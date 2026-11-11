@@ -1,0 +1,6 @@
+﻿"test","expect","exit","ok","wall_s","evidence"
+"E1a_session_stability","PASS","0","True","377.3","RESULT: PASS"
+"E1b_session_stability","PASS","0","True","392.8","RESULT: PASS"
+"E2_killed_mid_handshake","INFO","0","True","0","requester killed during KEY_EXCHANGE_RSP transfer"
+"E2b_reconnect_after_abort","PASS","0","True","397.4","exchange: OK (encrypted app message, sent 23 B, received 23 B)"
+"E3_empty_cert_slot","REJECT","1","True","8.2","spdm-requester.exe : error: slot 1 is empty (slot mask 0x01; populated slots: 0)"

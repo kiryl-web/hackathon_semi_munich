@@ -1,0 +1,11 @@
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 15187 bytes, verified to pinned root)
+spdm-requester.exe : error: challenge failed: SPDM_REQ_EAUTH
+At C:\Users\kpato\KP\Hackathon\tools\task3_neg_tests.ps1:63 char:10
++     $o = & $req @opArgs @common --work-dir "$outDir\work_$name" 2>&1  ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: challenge failed: SPDM_REQ_EAUTH:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

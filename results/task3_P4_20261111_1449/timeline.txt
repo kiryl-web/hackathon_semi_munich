@@ -1,0 +1,10 @@
+14:49:55.109 START connect
+14:50:00.866 START slots
+14:50:07.777 START get_cert
+14:53:40.104 START challenge
+14:58:18.461 START measure
+15:03:09.420 START session
+15:09:24.687 START exchange_1
+15:15:09.551 START exchange_2
+15:21:01.375 START exchange_3
+15:27:13.195 START NEG_wrong_root

@@ -1,0 +1,14 @@
+test,expect,exit,ok,wall_s,evidence
+A1_rogue_mldsa87_root,REJECT,1,True,243.0,get_certificate failed: SPDM_REQ_EAUTH
+A2_mldsa65_root,REJECT,1,True,246.0,get_certificate failed: SPDM_REQ_EAUTH
+A3_classical_ec384_root,REJECT,1,True,254.3,get_certificate failed: SPDM_REQ_EAUTH
+A4_malformed_key_root,REJECT,1,True,255.0,get_certificate failed: SPDM_REQ_EAUTH
+A5_truncated_root,REJECT,1,True,258.2,get_certificate failed: SPDM_REQ_EAUTH
+B1_modified_cert,REJECT,1,True,253.4,get_certificate failed: SPDM_REQ_EAUTH
+B2_invalid_signature,REJECT,1,True,338.0,challenge failed: SPDM_REQ_EAUTH
+B3_modified_transcript,REJECT,1,True,372.6,start_session failed: SPDM_REQ_ESESSION
+B4_modified_kem_ct,REJECT,1,True,373.7,start_session failed: SPDM_REQ_ESESSION
+B5_mitm_finish_rsp,REJECT,1,True,362.5,start_session failed: SPDM_REQ_ESESSION
+B6_mitm_app_data,REJECT,1,True,363.1,send_receive failed: SPDM_REQ_ESESSION
+R1_restore_exchange,PASS,0,True,369.4,RESULT: PASS
+R2_restore_exchange,PASS,0,True,371.7,RESULT: PASS

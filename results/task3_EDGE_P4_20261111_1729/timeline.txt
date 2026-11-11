@@ -1,0 +1,2 @@
+17:30:02.380 START E5_reset
+17:30:07.964 START E5_challenge_after_reset

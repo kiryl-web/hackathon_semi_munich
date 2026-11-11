@@ -1,0 +1,11 @@
+spdm-requester.exe : error: challenge failed: SPDM_REQ_EAUTH
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:83 char:10
++     $o = & $req @a --hwid $Hwid --dfuh-cli $dfuh --work-dir "$outDir\ ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: challenge failed: SPDM_REQ_EAUTH:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 1218 bytes, verified to pinned root)
+

@@ -1,0 +1,1 @@
+error: start_session failed: SPDM_REQ_ESESSION: dfuh-cli exited with code 4294967295: [INFO] Command line= C:/Users/kpato/ModusToolbox/tools_3.9/dfuh-tool/dfuh-cli.exe --custom-command spdm_0148.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400

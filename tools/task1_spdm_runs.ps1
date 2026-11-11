@@ -9,7 +9,8 @@ param(
     [ValidateSet('P2','P4')][string]$Profile = 'P2',
     [string]$Hwid = '',
     [string]$Com = 'COM4',
-    [int]$Repeat = 3
+    [int]$Repeat = 3,
+    [string]$Tag = 'task1'
 )
 $ErrorActionPreference = 'Continue'
 . "$PSScriptRoot\mtbenv.ps1"
@@ -18,7 +19,7 @@ $caPem  = @{ P2 = 'ca_ec384.crt'; P4 = 'ca_mldsa87.crt' }[$Profile]
 $badPem = @{ P2 = 'ca_ec256.crt'; P4 = 'ca_ec384.crt' }[$Profile]   # wrong trust anchor
 $req    = "$SPDM\psoc-spdm-requester\spdm-requester.exe"
 $stamp  = Get-Date -Format 'yyyyMMdd_HHmm'
-$outDir = "C:\Users\kpato\KP\Hackathon\results\task1_${Profile}_$stamp"
+$outDir = "C:\Users\kpato\KP\Hackathon\results\${Tag}_${Profile}_$stamp"
 New-Item -ItemType Directory -Force $outDir | Out-Null
 
 if (-not $Hwid) {

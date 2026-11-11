@@ -1,0 +1,17 @@
+{
+  "APPInfo": {
+    "File Version": "0x1",
+    "Packet Checksum Type": "0x0",
+    "Product Id": "01020304"
+  },
+  "commands": [
+    {
+      "cmdId": "0x80",
+      "dataLength": "0x2E",
+      "dataBytes": "06 FF FF FF FF 00 00 25 00 34 77 1D 38 A9 76 5A 09 45 46 7B 19 02 16 86 6E E2 4B 63 5E C9 C4 7F 01 C7 73 FA E0 9D 24 DD 77 72 DD 14 BD 9C",
+      "outFile": "spdm_0214.bin",
+      "outCli": "true",
+      "timeoutMS": "0x1388"
+    }
+  ]
+}

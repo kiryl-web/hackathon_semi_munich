@@ -1,0 +1,5 @@
+﻿"test","expect","exit","ok","wall_s","evidence"
+"R_restore_exchange","PASS","0","True","384.7","exchange: OK (encrypted app message, sent 11 B, received 11 B)"
+"R_repeat_exchange_2","PASS","0","True","388","exchange: OK (encrypted app message, sent 8 B, received 8 B)"
+"R_repeat_exchange_3","PASS","0","True","393.4","exchange: OK (encrypted app message, sent 8 B, received 8 B)"
+"R_restore_get_cert","PASS","0","True","267.9","wrote certificate chain to C:\Users\kpato\KP\Hackathon\results\task3_EDGE_RESTORE_20261111_1805\chain.der"

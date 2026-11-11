@@ -1,0 +1,17 @@
+connect: OK (VERSION / CAPABILITIES / ALGORITHMS)
+  SPDM version         : 1.4 (0x14)
+  Responder capabilities: CERT, CHAL, ENCRYPT, MAC, KEY_EX, CHUNK, MEAS(sig)  [0x000202d6]
+  Requester capabilities: CERT, CHAL, ENCRYPT, MAC, KEY_EX, CHUNK  [0x000202c6]
+  Negotiated algorithms :
+    Base asym  : (none)
+    PQC asym   : ML_DSA_87
+    Base hash  : SHA_384
+    DHE group  : (none)
+    KEM alg    : ML_KEM_1024
+    AEAD suite : AES_256_GCM
+    Key schedule: SPDM
+    OtherParams : OpaqueDataFmt1 (0x02)
+    Meas spec  : DMTF (0x01)
+    Meas hash  : SHA_384 (0x00000004)
+RESULT: PASS
+

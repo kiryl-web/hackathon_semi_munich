@@ -1,0 +1,8 @@
+﻿"test","expect","exit","ok","wall_s","evidence"
+"P2_B1_modified_cert","REJECT","1","True","32.1","spdm-requester.exe : error: get_certificate failed: SPDM_REQ_EAUTH"
+"P2_B2_invalid_signature","REJECT","1","True","37.2","spdm-requester.exe : error: challenge failed: SPDM_REQ_EAUTH"
+"P2_B3_modified_transcript","REJECT","1","True","40.6","spdm-requester.exe : error: start_session failed: SPDM_REQ_ESESSION"
+"P2_B5_mitm_finish_rsp","REJECT","1","True","43.5","spdm-requester.exe : error: start_session failed: SPDM_REQ_ESESSION"
+"P2_B6_mitm_app_data","REJECT","1","True","45.1","spdm-requester.exe : error: send_receive failed: SPDM_REQ_ESESSION"
+"P2_R1_clean_exchange","PASS","0","True","46.4","exchange: OK (encrypted app message, sent 8 B, received 8 B)"
+"P2_R2_pqc_root_on_ecc_device","REJECT","1","True","32.5","spdm-requester.exe : error: get_certificate failed: SPDM_REQ_EAUTH"

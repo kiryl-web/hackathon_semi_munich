@@ -1,0 +1,6 @@
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 15187 bytes, verified to pinned root)
+wrote certificate chain to C:\Users\kpato\KP\Hackathon\results\task3_P4_20261111_1449\chain.der
+RESULT: PASS
+

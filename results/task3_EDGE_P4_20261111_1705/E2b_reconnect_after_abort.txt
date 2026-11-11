@@ -1,0 +1,9 @@
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 15187 bytes, verified to pinned root)
+start-session: OK (KEY_EXCHANGE / FINISH, session 0xffffffff, AES_256_GCM)
+exchange: OK (encrypted app message, sent 23 B, received 23 B)
+  reply: b'after aborted handshake'
+end-session: OK (secured END_SESSION)
+RESULT: PASS
+

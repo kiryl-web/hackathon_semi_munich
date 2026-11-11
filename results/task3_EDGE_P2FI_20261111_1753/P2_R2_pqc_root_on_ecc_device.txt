@@ -1,0 +1,10 @@
+spdm-requester.exe : error: get_certificate failed: SPDM_REQ_EAUTH
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:83 char:10
++     $o = & $req @a --hwid $Hwid --dfuh-cli $dfuh --work-dir "$outDir\ ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: get_cert... SPDM_REQ_EAUTH:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+connect: OK
+set-trust: OK (root pinned)
+

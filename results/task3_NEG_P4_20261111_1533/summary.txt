@@ -1,0 +1,15 @@
+A1_rogue_mldsa87_root      expect=REJECT exit=1 ok=True  wall=243.0s  get_certificate failed: SPDM_REQ_EAUTH
+A2_mldsa65_root            expect=REJECT exit=1 ok=True  wall=246.0s  get_certificate failed: SPDM_REQ_EAUTH
+A3_classical_ec384_root    expect=REJECT exit=1 ok=True  wall=254.3s  get_certificate failed: SPDM_REQ_EAUTH
+A4_malformed_key_root      expect=REJECT exit=1 ok=True  wall=255.0s  get_certificate failed: SPDM_REQ_EAUTH
+A5_truncated_root          expect=REJECT exit=1 ok=True  wall=258.2s  get_certificate failed: SPDM_REQ_EAUTH
+B1_modified_cert           expect=REJECT exit=1 ok=True  wall=253.4s  get_certificate failed: SPDM_REQ_EAUTH
+B2_invalid_signature       expect=REJECT exit=1 ok=True  wall=338.0s  challenge failed: SPDM_REQ_EAUTH
+B3_modified_transcript     expect=REJECT exit=1 ok=True  wall=372.6s  start_session failed: SPDM_REQ_ESESSION
+B4_modified_kem_ct         expect=REJECT exit=1 ok=True  wall=373.7s  start_session failed: SPDM_REQ_ESESSION
+B5_mitm_finish_rsp         expect=REJECT exit=1 ok=True  wall=362.5s  start_session failed: SPDM_REQ_ESESSION
+B6_mitm_app_data           expect=REJECT exit=1 ok=True  wall=363.1s  send_receive failed: SPDM_REQ_ESESSION
+R1_restore_exchange        expect=PASS   exit=0 ok=True  wall=369.4s  RESULT: PASS
+R2_restore_exchange        expect=PASS   exit=0 ok=True  wall=371.7s  RESULT: PASS
+
+NOTE: rebuilt from per-test outputs; runner was stopped by Claude Code (host memory pressure) during R3_restore_exchange (repeat reconnect #3, 181 of ~215 transfers, no result) - excluded.

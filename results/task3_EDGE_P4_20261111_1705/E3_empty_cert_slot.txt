@@ -1,0 +1,9 @@
+spdm-requester.exe : error: slot 1 is empty (slot mask 0x01; populated slots: 0)
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:81 char:10
++     $o = & $req @a --hwid $Hwid --dfuh-cli $dfuh --work-dir "$outDir\ ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: slot 1 i...lated slots: 0):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+connect: OK
+

@@ -1,0 +1,10 @@
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 15187 bytes, verified to pinned root)
+measure: OK (slot 0, 4 blocks, signature verified over the record; measurement hash SHA_384)
+    block 1: ImmutableROM (digest)  (48 B)  970d6d5f1437273df6b456fb2240fd6abde12b1e99ddef1884077d7b886753cb89598c4d623a0718c54925ff3784eac6
+    block 2: MutableFirmware (digest)  (48 B)  6ca27493e94194b577d7e2e9e02177ceff0a86885826a31519556a6212cd5e819e7cdde8175ef398b2aa114bec228d7a
+    block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0100000000000000
+    block 4: Informational (raw)  (17 B)  505343334d352d5350444d2d312e302e30
+RESULT: PASS
+

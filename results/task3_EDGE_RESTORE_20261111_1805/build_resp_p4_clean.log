@@ -1,0 +1,866 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && /usr/bin/make -C proj_cm33_ns build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && true
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[2/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc.o
+[3/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_cert.o
+[4/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_heap.o
+[5/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/pas/pas.o
+[6/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[7/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_alt_mxcrypto.o
+[8/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_gcm_alt_mxcrypto.o
+[9/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/crypto_common.o
+[10/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdh_alt_mxcrypto.o
+[11/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdsa_alt_mxcrypto.o
+[12/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_alt_mxcrypto.o
+[13/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_curves_alt_mxcrypto.o
+[14/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_meas.o
+[15/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha1_alt_mxcrypto.o
+[16/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_sign.o
+[17/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_psa.o
+[18/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_meas.o
+[19/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ed25519_alt_mxcrypto.o
+[20/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha256_alt_mxcrypto.o
+[21/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha512_alt_mxcrypto.o
+[22/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/trng_alt_mxcrypto.o
+[23/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/aes_alt_mxcryptolite.o
+[24/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_perf.o
+[25/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ecdsa_alt_mxcryptolite.o
+[26/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/eddsa_alt_sha512.o
+[27/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_wc_seed.o
+[28/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/platform/ppc_config.o
+[29/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ed25519_alt_mxcryptolite.o
+[30/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_aead.o
+[31/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_asymmetric.o
+[32/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_common.o
+[33/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/sha256_alt_mxcryptolite.o
+[34/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_crypto.o
+[35/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/local/main.o
+[36/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_cipher.o
+[37/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_hash.o
+[38/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_agreement.o
+[39/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_generation.o
+[40/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/trng_alt_mxcryptolite.o
+[41/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_mac.o
+[42/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_public_key_export.o
+[43/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_common.o
+[44/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_sign.o
+[45/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_import.o
+[46/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_encapsulation.o
+[47/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_generation.o
+[48/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_signature_verify.o
+[49/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_public_key_export.o
+[50/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_sign.o
+[51/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_signature_verify.o
+[52/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_aead.o
+[53/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_cipher.o
+[54/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_agreement.o
+[55/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_generation.o
+[56/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_public_key_export.o
+[57/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_signature_verify.o
+[58/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aesce.o
+[59/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_common.o
+[60/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aesni.o
+[61/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aes.o
+[62/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aria.o
+[63/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_hash.o
+[64/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_derivation.o
+[65/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/asn1parse.o
+[66/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/asn1write.o
+[67/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_mac.o
+[68/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/base64.o
+[69/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_sign.o
+[70/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum.o
+[71/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_common.o
+[72/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_aead.o
+[73/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_core.o
+[74/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_mod.o
+[75/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_mod_raw.o
+[76/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/block_cipher.o
+[77/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_cipher.o
+[78/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/camellia.o
+[79/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_mac.o
+[80/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ccm.o
+[81/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/chacha20.o
+[82/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/chachapoly.o
+[83/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/constant_time.o
+[84/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/debug.o
+[85/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cmac.o
+[86/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/des.o
+[87/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ctr_drbg.o
+[88/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/dhm.o
+[89/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecdh.o
+[90/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecdsa.o
+[91/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecjpake.o
+[92/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp.o
+[93/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp_curves.o
+[94/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp_curves_new.o
+[95/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/entropy.o
+[96/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/error.o
+[97/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/entropy_poll.o
+[98/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/gcm.o
+[99/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/hkdf.o
+[100/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/hmac_drbg.o
+[101/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/lms.o
+[102/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/lmots.o
+[103/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/md5.o
+[104/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/net_sockets.o
+[105/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/mps_reader.o
+[106/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/mps_trace.o
+[107/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/memory_buffer_alloc.o
+[108/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/nist_kw.o
+[109/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cipher_wrap.o
+[110/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/oid.o
+[111/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cipher.o
+[112/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/padlock.o
+[113/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pem.o
+[114/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk.o
+[115/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk_wrap.o
+[116/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs5.o
+[117/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs12.o
+[118/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs7.o
+[119/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkwrite.o
+[120/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkparse.o
+[121/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/poly1305.o
+[122/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/platform_util.o
+[123/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/platform.o
+[124/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/md.o
+[125/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_se.o
+[126/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_its_file.o
+[127/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_storage.o
+[128/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk_ecc.o
+[129/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_aead.o
+[130/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_cipher.o
+[131/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_client.o
+[132/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ripemd160.o
+[133/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_driver_wrappers_no_static.o
+[134/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_ecp.o
+[135/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_ffdh.o
+[136/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/rsa.o
+[137/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/rsa_alt_helpers.o
+[138/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha1.o
+[139/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_hash.o
+[140/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_pake.o
+[141/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_mac.o
+[142/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_random.o
+[143/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_rsa.o
+[144/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_slot_management.o
+[145/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha3.o
+[146/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha256.o
+[147/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_ciphersuites.o
+[148/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_cache.o
+[149/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_client.o
+[150/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha512.o
+[151/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto.o
+[152/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_msg.o
+[153/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_cookie.o
+[154/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_util.o
+[155/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_ticket.o
+[156/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls.o
+[157/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls12_client.o
+[158/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls12_server.o
+[159/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_client.o
+[160/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_generic.o
+[161/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_keys.o
+[162/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_server.o
+[163/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/threading.o
+[164/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/timing.o
+[165/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/version.o
+[166/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/target/infineon/mbedtls/ifx_mbedtls_builtin_keys.o
+[167/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/version_features.o
+[168/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509.o
+[169/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_create.o
+[170/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_crt.o
+[171/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_crl.o
+[172/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_csr.o
+[173/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write.o
+[174/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write_crt.o
+[175/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write_csr.o
+[176/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_debug_helpers_generated.o
+[177/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/arc4.o
+[178/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ascon.o
+[179/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/asm.o
+[180/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/aes.o
+[181/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/async.o
+[182/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/blake2b.o
+[183/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/camellia.o
+[184/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/blake2s.o
+[185/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/chacha.o
+[186/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ecc_fp.o
+[187/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/chacha20_poly1305.o
+[188/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/cmac.o
+[189/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/compress.o
+[190/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/coding.o
+[191/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/cpuid.o
+[192/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/curve25519.o
+[193/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/cryptocb.o
+[194/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/curve448.o
+[195/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/des3.o
+[196/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/dh.o
+[197/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/fips.o
+[198/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/fips_test.o
+[199/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/dsa.o
+[200/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ecc.o
+[201/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ed25519.o
+[202/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/eccsi.o
+[203/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ed448.o
+[204/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/error.o
+[205/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/evp.o
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/mtb_shared/ifx-wolfcrypto/release-v5.9.1/wolfcrypt/src/evp.c:20:10: warning: #warning evp.c does not need to be compiled separately from ssl.c [-Wcpp]
+   20 |         #warning evp.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+[206/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/evp_pk.o
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/mtb_shared/ifx-wolfcrypto/release-v5.9.1/wolfcrypt/src/evp_pk.c:20:10: warning: #warning evp_pk.c does not need to be compiled separately from ssl.c [-Wcpp]
+   20 |         #warning evp_pk.c does not need to be compiled separately from ssl.c
+      |          ^~~~~~~
+[207/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ext_lms.o
+[208/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ext_mlkem.o
+[209/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/asn.o
+[210/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/falcon.o
+[211/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ext_xmss.o
+[212/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/fe_448.o
+[213/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/fe_low_mem.o
+[214/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/fe_operations.o
+[215/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/dilithium.o
+[216/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ge_448.o
+[217/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ge_low_mem.o
+[218/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ge_operations.o
+[219/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/hpke.o
+[220/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/integer.o
+[221/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/logging.o
+[222/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/hmac.o
+[223/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/md2.o
+[224/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/hash.o
+[225/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/kdf.o
+[226/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/selftest.o
+[227/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/md4.o
+[228/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/md5.o
+[229/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/misc.o
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/mtb_shared/ifx-wolfcrypto/release-v5.9.1/wolfcrypt/src/misc.c:47:10: warning: #warning misc.c does not need to be compiled when using inline (NO_INLINE not defined) [-Wcpp]
+   47 |         #warning misc.c does not need to be compiled when using inline (NO_INLINE not defined)
+      |          ^~~~~~~
+[230/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/memory.o
+[231/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/pkcs7.o
+[232/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/pkcs12.o
+[233/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/poly1305.o
+[234/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/rc2.o
+[235/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/ripemd.o
+[236/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/pwdbased.o
+[237/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/rng_bank.o
+[238/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/rsa.o
+[239/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/random.o
+[240/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sakke.o
+[241/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sha512.o
+[242/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/siphash.o
+[243/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sha256.o
+[244/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/signature.o
+[245/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sm3.o
+[246/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sm2.o
+[247/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sha3.o
+[248/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sha.o
+[249/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sm4.o
+[250/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_arm32.o
+[251/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_arm64.o
+[252/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_c32.o
+[253/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_armthumb.o
+[254/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_c64.o
+[255/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_cortexm.o
+[256/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_dsp32.o
+[257/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_arm32.o
+[258/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_arm64.o
+[259/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_armthumb.o
+[260/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_c32.o
+[261/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_c64.o
+[262/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_cortexm.o
+[263/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_sm2_x86_64.o
+[264/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wolfcrypt_first.o
+[265/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_x86_64.o
+[266/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wolfcrypt_last.o
+[267/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sphincs.o
+[268/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/srp.o
+[269/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/tfm.o
+[270/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_dsp.o
+[271/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/sp_int.o
+[272/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_lms.o
+[273/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_lms_impl.o
+[274/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_encrypt.o
+[275/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_pkcs11.o
+[276/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_mlkem.o
+[277/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_port.o
+[278/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_slhdsa.o
+[279/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_xmss.o
+[280/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_xmss_impl.o
+[281/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wolfentropy.o
+[282/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wolfevent.o
+[283/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wolfmath.o
+[284/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-wolfcrypto/wolfcrypt/src/wc_mlkem_poly.o
+[285/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[286/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[287/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[288/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[289/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[290/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[291/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[292/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[293/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[294/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[295/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[296/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[297/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[298/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[299/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[300/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[301/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[302/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[303/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[304/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[305/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[306/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[307/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[308/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[309/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[310/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[311/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[312/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[313/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[314/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[315/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[316/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[317/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[318/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[319/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[320/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[321/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[322/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[323/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[324/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[325/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[326/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[327/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[328/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[329/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[330/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[331/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[332/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[333/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[334/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[335/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[336/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[337/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[338/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[339/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[340/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[341/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[342/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[343/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[344/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[345/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[346/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[347/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[348/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[349/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[350/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[351/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[352/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[353/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[354/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[355/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[356/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[357/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[358/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[359/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[360/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[361/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[362/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[363/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[364/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[365/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[366/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[367/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[368/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[369/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[370/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[371/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[372/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[373/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[374/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[375/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[376/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[377/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[378/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-srf/source/mtb_srf.o
+[379/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[380/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[381/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[382/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[383/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[384/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[385/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[386/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[387/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[388/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[389/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[390/391] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[391/391] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+cmake -S spdm -B build_libspdm -G "Ninja" -DCMAKE_MAKE_PROGRAM="C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=toolchain_arm_none_eabi.cmake -DARM_TOOLCHAIN_DIR="C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin" -DSPDM_PROFILE_INCLUDE_DIR="C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/profiles/P4" -DCMAKE_BUILD_TYPE=MinSizeRel && cmake --build build_libspdm
+make.exe : CMake Warning (deprecated) at CMakeLists.txt:31 (cmake_minimum_required):
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:121 char:5
++     & $make -C $proj build -j8 @vars 2>&1 | Out-File -Encoding utf8 " ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Warning (...imum_required)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_common_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Configuring done (0.1s)
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_crypt_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_secured_message_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_responder_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_transport_mctp_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build_libspdm
+[1/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_event.c.obj
+[2/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_msg_log.c.obj
+[3/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_cert.c.obj
+[4/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hkdf.c.obj
+[5/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data_session.c.obj
+[6/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_rng.c.obj
+[7/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hmac.c.obj
+[8/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service_session.c.obj
+[9/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hash.c.obj
+[10/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_kem.c.obj
+[11/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_aead.c.obj
+[12/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_dhe.c.obj
+[13/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_support.c.obj
+[14/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hmac.c.obj
+[15/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_aes_gcm.c.obj
+[16/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest.c.obj
+[17/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_ssa.c.obj
+[18/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service.c.obj
+[19/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_key_schedule.c.obj
+[20/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_pss.c.obj
+[21/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_asym.c.obj
+[22/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha2.c.obj
+[23/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdh.c.obj
+[24/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hkdf.c.obj
+[25/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdsa.c.obj
+[26/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_opaque_data.c.obj
+[27/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha3.c.obj
+[28/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ffdh.c.obj
+[29/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_eddsa.c.obj
+[30/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem.c.obj
+[31/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem_vec.c.obj
+[32/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa.c.obj
+[33/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa_vec.c.obj
+[34/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa.c.obj
+[35/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa_vec.c.obj
+[36/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange.c.obj
+[37/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_asym.c.obj
+[38/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange_pqc.c.obj
+[39/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_context_data.c.obj
+[40/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_certificate.c.obj
+[41/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_communication.c.obj
+[42/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_digests.c.obj
+[43/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_challenge.c.obj
+[44/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_common.c.obj
+[45/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_endpoint_info.c.obj
+[46/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_certificate.c.obj
+[47/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_session.c.obj
+[48/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_challenge_auth.c.obj
+[49/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_digests.c.obj
+[50/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_key_update.c.obj
+[51/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_response.c.obj
+[52/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_encode_decode.c.obj
+[53/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_send_event.c.obj
+[54/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_endpoint_info.c.obj
+[55/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_event_ack.c.obj
+[56/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_end_session_ack.c.obj
+[57/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_error.c.obj
+[58/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_handle_response_state.c.obj
+[59/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_capabilities.c.obj
+[60/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_algorithms.c.obj
+[61/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_heartbeat_ack.c.obj
+[62/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_exchange_rsp.c.obj
+[63/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_respond_if_ready.c.obj
+[64/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_finish_rsp.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c: In function 'libspdm_get_response_finish':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:413:20: note: 'req_opaque_data' was declared here
+  413 |     const uint8_t *req_opaque_data;
+      |                    ^~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data_size' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:414:12: note: 'req_opaque_data_size' was declared here
+  414 |     size_t req_opaque_data_size;
+      |            ^~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_slot_id' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:404:13: note: 'req_slot_id' was declared here
+  404 |     uint8_t req_slot_id;
+      |             ^~~~~~~~~~~
+[65/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_finish_rsp.c.obj
+[66/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_certificate_rsp.c.obj
+[67/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_update_ack.c.obj
+[68/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data.c.obj
+[69/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_version.c.obj
+[70/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_supported_event_types.c.obj
+[71/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_subscribe_event_types_ack.c.obj
+[72/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_csr.c.obj
+[73/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_vendor_defined_response.c.obj
+[74/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurement_extension_log.c.obj
+[75/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurements.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c: In function 'libspdm_get_response_measurements':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:517:15: warning: 'slot_id_param' may be used uninitialized [-Wmaybe-uninitialized]
+  517 |         ret = libspdm_generate_measurement_signature(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  518 |             spdm_context, session_info, slot_id_param, fill_response_ptr);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:91:13: note: 'slot_id_param' was declared here
+   91 |     uint8_t slot_id_param;
+      |             ^~~~~~~~~~~~~
+[76/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_pair_info.c.obj
+[77/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_key_pair_info_ack.c.obj
+[78/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_exchange_rsp.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c: In function 'libspdm_get_response_key_exchange':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:626:18: warning: 'kem_encap_key_size' may be used uninitialized [-Wmaybe-uninitialized]
+  626 |         result = libspdm_secured_message_kem_encapsulate(
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  627 |             spdm_context->connection_info.algorithm.kem_alg,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  628 |             kem_context,
+      |             ~~~~~~~~~~~~
+  629 |             (const uint8_t *)request + sizeof(spdm_key_exchange_request_t),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  630 |             kem_encap_key_size, ptr, &kem_cipher_text_size, session_info->secured_message_context);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:189:12: note: 'kem_encap_key_size' was declared here
+  189 |     size_t kem_encap_key_size;
+      |            ^~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:729:12: warning: 'use_default_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  729 |         if (use_default_opaque_data) {
+      |            ^
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:211:10: note: 'use_default_opaque_data' was declared here
+  211 |     bool use_default_opaque_data;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+[79/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_response.c.obj
+[80/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_mctp.c.obj
+[81/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_common.c.obj
+[82/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_send_ack.c.obj
+[83/88] Linking C static library lib\libspdm_secured_message_lib.a
+[84/88] Linking C static library lib\libspdm_common_lib.a
+[85/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_receive_send.c.obj
+[86/88] Linking C static library lib\libspdm_crypt_lib.a
+[87/88] Linking C static library lib\libspdm_transport_mctp_lib.a
+[88/88] Linking C static library lib\libspdm_responder_lib.a
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/aead.o
+[2/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/hash.o
+[3/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/rand.o
+[4/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mldsa.o
+[5/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_memlib.o
+[6/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[7/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_debuglib.o
+[8/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/kdf.o
+[9/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_measlib.o
+[10/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mac.o
+[11/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_responder.o
+[12/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_transport_dfu.o
+[13/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[14/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/dfu_user.o
+[15/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/imports/dfu/config/DFU_CFG1/COMPONENT_DFU_I2C/transport_i2c.o
+[16/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/ec.o
+[17/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/log/log.o
+[18/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mlkem.o
+[19/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_platform.o
+[20/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/device_secret.o
+[21/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/main.o
+[22/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/local/router/spdm_router.o
+[23/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[24/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/dfu/cy_dfu.o
+[25/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[26/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[27/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[28/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[29/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[30/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[31/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[32/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[33/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[34/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[35/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[36/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[37/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[38/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[39/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[40/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[41/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[42/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[43/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[44/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[45/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[46/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[47/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[48/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[49/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[50/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[51/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[52/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[53/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[54/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[55/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[56/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[57/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[58/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[59/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[60/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[61/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[62/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[63/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[64/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[65/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[66/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[67/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[68/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[69/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[70/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[71/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[72/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[73/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[74/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[75/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[76/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[77/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[78/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[79/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[80/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[81/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[82/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[83/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[84/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[85/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[86/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[87/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[88/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[89/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[90/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[91/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[92/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[93/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[94/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[95/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[96/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[97/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[98/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[99/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[100/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[101/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[102/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[103/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[104/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[105/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[106/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[107/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[108/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[109/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[110/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[111/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[112/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[113/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[114/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[115/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[116/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[117/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[118/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[119/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[120/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[121/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[122/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-srf/source/mtb_srf.o
+[123/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/retarget-io/source/cy_retarget_io.o
+[124/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-srf/source/COMPONENT_NON_SECURE_DEVICE/mtb_srf_pool.o
+[125/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[126/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[127/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[128/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[129/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[130/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[131/132] Building object file C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[132/132] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+/usr/bin/make -C proj_cm33_s application_postbuild MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns"
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+mkdir -p ../build ../build/project_hex
+(cd ../configs && C:/Users/kpato/Infineon/Tools/ModusToolbox-Edge-Protect-Security-Suite-2.4.0/tools/edgeprotecttools/bin/edgeprotecttools.exe run-config -i signer_combiner.json --symbol-search ../proj_cm33_s/../bsps/TARGET_APP_KIT_PSC3M6_EVAL ) 
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x12000000-0x12000068 to 0x32000000-0x32000068
+: E : INFO  : Relocating segment 0x12000080-0x12013774 to 0x32000080-0x32013774
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_s_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x02020000-0x0202F9D4 to 0x22020000-0x2202F9D4
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_ns_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : merge: command "merge" validation succeeded
+: E : INFO  : merge: command "merge" succeeded
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |              143,664 |       524,288 |
+ |   m33_nvm             | 0x00000000 | ( 61%)        79,708 |       131,072 |
+ |     .vector_table     | 0x00000000 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000080 |                  128 |               |
+ |     .text             | 0x00000100 |               79,080 |               |
+ |     .ARM.exidx        | 0x000135e8 |                    8 |               |
+ |     .copy.table       | 0x000135f0 |                   24 |               |
+ |     .zero.table       | 0x00013608 |                    8 |               |
+ |     .data (load data) | 0x00013610 |                  356 |               |
+ |   m33ns_nvm           | 0x00020000 | ( 39%)        63,956 |       163,840 |
+ |     .text             | 0x00000000 |               63,264 |               |
+ |     .ARM.exidx        | 0x0000f720 |                    8 |               |
+ |     .copy.table       | 0x0000f728 |                   24 |               |
+ |     .zero.table       | 0x0000f740 |                    8 |               |
+ |     .data (load data) | 0x0000f748 |                  652 |               |
+ |   pas                 | 0x00048000 | (  0%)             0 |        24,576 |
+ |   <unallocated>       |            |                      |       204,800 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |              129,140 |       131,072 |
+ |   m33_data            | 0x00000000 | (100%)        59,388 |        59,392 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  356 |               |
+ |     .noinit           | 0x00000440 |                   52 |               |
+ |     .bss              | 0x00000478 |               18,944 |               |
+ |     .heap             | 0x00004e78 |               31,112 |               |
+ |     .stack            | 0x0000c800 |                8,192 |               |
+ |   m33ns_data          | 0x0000e800 | (100%)        69,628 |        69,632 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  652 |               |
+ |     .noinit           | 0x00000568 |                   52 |               |
+ |     .bss              | 0x000005a0 |               58,296 |               |
+ |     .heap             | 0x0000e958 |                5,800 |               |
+ |     .stack            | 0x00010000 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0001f800 | (  6%)           124 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |     .cy_sharedmem     | 0x00000000 |                  124 |               |
+ |   <unallocated>       |            |                      |             0 |
+  ---------------------------------------------------------------------------
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'

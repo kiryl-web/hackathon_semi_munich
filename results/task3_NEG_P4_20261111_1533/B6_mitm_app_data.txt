@@ -1,0 +1,12 @@
+spdm-requester.exe : error: send_receive failed: SPDM_REQ_ESESSION
+At C:\Users\kpato\KP\Hackathon\tools\task3_neg_tests.ps1:63 char:10
++     $o = & $req @opArgs @common --work-dir "$outDir\work_$name" 2>&1  ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: send_rec...DM_REQ_ESESSION:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 15187 bytes, verified to pinned root)
+start-session: OK (KEY_EXCHANGE / FINISH, session 0xffffffff, AES_256_GCM)
+

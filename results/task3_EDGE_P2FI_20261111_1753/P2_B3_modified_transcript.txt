@@ -1,0 +1,11 @@
+spdm-requester.exe : error: start_session failed: SPDM_REQ_ESESSION
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:83 char:10
++     $o = & $req @a --hwid $Hwid --dfuh-cli $dfuh --work-dir "$outDir\ ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: start_se...DM_REQ_ESESSION:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 1218 bytes, verified to pinned root)
+

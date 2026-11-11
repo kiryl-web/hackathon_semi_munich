@@ -93,7 +93,7 @@ endif
 # ---------------------------------------------------------------------------
 # Task 1 (ECC baseline): ecdsa-p384. Task 3 (PQC): set back to ml-dsa-87.
 # "ecdsa-p384 ml-dsa-87" together overflows the 128 KB secure flash by ~1 KB (Debug).
-PROV_SIG_SUITES ?= ecdsa-p384
+PROV_SIG_SUITES ?= ml-dsa-87
 
 ifneq ($(filter ecdsa-p256,$(PROV_SIG_SUITES)),)
 PROV_ENABLE_EC256 := 1

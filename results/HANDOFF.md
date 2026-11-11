@@ -1,6 +1,8 @@
-# Handoff – state after Task 2 (2026-11-11)
+# Handoff – state after Task 3 (2026-11-11)
 
-Read this first in a new session. Task 2 (boot-time PQC) is DONE: `results/Task2_PQC_Boot_Report.pdf`,
+Read this first in a new session. **Task 3 (SPDM PQC) is DONE**: `results/Task3_PQC_SPDM_Report.pdf`,
+details `results/TASK3_NOTES.md`. Next = Task 4 (lifecycle / update), then Task 5 (presentation).
+Task 2 (boot-time PQC) is DONE: `results/Task2_PQC_Boot_Report.pdf`,
 details `results/TASK2_NOTES.md`. Task 1 (ECC baseline) is DONE: `results/Task1_ECC_Baseline_Report.pdf`,
 details in `results/TASK1_NOTES.md`.
 
@@ -37,12 +39,15 @@ details in `results/TASK1_NOTES.md`.
 | `hex_flip.py in out addr` | tamper one byte in an Intel-HEX |
 | `make_task1_report.py` | regenerates the Task 1 PDF |
 
-## Current device state
-- Flash: EPBL **ML-DSA-87 / SHA-512** (`results/epbl_ML-DSA-87.hex`) + CE243041 app v1.0.0 signed ML-DSA-87.
-  Upgrade slot used again in Task 2 → SPDM credential store (PAS @0x32048000) overwritten → re-provision first.
-- To get back to SPDM: program provisioning app, run provisioning script, program responder (responder is NOT
-  behind EPBL; programming it overwrites EPBL at 0x32000000 → reprogram EPBL afterwards for boot demos:
-  `make -C epbl/bl qprogram` with feature_config_ML-DSA-87.json active).
+## Current device state (after Task 3)
+- Flash @0x32000000: **SPDM responder P4 (ML-DSA-87 / ML-KEM-1024), SPDM_FAULT_INJECT=0**, Release + [PERF] logging.
+  EPBL + CE243041 app were overwritten → for boot demos reprogram EPBL (`make -C epbl/bl build` then `qprogram`,
+  feature_config_ML-DSA-87.json active) and the signed app (results/img_ML-DSA-87_v1_0_boot.hex).
+- PAS: ML-DSA-87 key slot 0 + SPDM chain slot 1 (root ca_mldsa87 → leaf "PSC3 DEV 01"), NOT frozen. Re-provisioned
+  18:08 (new on-device key; artifacts in provisioning-host `test/_work/edge_p4`; original Task 3 identity artifacts
+  backed up in `results/task3_cred_p4_original`).
+- To switch SPDM back to ECC: program provisioning app built with PROV_SIG_SUITES=ecdsa-p384, run
+  task1_provision_p2.ps1, build responder `SPDM_PROFILE=P2` (clean first), program.
 
 ## Code changes made (all measurement-only or config)
 - Responder: `[PERF]` instrumentation (shared/spdm_perf.h, shared/nsc_perf.h, proj_cm33_s/nsc/nsc_perf.c,
@@ -99,3 +104,23 @@ Next = Task 3: provisioning app → ml-dsa-87, re-provision (Quick Start command
 - `psoc-spdm-responder` is a nested repo (internal GitLab); outer repo stores only a pointer. Responder changes are kept
   as `patches/psoc-spdm-responder_task1_perf.patch` – regenerate it after Task 3 responder changes (see patches/README.md).
 - Rollback tests: `boot_capture.ps1 -JLinkCmds` runs load + readback + reset in the capture session (full boot log).
+
+## Task 3 summary (done)
+- Provisioning app PROV_SIG_SUITES ?= ml-dsa-87; `tools/task3_provision_p4.ps1` (no --freeze); responder common.mk
+  SPDM_PROFILE ?= P4 (default now P4).
+- Positive: 8/9 PASS; exchange_2 aborted at last KEY_EXCHANGE_RSP chunk (SPDM 1.0 error = responder lost state,
+  UART capture died same second, cause undetermined, failed closed). Negative: 12/12 rejected, R1/R2 reconnect PASS.
+- Fault injection: `make build SPDM_FAULT_INJECT=1..6` (test only; banner `[FI]`). Runner `tools/task3_neg_tests.ps1`
+  (~80 min: every requester op re-fetches the 15 KB chain at ~1.4 s per 127 B transfer).
+- Measurements: ML-DSA sign 66–346 ms (P-384 84 ms), ML-KEM encaps 11 ms (ECDHE 163 ms), KEX rsp 6,305 B,
+  NS .bss 57.8 KB. `tools/perf_summary.py <run dir>` summarises [PERF].
+- Long runs: Claude Code may kill background jobs under PC memory pressure (happened at R3) → keep the PC lightly loaded.
+- Patch: `patches/psoc-spdm-responder_task3.patch` (cumulative).
+- Verification pass: `tools/tests/test_task3_offline.py` (50 checks PASS), edge runs E1/E2/E3/E5 PASS
+  (`tools/task3_edge_tests.ps1`). Phases PROV (provisioning rejections + SHA-256 RootHash), P2FI (ECC tamper builds),
+  RESTORE are implemented but NOT run → use PROV in Task 4 (credential update); it erases the identity, so run
+  RESTORE afterwards.
+- Gap closing (17:50-18:40): P2FI run → ECC baseline 6/6 tamper REJECTED + clean ECC exchange PASS
+  (`results/task3_EDGE_P2FI_20261111_1753`); RESTORE run → 3/3 P4 exchanges + get-cert PASS
+  (`results/task3_EDGE_RESTORE_20261111_1805`), exchange_2 fault not reproduced. Offline suite 58 OK.
+  Still open (documented): PROV phase (provisioning rejections → Task 4), E4 message sizes.
