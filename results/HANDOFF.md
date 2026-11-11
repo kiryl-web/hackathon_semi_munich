@@ -92,3 +92,10 @@ details in `results/TASK1_NOTES.md`.
    upgrade slot) – document if not feasible.
 Next = Task 3: provisioning app → ml-dsa-87, re-provision (Quick Start command, no --freeze), responder SPDM_PROFILE=P4,
 `task1_spdm_runs.ps1 -Profile P4`.
+
+## Git (2026-11-11)
+- Work is committed on branch `pqc-task1-task2` (not merged to main). `Instruction.pdf` (confidential) and downloaded
+  libraries (`mtb_shared/`, `epbl/mtb_shared/`) are intentionally not committed.
+- `psoc-spdm-responder` is a nested repo (internal GitLab); outer repo stores only a pointer. Responder changes are kept
+  as `patches/psoc-spdm-responder_task1_perf.patch` – regenerate it after Task 3 responder changes (see patches/README.md).
+- Rollback tests: `boot_capture.ps1 -JLinkCmds` runs load + readback + reset in the capture session (full boot log).
