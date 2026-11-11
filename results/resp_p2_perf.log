@@ -1,0 +1,749 @@
+﻿make: Entering directory '/cygdrive/p/psoc-spdm-responder'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && /usr/bin/make -C proj_cm33_ns build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && true
+make[1]: Entering directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'P:/psoc-spdm-responder/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_wc_seed.o
+[2/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[3/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_heap.o
+[4/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc.o
+[5/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_cert.o
+[6/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/pas/pas.o
+[7/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[8/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdh_alt_mxcrypto.o
+[9/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_gcm_alt_mxcrypto.o
+[10/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_alt_mxcrypto.o
+[11/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/crypto_common.o
+[12/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdsa_alt_mxcrypto.o
+[13/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_curves_alt_mxcrypto.o
+[14/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_alt_mxcrypto.o
+[15/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ed25519_alt_mxcrypto.o
+[16/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha1_alt_mxcrypto.o
+[17/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha256_alt_mxcrypto.o
+[18/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha512_alt_mxcrypto.o
+[19/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/trng_alt_mxcrypto.o
+[20/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_meas.o
+[21/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_sign.o
+[22/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/aes_alt_mxcryptolite.o
+[23/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/sha256_alt_mxcryptolite.o
+[24/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/eddsa_alt_sha512.o
+[25/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ecdsa_alt_mxcryptolite.o
+[26/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_meas.o
+[27/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_psa.o
+[28/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ed25519_alt_mxcryptolite.o
+[29/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_asymmetric.o
+[30/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_hash.o
+[31/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_aead.o
+[32/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_cipher.o
+[33/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_common.o
+[34/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_agreement.o
+[35/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_generation.o
+[36/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_mac.o
+[37/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_public_key_export.o
+[38/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_signature_verify.o
+[39/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_sign.o
+[40/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/trng_alt_mxcryptolite.o
+[41/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/nsc/nsc_perf.o
+[42/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_aead.o
+[43/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_common.o
+[44/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_import.o
+[45/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/platform/ppc_config.o
+[46/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_encapsulation.o
+[47/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/main.o
+[48/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_common.o
+[49/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_public_key_export.o
+[50/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_generation.o
+[51/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/local/core/spdm_crypto.o
+[52/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_cipher.o
+[53/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_sign.o
+[54/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_signature_verify.o
+[55/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aesni.o
+[56/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aesce.o
+[57/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_common.o
+[58/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aria.o
+[59/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_mac.o
+[60/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_cipher.o
+[61/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_aead.o
+[62/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_mac.o
+[63/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_public_key_export.o
+[64/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_agreement.o
+[65/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_hash.o
+[66/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_signature_verify.o
+[67/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_derivation.o
+[68/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/base64.o
+[69/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/asn1write.o
+[70/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/asn1parse.o
+[71/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/aes.o
+[72/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_mod.o
+[73/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_mod_raw.o
+[74/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/block_cipher.o
+[75/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/camellia.o
+[76/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_sign.o
+[77/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ccm.o
+[78/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_generation.o
+[79/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/chachapoly.o
+[80/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum_core.o
+[81/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/chacha20.o
+[82/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/debug.o
+[83/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/bignum.o
+[84/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/constant_time.o
+[85/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/dhm.o
+[86/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/des.o
+[87/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cmac.o
+[88/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecjpake.o
+[89/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ctr_drbg.o
+[90/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp_curves_new.o
+[91/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp_curves.o
+[92/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecdh.o
+[93/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/error.o
+[94/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/entropy_poll.o
+[95/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecdsa.o
+[96/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/entropy.o
+[97/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/lmots.o
+[98/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/hmac_drbg.o
+[99/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/hkdf.o
+[100/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/lms.o
+[101/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/gcm.o
+[102/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cipher_wrap.o
+[103/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/md5.o
+[104/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ecp.o
+[105/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/mps_trace.o
+[106/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/cipher.o
+[107/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/net_sockets.o
+[108/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/memory_buffer_alloc.o
+[109/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/mps_reader.o
+[110/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/nist_kw.o
+[111/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pem.o
+[112/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk.o
+[113/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/padlock.o
+[114/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/oid.o
+[115/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk_wrap.o
+[116/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs12.o
+[117/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs5.o
+[118/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkcs7.o
+[119/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkparse.o
+[120/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pkwrite.o
+[121/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/platform_util.o
+[122/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/poly1305.o
+[123/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/platform.o
+[124/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/md.o
+[125/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_se.o
+[126/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/pk_ecc.o
+[127/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_storage.o
+[128/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_its_file.o
+[129/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/rsa.o
+[130/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/rsa_alt_helpers.o
+[131/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ripemd160.o
+[132/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha1.o
+[133/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_random.o
+[134/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_pake.o
+[135/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_rsa.o
+[136/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_client.o
+[137/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha3.o
+[138/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_slot_management.o
+[139/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_util.o
+[140/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_cache.o
+[141/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_ciphersuites.o
+[142/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_hash.o
+[143/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_ffdh.o
+[144/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_cipher.o
+[145/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_client.o
+[146/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_cookie.o
+[147/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_aead.o
+[148/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha256.o
+[149/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/sha512.o
+[150/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_msg.o
+[151/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_ecp.o
+[152/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_mac.o
+[153/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_ticket.o
+[154/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls.o
+[155/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls12_client.o
+[156/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls12_server.o
+[157/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_keys.o
+[158/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_client.o
+[159/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_server.o
+[160/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_tls13_generic.o
+[161/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/threading.o
+[162/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/version_features.o
+[163/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/timing.o
+[164/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_crl.o
+[165/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/version.o
+[166/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509.o
+[167/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_crt.o
+[168/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_create.o
+[169/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto_driver_wrappers_no_static.o
+[170/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/target/infineon/mbedtls/ifx_mbedtls_builtin_keys.o
+[171/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/ssl_debug_helpers_generated.o
+[172/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509_csr.o
+[173/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write_crt.o
+[174/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write.o
+[175/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/x509write_csr.o
+[176/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[177/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[178/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[179/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[180/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[181/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[182/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[183/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[184/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[185/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[186/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[187/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[188/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[189/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[190/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[191/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[192/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[193/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[194/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[195/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[196/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[197/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[198/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[199/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[200/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[201/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[202/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[203/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/ifx-mbedtls/library/psa_crypto.o
+[204/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[205/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[206/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[207/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[208/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[209/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[210/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[211/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[212/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[213/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[214/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[215/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[216/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[217/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[218/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[219/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[220/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[221/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[222/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[223/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[224/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[225/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[226/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[227/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[228/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[229/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[230/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[231/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[232/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[233/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[234/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[235/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[236/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[237/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[238/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[239/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[240/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[241/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[242/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[243/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[244/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[245/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[246/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[247/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[248/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[249/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[250/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[251/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[252/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[253/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[254/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[255/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[256/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[257/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[258/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[259/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[260/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[261/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[262/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[263/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[264/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[265/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[266/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[267/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[268/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[269/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[270/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[271/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[272/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/libraries_shared/mtb-srf/source/mtb_srf.o
+[273/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[274/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[275/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[276/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[277/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[278/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[279/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[280/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[281/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[282/283] Building object file P:/psoc-spdm-responder/proj_cm33_s/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[283/283] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex P:/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf P:/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary P:/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf P:/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+cmake -S spdm -B build_libspdm -G "Ninja" -DCMAKE_MAKE_PROGRAM="C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=toolchain_arm_none_eabi.cmake -DARM_TOOLCHAIN_DIR="C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin" -DSPDM_PROFILE_INCLUDE_DIR="P:/psoc-spdm-responder/profiles/P2" -DCMAKE_BUILD_TYPE=MinSizeRel && cmake --build build_libspdm
+make.exe : CMake Warning (deprecated) at CMakeLists.txt:31 (cmake_minimum_required):
+At line:1 char:562
++ ... n *> $null; & $make -C P:/psoc-spdm-responder build -j8 *> C:\Users\k ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Warning (...imum_required)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at P:/psoc-spdm-responder/third_party/libspdm/library/spdm_common_lib/CMakeLists.txt:1 
+(cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at P:/psoc-spdm-responder/third_party/libspdm/library/spdm_crypt_lib/CMakeLists.txt:1 
+(cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at 
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_secured_message_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/CMakeLists.txt:1 
+(cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at 
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_transport_mctp_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: P:/psoc-spdm-responder/proj_cm33_ns/build_libspdm
+[1/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_event.c.obj
+[2/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_msg_log.c.obj
+[3/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_rng.c.obj
+[4/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data_session.c.obj
+[5/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_cert.c.obj
+[6/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_kem.c.obj
+[7/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_aead.c.obj
+[8/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hmac.c.obj
+[9/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_dhe.c.obj
+[10/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hash.c.obj
+[11/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hkdf.c.obj
+[12/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service_session.c.obj
+[13/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_asym.c.obj
+[14/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest.c.obj
+[15/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hmac.c.obj
+[16/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_support.c.obj
+[17/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_aes_gcm.c.obj
+[18/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_key_schedule.c.obj
+[19/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_pss.c.obj
+[20/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_ssa.c.obj
+[21/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha2.c.obj
+[22/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdh.c.obj
+[23/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ffdh.c.obj
+[24/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdsa.c.obj
+[25/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service.c.obj
+[26/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha3.c.obj
+[27/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hkdf.c.obj
+[28/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_eddsa.c.obj
+[29/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem.c.obj
+[30/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem_vec.c.obj
+[31/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_opaque_data.c.obj
+[32/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa.c.obj
+[33/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa.c.obj
+[34/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa_vec.c.obj
+[35/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa_vec.c.obj
+[36/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange.c.obj
+[37/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange_pqc.c.obj
+[38/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_asym.c.obj
+[39/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_context_data.c.obj
+[40/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_challenge.c.obj
+[41/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_common.c.obj
+[42/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_communication.c.obj
+[43/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_challenge_auth.c.obj
+[44/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_certificate.c.obj
+[45/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_endpoint_info.c.obj
+[46/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_response.c.obj
+[47/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_digests.c.obj
+[48/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_key_update.c.obj
+[49/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_certificate.c.obj
+[50/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_session.c.obj
+[51/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_encode_decode.c.obj
+[52/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_digests.c.obj
+[53/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_endpoint_info.c.obj
+[54/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_send_event.c.obj
+[55/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_event_ack.c.obj
+[56/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_end_session_ack.c.obj
+[57/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_capabilities.c.obj
+[58/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_error.c.obj
+[59/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_handle_response_state.c.obj
+[60/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_algorithms.c.obj
+[61/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_heartbeat_ack.c.obj
+[62/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_exchange_rsp.c.obj
+[63/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_respond_if_ready.c.obj
+[64/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_update_ack.c.obj
+[65/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_finish_rsp.c.obj
+[66/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_certificate_rsp.c.obj
+[67/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_finish_rsp.c.obj
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c: In function 'libspdm_get_response_finish':
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:413:20: note: 'req_opaque_data' was declared here
+  413 |     const uint8_t *req_opaque_data;
+      |                    ^~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data_size' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:414:12: note: 'req_opaque_data_size' was declared here
+  414 |     size_t req_opaque_data_size;
+      |            ^~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_slot_id' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:404:13: note: 'req_slot_id' was declared here
+  404 |     uint8_t req_slot_id;
+      |             ^~~~~~~~~~~
+[68/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_version.c.obj
+[69/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_supported_event_types.c.obj
+[70/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_csr.c.obj
+[71/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data.c.obj
+[72/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_subscribe_event_types_ack.c.obj
+[73/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_vendor_defined_response.c.obj
+[74/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurement_extension_log.c.obj
+[75/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_pair_info.c.obj
+[76/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_response.c.obj
+[77/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_key_pair_info_ack.c.obj
+[78/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurements.c.obj
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c: In function 'libspdm_get_response_measurements':
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:517:15: warning: 'slot_id_param' may be used uninitialized [-Wmaybe-uninitialized]
+  517 |         ret = libspdm_generate_measurement_signature(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  518 |             spdm_context, session_info, slot_id_param, fill_response_ptr);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:91:13: note: 'slot_id_param' was declared here
+   91 |     uint8_t slot_id_param;
+      |             ^~~~~~~~~~~~~
+[79/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_send_ack.c.obj
+[80/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_mctp.c.obj
+[81/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_common.c.obj
+[82/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_exchange_rsp.c.obj
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c: In function 'libspdm_get_response_key_exchange':
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:626:18: warning: 'kem_encap_key_size' may be used uninitialized [-Wmaybe-uninitialized]
+  626 |         result = libspdm_secured_message_kem_encapsulate(
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  627 |             spdm_context->connection_info.algorithm.kem_alg,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  628 |             kem_context,
+      |             ~~~~~~~~~~~~
+  629 |             (const uint8_t *)request + sizeof(spdm_key_exchange_request_t),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  630 |             kem_encap_key_size, ptr, &kem_cipher_text_size, session_info->secured_message_context);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:189:12: note: 'kem_encap_key_size' was declared here
+  189 |     size_t kem_encap_key_size;
+      |            ^~~~~~~~~~~~~~~~~~
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:729:12: warning: 'use_default_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  729 |         if (use_default_opaque_data) {
+      |            ^
+P:/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:211:10: note: 'use_default_opaque_data' was declared here
+  211 |     bool use_default_opaque_data;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+[83/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_receive_send.c.obj
+[84/88] Linking C static library lib\libspdm_secured_message_lib.a
+[85/88] Linking C static library lib\libspdm_common_lib.a
+[86/88] Linking C static library lib\libspdm_crypt_lib.a
+[87/88] Linking C static library lib\libspdm_transport_mctp_lib.a
+[88/88] Linking C static library lib\libspdm_responder_lib.a
+Prebuild operations complete
+# 0: Loading the application in directory 'P:/psoc-spdm-responder/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/aead.o
+[2/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/hash.o
+[3/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/rand.o
+[4/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_memlib.o
+[5/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mldsa.o
+[6/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[7/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_debuglib.o
+[8/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/kdf.o
+[9/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_measlib.o
+[10/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mac.o
+[11/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_transport_dfu.o
+[12/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_responder.o
+[13/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[14/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/spdm_platform.o
+[15/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/dfu_user.o
+[16/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[17/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[18/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[19/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[20/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/imports/dfu/config/DFU_CFG1/COMPONENT_DFU_I2C/transport_i2c.o
+[21/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/ec.o
+[22/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[23/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/cryptlib/mlkem.o
+[24/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[25/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[26/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/spdm/device_secret.o
+[27/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[28/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/dfu/cy_dfu.o
+[29/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/router/spdm_router.o
+[30/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/log/log.o
+[31/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/local/main.o
+[32/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[33/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[34/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[35/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[36/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[37/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[38/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[39/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[40/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[41/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[42/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[43/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[44/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[45/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[46/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[47/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[48/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[49/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[50/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[51/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[52/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[53/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[54/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[55/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[56/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[57/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[58/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[59/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[60/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[61/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[62/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[63/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[64/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[65/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[66/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[67/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[68/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[69/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[70/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[71/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[72/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[73/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[74/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[75/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[76/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[77/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[78/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[79/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[80/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[81/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[82/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[83/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[84/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[85/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[86/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[87/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[88/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[89/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[90/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[91/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[92/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[93/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[94/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[95/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[96/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[97/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[98/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[99/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[100/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[101/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[102/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[103/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[104/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[105/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[106/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[107/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[108/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[109/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[110/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[111/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[112/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[113/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[114/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[115/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[116/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[117/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[118/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[119/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[120/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[121/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[122/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[123/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-srf/source/mtb_srf.o
+[124/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/mtb-srf/source/COMPONENT_NON_SECURE_DEVICE/mtb_srf_pool.o
+[125/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[126/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/libraries_shared/retarget-io/source/cy_retarget_io.o
+[127/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[128/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[129/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[130/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[131/132] Building object file P:/psoc-spdm-responder/proj_cm33_ns/build/Release/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[132/132] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex P:/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf P:/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary P:/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf P:/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_ns'
+/usr/bin/make -C proj_cm33_s application_postbuild MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns"
+make[1]: Entering directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_s'
+mkdir -p ../build ../build/project_hex
+(cd ../configs && C:/Users/kpato/Infineon/Tools/ModusToolbox-Edge-Protect-Security-Suite-2.4.0/tools/edgeprotecttools/bin/edgeprotecttools.exe run-config -i signer_combiner.json --symbol-search ../proj_cm33_s/../bsps/TARGET_APP_KIT_PSC3M6_EVAL ) 
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x12000000-0x12000068 to 0x32000000-0x32000068
+: E : INFO  : Relocating segment 0x12000080-0x12014244 to 0x32000080-0x32014244
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_s_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x02020000-0x0202F9CC to 0x22020000-0x2202F9CC
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_ns_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : merge: command "merge" validation succeeded
+: E : INFO  : merge: command "merge" succeeded
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |              146,424 |       524,288 |
+ |   m33_nvm             | 0x00000000 | ( 63%)        82,476 |       131,072 |
+ |     .vector_table     | 0x00000000 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000080 |                  160 |               |
+ |     .text             | 0x00000120 |               81,816 |               |
+ |     .ARM.exidx        | 0x000140b8 |                    8 |               |
+ |     .copy.table       | 0x000140c0 |                   24 |               |
+ |     .zero.table       | 0x000140d8 |                    8 |               |
+ |     .data (load data) | 0x000140e0 |                  356 |               |
+ |   m33ns_nvm           | 0x00020000 | ( 39%)        63,948 |       163,840 |
+ |     .text             | 0x00000000 |               63,256 |               |
+ |     .ARM.exidx        | 0x0000f718 |                    8 |               |
+ |     .copy.table       | 0x0000f720 |                   24 |               |
+ |     .zero.table       | 0x0000f738 |                    8 |               |
+ |     .data (load data) | 0x0000f740 |                  652 |               |
+ |   pas                 | 0x00048000 | (  0%)             0 |        24,576 |
+ |   <unallocated>       |            |                      |       204,800 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |              129,140 |       131,072 |
+ |   m33_data            | 0x00000000 | (100%)        59,388 |        59,392 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  356 |               |
+ |     .noinit           | 0x00000440 |                   52 |               |
+ |     .bss              | 0x00000478 |               11,020 |               |
+ |     .heap             | 0x00002f84 |               39,036 |               |
+ |     .stack            | 0x0000c800 |                8,192 |               |
+ |   m33ns_data          | 0x0000e800 | (100%)        69,628 |        69,632 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  652 |               |
+ |     .noinit           | 0x00000568 |                   52 |               |
+ |     .bss              | 0x000005a0 |               20,424 |               |
+ |     .heap             | 0x00005568 |               43,672 |               |
+ |     .stack            | 0x00010000 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0001f800 | (  6%)           124 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |     .cy_sharedmem     | 0x00000000 |                  124 |               |
+ |   <unallocated>       |            |                      |             0 |
+  ---------------------------------------------------------------------------
+make[1]: Leaving directory '/cygdrive/p/psoc-spdm-responder/proj_cm33_s'
+make: Leaving directory '/cygdrive/p/psoc-spdm-responder'

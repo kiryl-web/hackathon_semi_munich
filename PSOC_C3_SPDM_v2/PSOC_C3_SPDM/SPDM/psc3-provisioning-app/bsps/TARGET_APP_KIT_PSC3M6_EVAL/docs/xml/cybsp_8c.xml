@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cybsp_8c" kind="file" language="C++">
+    <compoundname>cybsp.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="cybsp__pm_8h" local="yes">cybsp_pm.h</includes>
+    <includes local="yes">cy_syspm.h</includes>
+    <includes local="yes">cy_sysclk.h</includes>
+    <includes refid="cybsp_8h" local="yes">cybsp.h</includes>
+    <includes local="yes">cycfg.h</includes>
+    <includes refid="cybsp__dsram_8h" local="yes">cybsp_dsram.h</includes>
+    <includes local="yes">mtb_srf_pool_init.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>cybsp.c</label>
+        <link refid="cybsp_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cy_sysclk.h</label>
+      </node>
+      <node id="3">
+        <label>cy_syspm.h</label>
+      </node>
+      <node id="5">
+        <label>cycfg.h</label>
+      </node>
+      <node id="6">
+        <label>mtb_srf_pool_init.h</label>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cybsp_8c_1afa59dac61cf3d20529cee4978cf0de40" prot="public" static="no">
+        <name>CYBSP_SYSCLK_PM_CALLBACK_ORDER</name>
+        <initializer>(255u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" line="70" column="13" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cybsp_8c_1a934d562d62bd0c02534e51b028f276f4" prot="public" static="no">
+        <name>CYBSP_DISABLE_SRF_INIT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" line="75" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__bsp__functions_1gab989986b285e127f78f61c29f6ccbbfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cy_rslt_t</type>
+        <definition>cy_rslt_t cybsp_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize all hardware on the board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CY_RSLT_SUCCESS if the board is successfully initialized, if there is a problem initializing any hardware it returns an error code specific to the hardware module that had a problem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" line="99" column="11" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" bodystart="99" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Description: Provides initialization code for starting up the hardware contained on the Infineon board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>(c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(CYBSP_SKIP_PM_REGISTRATION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_pm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_syspm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_sysclk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cycfg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_dsram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CY_IP_MXSMIF_INSTANCES)<sp/>&amp;&amp;<sp/>(CY_IP_MXSMIF_INSTANCES<sp/>&gt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cycfg_qspi_memslot.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>((CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_NON_SECURE_DEVICE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cycfg_protection.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBSP_DISABLE_SRF_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mtb_srf.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mtb_srf_pool_init.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;partition_ARMCM33.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>(CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CYBSP_POST_CFG_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>BSP<sp/>requires<sp/>a<sp/>step<sp/>immediately<sp/>after<sp/>init_cycfg_all,<sp/>declare<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">cy_rslt_t<sp/>cybsp_post_cfg_init();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(CYBSP_POST_CFG_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>sysclk<sp/>deep<sp/>sleep<sp/>callback<sp/>is<sp/>recommended<sp/>to<sp/>be<sp/>the<sp/>last<sp/>callback<sp/>that<sp/>is<sp/>executed<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>entry<sp/>into<sp/>deep<sp/>sleep<sp/>mode<sp/>and<sp/>the<sp/>first<sp/>one<sp/>upon<sp/>exit<sp/>the<sp/>deep<sp/>sleep<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Doing<sp/>so<sp/>minimizes<sp/>the<sp/>time<sp/>spent<sp/>on<sp/>low<sp/>power<sp/>mode<sp/>entry<sp/>and<sp/>exit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBSP_SYSCLK_PM_CALLBACK_ORDER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>CYBSP_SYSCLK_PM_CALLBACK_ORDER<sp/><sp/>(255u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(COMPONENT_MW_MTB_SRF)<sp/>||<sp/>defined(CY_SRF_DISABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>MTB-SRF<sp/>library<sp/>isn&apos;t<sp/>present,<sp/>disable<sp/>its<sp/>initialization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CYBSP_DISABLE_SRF_INIT<sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBSP_DISABLE_SRF_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Secure<sp/>context<sp/>and<sp/>pool<sp/>for<sp/>use<sp/>with<sp/>the<sp/>Secure<sp/>Request<sp/>Framework</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MTB_SRF_SECURE_CONTEXT_SECTION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Optional<sp/>macro<sp/>to<sp/>specify<sp/>the<sp/>linker<sp/>section<sp/>for<sp/>the<sp/>secure<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MTB_SRF_SECURE_CONTEXT_SECTION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">MTB_SRF_SECURE_CONTEXT_SECTION<sp/>mtb_srf_context_s_t<sp/>cybsp_srf_context;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">mtb_srf_pool_t<sp/>cy_pdl_srf_default_pool;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">CY_SECTION_SHAREDMEM<sp/>_MTB_SRF_DATA_ALIGN<sp/>uint32_t<sp/>cy_pdl_srf_default_pool_memory[(MTB_SRF_POOL_ENTRY_SIZE(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__mtb__srf__config_1ga864b2d587f63354c174102937f1c4e36" kindref="member">MTB_SRF_MAX_ARG_IN_SIZE</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__mtb__srf__config_1ga68ee7633d8162c1f31896810f563e206" kindref="member">MTB_SRF_MAX_ARG_OUT_SIZE</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><ref refid="group__group__mtb__srf__config_1ga589067eb1e3af68adab2b2caaf8435d5" kindref="member">MTB_SRF_POOL_SIZE</ref>)<sp/>/</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t)];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ifndef<sp/>CYBSP_DISABLE_SRF_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_init</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">cy_rslt_t<sp/><ref refid="group__group__bsp__functions_1gab989986b285e127f78f61c29f6ccbbfa" kindref="member">cybsp_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>hardware<sp/>manager<sp/>to<sp/>track<sp/>resource<sp/>usage<sp/>then<sp/>initialize<sp/>all<sp/>system<sp/>(clock/power)<sp/>board</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>cy_rslt_t<sp/>result<sp/>=<sp/>CY_RSLT_SUCCESS;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CM33<sp/>secure<sp/>is<sp/>the<sp/>first<sp/>to<sp/>boot.<sp/>Initialize<sp/>peripherals,<sp/>SAU,<sp/>any<sp/>enabled<sp/>MPCs,<sp/>and<sp/>the<sp/>MPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>this<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>System<sp/>Control<sp/>Block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>SysCtrlBlk_Setup();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined<sp/>(__FPU_USED)<sp/>&amp;&amp;<sp/>(__FPU_USED<sp/>==<sp/>1U)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined<sp/>(TZ_FPU_NS_USAGE)<sp/>&amp;&amp;<sp/>(TZ_FPU_NS_USAGE<sp/>==<sp/>1U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*FPU<sp/>initialization*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>initFPU();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>SystemCoreClock<sp/>before<sp/>init_cycfg_all()<sp/>enables<sp/>SAU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SAU<sp/>Region<sp/>2<sp/>marks<sp/>0x40000000-0xFFFFFFFF<sp/>as<sp/>Non-Secure,<sp/>which<sp/>covers<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>secure<sp/>MMIO<sp/>alias<sp/>(0x52xxxxxx).<sp/>Any<sp/>peripheral<sp/>register<sp/>read<sp/>after<sp/>SAU<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enabled<sp/>will<sp/>carry<sp/>the<sp/>NS<sp/>attribute<sp/>and<sp/>fault.<sp/>At<sp/>this<sp/>point<sp/>SAU<sp/>is<sp/>still</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disabled<sp/>(default<sp/>=<sp/>everything<sp/>secure),<sp/>so<sp/>the<sp/>clock<sp/>register<sp/>reads<sp/>succeed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>SystemCoreClockUpdate();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>system<sp/>clocks,<sp/>peripheral<sp/>clock<sp/>dividers,<sp/>pin<sp/>configurations,<sp/>routing,<sp/>SAU,<sp/>MPCs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>MPU<sp/>for<sp/>the<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>init_cycfg_all();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(CY_RSLT_SUCCESS<sp/>==<sp/>result)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>cybsp_register_custom_sysclk_pm_callback();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CYBSP_POST_CFG_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Perform<sp/>custom<sp/>initialization<sp/>step<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>cybsp_post_cfg_init();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>CY_RSLT_SUCCESS)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>the<sp/>SRF<sp/>and<sp/>register<sp/>the<sp/>PDL<sp/>module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>mtb_srf_init(&amp;cybsp_srf_context);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>CY_RSLT_SUCCESS)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CY_PDL_ENABLE_SECURE_AWARE)<sp/>&amp;&amp;<sp/>(CY_PDL_ENABLE_SECURE_AWARE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>cy_pdl_srf_module_register(&amp;cybsp_srf_context);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>CY_RSLT_SUCCESS)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>defined(CY_PDL_ENABLE_SECURE_AWARE)<sp/>&amp;&amp;<sp/>(CY_PDL_ENABLE_SECURE_AWARE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>NS<sp/>NVIC<sp/>interrupts<sp/>-<sp/>only<sp/>for<sp/>secure<sp/>main<sp/>CM33<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CY_CYBSP_NVIC_NS_ENABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>NVIC_NS_Setup();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>defined(CY_CYBSP_NVIC_NS_ENABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else<sp/></highlight><highlight class="comment">//<sp/>CM33<sp/>non-secure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>mtb_srf_pool_init(&amp;cy_pdl_srf_default_pool,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;cy_pdl_srf_default_pool_memory[0],<sp/><ref refid="group__group__mtb__srf__config_1ga589067eb1e3af68adab2b2caaf8435d5" kindref="member">MTB_SRF_POOL_SIZE</ref>,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__mtb__srf__config_1ga864b2d587f63354c174102937f1c4e36" kindref="member">MTB_SRF_MAX_ARG_IN_SIZE</ref>,<sp/><ref refid="group__group__mtb__srf__config_1ga68ee7633d8162c1f31896810f563e206" kindref="member">MTB_SRF_MAX_ARG_OUT_SIZE</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>CY_RSLT_SUCCESS)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>ECO<sp/>frequency<sp/>is<sp/>stored<sp/>in<sp/>a<sp/>software<sp/>variable<sp/>(see<sp/>Cy_SysClk_EcoSetFrequency)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>is<sp/>populated<sp/>by<sp/>init_cycfg_all()<sp/>on<sp/>the<sp/>secure<sp/>core<sp/>only.<sp/>The<sp/>non-secure<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>its<sp/>own<sp/>copy<sp/>of<sp/>that<sp/>variable,<sp/>so<sp/>without<sp/>this<sp/>call<sp/>Cy_SysClk_EcoGetFrequency()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>returns<sp/>0<sp/>on<sp/>the<sp/>non-secure<sp/>side<sp/>and<sp/>every<sp/>ECO-derived<sp/>clock<sp/>reports<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CY_CFG_SYSCLK_ECO_ENABLED)<sp/>&amp;&amp;<sp/>(CY_CFG_SYSCLK_ECO_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>Cy_SysClk_EcoSetFrequency(CY_CFG_SYSCLK_ECO_FREQ);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>defined(CY_CFG_SYSCLK_ECO_ENABLED)<sp/>&amp;&amp;<sp/>(CY_CFG_SYSCLK_ECO_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Non-secure<sp/>app<sp/>builds<sp/>need<sp/>this<sp/>explicit<sp/>call.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>SystemCoreClockUpdate();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>((CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_NON_SECURE_DEVICE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>non-secure<sp/>MPU<sp/>(configured<sp/>via<sp/>the<sp/>Device<sp/>Configurator).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>init_cycfg_protection()<sp/>calls<sp/>Cy_MPU_Init()<sp/>when<sp/>COMPONENT_NON_SECURE_DEVICE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>defined,<sp/>which<sp/>programs<sp/>the<sp/>MPU<sp/>regions<sp/>and<sp/>enables<sp/>the<sp/>MPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//init_cycfg_protection();<sp/>/*<sp/>For<sp/>now<sp/>application<sp/>needs<sp/>to<sp/>call<sp/>this<sp/>when<sp/>MPU<sp/>is<sp/>enabled<sp/>for<sp/>non-secure<sp/>from<sp/>device-configurator<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>((CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_NON_SECURE_DEVICE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>(CY_SYSTEM_CPU_M33)<sp/>&amp;&amp;<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Always<sp/>initialize<sp/>peripheral-related<sp/>data<sp/>structures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Skip<sp/>PM/DSRAM<sp/>registration<sp/>on<sp/>NS<sp/>side<sp/>cybsp_syspm_dsram_init()<sp/>writes<sp/>to<sp/>secure<sp/>BACKUP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>registers<sp/>and<sp/>the<sp/>warmboot<sp/>handler<sp/>calls<sp/>init_cycfg_all()<sp/>which<sp/>accesses<sp/>secure<sp/>peripherals.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(CYBSP_SKIP_PM_REGISTRATION)<sp/>&amp;&amp;<sp/>!defined(COMPONENT_NON_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(CY_RSLT_SUCCESS<sp/>==<sp/>result)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="group__group__bsp__dsram__functions_1gae9217e4b92ef5f9cda69a3bc26b9a5a8" kindref="member">cybsp_syspm_dsram_init</ref>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(CY_RSLT_SUCCESS<sp/>==<sp/>result)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>cybsp_pm_callbacks_register();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CYBSP_SKIP_PM_REGISTRATION)<sp/>&amp;&amp;<sp/>!defined(COMPONENT_NON_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_MW_MTB_SRF)<sp/>&amp;&amp;<sp/>!defined(MTB_SRF_CUSTOM_REQUEST_SUBMIT)<sp/>&amp;&amp;<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mtb_srf_request_submit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">cy_rslt_t<sp/>__attribute__((cmse_nonsecure_entry))<sp/>mtb_srf_request_submit(</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>mtb_srf_invec_ns_t*<sp/>inVec_ns,<sp/>uint8_t<sp/>inVec_cnt_ns,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>mtb_srf_outvec_ns_t*<sp/>outVec_ns,<sp/>uint8_t<sp/>outVec_cnt_ns)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mtb_srf_request_execute(&amp;cybsp_srf_context,<sp/>inVec_ns,<sp/>inVec_cnt_ns,<sp/>outVec_ns,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outVec_cnt_ns);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(COMPONENT_SECURE_DEVICE)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(COMPONENT_MW_MTB_SRF)<sp/>&amp;&amp;<sp/>!defined(MTB_SRF_CUSTOM_REQUEST_SUBMIT)<sp/>&amp;&amp;<sp/>!defined(CYBSP_DISABLE_SRF_INIT)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c"/>
+  </compounddef>
+</doxygen>

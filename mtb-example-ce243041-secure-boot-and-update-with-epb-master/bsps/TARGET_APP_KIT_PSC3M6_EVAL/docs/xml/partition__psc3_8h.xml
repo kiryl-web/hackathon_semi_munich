@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="partition__psc3_8h" kind="file" language="C++">
+    <compoundname>partition_psc3.h</compoundname>
+    <includes local="yes">cy_device_headers.h</includes>
+    <includedby refid="partition__ARMCM33_8h" local="yes">partition_ARMCM33.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>partition_psc3.h</label>
+        <link refid="partition__psc3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cy_device_headers.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="partition__psc3_8h_1aa4a0866f95fab5403724626bc0bc27dd" prot="public" static="no">
+        <name>SRAM0_NS_SAHB_START</name>
+        <initializer>(CY_SRAM_NS_SBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="31" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a7f577c7192be2edd97005dd267d5aa03" prot="public" static="no">
+        <name>SRAM0_S_SAHB_START</name>
+        <initializer>(CY_SRAM_S_SBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="32" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a6b8d4a9cd945367f8e4c9cba28f61847" prot="public" static="no">
+        <name>SRAM0_NS_CBUS_START</name>
+        <initializer>(CY_SRAM_NS_CBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="33" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a784c0fa9f90367ccb7883400012ef172" prot="public" static="no">
+        <name>SRAM0_S_CBUS_START</name>
+        <initializer>(CY_SRAM_S_CBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="34" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ade6f29a1d3e5bd550ae6527640d8ab0d" prot="public" static="no">
+        <name>SRAM0_SIZE</name>
+        <initializer>                                    ((CPUSS_CHIP_TOP_RAMC0_SIZE + (CPUSS_RAMC1_PRESENT ? CPUSS_CHIP_TOP_RAMC1_SIZE : 0U) +\
+                                    (CPUSS_RAMC2_PRESENT ? CPUSS_CHIP_TOP_RAMC2_SIZE : 0U)) * 1024U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="35" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a4d3ec1e480b8a51cb00195461bfaa100" prot="public" static="no">
+        <name>MMIO_NS_START</name>
+        <initializer>0x42000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="37" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a5ca03fb8c57a2ff53627512693c0abca" prot="public" static="no">
+        <name>MMIO_S_START</name>
+        <initializer>0x52000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="38" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ab19af8793b818388cd483ae2617bd8b9" prot="public" static="no">
+        <name>MMIO_SIZE</name>
+        <initializer>0x02000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="39" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a575b202ae801a51755b614f6760bc51a" prot="public" static="no">
+        <name>FLASH_NS_SAHB_START</name>
+        <initializer>(CY_FLASH_NS_SBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="40" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a1efbfe429a7aa9cf6e60ea60a1b93f33" prot="public" static="no">
+        <name>FLASH_S_SAHB_START</name>
+        <initializer>(CY_FLASH_S_SBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="41" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a935365e05c138d540231996ff196d046" prot="public" static="no">
+        <name>FLASH_NS_CBUS_START</name>
+        <initializer>(CY_FLASH_NS_CBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="42" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a8e8b44c5c517997b4e6106ffaa72b5b3" prot="public" static="no">
+        <name>FLASH_S_CBUS_START</name>
+        <initializer>(CY_FLASH_S_CBUS_BASE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="43" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ae69620948dea1b76e0ab7843ab719db7" prot="public" static="no">
+        <name>FLASH_SIZE</name>
+        <initializer>(CY_FLASH_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="44" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a9efa5367b40283802f546a4f3e55fe17" prot="public" static="no">
+        <name>FLASH_S_SIZE</name>
+        <initializer>(FLASH_SIZE / 4U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="54" column="14" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a327d48d172d98657b1f4e5b0888e0680" prot="public" static="no">
+        <name>FLASH_NSC_SIZE</name>
+        <initializer>0x00000800U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="60" column="14" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a05d8c90d5bebf0f50b7df851ffceb6c7" prot="public" static="no">
+        <name>FLASH_NS_OFFSET</name>
+        <initializer>(FLASH_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="63" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a53b2369de0f49f697ba401c0666849b4" prot="public" static="no">
+        <name>FLASH_NS_SIZE</name>
+        <initializer>(FLASH_SIZE - FLASH_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="64" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a54bd59653affbf29b2883067c84fa341" prot="public" static="no">
+        <name>SRAM0_S_SIZE</name>
+        <initializer>(CY_SRAM_SIZE / 4U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="70" column="14" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ad7ec13f90e46e1c248f86d437221dccd" prot="public" static="no">
+        <name>SRAM0_NSC_SIZE</name>
+        <initializer>0x00000800U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="79" column="23" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1aa97c69aaea4502d862e70f559dc8969e" prot="public" static="no">
+        <name>SRAM0_SHM_S_SIZE</name>
+        <initializer>0x00000800U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="87" column="14" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1adbb4311b17f397dfdf8e30b6dd41a6db" prot="public" static="no">
+        <name>SRAM0_SHM_NS_SIZE</name>
+        <initializer>0x00000800U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="93" column="14" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a3a1db184af98354d682eb390bdc349a5" prot="public" static="no">
+        <name>SRAM0_SHM_SIZE</name>
+        <initializer>(SRAM0_SHM_S_SIZE + SRAM0_SHM_NS_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="96" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a8905a25019ac6c629cf26adca03175d8" prot="public" static="no">
+        <name>SRAM0_NS_SIZE</name>
+        <initializer>(SRAM0_SIZE - SRAM0_S_SIZE - SRAM0_SHM_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="98" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a1185d7168a82973342a04e63af5ebe2e" prot="public" static="no">
+        <name>SRAM0_NS_CBUS_CODE_START</name>
+        <initializer>(SRAM0_NS_CBUS_START + SRAM0_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="99" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ad0d0c12fdec2922889a9a4473aa73fdc" prot="public" static="no">
+        <name>FLASH_NS_CBUS_CODE_START</name>
+        <initializer>(FLASH_NS_CBUS_START + FLASH_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="100" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1af6553b7ecf37ea43e6c53ed2ece59be2" prot="public" static="no">
+        <name>SRAM0_NS_OFFSET</name>
+        <initializer>(SRAM0_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="102" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a6ffd5e2597bb1a8f80ddf1f7c64ddfa9" prot="public" static="no">
+        <name>SRAM0_SHM_OFFSET</name>
+        <initializer>(SRAM0_S_SIZE + SRAM0_NS_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="103" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1abf82b96d46eb17c251d600e1e02fe9d2" prot="public" static="no">
+        <name>SRAM0_NSC_OFFSET</name>
+        <initializer>(SRAM0_S_SIZE + SRAM0_NS_SIZE + SRAM0_SHM_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="104" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a62e42576840139e87f00ba1aedec299c" prot="public" static="no">
+        <name>SRAM0_S_SAHB_SHARED_START</name>
+        <initializer>(SRAM0_S_SAHB_START + SRAM0_SIZE - SRAM0_SHM_S_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="107" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1abcb491c2d5edaa3e9642e4723cfe73d2" prot="public" static="no">
+        <name>SRAM0_S_CBUS_SHARED_START</name>
+        <initializer>(SRAM0_S_CBUS_START + SRAM0_SIZE - SRAM0_SHM_S_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="108" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a2e55340b563c93a8ed9a8060643e5588" prot="public" static="no">
+        <name>SRAM0_NS_SAHB_SHARED_START</name>
+        <initializer>(SRAM0_NS_SAHB_START + SRAM0_SIZE - SRAM0_SHM_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="109" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1aca8138ebae0b96dd77f07e9bb3b9415e" prot="public" static="no">
+        <name>SRAM0_NS_CBUS_SHARED_START</name>
+        <initializer>(SRAM0_NS_CBUS_START + SRAM0_SIZE - SRAM0_SHM_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="110" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a7abae1180101a63326b6ae1f757f48e9" prot="public" static="no">
+        <name>SRAM0_NS_SBUS_SAU_START</name>
+        <initializer>(SRAM0_NS_SAHB_START + SRAM0_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="115" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1acd27caa5cd49fadeeea4be484627db77" prot="public" static="no">
+        <name>SRAM0_NS_SBUS_SAU_END</name>
+        <initializer>(SRAM0_NS_SAHB_START + SRAM0_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="116" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a6265d7e731ae05b32d4c8c7c083fb181" prot="public" static="no">
+        <name>SRAM0_NS_CBUS_SAU_START</name>
+        <initializer>(SRAM0_NS_CBUS_START + SRAM0_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="117" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1ad2c9dac9f31f9a6a56491a520d53b3b8" prot="public" static="no">
+        <name>SRAM0_NS_CBUS_SAU_END</name>
+        <initializer>(SRAM0_NS_CBUS_START + SRAM0_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="118" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1abb6c036dc9f0509ce613131982be704a" prot="public" static="no">
+        <name>MMIO_NS_SAU_START</name>
+        <initializer>(MMIO_NS_START)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="119" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a7fc6090dc77ebf33c2545538fae17507" prot="public" static="no">
+        <name>MMIO_NS_SAU_END</name>
+        <initializer>(MMIO_NS_START + MMIO_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="120" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a4143befe0820ba68bb66160595dfb0fc" prot="public" static="no">
+        <name>FLASH_NS_SBUS_SAU_START</name>
+        <initializer>(FLASH_NS_SAHB_START + FLASH_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="121" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a26c4d3fe2489d30c6fc7c10192af4aa5" prot="public" static="no">
+        <name>FLASH_NS_SBUS_SAU_END</name>
+        <initializer>(FLASH_NS_SAHB_START + FLASH_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="122" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1aea881a99bd54c2af529413bc505f4556" prot="public" static="no">
+        <name>FLASH_NS_CBUS_SAU_START</name>
+        <initializer>(FLASH_NS_CBUS_START + FLASH_S_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="123" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a81d6336dadd87a85160549b286c32efa" prot="public" static="no">
+        <name>FLASH_NS_CBUS_SAU_END</name>
+        <initializer>(FLASH_NS_CBUS_START + FLASH_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="124" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a613b4987ff9eaeb06f17fd56c2cb1e69" prot="public" static="no">
+        <name>NS_BOOT_START</name>
+        <initializer>(SRAM0_NS_CBUS_CODE_START)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="130" column="10" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a0af4692b61acf0cf34a1d710643b80b2" prot="public" static="no">
+        <name>NSC_SAU_START</name>
+        <initializer>(SRAM0_S_CBUS_START + SRAM0_SIZE - SRAM0_NSC_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="131" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="partition__psc3_8h_1a1543d2877fb5d7b6b40a3b5114d52f45" prot="public" static="no">
+        <name>NSC_SAU_END</name>
+        <initializer>(SRAM0_S_CBUS_START + SRAM0_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" line="132" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>\file<sp/>partition_psc3.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>\brief<sp/>Memory<sp/>partition<sp/>definitions<sp/>for<sp/>PSC3M6.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">********************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>\copyright</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>(c)<sp/>2016-2026,<sp/>Infineon<sp/>Technologies<sp/>AG,<sp/>or<sp/>an<sp/>affiliate<sp/>of<sp/>Infineon</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>Technologies<sp/>AG.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PARTITION_PSC3_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PARTITION_PSC3_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_device_headers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Memory<sp/>layout<sp/>definition</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_SAHB_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_SRAM_NS_SBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_S_SAHB_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_SRAM_S_SBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_CBUS_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_SRAM_NS_CBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_S_CBUS_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_SRAM_S_CBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((CPUSS_CHIP_TOP_RAMC0_SIZE<sp/>+<sp/>(CPUSS_RAMC1_PRESENT<sp/>?<sp/>CPUSS_CHIP_TOP_RAMC1_SIZE<sp/>:<sp/>0U)<sp/>+\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CPUSS_RAMC2_PRESENT<sp/>?<sp/>CPUSS_CHIP_TOP_RAMC2_SIZE<sp/>:<sp/>0U))<sp/>*<sp/>1024U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMIO_NS_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x42000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMIO_S_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x52000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMIO_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_SAHB_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_FLASH_NS_SBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_S_SAHB_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_FLASH_S_SBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_CBUS_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_FLASH_NS_CBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_S_CBUS_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_FLASH_S_CBUS_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_FLASH_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>memory<sp/>sectors<sp/>size.<sp/>Need<sp/>to<sp/>be<sp/>alighted<sp/>with<sp/>Linker<sp/>scripts</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>size<sp/>of<sp/>secure<sp/>flash<sp/>also<sp/>includes<sp/>the<sp/>FLASH_NSC_SIZE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FLASH_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(USER_FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FLASH_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_SIZE<sp/>/<sp/>4U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_FLASH_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FLASH_NSC_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(USER_FLASH_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FLASH_NSC_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000800U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_SIZE<sp/>-<sp/>FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>RAM<sp/>application<sp/>the<sp/>size<sp/>covers<sp/>both<sp/>code<sp/>and<sp/>data<sp/>regions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_SRAM_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(USER_SRAM_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CY_SRAM_SIZE<sp/>/<sp/>4U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_NSC_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USER_SRAM0_NSC_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(CY_PDL_FLASH_BOOT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_NSC_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_NSC_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000800U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>shared<sp/>memory<sp/>is<sp/>located<sp/>in<sp/>the<sp/>end<sp/>of<sp/>SRAM<sp/>region<sp/>for<sp/>both<sp/>application<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_SRAM0_SHM_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_SHM_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(USER_SRAM0_SHM_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_SHM_S_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000800U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USER_SRAM0_SHM_NS_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_SHM_NS_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(USER_SRAM0_SHM_NS_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SRAM0_SHM_NS_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000800U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_SHM_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_SHM_S_SIZE<sp/>+<sp/>SRAM0_SHM_NS_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_SIZE<sp/>-<sp/>SRAM0_S_SIZE<sp/>-<sp/>SRAM0_SHM_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_CBUS_CODE_START<sp/><sp/><sp/><sp/>(SRAM0_NS_CBUS_START<sp/>+<sp/>SRAM0_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_CBUS_CODE_START<sp/><sp/><sp/><sp/>(FLASH_NS_CBUS_START<sp/>+<sp/>FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_SHM_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_S_SIZE<sp/>+<sp/>SRAM0_NS_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NSC_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_S_SIZE<sp/>+<sp/>SRAM0_NS_SIZE<sp/>+<sp/>SRAM0_SHM_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_S_SAHB_SHARED_START<sp/><sp/><sp/>(SRAM0_S_SAHB_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_SHM_S_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_S_CBUS_SHARED_START<sp/><sp/><sp/>(SRAM0_S_CBUS_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_SHM_S_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_SAHB_SHARED_START<sp/><sp/>(SRAM0_NS_SAHB_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_SHM_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_CBUS_SHARED_START<sp/><sp/>(SRAM0_NS_CBUS_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_SHM_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SAU<sp/>regions</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_SBUS_SAU_START<sp/><sp/><sp/><sp/><sp/>(SRAM0_NS_SAHB_START<sp/>+<sp/>SRAM0_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_SBUS_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_NS_SAHB_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_CBUS_SAU_START<sp/><sp/><sp/><sp/><sp/>(SRAM0_NS_CBUS_START<sp/>+<sp/>SRAM0_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRAM0_NS_CBUS_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_NS_CBUS_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMIO_NS_SAU_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MMIO_NS_START)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MMIO_NS_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MMIO_NS_START<sp/>+<sp/>MMIO_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_SBUS_SAU_START<sp/><sp/><sp/><sp/><sp/>(FLASH_NS_SAHB_START<sp/>+<sp/>FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_SBUS_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_NS_SAHB_START<sp/>+<sp/>FLASH_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_CBUS_SAU_START<sp/><sp/><sp/><sp/><sp/>(FLASH_NS_CBUS_START<sp/>+<sp/>FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_NS_CBUS_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_NS_CBUS_START<sp/>+<sp/>FLASH_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CY_PDL_FLASH_BOOT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NS_BOOT_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_NS_CBUS_CODE_START)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSC_SAU_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_S_CBUS_START<sp/>+<sp/>FLASH_S_SIZE<sp/>-<sp/>FLASH_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSC_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FLASH_S_CBUS_START<sp/>+<sp/>FLASH_S_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NS_BOOT_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_NS_CBUS_CODE_START)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSC_SAU_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_S_CBUS_START<sp/>+<sp/>SRAM0_SIZE<sp/>-<sp/>SRAM0_NSC_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSC_SAU_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SRAM0_S_CBUS_START<sp/>+<sp/>SRAM0_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_PARTITION_PSC3_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/partition_psc3.h"/>
+  </compounddef>
+</doxygen>

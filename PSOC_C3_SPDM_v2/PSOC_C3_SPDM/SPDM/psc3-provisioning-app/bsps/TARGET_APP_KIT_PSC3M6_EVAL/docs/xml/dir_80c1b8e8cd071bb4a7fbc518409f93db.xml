@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_80c1b8e8cd071bb4a7fbc518409f93db" kind="dir">
+    <compoundname>TARGET_KIT_PSC3M6_EVAL</compoundname>
+    <innerdir refid="dir_a64a95de6121becff97a48ae7a566544">COMPONENT_SECURE_DEVICE</innerdir>
+    <innerfile refid="cybsp_8c">cybsp.c</innerfile>
+    <innerfile refid="cybsp_8h">cybsp.h</innerfile>
+    <innerfile refid="cybsp__doc_8h">cybsp_doc.h</innerfile>
+    <innerfile refid="cybsp__dsram_8c">cybsp_dsram.c</innerfile>
+    <innerfile refid="cybsp__dsram_8h">cybsp_dsram.h</innerfile>
+    <innerfile refid="cybsp__hw__config_8h">cybsp_hw_config.h</innerfile>
+    <innerfile refid="cybsp__pm_8c">cybsp_pm.c</innerfile>
+    <innerfile refid="cybsp__pm_8h">cybsp_pm.h</innerfile>
+    <innerfile refid="cybsp__pm__callbacks_8c">cybsp_pm_callbacks.c</innerfile>
+    <innerfile refid="cybsp__pm__callbacks_8h">cybsp_pm_callbacks.h</innerfile>
+    <innerfile refid="cybsp__types_8h">cybsp_types.h</innerfile>
+    <innerfile refid="gpio__psc3m6__e__lqfp__100_8h">gpio_psc3m6_e_lqfp_100.h</innerfile>
+    <innerfile refid="mtb__ipc__config_8h">mtb_ipc_config.h</innerfile>
+    <innerfile refid="mtb__srf__config_8h">mtb_srf_config.h</innerfile>
+    <innerfile refid="partition__psc3_8h">partition_psc3.h</innerfile>
+    <innerfile refid="psc3m6__config_8h">psc3m6_config.h</innerfile>
+    <innerfile refid="startup__cat1b_8h">startup_cat1b.h</innerfile>
+    <innerfile refid="startup__cat1b__cm33_8c">startup_cat1b_cm33.c</innerfile>
+    <innerfile refid="system__cat1b_8h">system_cat1b.h</innerfile>
+    <innerfile refid="system__psc3__x6_8c">system_psc3_x6.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/"/>
+  </compounddef>
+</doxygen>

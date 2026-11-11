@@ -1,0 +1,40 @@
+  3.883s [524s.288ms][DBG] [2J[;H
+  3.957s [0s.0ms][INF] MCUBoot Bootloader Started
+  3.960s [0s.0ms][INF] boot_go_for_image_id
+  3.963s [0s.0ms][INF] Processing img id: 0
+  3.965s [0s.1ms][DBG]  * boot_prepare_image_for_update...
+  3.970s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  3.975s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  3.981s [0s.16ms][DBG]  * There was no partial swap, determine swap type.
+  3.987s [0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  3.996s [0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  4.005s [0s.40ms][INF] Swap type: test
+  4.008s [0s.43ms][DBG] > boot_validate_slot: fa_id = 2
+  4.012s [0s.47ms][ERR] insufficient version in secondary slot
+  6.490s [2s.572ms][DBG] < boot_validate_slot: fa_id = 2
+  6.545s [2s.572ms][DBG] < boot_prepare_image_for_update
+  6.550s [2s.572ms][DBG]  * process swap_type = 1
+  6.554s [2s.573ms][DBG] > boot_validate_slot: fa_id = 1
+  6.557s [2s.643ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  6.619s [2s.643ms][DBG] < boot_validate_slot: fa_id = 1
+  6.624s [2s.643ms][INF] Successfully added image data to shared area
+  6.628s [2s.648ms][INF] User Application validated successfully
+  6.633s [2s.653ms][INF] Running the first app
+  6.637s [2s.656ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  6.643s [2s.663ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  6.670s [2s.669ms][INF] Starting User Application (wait)...
+  6.671s [2s.673ms][INF] Start slot Address: 0x3201B400
+  6.671s [2s.678ms][INF] MCUBoot Bootloader finished.
+  6.672s 
+  6.672s [INF] Deinitializing hardware...
+  6.672s 
+  6.673s [2J[;H******************************************************************
+  6.674s 
+  6.674s         PSOC Control C3M6: Secure Boot and Update with EPB
+  6.679s 
+  6.679s                    Image Version : 1.0.0+0
+  6.683s 
+  6.683s ******************************************************************
+  6.689s 
+  6.690s  Starting DFU Transport
+  6.691s 

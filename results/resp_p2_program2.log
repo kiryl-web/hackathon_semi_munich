@@ -1,0 +1,266 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && /usr/bin/make -C proj_cm33_ns build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" MTB_APPLICATION_PROMOTE=true && true
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Release APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+ninja: no work to do.
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_s.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+cmake -S spdm -B build_libspdm -G "Ninja" -DCMAKE_MAKE_PROGRAM="C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=toolchain_arm_none_eabi.cmake -DARM_TOOLCHAIN_DIR="C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin" -DSPDM_PROFILE_INCLUDE_DIR="C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/profiles/P2" -DCMAKE_BUILD_TYPE=MinSizeRel && cmake --build build_libspdm
+make.exe : CMake Warning (deprecated) at CMakeLists.txt:31 (cmake_minimum_required):
+At line:1 char:350
++ ... mtbenv.ps1; & $make -C "$SPDM/psoc-spdm-responder" program *> C:\User ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Warning (...imum_required)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_common_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_crypt_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_secured_message_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_responder_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_transport_mctp_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build_libspdm
+ninja: no work to do.
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Release APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+ninja: no work to do.
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.elf C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Release/proj_cm33_ns.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+/usr/bin/make -C proj_cm33_s application_postbuild MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns"
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |              146,528 |       524,288 |
+ |   m33_nvm             | 0x00000000 | ( 63%)        82,476 |       131,072 |
+ |     .vector_table     | 0x00000000 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000080 |                  160 |               |
+ |     .text             | 0x00000120 |               81,816 |               |
+ |     .ARM.exidx        | 0x000140b8 |                    8 |               |
+ |     .copy.table       | 0x000140c0 |                   24 |               |
+ |     .zero.table       | 0x000140d8 |                    8 |               |
+ |     .data (load data) | 0x000140e0 |                  356 |               |
+ |   m33ns_nvm           | 0x00020000 | ( 39%)        64,052 |       163,840 |
+ |     .text             | 0x00000000 |               63,360 |               |
+ |     .ARM.exidx        | 0x0000f780 |                    8 |               |
+ |     .copy.table       | 0x0000f788 |                   24 |               |
+ |     .zero.table       | 0x0000f7a0 |                    8 |               |
+ |     .data (load data) | 0x0000f7a8 |                  652 |               |
+ |   pas                 | 0x00048000 | (  0%)             0 |        24,576 |
+ |   <unallocated>       |            |                      |       204,800 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |              129,140 |       131,072 |
+ |   m33_data            | 0x00000000 | (100%)        59,388 |        59,392 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  356 |               |
+ |     .noinit           | 0x00000440 |                   52 |               |
+ |     .bss              | 0x00000478 |               11,020 |               |
+ |     .heap             | 0x00002f84 |               39,036 |               |
+ |     .stack            | 0x0000c800 |                8,192 |               |
+ |   m33ns_data          | 0x0000e800 | (100%)        69,628 |        69,632 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  652 |               |
+ |     .noinit           | 0x00000568 |                   52 |               |
+ |     .bss              | 0x000005a0 |               20,432 |               |
+ |     .heap             | 0x00005570 |               43,664 |               |
+ |     .stack            | 0x00010000 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0001f800 | (  6%)           124 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |     .cy_sharedmem     | 0x00000000 |                  124 |               |
+ |   <unallocated>       |            |                      |             0 |
+  ---------------------------------------------------------------------------
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+/usr/bin/make -C proj_cm33_s qprogram_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder"
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+
+SEGGER J-Link Commander V9.76a (Compiled Sep 14 2026 16:59:56)
+DLL version V9.76a, compiled Sep 14 2026 16:58:56
+
+J-Link Commander will now exit on Error
+
+J-Link Command File read successfully.
+Processing script file...
+J-Link>Connect
+J-Link connection not established yet but required for command.
+Connecting to J-Link ...O.K.
+Firmware: J-Link Lite-XMC4200 Rev.1 compiled May  4 2026 12:38:23
+Hardware version: V1.00
+J-Link uptime (since boot): 0d 00h 10m 55s
+S/N: 591239652
+USB speed mode: Full speed (12 MBit/s)
+VTref=3.300V
+Device "PSC3M6GES3AH" selected.
+
+
+Connecting to target via SWD
+ConfigTargetSettings() start
+ConfigTargetSettings() end - Took 82us
+InitTarget() start
+InitTarget() end - Took 28.3ms
+Found SW-DP with ID 0x4C013477
+DPIDR: 0x4C013477
+CoreSight SoC-600 or later (DPv3 detected)
+AP map detection skipped. User specified AP map and usage.
+AP[1]: Core found
+AP[1]: AHB-AP ROM base: 0xE00BF000
+CPUID register: 0x411FD210. Implementer code: 0x41 (ARM)
+Feature set: Mainline
+Cache: No cache
+Found Cortex-M33 r1p0, Little endian.
+FPUnit: 8 code (BP) slots and 0 literal slots
+Security extension: implemented
+Secure debug: enabled
+CoreSight components:
+ROMTbl[0] @ E00BF000
+[0][0]: E0080000 CID B105900D PID 003BB9ED DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+[0][1]: E008E000 CID B105900D PID 002BB9E7 DEVARCH 00000000 DEVTYPE 11 TPIU
+[0][2]: E0088000 CID B105900D PID 002BB9EB DEVARCH 00000000 DEVTYPE 12 CSTF
+[0][4]: E00FF000 CID B105100D PID 000BB4C9 DEVARCH 00000000 DEVTYPE 01 ROM Table
+ROMTbl[1] @ E00FF000
+[1][0]: E000E000 CID B105900D PID 000BBD21 DEVARCH 47702A04 DEVTYPE 00 Cortex-M33
+[1][1]: E0001000 CID B105900D PID 000BBD21 DEVARCH 47701A02 DEVTYPE 00 DWT
+[1][2]: E0002000 CID B105900D PID 000BBD21 DEVARCH 47701A03 DEVTYPE 00 FPB
+[1][3]: E0000000 CID B105900D PID 000BBD21 DEVARCH 47701A01 DEVTYPE 43 ITM
+[1][5]: E0041000 CID B105900D PID 002BBD21 DEVARCH 47724A13 DEVTYPE 13 ETM
+[1][6]: E0042000 CID B105900D PID 000BBD21 DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+SetupTarget() start
+****************************************************
+** Silicon: 0xF100, Family: 0x124, Rev.: 0x11 (A0)
+** ROM Boot version: 1.0.0.13973                    
+** Flash Boot version: 91.191.28.1199574148         
+** Life Cycle : DEVELOPMENT
+** Flash Bank Mode : Single bank                    
+****************************************************
+SetupTarget() end - Took 16.0ms
+Memory zones:
+  Zone: "Default" Description: Default access mode
+Cortex-M33 identified.
+J-Link>exec EnableEraseAllFlashBanks
+J-Link>LoadFile C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/build/app_combined.hex 0 reset
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+ResetTarget() end - Took 236ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 7us
+Downloading file [C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/build/app_combined.hex]...
+Comparing flash   [000%]100%] Done.
+Erasing flash     [000%]000%]100%] Done.
+Programming flash [000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]040%]040%]040%]040%]040%]040%]040%]040%]040%]040%]040%]040%]045%]045%]045%]045%]045%]045%]045%]045%]045%]045%]045%]045%]050%]050%]050%]050%]050%]050%]050%]050%]050%]050%]050%]050%]050%]050%]055%]055%]055%]055%]055%]055%]055%]055%]055%]055%]055%]055%]060%]060%]060%]060%]060%]060%]060%]060%]060%]060%]060%]060%]065%]065%]065%]065%]065%]065%]065%]065%]065%]065%]065%]065%]065%]065%]070%]070%]070%]070%]070%]070%]070%]070%]070%]070%]070%]070%]075%]075%]075%]075%]075%]075%]075%]075%]075%]075%]075%]075%]080%]080%]080%]080%]080%]080%]080%]080%]080%]080%]080%]080%]080%]080%]085%]085%]085%]085%]085%]085%]085%]085%]085%]085%]085%]085%]090%]090%]090%]090%]090%]090%]090%]090%]090%]090%]090%]090%]095%]095%]095%]095%]095%]095%]095%]095%]095%]095%]095%]095%]100%] Done.
+J-Link: Flash download: Bank 0 @ 0x22000000: 1 range affected (64512 bytes)
+J-Link: Flash download: Total: 2.552s (Prepare: 0.099s, Compare: 0.054s, Erase: 1.249s, Program: 0.659s, Verify: 0.414s, Restore: 0.074s)
+J-Link: Flash download: Program & Verify speed: 59 KB/s
+J-Link: Flash download: Bank 1 @ 0x32000000: Skipped. Contents already match
+HandleAfterFlashProg() start
+HandleAfterFlashProg() end - Took 85.6ms
+O.K.
+J-Link>Reset
+Reset delay: 0 ms
+ResetTarget() start
+ResetTarget() end - Took 87.5ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 7us
+J-Link>Go
+Memory map 'after startup completion point' is active
+J-Link>Exit
+
+Script processing completed.
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'

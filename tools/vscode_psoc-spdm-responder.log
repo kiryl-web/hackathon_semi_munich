@@ -1,0 +1,407 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s vscode MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" && /usr/bin/make -C proj_cm33_ns vscode MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psoc-spdm-responder" && true
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Release APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/.vscode/c_cpp_properties.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/.vscode/extensions.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s/.vscode/settings.json
+Generated ../.vscode/extensions.json
+Generated ../.vscode/settings.json
+Generated ../.vscode/tasks.json
+Generated .vscode/tasks_partial.json
+Generated .vscode/tasks_0.json
+Generated ../psoc-spdm-responder.code-workspace
+Generated ../.vscode/launch.json
+Generated .vscode/launch_0.json
+Required Settings, Tasks and Debug-configurations have been created and are ready to use.
+
+Instructions:
+  1. In VS Code, File->Open Workspace From File (Welcome page->Start->Open File)
+  2. Select the .code-workspace file from app root directory and open
+  3. Builds: Terminal->Run Task
+  4. Debugging: "Bug icon" on the left-hand pane:
+
+For more information, refer to the Visual Studio Code for ModusToolbox user guide.
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+cmake -S spdm -B build_libspdm -G "Ninja" -DCMAKE_MAKE_PROGRAM="C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=toolchain_arm_none_eabi.cmake -DARM_TOOLCHAIN_DIR="C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin" -DSPDM_PROFILE_INCLUDE_DIR="C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/profiles/P2" -DCMAKE_BUILD_TYPE=MinSizeRel && cmake --build build_libspdm
+make.exe : CMake Warning (deprecated) at CMakeLists.txt:31 (cmake_minimum_required):
+At line:1 char:414
++ ... sponder') { & $make -C "$SPDM/$a" vscode *> "C:\Users\kpato\KP\Hackat ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Warning (...imum_required)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The C compiler identification is GNU 14.2.1
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_common_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_crypt_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_secured_message_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_responder_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_transport_mctp_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Configuring done (1.4s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build_libspdm
+[1/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_event.c.obj
+[2/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_cert.c.obj
+[3/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hkdf.c.obj
+[4/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_rng.c.obj
+[5/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_msg_log.c.obj
+[6/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hmac.c.obj
+[7/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_aead.c.obj
+[8/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_kem.c.obj
+[9/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service_session.c.obj
+[10/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_dhe.c.obj
+[11/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data_session.c.obj
+[12/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_hash.c.obj
+[13/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest.c.obj
+[14/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_support.c.obj
+[15/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_aes_gcm.c.obj
+[16/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_pqc_asym.c.obj
+[17/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hmac.c.obj
+[18/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_pss.c.obj
+[19/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_rsa_ssa.c.obj
+[20/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_key_schedule.c.obj
+[21/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdh.c.obj
+[22/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha3.c.obj
+[23/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_hkdf.c.obj
+[24/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_opaque_data.c.obj
+[25/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_crypto_service.c.obj
+[26/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_sha2.c.obj
+[27/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ffdh.c.obj
+[28/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_ecdsa.c.obj
+[29/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem_vec.c.obj
+[30/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mlkem.c.obj
+[31/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_eddsa.c.obj
+[32/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa_vec.c.obj
+[33/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_mldsa.c.obj
+[34/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa_vec.c.obj
+[35/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/fips/libspdm_selftest_slhdsa.c.obj
+[36/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_context_data.c.obj
+[37/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange_pqc.c.obj
+[38/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_key_exchange.c.obj
+[39/88] Building C object spdm_crypt_lib/CMakeFiles/spdm_crypt_lib.dir/libspdm_crypt_asym.c.obj
+[40/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_challenge.c.obj
+[41/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_certificate.c.obj
+[42/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_communication.c.obj
+[43/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_digests.c.obj
+[44/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_get_endpoint_info.c.obj
+[45/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_common.c.obj
+[46/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_challenge_auth.c.obj
+[47/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_digests.c.obj
+[48/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_certificate.c.obj
+[49/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_session.c.obj
+[50/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_response.c.obj
+[51/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_endpoint_info.c.obj
+[52/88] Building C object spdm_secured_message_lib/CMakeFiles/spdm_secured_message_lib.dir/libspdm_secmes_encode_decode.c.obj
+[53/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_error.c.obj
+[54/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_send_event.c.obj
+[55/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_event_ack.c.obj
+[56/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_encap_key_update.c.obj
+[57/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_end_session_ack.c.obj
+[58/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_heartbeat_ack.c.obj
+[59/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_handle_response_state.c.obj
+[60/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_capabilities.c.obj
+[61/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_exchange_rsp.c.obj
+[62/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_psk_finish_rsp.c.obj
+[63/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_algorithms.c.obj
+[64/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_respond_if_ready.c.obj
+[65/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_update_ack.c.obj
+[66/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_certificate_rsp.c.obj
+[67/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_subscribe_event_types_ack.c.obj
+[68/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_supported_event_types.c.obj
+[69/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_version.c.obj
+[70/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_csr.c.obj
+[71/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_finish_rsp.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c: In function 'libspdm_get_response_finish':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:413:20: note: 'req_opaque_data' was declared here
+  413 |     const uint8_t *req_opaque_data;
+      |                    ^~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_opaque_data_size' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:414:12: note: 'req_opaque_data_size' was declared here
+  414 |     size_t req_opaque_data_size;
+      |            ^~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:698:22: warning: 'req_slot_id' may be used uninitialized [-Wmaybe-uninitialized]
+  698 |             result = libspdm_finish_rsp_opaque_data(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  699 |                 spdm_context, session_id, spdm_request->header.spdm_version,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                 req_slot_id, req_opaque_data, req_opaque_data_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                 opaque_data, &opaque_data_size);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_finish_rsp.c:404:13: note: 'req_slot_id' was declared here
+  404 |     uint8_t req_slot_id;
+      |             ^~~~~~~~~~~
+[72/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurements.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c: In function 'libspdm_get_response_measurements':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:517:15: warning: 'slot_id_param' may be used uninitialized [-Wmaybe-uninitialized]
+  517 |         ret = libspdm_generate_measurement_signature(
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  518 |             spdm_context, session_info, slot_id_param, fill_response_ptr);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_measurements.c:91:13: note: 'slot_id_param' was declared here
+   91 |     uint8_t slot_id_param;
+      |             ^~~~~~~~~~~~~
+[73/88] Building C object spdm_common_lib/CMakeFiles/spdm_common_lib.dir/libspdm_com_context_data.c.obj
+[74/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_measurement_extension_log.c.obj
+[75/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_vendor_defined_response.c.obj
+[76/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_pair_info.c.obj
+[77/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_set_key_pair_info_ack.c.obj
+[78/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_key_exchange_rsp.c.obj
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c: In function 'libspdm_get_response_key_exchange':
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:626:18: warning: 'kem_encap_key_size' may be used uninitialized [-Wmaybe-uninitialized]
+  626 |         result = libspdm_secured_message_kem_encapsulate(
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  627 |             spdm_context->connection_info.algorithm.kem_alg,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  628 |             kem_context,
+      |             ~~~~~~~~~~~~
+  629 |             (const uint8_t *)request + sizeof(spdm_key_exchange_request_t),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  630 |             kem_encap_key_size, ptr, &kem_cipher_text_size, session_info->secured_message_context);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:189:12: note: 'kem_encap_key_size' was declared here
+  189 |     size_t kem_encap_key_size;
+      |            ^~~~~~~~~~~~~~~~~~
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:729:12: warning: 'use_default_opaque_data' may be used uninitialized [-Wmaybe-uninitialized]
+  729 |         if (use_default_opaque_data) {
+      |            ^
+C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_party/libspdm/library/spdm_responder_lib/libspdm_rsp_key_exchange_rsp.c:211:10: note: 'use_default_opaque_data' was declared here
+  211 |     bool use_default_opaque_data;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+[79/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_response.c.obj
+[80/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_common.c.obj
+[81/88] Building C object spdm_transport_mctp_lib/CMakeFiles/spdm_transport_mctp_lib.dir/libspdm_mctp_mctp.c.obj
+[82/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_chunk_send_ack.c.obj
+[83/88] Linking C static library lib\libspdm_secured_message_lib.a
+[84/88] Building C object spdm_responder_lib/CMakeFiles/spdm_responder_lib.dir/libspdm_rsp_receive_send.c.obj
+[85/88] Linking C static library lib\libspdm_common_lib.a
+[86/88] Linking C static library lib\libspdm_crypt_lib.a
+[87/88] Linking C static library lib\libspdm_transport_mctp_lib.a
+[88/88] Linking C static library lib\libspdm_responder_lib.a
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Release APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Release APP_KIT_PSC3M6_EVAL GCC_ARM
+
+cmake -S spdm -B build_libspdm -G "Ninja" -DCMAKE_MAKE_PROGRAM="C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=toolchain_arm_none_eabi.cmake -DARM_TOOLCHAIN_DIR="C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin" -DSPDM_PROFILE_INCLUDE_DIR="C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/profiles/P2" -DCMAKE_BUILD_TYPE=MinSizeRel && cmake --build build_libspdm
+CMake Warning (deprecated) at CMakeLists.txt:31 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_common_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_crypt_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_secured_message_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_responder_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/third_p
+arty/libspdm/library/spdm_transport_mctp_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    CMAKE_TOOLCHAIN_FILE
+
+
+-- Build files have been written to: C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/build_libspdm
+ninja: no work to do.
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/.vscode/c_cpp_properties.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/.vscode/extensions.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns/.vscode/settings.json
+Generated .vscode/extensions.json
+Generated .vscode/settings.json
+Generated .vscode/tasks_partial.json
+Generated .vscode/tasks_1.json
+Generated .vscode/launch_1.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/.vscode/extensions.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/.vscode/launch.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/.vscode/settings.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/.vscode/tasks.json
+Updated ../psoc-spdm-responder.code-workspace
+Required Settings, Tasks and Debug-configurations have been created and are ready to use.
+
+Instructions:
+  1. In VS Code, File->Open Workspace From File (Welcome page->Start->Open File)
+  2. Select the .code-workspace file from app root directory and open
+  3. Builds: Terminal->Run Task
+  4. Debugging: "Bug icon" on the left-hand pane:
+
+For more information, refer to the Visual Studio Code for ModusToolbox user guide.
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder/proj_cm33_ns'
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'

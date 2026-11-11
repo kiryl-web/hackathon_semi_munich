@@ -1,0 +1,12 @@
+connect: OK
+slots: OK (slot mask 0x01)
+    slot 0: populated  6456b273f7f00588e9106be2f3f03b68692548f1e54bae3645219495c7e95013d6d9ea5aa94ccb1be1628855791ca1bf
+    slot 1: empty
+    slot 2: empty
+    slot 3: empty
+    slot 4: empty
+    slot 5: empty
+    slot 6: empty
+    slot 7: empty
+RESULT: PASS
+

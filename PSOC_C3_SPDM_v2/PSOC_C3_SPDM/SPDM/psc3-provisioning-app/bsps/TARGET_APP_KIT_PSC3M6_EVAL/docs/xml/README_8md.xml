@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>KIT_PSC3M6_EVAL<sp/>BSP</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>PSOC™<sp/>Control<sp/>C3M6<sp/>MCU<sp/>Evaluation<sp/>Kit<sp/>(KIT_PSC3M6_EVAL)<sp/>is<sp/>based<sp/>on<sp/>the<sp/>PSOC™<sp/>Control<sp/>family<sp/>of<sp/>devices.<sp/>It<sp/>enables<sp/>the<sp/>evaluation<sp/>and<sp/>development<sp/>of<sp/>applications<sp/>for<sp/>the<sp/>PSOC™<sp/>Control<sp/>C3M6<sp/>MCU.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**<sp/>Programming<sp/>this<sp/>kit<sp/>requires<sp/>installing<sp/>[SEGGER<sp/>J-Link<sp/>software](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![](board.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>code<sp/>from<sp/>the<sp/>BSP,<sp/>simply<sp/>include<sp/>a<sp/>reference<sp/>to<sp/>`cybsp.h`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Kit<sp/>Features:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>PSoC™<sp/>Control<sp/>C3M6<sp/>(Arm®<sp/>Cortex®-M33<sp/>based)<sp/>Microcontroller</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On-board<sp/>Debug<sp/>Probe<sp/>with<sp/>USB<sp/>interface<sp/>supporting<sp/>SWD</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>J-Link<sp/>debugger<sp/>and<sp/>UART<sp/>virtual<sp/>COM<sp/>port,<sp/>with<sp/>USB<sp/>Type<sp/>C<sp/>connector</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Two<sp/>user<sp/>LEDs,<sp/>two<sp/>user<sp/>buttons,<sp/>and<sp/>a<sp/>reset<sp/>button<sp/>for<sp/>the<sp/>PSC3M6</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>USB<sp/>device<sp/>and<sp/>host<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>All<sp/>IOs<sp/>available<sp/>on<sp/>expansion<sp/>header</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On<sp/>board<sp/>SPI<sp/>Nor<sp/>flash</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Headers<sp/>compatible<sp/>with<sp/>MIKROE’s<sp/>mikroBUS<sp/>shields</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Headers<sp/>compatible<sp/>with<sp/>Arduino<sp/>Uno<sp/>R3</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Potentiometer<sp/>that<sp/>can<sp/>be<sp/>used<sp/>to<sp/>simulate<sp/>analog<sp/>sensor<sp/>output</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Kit<sp/>Contents:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>PSOC™<sp/>Control<sp/>C3M6<sp/>Evaluation<sp/>Kit</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>USB<sp/>Type-A<sp/>to<sp/>Type-C<sp/>cable</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Jumper<sp/>wires</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>BSP<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>BSP<sp/>has<sp/>a<sp/>few<sp/>hooks<sp/>that<sp/>allow<sp/>its<sp/>behavior<sp/>to<sp/>be<sp/>configured.<sp/>Some<sp/>of<sp/>these<sp/>items<sp/>are<sp/>enabled<sp/>by<sp/>default<sp/>while<sp/>others<sp/>must<sp/>be<sp/>explicitly<sp/>enabled.<sp/>Items<sp/>enabled<sp/>by<sp/>default<sp/>are<sp/>specified<sp/>in<sp/>the<sp/>KIT_PSC3M6_EVAL.mk<sp/>file.<sp/>The<sp/>items<sp/>that<sp/>are<sp/>enabled<sp/>can<sp/>be<sp/>changed<sp/>by<sp/>creating<sp/>a<sp/>custom<sp/>BSP<sp/>or<sp/>by<sp/>editing<sp/>the<sp/>application<sp/>makefile.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Components:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Device<sp/>specific<sp/>category<sp/>reference<sp/>(e.g.:<sp/>CAT1)<sp/>-<sp/>This<sp/>component,<sp/>enabled<sp/>by<sp/>default,<sp/>pulls<sp/>in<sp/>any<sp/>device<sp/>specific<sp/>code<sp/>for<sp/>this<sp/>board.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Defines:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>CYBSP_WIFI_CAPABLE<sp/>-<sp/>This<sp/>define,<sp/>disabled<sp/>by<sp/>default,<sp/>causes<sp/>the<sp/>BSP<sp/>to<sp/>initialize<sp/>the<sp/>interface<sp/>to<sp/>an<sp/>onboard<sp/>wireless<sp/>chip<sp/>if<sp/>it<sp/>has<sp/>one.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>CY_USING_HAL<sp/>-<sp/>This<sp/>define,<sp/>enabled<sp/>by<sp/>default<sp/>in<sp/>some<sp/>BSPs,<sp/>specifies<sp/>that<sp/>the<sp/>HAL<sp/>is<sp/>intended<sp/>to<sp/>be<sp/>used<sp/>by<sp/>the<sp/>application.<sp/>This<sp/>will<sp/>cause<sp/>the<sp/>BSP<sp/>to<sp/>include<sp/>the<sp/>applicable<sp/>header<sp/>file<sp/>and<sp/>to<sp/>initialize<sp/>the<sp/>system<sp/>level<sp/>drivers.<sp/><sp/>Newer<sp/>BSPs<sp/>pull<sp/>in<sp/>the<sp/>v3.x<sp/>HAL,<sp/>which<sp/>enables<sp/>itself<sp/>via<sp/>its<sp/>own<sp/>makefile,<sp/>so<sp/>CY_USING_HAL<sp/>is<sp/>not<sp/>present.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>CYBSP_CUSTOM_SYSCLK_PM_CALLBACK<sp/>-<sp/>This<sp/>define,<sp/>disabled<sp/>by<sp/>default,<sp/>causes<sp/>the<sp/>BSP<sp/>to<sp/>skip<sp/>registering<sp/>its<sp/>default<sp/>SysClk<sp/>Power<sp/>Management<sp/>callback,<sp/>if<sp/>any,<sp/>and<sp/>instead<sp/>to<sp/>invoke<sp/>the<sp/>application-defined<sp/>function<sp/>`cybsp_register_custom_sysclk_pm_callback`<sp/>to<sp/>register<sp/>an<sp/>application-specific<sp/>callback.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Clock<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>Clock<sp/><sp/>|<sp/><sp/><sp/>Source<sp/><sp/>|<sp/>Output<sp/>Frequency<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>:-----:<sp/>|<sp/>:-------:<sp/>|<sp/>:--------------:<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>FLL<sp/><sp/><sp/>|<sp/><sp/><sp/><sp/>IHO<sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/>100.0<sp/>MHz<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF0<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF1<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF2<sp/>|<sp/>CLK_PATH0<sp/>|<sp/><sp/><sp/><sp/><sp/>100<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF3<sp/>|<sp/>CLK_PATH0<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>50<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF4<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Power<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>System<sp/>Active<sp/>Power<sp/>Mode:<sp/>OD</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>System<sp/>Idle<sp/>Power<sp/>Mode:<sp/>CPU<sp/>Sleep</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>VDDA<sp/>Voltage:<sp/>3300<sp/>mV</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>VDDD<sp/>Voltage:<sp/>3300<sp/>mV</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[BSP<sp/>Setttings][settings]<sp/>for<sp/>additional<sp/>board<sp/>specific<sp/>configuration<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>API<sp/>Reference<sp/>Manual</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>KIT_PSC3M6_EVAL<sp/>Board<sp/>Support<sp/>Package<sp/>provides<sp/>a<sp/>set<sp/>of<sp/>APIs<sp/>to<sp/>configure,<sp/>initialize<sp/>and<sp/>use<sp/>the<sp/>board<sp/>resources.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[BSP<sp/>API<sp/>Reference<sp/>Manual][api]<sp/>for<sp/>the<sp/>complete<sp/>list<sp/>of<sp/>the<sp/>provided<sp/>interfaces.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>More<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[KIT_PSC3M6_EVAL<sp/>BSP<sp/>API<sp/>Reference<sp/>Manual][api]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[KIT_PSC3M6_EVAL<sp/>Documentation](https://www.infineon.com/evaluation-board/KIT-PSC3M6-EVAL)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Infineon<sp/>Technologies<sp/>AG](https://www.infineon.com)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Infineon<sp/>GitHub](https://github.com/Infineon)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[ModusToolbox™](https://www.infineon.com/modustoolbox)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[api]:<sp/>modules.html</highlight></codeline>
+<codeline><highlight class="normal">[settings]:<sp/>md_bsp_settings.html</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">©<sp/>2026,<sp/>Infineon<sp/>Technologies<sp/>AG,<sp/>or<sp/>an<sp/>affiliate<sp/>of<sp/>Infineon<sp/>Technologies<sp/>AG.</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/README.md"/>
+  </compounddef>
+</doxygen>

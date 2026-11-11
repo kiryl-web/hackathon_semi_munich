@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_a64a95de6121becff97a48ae7a566544" kind="dir">
+    <compoundname>COMPONENT_SECURE_DEVICE</compoundname>
+    <innerfile refid="partition__ARMCM33_8h">partition_ARMCM33.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/COMPONENT_SECURE_DEVICE/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="startup__cat1b_8h" kind="file" language="C++">
+    <compoundname>startup_cat1b.h</compoundname>
+    <includes local="yes">cy_device_headers.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>startup_cat1b.h</label>
+        <link refid="startup__cat1b_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cy_device_headers.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="startup__cat1b_8h_1a36d85e51f673b43266a19eb9f58aa826" prot="public" static="no">
+        <name>CM33_FIXED_EXP_NR</name>
+        <initializer>(15u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" line="39" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="startup__cat1b_8h_1a643c3ea4654de2811c559fafb4d8a39a" prot="public" static="no">
+        <name>VECTORTABLE_SIZE</name>
+        <initializer>(MXCM33_SYSTEM_INT_NR + CM33_FIXED_EXP_NR + 1u) /* +1 is for Stack pointer */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" line="40" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="startup__cat1b_8h_1a8805e6a0cc4344f8b293ed2a82e8dc86" prot="public" static="no">
+        <name>VECTORTABLE_ALIGN</name>
+        <initializer>(VECTORTABLE_SIZE &lt;= 128u ? 512u :1024u) /* alignment for &apos;n&apos; entries is (nx4) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" line="41" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="startup__cat1b_8h_1a806928ba3497098c4b3f0a848cd8a054" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* cy_israddress_cat1b) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>cy_israddress_cat1b</name>
+        <briefdescription>
+<para>Type of ISR callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" line="37" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Common startup header file for PSC3 devices. This file provides declarations for secure and non-secure vector table. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>1.2</para>
+</simplesect>
+</para>
+<para><simplesect kind="copyright"><para>(c) 2016-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STARTUP_CAT1B_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STARTUP_CAT1B_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_device_headers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<sp/>cy_israddress_cat1b)(void);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CM33_FIXED_EXP_NR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(15u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECTORTABLE_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MXCM33_SYSTEM_INT_NR<sp/>+<sp/>CM33_FIXED_EXP_NR<sp/>+<sp/>1u)<sp/></highlight><highlight class="comment">/*<sp/>+1<sp/>is<sp/>for<sp/>Stack<sp/>pointer<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECTORTABLE_ALIGN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(VECTORTABLE_SIZE<sp/>&lt;=<sp/>128u<sp/>?<sp/>512u<sp/>:1024u)<sp/></highlight><highlight class="comment">/*<sp/>alignment<sp/>for<sp/>&apos;n&apos;<sp/>entries<sp/>is<sp/>(nx4)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__ARMCC_VERSION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CY_PDL_TZ_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__s_vector_table_rw[VECTORTABLE_SIZE]<sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.bss.noinit.RESET_RAM&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__ns_vector_table_rw[VECTORTABLE_SIZE]<sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.bss.noinit.RESET_RAM&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CY_PDL_TZ_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__s_vector_table_rw[VECTORTABLE_SIZE]<sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.ram_vectors&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__ns_vector_table_rw[VECTORTABLE_SIZE]<sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.ram_vectors&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(__ICCARM__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CY_PDL_TZ_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__s_vector_table_rw[VECTORTABLE_SIZE]<sp/><sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.intvec_ram&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>cy_israddress_cat1b<sp/>__ns_vector_table_rw[VECTORTABLE_SIZE]<sp/>__attribute__(<sp/>(<sp/>section(</highlight><highlight class="stringliteral">&quot;.intvec_ram&quot;</highlight><highlight class="normal">)))<sp/>__attribute__((aligned(VECTORTABLE_ALIGN)));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;An<sp/>unsupported<sp/>toolchain&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>(__ARMCC_VERSION)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STARTUP_CAT1B_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/startup_cat1b.h"/>
+  </compounddef>
+</doxygen>

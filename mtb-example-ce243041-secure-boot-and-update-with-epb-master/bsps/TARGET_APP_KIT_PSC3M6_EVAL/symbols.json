@@ -1,0 +1,28 @@
+{
+  "symbolInformation": [
+    {
+      "name": "IMAGE_VERSION_STRING",
+      "value": "1.0.0+1513881600"
+    },
+    {
+      "name": "IMAGE_SIGNING_KEY_TYPE",
+      "value": "ML-DSA-65"
+    },
+    {
+      "name": "IMAGE_SIGNING_KEY",
+      "value": "../keys/ml_dsa_65_img_sign_key_priv.der"
+    },
+    {
+      "name": "IMAGE_SHA",
+      "value": "sha512"
+    },
+    {
+      "name": "IMAGE_SIG_ENCODING",
+      "value": "raw"
+    },
+    {
+      "name": "IMAGE_ENCRYPTION_KEY",
+      "value": "../keys/enc_ec256_pub.pem"
+    }
+  ]
+}

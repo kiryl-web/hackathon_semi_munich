@@ -1,0 +1,48 @@
+
+define symbol __ICFEDIT_intvec_start__ = 0x00000000;
+define symbol _size_SRAM_CLEANUP = 0x400;
+define symbol _base_SRAM_CLEANUP = RAM_ORIGIN;
+define symbol _size_SRAM = RAM_SIZE - _size_SRAM_CLEANUP;
+define symbol _base_SRAM = RAM_ORIGIN + _size_SRAM_CLEANUP;
+
+/* Flash */
+define symbol __ICFEDIT_region_IROM0_start__      = FLASH_ORIGIN; /* flash sbus */
+define symbol __ICFEDIT_region_IROM1_start__      = FLASH_ORIGIN - 0x32000000 + 0x12000000 + FLASH_OFS; /* flash cbus */
+define symbol __ICFEDIT_region_IROM1_size__       = FLASH_SIZE;
+
+export symbol _size_SRAM_CLEANUP;
+
+define memory mem with size = 4G;
+define region IROM0_region = mem:[from __ICFEDIT_region_IROM0_start__ size __ICFEDIT_region_IROM1_size__];
+define region IROM1_region = mem:[from __ICFEDIT_region_IROM1_start__ size __ICFEDIT_region_IROM1_size__];
+define region IRAM1_region = mem:[from _base_SRAM size _size_SRAM];
+define region IRAM1_cleanup = mem:[from _base_SRAM_CLEANUP size _size_SRAM_CLEANUP];
+logical [from __ICFEDIT_region_IROM1_start__ size __ICFEDIT_region_IROM1_size__] =
+physical [from __ICFEDIT_region_IROM0_start__ size __ICFEDIT_region_IROM1_size__]; /* logical = 0x12000000 CBUS == physical 0x32000000 SBUS*/
+
+define block CSTACK     with alignment = 8, size = 0x4000 { };
+define block HEAP       with alignment = 8, size = 0x2000 { };
+define block CLEANUP    with alignment = 8, size = _size_SRAM_CLEANUP { section .cleanup_helper_area };
+define block HSTACK {block HEAP, last block CSTACK};
+define block RO     {first section .intvec, readonly};
+
+/*-Initializations-*/
+initialize by copy { readwrite };
+do not initialize  { section .noinit, section .intvec_ram };
+
+/*-Placement-*/
+
+/* Flash - Cortex-M33 application */
+place at address (__ICFEDIT_region_IROM1_start__) { block RO };
+
+/* RAM */
+place at start of IRAM1_region  { readwrite section .intvec_ram};
+
+
+place in          IRAM1_region  { readwrite };
+place in          IRAM1_cleanup { block CLEANUP};
+place at end   of IRAM1_region  { block HSTACK };
+
+keep {  section .intvec  };
+
+/* EOF */

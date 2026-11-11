@@ -1,0 +1,93 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s vscode MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psc3-provisioning-app" && /usr/bin/make -C proj_cm33_ns vscode MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psc3-provisioning-app" && true
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s/.vscode/c_cpp_properties.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s/.vscode/extensions.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s/.vscode/settings.json
+Generated ../.vscode/extensions.json
+Generated ../.vscode/settings.json
+Generated ../.vscode/tasks.json
+Generated .vscode/tasks_partial.json
+Generated .vscode/tasks_0.json
+Generated ../psc3-provisioning-app.code-workspace
+Generated ../.vscode/launch.json
+Generated .vscode/launch_0.json
+Required Settings, Tasks and Debug-configurations have been created and are ready to use.
+
+Instructions:
+  1. In VS Code, File->Open Workspace From File (Welcome page->Start->Open File)
+  2. Select the .code-workspace file from app root directory and open
+  3. Builds: Terminal->Run Task
+  4. Debugging: "Bug icon" on the left-hand pane:
+
+For more information, refer to the Visual Studio Code for ModusToolbox user guide.
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns/.vscode/c_cpp_properties.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns/.vscode/extensions.json
+Generated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns/.vscode/settings.json
+Generated .vscode/extensions.json
+Generated .vscode/settings.json
+Generated .vscode/tasks_partial.json
+Generated .vscode/tasks_1.json
+Generated .vscode/launch_1.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/.vscode/extensions.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/.vscode/launch.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/.vscode/settings.json
+Updated C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/.vscode/tasks.json
+Updated ../psc3-provisioning-app.code-workspace
+Required Settings, Tasks and Debug-configurations have been created and are ready to use.
+
+Instructions:
+  1. In VS Code, File->Open Workspace From File (Welcome page->Start->Open File)
+  2. Select the .code-workspace file from app root directory and open
+  3. Builds: Terminal->Run Task
+  4. Debugging: "Bug icon" on the left-hand pane:
+
+For more information, refer to the Visual Studio Code for ModusToolbox user guide.
+
+make[1]: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app/proj_cm33_ns'
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psc3-provisioning-app'

@@ -1,0 +1,53 @@
+  0.017s Application (wait)...
+  0.038s [0s.151ms][INF] Start slot Address: 0x3201B400
+  0.039s [0s.155ms][INF] MCUBoot Bootloader finished.
+  0.039s 
+  0.039s [INF] Deinitializing hardware...
+  0.040s 
+  0.040s [2J[;H******************************************************************
+  0.040s 
+  0.040s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.041s 
+  0.041s                    Image Version : 0.9.0+0
+  0.041s 
+  0.042s ******************************************************************
+  0.042s 
+  0.042s  Starting DFU Transport
+  0.042s 
+  0.298s [0s.0ms][DBG] [2J[;H
+  0.299s [0s.0ms][INF] MCUBoot Bootloader Started
+  0.301s [0s.0ms][INF] boot_go_for_image_id
+  0.302s [0s.0ms][INF] Processing img id: 0
+  0.303s [0s.0ms][DBG]  * boot_prepare_image_for_update...
+  0.307s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  0.312s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  0.313s [0s.15ms][DBG]  * There was no partial swap, determine swap type.
+  0.314s [0s.21ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.317s [0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.320s [0s.40ms][INF] Swap type: none
+  0.323s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.327s [0s.47ms][DBG]  * process swap_type = 1
+  0.331s [0s.50ms][DBG] > boot_validate_slot: fa_id = 1
+  0.335s [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  0.396s [0s.120ms][DBG] < boot_validate_slot: fa_id = 1
+  0.401s [0s.120ms][INF] Successfully added image data to shared area
+  0.405s [0s.125ms][INF] User Application validated successfully
+  0.410s [0s.130ms][INF] Running the first app
+  0.414s [0s.133ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  0.421s [0s.140ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  0.427s [0s.146ms][INF] Starting User Application (wait)...
+  0.431s [0s.151ms][INF] Start slot Address: 0x3201B400
+  0.435s [0s.155ms][INF] MCUBoot Bootloader finished.
+  0.440s 
+  0.440s [INF] Deinitializing hardware...
+  0.442s 
+  0.442s [2J[;H******************************************************************
+  0.452s 
+  0.452s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.457s 
+  0.457s                    Image Version : 0.9.0+0
+  0.461s 
+  0.461s ******************************************************************
+  0.467s 
+  0.467s  Starting DFU Transport
+  0.469s 

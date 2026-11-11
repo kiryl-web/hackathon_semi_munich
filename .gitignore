@@ -1,0 +1,6 @@
+# Downloaded ModusToolbox libraries (restore with "make getlibs")
+epbl/mtb_shared/
+# Build output / editor caches
+**/build/
+**/.cache/
+/mtb_shared/

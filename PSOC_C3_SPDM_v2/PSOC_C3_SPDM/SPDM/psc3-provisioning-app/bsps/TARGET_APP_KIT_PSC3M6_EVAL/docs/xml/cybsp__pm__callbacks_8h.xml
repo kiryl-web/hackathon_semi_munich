@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cybsp__pm__callbacks_8h" kind="file" language="C++">
+    <compoundname>cybsp_pm_callbacks.h</compoundname>
+    <includes local="yes">cy_syspm.h</includes>
+    <includedby refid="cybsp__pm_8c" local="yes">cybsp_pm.c</includedby>
+    <includedby refid="cybsp__pm__callbacks_8c" local="yes">cybsp_pm_callbacks.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>cybsp_pm_callbacks.h</label>
+        <link refid="cybsp__pm__callbacks_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cy_syspm.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cybsp__pm__callbacks_8h_1a8f6f2401158fd23670891e717596f535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _cybsp_pm_callbacks_get_ptr_and_number</definition>
+        <argsstring>(cy_stc_syspm_callback_t ***arr_ptr, size_t *number_of_elements)</argsstring>
+        <name>_cybsp_pm_callbacks_get_ptr_and_number</name>
+        <param>
+          <type>cy_stc_syspm_callback_t ***</type>
+          <declname>arr_ptr</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>number_of_elements</declname>
+        </param>
+        <briefdescription>
+<para>Get number of PM callbacks, that are available for specific BSP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">arr_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to store array of callback pointers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_elements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to store number of elements in array of callback pointers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.h" line="40" column="6" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="127" bodyend="136" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic API for setting up boards containing an Infineon MCU. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>(c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***********************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_syspm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_cybsp_pm_callbacks_get_ptr_and_number(cy_stc_syspm_callback_t***<sp/>arr_ptr,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>number_of_elements);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+  0.009s ******************************************
+  0.035s 
+  0.036s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.036s 
+  0.036s                    Image Version : 1.0.0+0
+  0.037s 
+  0.037s ******************************************************************
+  0.038s 
+  0.038s  Starting DFU Transport
+  0.038s 
+  0.267s [0s.0ms][DBG] [2J[;H
+  0.279s [0s.0ms][INF] MCUBoot Bootloader Started
+  0.282s [0s.0ms][INF] boot_go_for_image_id
+  0.286s [0s.0ms][INF] Processing img id: 0
+  0.289s [0s.0ms][DBG]  * boot_prepare_image_for_update...
+  0.293s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  0.299s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  0.305s [0s.15ms][DBG]  * There was no partial swap, determine swap type.
+  0.310s [0s.21ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.320s [0s.30ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.330s [0s.40ms][INF] Swap type: none
+  0.332s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.336s [0s.47ms][DBG]  * process swap_type = 1
+  0.339s [0s.50ms][DBG] > boot_validate_slot: fa_id = 1
+  0.343s [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  0.405s [0s.120ms][DBG] < boot_validate_slot: fa_id = 1
+  0.409s [0s.120ms][INF] Successfully added image data to shared area
+  0.415s [0s.125ms][INF] User Application validated successfully
+  0.419s [0s.130ms][INF] Running the first app
+  0.423s [0s.133ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  0.430s [0s.140ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  0.436s [0s.146ms][INF] Starting User Application (wait)...
+  0.440s [0s.150ms][INF] Start slot Address: 0x3201B400
+  0.445s [0s.155ms][INF] MCUBoot Bootloader finished.
+  0.449s 
+  0.449s [INF] Deinitializing hardware...
+  0.451s 
+  0.451s [2J[;H******************************************************************
+  0.460s 
+  0.460s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.466s 
+  0.466s                    Image Version : 1.0.0+0
+  0.469s 
+  0.469s ******************************************************************
+  0.475s 
+  0.475s  Starting DFU Transport
+  0.477s 

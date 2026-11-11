@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cybsp_8h" kind="file" language="C++">
+    <compoundname>cybsp.h</compoundname>
+    <includes local="yes">cy_result.h</includes>
+    <includes refid="cybsp__types_8h" local="yes">cybsp_types.h</includes>
+    <includes refid="cybsp__hw__config_8h" local="yes">cybsp_hw_config.h</includes>
+    <includedby refid="cybsp_8c" local="yes">cybsp.c</includedby>
+    <includedby refid="cybsp__dsram_8c" local="yes">cybsp_dsram.c</includedby>
+    <includedby refid="cybsp__pm_8c" local="yes">cybsp_pm.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>cybsp.h</label>
+        <link refid="cybsp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cy_result.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__bsp__errors_1gaee745bd3fccec6eb2df1e83fc4c9f775" prot="public" static="no">
+        <name>CYBSP_RSLT_ERR_SYSCLK_PM_CALLBACK</name>
+        <initializer>    (CY_RSLT_CREATE(CY_RSLT_TYPE_ERROR, CY_RSLT_MODULE_ABSTRACTION_BSP, 0))</initializer>
+        <briefdescription>
+<para>Failed to configure sysclk power management callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.h" line="46" column="9" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__bsp__functions_1gab989986b285e127f78f61c29f6ccbbfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cy_rslt_t</type>
+        <definition>cy_rslt_t cybsp_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize all hardware on the board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CY_RSLT_SUCCESS if the board is successfully initialized, if there is a problem initializing any hardware it returns an error code specific to the hardware module that had a problem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.h" line="77" column="11" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.c" bodystart="99" bodyend="214" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.h" declline="77" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic API for setting up boards containing a Cypress MCU. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>(c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***********************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_types.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_hw_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_MW_MTB_SRF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mtb_srf.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CYBSP_RSLT_ERR_SYSCLK_PM_CALLBACK<sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(CY_RSLT_CREATE(CY_RSLT_TYPE_ERROR,<sp/>CY_RSLT_MODULE_ABSTRACTION_BSP,<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>mtb_srf_context_s_t<sp/>cybsp_srf_context;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(COMPONENT_SECURE_DEVICE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CYBSP_DISABLE_SRF_INIT)</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"></highlight><highlight class="normal">cy_rslt_t<sp/>cybsp_init(void);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_register_custom_sysclk_pm_callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Registers<sp/>a<sp/>power<sp/>management<sp/>callback<sp/>that<sp/>prepares<sp/>the<sp/>clock<sp/>system<sp/>for<sp/>entering<sp/>deep<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>restore<sp/>the<sp/>clocks<sp/>upon<sp/>wakeup<sp/>from<sp/>deep<sp/>sleep.<sp/>The<sp/>application<sp/>should<sp/>implement<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>and<sp/>define<sp/>`CYBSP_CUSTOM_SYSCLK_PM_CALLBACK`<sp/>if<sp/>it<sp/>needs<sp/>to<sp/>replace<sp/>the<sp/>default<sp/>SysClk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DeepSleep<sp/>callback<sp/>behavior<sp/>with<sp/>application<sp/>specific<sp/>logic.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>This<sp/>is<sp/>called<sp/>automatically<sp/>as<sp/>part<sp/>of<sp/>\ref<sp/>cybsp_init</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">cy_rslt_t<sp/>cybsp_register_custom_sysclk_pm_callback(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp.h"/>
+  </compounddef>
+</doxygen>

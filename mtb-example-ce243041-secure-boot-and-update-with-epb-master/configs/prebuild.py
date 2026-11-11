@@ -74,6 +74,8 @@ def main():
                         f"Allowed values: {', '.join(ALLOWED_KEY_TYPES)}")
     parser.add_argument("--enc-key",  help="Image encryption key path (or set env ENC_KEY). "
                         "Used only when image encryption is enabled; may be empty otherwise.")
+    parser.add_argument("--sha", choices=("sha256", "sha384", "sha512"),
+                        help="Override image hash / HashML-DSA pre-hash (must match the bootloader build).")
     parser.add_argument("--template", "-t", required=True, help="Path to the template JSON file.")
     parser.add_argument("--output", "-o", required=True, help="Path to write the generated JSON file.")
     parser.add_argument("--placeholder", "-p", default="MAJ.MIN.REV+BN",
@@ -101,7 +103,7 @@ def main():
               file=sys.stderr)
         sys.exit(1)
 
-    sha = SHA_BY_KEY_TYPE[key_type]
+    sha = args.sha or SHA_BY_KEY_TYPE[key_type]
     sig_encoding = SIG_ENCODING_BY_KEY_TYPE[key_type]
 
     version_str = f"{maj}.{min_}.{rev}+{bn}"

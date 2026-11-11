@@ -1,0 +1,19 @@
+﻿Task 2 boot tests, EPBL validation = ML-DSA-87 (HashML-DSA, SHA-512), 2026-11-11T13:42:59
+OK   P1   authorized_v1_0      expect=BOOTED   got=BOOTED   app=1.0.0+0  [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+OK   N1   payload_byte         expect=REJECTED got=REJECTED app=-        [0s.59ms][DBG] IMAGE_TLV_SHA is invalid | [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+OK   N2   header_version       expect=REJECTED got=REJECTED app=-        [0s.59ms][DBG] IMAGE_TLV_SHA is invalid | [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+OK   N3   protected_tlv        expect=REJECTED got=REJECTED app=-        [0s.59ms][DBG] IMAGE_TLV_SHA is invalid | [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+OK   N4   keyhash_tlv          expect=REJECTED got=REJECTED app=-        [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x2e | [0s.62ms][ERR] Image in the primary slot is not valid!
+OK   N5   signature_byte       expect=REJECTED got=REJECTED app=-        [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff | [0s.121ms][ERR] Image in the primary slot is not valid!
+OK   N6   sig_tlv_length       expect=REJECTED got=REJECTED app=-        [0s.64ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff | [0s.67ms][ERR] Image in the primary slot is not valid!
+OK   N7   rogue_mldsa87_key    expect=REJECTED got=REJECTED app=-        [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x2e | [0s.62ms][ERR] Image in the primary slot is not valid!
+OK   N8   ecdsa384_classical   expect=REJECTED got=REJECTED app=-        [0s.60ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff | [0s.68ms][ERR] Image in the primary slot is not valid!
+OK   N9   wrong_prehash_sha256 expect=REJECTED got=REJECTED app=-        [0s.61ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff | [0s.68ms][ERR] Image in the primary slot is not valid!
+OK   P2   restore_v1_0         expect=BOOTED   got=BOOTED   app=1.0.0+0  [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e | [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+OK   N10  rollback_v0_9        expect=BOOTED   got=BOOTED   app=1.0.0+0  [2s.639ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+OK   P3   valid_update_v2_0    expect=BOOTED   got=BOOTED   app=2.0.0+1  [0s.112ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e | [2s.656ms][INF] Copying the secondary slot to the primary slot: 0x20000 bytes
+OK   P4   reboot_after_update  expect=BOOTED   got=BOOTED   app=2.0.0+1  [0s.120ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+N10_rollback_readback_BEFORE : 32040000 = 96F3B83D 00000000 00A90400 0000A064  ||  32040010 = 00000000 00000900 5A3C0000 00000000  ||  3201B000 = 96F3B83D 00000000 00A90400 0000A064  ||  3201B010 = 00000000 00000001 5A3C0000 00000000
+N10_rollback_readback_AFTER : 32040000 = 00000000 00000000 00000000 00000000  ||  32040010 = 00000000 00000000 00000000 00000000  ||  3201B000 = 96F3B83D 00000000 00A90400 0000A064  ||  3201B010 = 00000000 00000001 5A3C0000 00000000
+P3_update_readback_BEFORE : 32040000 = 96F3B83D 00000000 00A90400 0000A064  ||  32040010 = 00000000 00000002 5A3C0001 00000000  ||  3201B000 = 96F3B83D 00000000 00A90400 0000A064  ||  3201B010 = 00000000 00000001 5A3C0000 00000000
+P3_update_readback_AFTER : 32040000 = 00000000 00000000 00000000 00000000  ||  32040010 = 00000000 00000000 00000000 00000000  ||  3201B000 = 96F3B83D 00000000 00A90400 0000A064  ||  3201B010 = 00000000 00000002 5A3C0001 00000000

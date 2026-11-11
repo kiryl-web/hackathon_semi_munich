@@ -1,0 +1,39 @@
+  0.025s [0s.222ms][DBG] ECDSA verification result: verify_ret=0x0d50b002
+  0.067s [0s.222ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  0.069s [0s.223ms][DBG] < boot_validate_slot: fa_id = 2
+  0.070s [0s.228ms][DBG] < boot_prepare_image_for_update
+  0.072s [0s.232ms][DBG]  * process swap_type = 2
+  0.073s [0s.235ms][DBG]  * perform update, mode 2...
+  0.074s [0s.239ms][DBG] > boot_perform_update: bs->idx = 1
+  0.075s [0s.244ms][INF] Image upgrade secondary slot -> primary slot
+  0.077s [0s.249ms][INF] Erasing the primary slot
+  0.078s [0s.253ms][DBG]  * primary slot sectors: 256
+  2.439s [2s.774ms][INF] Copying the secondary slot to the primary slot: 0x20000 bytes
+  3.364s [3s.579ms][DBG] erasing secondary header
+  3.367s [3s.589ms][DBG] erasing secondary trailer
+  3.377s [3s.599ms][DBG] > boot_validate_slot: fa_id = 1
+  3.387s [3s.603ms][DBG] ECDSA verifying signature with curve ID 4, hash_len=48, sig_len=96
+  3.394s [3s.770ms][DBG] ECDSA verification result: verify_ret=0x0d50b002
+  3.562s [3s.770ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  3.569s [3s.772ms][DBG] < boot_validate_slot: fa_id = 1
+  3.573s [3s.776ms][INF] Successfully added image data to shared area
+  3.579s [3s.781ms][INF] User Application validated successfully
+  3.583s [3s.786ms][INF] Running the first app
+  3.586s [3s.789ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  3.594s [3s.796ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  3.600s [3s.802ms][INF] Starting User Application (wait)...
+  3.605s [3s.807ms][INF] Start slot Address: 0x3201B400
+  3.609s [3s.811ms][INF] MCUBoot Bootloader finished.
+  3.612s 
+  3.613s [INF] Deinitializing hardware...
+  3.615s 
+  3.615s [2J[;H******************************************************************
+  3.624s 
+  3.624s         PSOC Control C3M6: Secure Boot and Update with EPB
+  3.630s 
+  3.630s                    Image Version : 2.0.0+1
+  3.633s 
+  3.633s ******************************************************************
+  3.640s 
+  3.640s  Starting DFU Transport
+  3.641s 

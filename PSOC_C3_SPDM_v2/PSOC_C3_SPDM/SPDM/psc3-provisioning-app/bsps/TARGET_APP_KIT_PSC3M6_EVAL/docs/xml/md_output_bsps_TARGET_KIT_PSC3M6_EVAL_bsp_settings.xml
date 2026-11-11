@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="md_output_bsps_TARGET_KIT_PSC3M6_EVAL_bsp_settings" kind="page">
+    <compoundname>md_output_bsps_TARGET_KIT_PSC3M6_EVAL_bsp_settings</compoundname>
+    <title>Peripheral Default BSP Settings</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><table rows="4" cols="4"><row>
+<entry thead="yes" align='center'><para>Resource   </para>
+</entry><entry thead="yes" align='center'><para>Parameter   </para>
+</entry><entry thead="yes" align='center'><para>Value   </para>
+</entry><entry thead="yes" align='left'><para>Remarks    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center' rowspan="3"><para>UART   </para>
+</entry><entry thead="no" align='center'><para>Flow control   </para>
+</entry><entry thead="no" align='center'><para>No flow control   </para>
+</entry><entry thead="no" align='left'><para></para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>Data format   </para>
+</entry><entry thead="no" align='center'><para>8N1   </para>
+</entry><entry thead="no" align='left'><para></para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>Baud rate   </para>
+</entry><entry thead="no" align='center'><para>115200   </para>
+</entry><entry thead="no" align='left'><para></para>
+</entry></row>
+</table>
+</para>
+<para><hruler/>
+ © Cypress Semiconductor Corporation, 2024-2026. </para>
+    </detaileddescription>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/bsp_settings.md"/>
+  </compounddef>
+</doxygen>

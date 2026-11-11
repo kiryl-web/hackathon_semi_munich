@@ -1,0 +1,61 @@
+  0.001s [0s.230ms][DBG] ECDSA verification result: verify_ret=0x0d50b002
+  0.121s [0s.230ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  0.128s [0s.231ms][DBG] < boot_validate_slot: fa_id = 1
+  0.134s [0s.236ms][INF] Successfully added image data to shared area
+  0.138s [0s.241ms][INF] User Application validated successfully
+  0.144s [0s.246ms][INF] Running the first app
+  0.146s [0s.249ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  0.171s [0s.256ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  0.175s [0s.26UBoot Bootloader finished.
+  0.175s 
+  0.176s [INF] Deinitializing hardware...
+  0.176s 
+  0.176s [2J[;H******************************************************************
+  0.184s 
+  0.184s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.189s 
+  0.189s                    Image Version : 1.0.0+0
+  0.192s 
+  0.193s ******************************************************************
+  0.199s 
+  0.200s  Starting DFU Transport
+  0.201s 
+  0.201s [524s.288ms][DBG] [2J[;H
+  0.328s [0s.0ms][INF] MCUBoot Bootloader Started
+  0.333s [0s.0ms][INF] boot_go_for_image_id
+  0.336s [0s.0ms][INF] Processing img id: 0
+  0.338s [0s.1ms][DBG]  * boot_prepare_image_for_update...
+  0.343s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  0.348s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  0.353s [0s.16ms][DBG]  * There was no partial swap, determine swap type.
+  0.364s [0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.369s [0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.378s [0s.40ms][INF] Swap type: none
+  0.381s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.385s [0s.47ms][DBG]  * process swap_type = 1
+  0.389s [0s.51ms][DBG] > boot_validate_slot: fa_id = 1
+  0.393s [0s.59ms][DBG] ECDSA verifying signature with curve ID 4, hash_len=48, sig_len=96
+  0.400s [0s.230ms][DBG] ECDSA verification result: verify_ret=0x0d50b002
+  0.563s [0s.230ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  0.570s [0s.231ms][DBG] < boot_validate_slot: fa_id = 1
+  0.574s [0s.236ms][INF] Successfully added image data to shared area
+  0.580s [0s.241ms][INF] User Application validated successfully
+  0.585s [0s.246ms][INF] Running the first app
+  0.588s [0s.249ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  0.595s [0s.256ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  0.601s [0s.262ms][INF] Starting User Application (wait)...
+  0.605s [0s.267ms][INF] Start slot Address: 0x3201B400
+  0.609s [0s.271ms][INF] MCUBoot Bootloader finished.
+  0.614s 
+  0.614s [INF] Deinitializing hardware...
+  0.616s 
+  0.617s [2J[;H******************************************************************
+  0.626s 
+  0.626s         PSOC Control C3M6: Secure Boot and Update with EPB
+  0.631s 
+  0.631s                    Image Version : 1.0.0+0
+  0.634s 
+  0.635s ******************************************************************
+  0.641s 
+  0.641s  Starting DFU Transport
+  0.643s 

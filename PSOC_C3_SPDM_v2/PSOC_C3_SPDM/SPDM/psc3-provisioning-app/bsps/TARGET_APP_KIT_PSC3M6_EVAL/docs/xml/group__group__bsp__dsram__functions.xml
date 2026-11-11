@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__group__bsp__dsram__functions" kind="group">
+    <compoundname>group_bsp_dsram_functions</compoundname>
+    <title>Functions</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__group__bsp__dsram__functions_1ga2f87313c9926c64f8f8cac002a3b0e2f" prot="public" static="no" mutable="no">
+        <type>cy_stc_syspm_warmboot_entrypoint_t</type>
+        <definition>cy_stc_syspm_warmboot_entrypoint_t syspmBspDeepSleepEntryPoint</definition>
+        <argsstring></argsstring>
+        <name>syspmBspDeepSleepEntryPoint</name>
+        <briefdescription>
+<para>DS entry point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" line="56" column="43" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="83" bodyend="-1" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" declline="56" declcolumn="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__bsp__dsram__functions_1gaeaa97ebf2a7a769589bf24bb2d306fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cybsp_syspm_do_warmboot</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_syspm_do_warmboot</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prepares the system to handle warm boot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" line="44" column="6" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="52" bodyend="57" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__bsp__dsram__functions_1gae9217e4b92ef5f9cda69a3bc26b9a5a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cy_rslt_t</type>
+        <definition>cy_rslt_t cybsp_syspm_dsram_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_syspm_dsram_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the deepsleep ram setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CY_RSLT_SUCCESS if the board is successfully initialized, if there is a problem initializing any hardware it returns an error code specific to the hardware module that had a problem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" line="53" column="11" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="90" bodyend="96" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.h" declline="53" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>All functions exposed by the board. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

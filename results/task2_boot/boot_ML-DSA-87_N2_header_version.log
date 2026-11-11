@@ -1,0 +1,19 @@
+  0.204s [524s.288ms][DBG] [2J[;H
+  0.307s [0s.0ms][INF] MCUBoot Bootloader Started
+  0.309s [0s.0ms][INF] boot_go_for_image_id
+  0.312s [0s.0ms][INF] Processing img id: 0
+  0.317s [0s.1ms][DBG]  * boot_prepare_image_for_update...
+  0.319s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  0.325s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  0.331s [0s.16ms][DBG]  * There was no partial swap, determine swap type.
+  0.336s [0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.345s [0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.356s [0s.40ms][INF] Swap type: none
+  0.358s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.362s [0s.47ms][DBG]  * process swap_type = 1
+  0.366s [0s.51ms][DBG] > boot_validate_slot: fa_id = 1
+  0.370s [0s.59ms][DBG] IMAGE_TLV_SHA is invalid
+  0.373s [0s.59ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+  0.381s [0s.66ms][ERR] Image in the primary slot is not valid!
+  0.386s [0s.70ms][DBG] < boot_validate_slot: fa_id = 1
+  0.390s [0s.75ms][ERR] handle_error!

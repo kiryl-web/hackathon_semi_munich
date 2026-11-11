@@ -1,0 +1,551 @@
+12:09:42.882 [I] === Non-secure provisioning application ===
+12:09:42.949 [I] Board init complete, starting DFU/provisioning bring-up
+12:09:45.488 [I] DFU middleware[I] Command 0x80 received (dataSize=5)
+12:09:45.527 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=640 nsheap=1032 sstk=292 sheap=112
+12:09:45.539 [I] DFU session finished; restarting session
+12:09:46.555 [I] Command 0x80 received (dataSize=21)
+12:09:46.874 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=720 nsheap=1032 sstk=292 sheap=112
+12:09:46.889 [I] DFU session finished; restarting session
+12:09:47.921 [I] Command 0x80 received (dataSize=49)
+12:09:48.261 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=720 nsheap=1032 sstk=292 sheap=112
+12:09:48.271 [I] DFU session finished; restarting session
+12:09:50.812 [I] Command 0x80 received (dataSize=5)
+12:09:50.828 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=720 nsheap=1032 sstk=292 sheap=112
+12:09:50.854 [I] DFU session finished; restarting session
+12:09:51.877 [I] Command 0x80 received (dataSize=21)
+12:09:52.258 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=720 nsheap=1032 sstk=292 sheap=112
+12:09:52.274 [I] DFU session finished; restarting session
+12:09:53.290 [I] Command 0x80 received (dataSize=49)
+12:09:53.676 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=720 nsheap=1032 sstk=292 sheap=112
+12:09:53.687 [I] DFU session finished; restarting session
+12:09:54.702 [I] Command 0x80 received (dataSize=5)
+12:09:55.169 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:09:55.180 [I] DFU session finished; restarting session
+12:09:57.724 [I] Command 0x80 received (dataSize=5)
+12:09:57.724 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:09:57.738 [I] DFU session finished; restarting session
+12:09:58.760 [I] Command 0x80 received (dataSize=21)
+12:09:59.142 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:09:59.163 [I] DFU session finished; restarting session
+12:10:00.175 [I] Command 0x80 received (dataSize=49)
+12:10:00.558 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:10:00.574 [I] DFU session finished; restarting session
+12:10:01.593 [I] Command 0x80 received (dataSize=5)
+12:10:01.976 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:10:01.990 [I] DFU session finished; restarting session
+12:10:03.010 [I] Command 0x80 received (dataSize=5)
+12:10:03.442 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=720 nsheap=1032 sstk=328 sheap=1340
+12:10:03.442 [I] DFU session finished; restarting session
+12:10:04.473 [I] Command 0x80 received (dataSize=9)
+12:10:04.906 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:04.925 [I] DFU session finished; restarting session
+12:10:05.951 [I] Command 0x80 received (dataSize=9)
+12:10:06.334 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:06.334 [I] DFU session finished; restarting session
+12:10:07.367 [I] Command 0x80 received (dataSize=9)
+12:10:07.765 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:07.780 [I] DFU session finished; restarting session
+12:10:08.831 [I] Command 0x80 received (dataSize=9)
+12:10:09.179 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:09.195 [I] DFU session finished; restarting session
+12:10:10.226 [I] Command 0x80 received (dataSize=9)
+12:10:10.586 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:10.592 [I] DFU session finished; restarting session
+12:10:12.121 [I] Command 0x80 received (dataSize=9)
+12:10:12.138 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:12.139 [I] DFU session finished; restarting session
+12:10:13.169 [I] Command 0x80 received (dataSize=9)
+12:10:13.630 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:13.630 [I] DFU session finished; restarting session
+12:10:14.665 [I] Command 0x80 received (dataSize=9)
+12:10:15.158 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:15.174 [I] DFU session finished; restarting session
+12:10:16.189 [I] Command 0x80 received (dataSize=9)
+12:10:16.555 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:16.570 [I] DFU session finished; restarting session
+12:10:17.588 [I] Command 0x80 received (dataSize=9)
+12:10:18.068 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:18.085 [I] DFU session finished; restarting session
+12:10:19.610 [I] Command 0x80 received (dataSize=9)
+12:10:19.630 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:19.641 [I] DFU session finished; restarting session
+12:10:20.658 [I] Command 0x80 received (dataSize=9)
+12:10:21.074 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:21.086 [I] DFU session finished; restarting session
+12:10:23.125 [I] Command 0x80 received (dataSize=5)
+12:10:23.480 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:23.492 [I] DFU session finished; restarting session
+12:10:24.510 [I] Command 0x80 received (dataSize=21)
+12:10:24.974 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=720 nsheap=1032 sstk=328 sheap=2576
+12:10:24.987 [I] DFU session finished; restarting session
+12:10:26.010 [I] Command 0x80 received (dataSize=49)
+12:10:26.363 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:26.378 [I] DFU session finished; restarting session
+12:10:27.398 [I] Command 0x80 received (dataSize=5)
+12:10:27.715 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:27.744 [I] DFU session finished; restarting session
+12:10:28.764 [I] Command 0x80 received (dataSize=5)
+12:10:29.136 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:29.148 [I] DFU session finished; restarting session
+12:10:30.166 [I] Command 0x80 received (dataSize=9)
+12:10:30.518 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:30.538 [I] DFU session finished; restarting session
+12:10:31.554 [I] Command 0x80 received (dataSize=9)
+12:10:31.909 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:31.923 [I] DFU session finished; restarting session
+12:10:32.943 [I] Command 0x80 received (dataSize=9)
+12:10:33.347 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:33.347 [I] DFU session finished; restarting session
+12:10:34.380 [I] Command 0x80 received (dataSize=9)
+12:10:34.790 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:34.802 [I] DFU session finished; restarting session
+12:10:36.319 [I] Command 0x80 received (dataSize=9)
+12:10:36.377 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:36.389 [I] DFU session finished; restarting session
+12:10:37.413 [I] Command 0x80 received (dataSize=9)
+12:10:37.908 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:37.920 [I] DFU session finished; restarting session
+12:10:39.435 [I] Command 0x80 received (dataSize=9)
+12:10:39.631 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:39.643 [I] DFU session finished; restarting session
+12:10:41.170 [I] Command 0x80 received (dataSize=9)
+12:10:41.218 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:41.228 [I] DFU session finished; restarting session
+12:10:42.752 [I] Command 0x80 received (dataSize=9)
+12:10:42.757 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:42.765 [I] DFU session finished; restarting session
+12:10:43.782 [I] Command 0x80 received (dataSize=9)
+12:10:44.201 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:44.216 [I] DFU session finished; restarting session
+12:10:45.244 [I] Command 0x80 received (dataSize=9)
+12:10:45.732 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:45.742 [I] DFU session finished; restarting session
+12:10:46.780 [I] Command 0x80 received (dataSize=9)
+12:10:47.202 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=728 nsheap=1032 sstk=328 sheap=2576
+12:10:47.207 [I] DFU session finished; restarting session
+12:10:48.728 [I] Command 0x80 received (dataSize=45)
+12:10:48.732 [I] [PERF] n=18 req=83 rq=45 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1820 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:48.826 [I] DFU session finished; restarting session
+12:10:49.864 [I] Command 0x80 received (dataSize=9)
+12:10:50.293 [I] [PERF] n=19 req=86 rq=9 rsp=06 rs=128 large=190 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1957 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:50.307 [I] DFU session finished; restarting session
+12:10:51.331 [I] Command 0x80 received (dataSize=9)
+12:10:51.805 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=92 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2058 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:51.815 [I] DFU session finished; restarting session
+12:10:53.852 [I] Command 0x80 received (dataSize=5)
+12:10:54.295 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:54.301 [I] DFU session finished; restarting session
+12:10:55.317 [I] Command 0x80 received (dataSize=21)
+12:10:55.740 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:55.757 [I] DFU session finished; restarting session
+12:10:56.769 [I] Command 0x80 received (dataSize=49)
+12:10:57.165 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:57.189 [I] DFU session finished; restarting session
+12:10:58.211 [I] Command 0x80 received (dataSize=5)
+12:10:58.649 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:10:58.662 [I] DFU session finished; restarting session
+12:10:59.678 [I] Command 0x80 received (dataSize=5)
+12:11:00.097 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:00.104 [I] DFU session finished; restarting session
+12:11:01.131 [I] Command 0x80 received (dataSize=9)
+12:11:01.575 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:01.585 [I] DFU session finished; restarting session
+12:11:02.606 [I] Command 0x80 received (dataSize=9)
+12:11:02.988 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:03.000 [I] DFU session finished; restarting session
+12:11:04.020 [I] Command 0x80 received (dataSize=9)
+12:11:04.400 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:04.411 [I] DFU session finished; restarting session
+12:11:05.438 [I] Command 0x80 received (dataSize=9)
+12:11:05.848 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:05.857 [I] DFU session finished; restarting session
+12:11:06.869 [I] Command 0x80 received (dataSize=9)
+12:11:07.304 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:07.316 [I] DFU session finished; restarting session
+12:11:08.350 [I] Command 0x80 received (dataSize=9)
+12:11:08.751 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:08.755 [I] DFU session finished; restarting session
+12:11:09.775 [I] Command 0x80 received (dataSize=9)
+12:11:10.202 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:10.213 [I] DFU session finished; restarting session
+12:11:11.234 [I] Command 0x80 received (dataSize=9)
+12:11:11.618 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:11.630 [I] DFU session finished; restarting session
+12:11:12.661 [I] Command 0x80 received (dataSize=9)
+12:11:13.022 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:13.034 [I] DFU session finished; restarting session
+12:11:14.058 [I] Command 0x80 received (dataSize=9)
+12:11:14.552 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:14.566 [I] DFU session finished; restarting session
+12:11:15.589 [I] Command 0x80 received (dataSize=9)
+12:11:16.059 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:16.062 [I] DFU session finished; restarting session
+12:11:17.080 [I] Command 0x80 received (dataSize=9)
+12:11:17.486 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:17.498 [I] DFU session finished; restarting session
+12:11:18.529 [I] Command 0x80 received (dataSize=13)
+12:11:18.944 [I] [PERF] n=18 req=E0 rq=13 rsp=60 rs=51 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1833 nsstk=984 nsheap=1032 sstk=4320 sheap=2576
+12:11:18.956 [I] DFU session finished; restarting session
+12:11:19.963 [I] Command 0x80 received (dataSize=46)
+12:11:20.380 [I] [PERF] n=19 req=E0 rq=46 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1885 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:20.468 [I] DFU session finished; restarting session
+12:11:21.497 [I] Command 0x80 received (dataSize=9)
+12:11:21.912 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=128 large=295 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2022 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:21.926 [I] DFU session finished; restarting session
+12:11:22.930 [I] Command 0x80 received (dataSize=9)
+12:11:23.346 [I] [PERF] n=21 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2159 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:23.353 [I] DFU session finished; restarting session
+12:11:24.374 [I] Command 0x80 received (dataSize=9)
+12:11:24.752 [I] [PERF] n=22 req=86 rq=9 rsp=06 rs=82 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2250 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:24.761 [I] DFU session finished; restarting session
+12:11:26.800 [I] Command 0x80 received (dataSize=5)
+12:11:27.159 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:27.173 [I] DFU session finished; restarting session
+12:11:28.194 [I] Command 0x80 received (dataSize=21)
+12:11:28.525 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:28.530 [I] DFU session finished; restarting session
+12:11:29.556 [I] Command 0x80 received (dataSize=49)
+12:11:29.901 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:29.913 [I] DFU session finished; restarting session
+12:11:30.925 [I] Command 0x80 received (dataSize=5)
+12:11:31.302 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:31.319 [I] DFU session finished; restarting session
+12:11:32.835 [I] Command 0x80 received (dataSize=5)
+12:11:32.887 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:32.901 [I] DFU session finished; restarting session
+12:11:33.918 [I] Command 0x80 received (dataSize=9)
+12:11:34.317 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:34.329 [I] DFU session finished; restarting session
+12:11:35.351 [I] Command 0x80 received (dataSize=9)
+12:11:35.773 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:35.787 [I] DFU session finished; restarting session
+12:11:36.806 [I] Command 0x80 received (dataSize=9)
+12:11:37.186 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:37.200 [I] DFU session finished; restarting session
+12:11:38.222 [I] Command 0x80 received (dataSize=9)
+12:11:38.625 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:38.637 [I] DFU session finished; restarting session
+12:11:39.648 [I] Command 0x80 received (dataSize=9)
+12:11:40.020 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:40.030 [I] DFU session finished; restarting session
+12:11:41.047 [I] Command 0x80 received (dataSize=9)
+12:11:41.397 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:41.411 [I] DFU session finished; restarting session
+12:11:42.442 [I] Command 0x80 received (dataSize=9)
+12:11:42.793 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:42.808 [I] DFU session finished; restarting session
+12:11:43.832 [I] Command 0x80 received (dataSize=9)
+12:11:44.196 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:44.209 [I] DFU session finished; restarting session
+12:11:45.241 [I] Command 0x80 received (dataSize=9)
+12:11:45.696 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:45.709 [I] DFU session finished; restarting session
+12:11:46.726 [I] Command 0x80 received (dataSize=9)
+12:11:47.099 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:47.110 [I] DFU session finished; restarting session
+12:11:48.129 [I] Command 0x80 received (dataSize=9)
+12:11:48.523 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:48.538 [I] DFU session finished; restarting session
+12:11:49.557 [I] Command 0x80 received (dataSize=9)
+12:11:49.957 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:49.969 [I] DFU session finished; restarting session
+12:11:50.981 [I] Command 0x80 received (dataSize=128)
+12:11:51.428 [I] [PERF] n=18 req=85 rq=128 rsp=05 rs=9 large=166 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1906 nsstk=1040 nsheap=1032 sstk=4336 sheap=2576
+12:11:51.450 [I] DFU session finished; restarting session
+12:11:52.465 [I] Command 0x80 received (dataSize=68)
+12:11:52.828 [I] [PERF] n=19 req=85 rq=68 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1980 nsstk=2112 nsheap=1032 sstk=4336 sheap=2576
+12:11:53.090 [I] DFU session finished; restarting session
+12:11:54.111 [I] Command 0x80 received (dataSize=9)
+12:11:54.491 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=128 large=302 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2117 nsstk=2112 nsheap=1032 sstk=4336 sheap=2576
+12:11:54.507 [I] DFU session finished; restarting session
+12:11:55.527 [I] Command 0x80 received (dataSize=9)
+12:11:55.960 [I] [PERF] n=21 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2254 nsstk=2112 nsheap=1032 sstk=4336 sheap=2576
+12:11:55.969 [I] DFU session finished; restarting session
+12:11:56.990 [I] Command 0x80 received (dataSize=9)
+12:11:57.360 [I] [PERF] n=22 req=86 rq=9 rsp=06 rs=89 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2352 nsstk=2112 nsheap=1032 sstk=4336 sheap=2576
+12:11:57.371 [I] DFU session finished; restarting session
+12:11:58.395 [I] Command 0x80 received (dataSize=95)
+12:11:58.872 [I] [PERF] n=23 req=SEC rq=95 rsp=SEC rs=42 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2489 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:11:58.888 [I] DFU session finished; restarting session
+12:11:59.913 [I] Command 0x80 received (dataSize=33)
+12:12:00.313 [I] [PERF] n=24 req=SEC rq=33 rsp=SEC rs=55 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2577 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:00.324 [I] DFU session finished; restarting session
+12:12:02.385 [I] Command 0x80 received (dataSize=5)
+12:12:02.784 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:02.797 [I] DFU session finished; restarting session
+12:12:03.814 [I] Command 0x80 received (dataSize=21)
+12:12:04.282 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:04.294 [I] DFU session finished; restarting session
+12:12:05.317 [I] Command 0x80 received (dataSize=49)
+12:12:05.826 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:05.836 [I] DFU session finished; restarting session
+12:12:06.852 [I] Command 0x80 received (dataSize=5)
+12:12:07.337 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:07.349 [I] DFU session finished; restarting session
+12:12:08.882 [I] Command 0x80 received (dataSize=5)
+12:12:08.887 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:08.895 [I] DFU session finished; restarting session
+12:12:10.421 [I] Command 0x80 received (dataSize=9)
+12:12:10.456 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:10.471 [I] DFU session finished; restarting session
+12:12:11.502 [I] Command 0x80 received (dataSize=9)
+12:12:11.983 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:11.997 [I] DFU session finished; restarting session
+12:12:13.022 [I] Command 0x80 received (dataSize=9)
+12:12:13.450 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:13.457 [I] DFU session finished; restarting session
+12:12:14.990 [I] Command 0x80 received (dataSize=9)
+12:12:15.002 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:15.015 [I] DFU session finished; restarting session
+12:12:16.553 [I] Command 0x80 received (dataSize=9)
+12:12:16.604 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:16.616 [I] DFU session finished; restarting session
+12:12:18.163 [I] Command 0x80 received (dataSize=9)
+12:12:18.178 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:18.189 [I] DFU session finished; restarting session
+12:12:19.213 [I] Command 0x80 received (dataSize=9)
+12:12:19.686 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:19.704 [I] DFU session finished; restarting session
+12:12:20.713 [I] Command 0x80 received (dataSize=9)
+12:12:21.113 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:21.121 [I] DFU session finished; restarting session
+12:12:22.152 [I] Command 0x80 received (dataSize=9)
+12:12:22.569 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:22.572 [I] DFU session finished; restarting session
+12:12:23.602 [I] Command 0x80 received (dataSize=9)
+12:12:24.000 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:24.018 [I] DFU session finished; restarting session
+12:12:25.057 [I] Command 0x80 received (dataSize=9)
+12:12:25.456 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:25.467 [I] DFU session finished; restarting session
+12:12:26.503 [I] Command 0x80 received (dataSize=9)
+12:12:26.882 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:26.896 [I] DFU session finished; restarting session
+12:12:27.919 [I] Command 0x80 received (dataSize=128)
+12:12:28.342 [I] [PERF] n=18 req=85 rq=128 rsp=05 rs=9 large=166 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1906 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:28.354 [I] DFU session finished; restarting session
+12:12:29.383 [I] Command 0x80 received (dataSize=68)
+12:12:29.794 [I] [PERF] n=19 req=85 rq=68 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1980 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:30.048 [I] DFU session finished; restarting session
+12:12:31.074 [I] Command 0x80 received (dataSize=9)
+12:12:31.486 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=128 large=302 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2117 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:31.502 [I] DFU session finished; restarting session
+12:12:32.523 [I] Command 0x80 received (dataSize=9)
+12:12:32.889 [I] [PERF] n=21 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2254 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:32.905 [I] DFU session finished; restarting session
+12:12:33.931 [I] Command 0x80 received (dataSize=9)
+12:12:34.307 [I] [PERF] n=22 req=86 rq=9 rsp=06 rs=89 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2352 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:34.318 [I] DFU session finished; restarting session
+12:12:35.342 [I] Command 0x80 received (dataSize=95)
+12:12:35.755 [I] [PERF] n=23 req=SEC rq=95 rsp=SEC rs=52 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2499 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:35.773 [I] DFU session finished; restarting session
+12:12:36.803 [I] Command 0x80 received (dataSize=66)
+12:12:37.194 [I] SPDM app message: echoing 14 B (session 0xFFFFFFFF)
+12:12:37.194 [I] [PERF] n=24 req=SEC rq=66 rsp=SEC rs=42 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2607 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:37.221 [I] DFU session finished; restarting session
+12:12:38.240 [I] Command 0x80 received (dataSize=46)
+12:12:38.659 [I] [PERF] n=25 req=SEC rq=46 rsp=SEC rs=48 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2701 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:38.674 [I] DFU session finished; restarting session
+12:12:40.710 [I] Command 0x80 received (dataSize=5)
+12:12:41.156 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:41.167 [I] DFU session finished; restarting session
+12:12:42.183 [I] Command 0x80 received (dataSize=21)
+12:12:42.561 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:42.572 [I] DFU session finished; restarting session
+12:12:43.597 [I] Command 0x80 received (dataSize=49)
+12:12:43.996 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:44.011 [I] DFU session finished; restarting session
+12:12:45.025 [I] Command 0x80 received (dataSize=5)
+12:12:45.391 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:45.402 [I] DFU session finished; restarting session
+12:12:46.417 [I] Command 0x80 received (dataSize=5)
+12:12:46.902 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:46.902 [I] DFU session finished; restarting session
+12:12:47.921 [I] Command 0x80 received (dataSize=9)
+12:12:48.290 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:48.304 [I] DFU session finished; restarting session
+12:12:49.308 [I] Command 0x80 received (dataSize=9)
+12:12:49.713 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:49.729 [I] DFU session finished; restarting session
+12:12:50.731 [I] Command 0x80 received (dataSize=9)
+12:12:51.120 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:51.136 [I] DFU session finished; restarting session
+12:12:52.154 [I] Command 0x80 received (dataSize=9)
+12:12:52.604 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:52.616 [I] DFU session finished; restarting session
+12:12:53.636 [I] Command 0x80 received (dataSize=9)
+12:12:54.071 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:54.082 [I] DFU session finished; restarting session
+12:12:55.110 [I] Command 0x80 received (dataSize=9)
+12:12:55.498 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:55.508 [I] DFU session finished; restarting session
+12:12:56.522 [I] Command 0x80 received (dataSize=9)
+12:12:56.937 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:56.952 [I] DFU session finished; restarting session
+12:12:57.973 [I] Command 0x80 received (dataSize=9)
+12:12:58.368 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:58.374 [I] DFU session finished; restarting session
+12:12:59.396 [I] Command 0x80 received (dataSize=9)
+12:12:59.842 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:12:59.852 [I] DFU session finished; restarting session
+12:13:00.874 [I] Command 0x80 received (dataSize=9)
+12:13:01.316 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:01.327 [I] DFU session finished; restarting session
+12:13:02.354 [I] Command 0x80 received (dataSize=9)
+12:13:02.824 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:02.837 [I] DFU session finished; restarting session
+12:13:03.858 [I] Command 0x80 received (dataSize=9)
+12:13:04.331 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:04.341 [I] DFU session finished; restarting session
+12:13:05.373 [I] Command 0x80 received (dataSize=128)
+12:13:05.803 [I] [PERF] n=18 req=85 rq=128 rsp=05 rs=9 large=166 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1906 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:05.816 [I] DFU session finished; restarting session
+12:13:06.839 [I] Command 0x80 received (dataSize=68)
+12:13:07.301 [I] [PERF] n=19 req=85 rq=68 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1980 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:07.563 [I] DFU session finished; restarting session
+12:13:08.573 [I] Command 0x80 received (dataSize=9)
+12:13:09.013 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=128 large=302 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2117 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:09.020 [I] DFU session finished; restarting session
+12:13:10.042 [I] Command 0x80 received (dataSize=9)
+12:13:10.487 [I] [PERF] n=21 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2254 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:10.491 [I] DFU session finished; restarting session
+12:13:11.527 [I] Command 0x80 received (dataSize=9)
+12:13:12.014 [I] [PERF] n=22 req=86 rq=9 rsp=06 rs=89 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2352 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:12.027 [I] DFU session finished; restarting session
+12:13:13.042 [I] Command 0x80 received (dataSize=88)
+12:13:13.458 [I] [PERF] n=23 req=SEC rq=88 rsp=SEC rs=62 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2502 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:13.472 [I] DFU session finished; restarting session
+12:13:14.491 [I] Command 0x80 received (dataSize=73)
+12:13:14.873 [I] SPDM app message: echoing 14 B (session 0xFFFFFFFF)
+12:13:14.876 [I] [PERF] n=24 req=SEC rq=73 rsp=SEC rs=51 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2626 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:14.889 [I] DFU session finished; restarting session
+12:13:15.912 [I] Command 0x80 received (dataSize=34)
+12:13:16.275 [I] [PERF] n=25 req=SEC rq=34 rsp=SEC rs=54 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2714 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:16.292 [I] DFU session finished; restarting session
+12:13:18.846 [I] Command 0x80 received (dataSize=5)
+12:13:18.850 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:18.866 [I] DFU session finished; restarting session
+12:13:19.888 [I] Command 0x80 received (dataSize=21)
+12:13:20.270 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:20.270 [I] DFU session finished; restarting session
+12:13:21.309 [I] Command 0x80 received (dataSize=49)
+12:13:21.777 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:21.798 [I] DFU session finished; restarting session
+12:13:22.823 [I] Command 0x80 received (dataSize=5)
+12:13:23.243 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:23.255 [I] DFU session finished; restarting session
+12:13:24.288 [I] Command 0x80 received (dataSize=5)
+12:13:24.691 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:24.703 [I] DFU session finished; restarting session
+12:13:25.719 [I] Command 0x80 received (dataSize=9)
+12:13:26.073 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:26.088 [I] DFU session finished; restarting session
+12:13:27.103 [I] Command 0x80 received (dataSize=9)
+12:13:27.452 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:27.468 [I] DFU session finished; restarting session
+12:13:28.486 [I] Command 0x80 received (dataSize=9)
+12:13:28.843 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:28.855 [I] DFU session finished; restarting session
+12:13:29.889 [I] Command 0x80 received (dataSize=9)
+12:13:30.245 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:30.255 [I] DFU session finished; restarting session
+12:13:31.274 [I] Command 0x80 received (dataSize=9)
+12:13:31.649 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:31.661 [I] DFU session finished; restarting session
+12:13:32.687 [I] Command 0x80 received (dataSize=9)
+12:13:33.053 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:33.069 [I] DFU session finished; restarting session
+12:13:34.089 [I] Command 0x80 received (dataSize=9)
+12:13:34.459 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:34.472 [I] DFU session finished; restarting session
+12:13:35.491 [I] Command 0x80 received (dataSize=9)
+12:13:35.858 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:35.871 [I] DFU session finished; restarting session
+12:13:36.885 [I] Command 0x80 received (dataSize=9)
+12:13:37.239 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:37.250 [I] DFU session finished; restarting session
+12:13:38.267 [I] Command 0x80 received (dataSize=9)
+12:13:38.656 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:38.664 [I] DFU session finished; restarting session
+12:13:39.696 [I] Command 0x80 received (dataSize=9)
+12:13:40.061 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:40.075 [I] DFU session finished; restarting session
+12:13:41.094 [I] Command 0x80 received (dataSize=9)
+12:13:41.464 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:41.477 [I] DFU session finished; restarting session
+12:13:42.511 [I] Command 0x80 received (dataSize=128)
+12:13:42.891 [I] [PERF] n=18 req=85 rq=128 rsp=05 rs=9 large=166 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1906 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:42.893 [I] DFU session finished; restarting session
+12:13:43.927 [I] Command 0x80 received (dataSize=68)
+12:13:44.276 [I] [PERF] n=19 req=85 rq=68 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1980 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:44.540 [I] DFU session finished; restarting session
+12:13:45.548 [I] Command 0x80 received (dataSize=9)
+12:13:45.955 [I] [PERF] n=20 req=86 rq=9 rsp=06 rs=128 large=302 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2117 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:45.965 [I] DFU session finished; restarting session
+12:13:46.989 [I] Command 0x80 received (dataSize=9)
+12:13:47.358 [I] [PERF] n=21 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2254 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:47.371 [I] DFU session finished; restarting session
+12:13:48.388 [I] Command 0x80 received (dataSize=9)
+12:13:48.758 [I] [PERF] n=22 req=86 rq=9 rsp=06 rs=89 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2352 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:48.770 [I] DFU session finished; restarting session
+12:13:49.789 [I] Command 0x80 received (dataSize=85)
+12:13:50.144 [I] [PERF] n=23 req=SEC rq=85 rsp=SEC rs=48 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2485 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:50.159 [I] DFU session finished; restarting session
+12:13:51.678 [I] Command 0x80 received (dataSize=69)
+12:13:51.688 [I] SPDM app message: echoing 14 B (session 0xFFFFFFFF)
+12:13:51.695 [I] [PERF] n=24 req=SEC rq=69 rsp=SEC rs=43 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2597 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:51.707 [I] DFU session finished; restarting session
+12:13:52.730 [I] Command 0x80 received (dataSize=40)
+12:13:53.180 [I] [PERF] n=25 req=SEC rq=40 rsp=SEC rs=33 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=2670 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:53.192 [I] DFU session finished; restarting session
+12:13:55.725 [I] Command 0x80 received (dataSize=5)
+12:13:55.731 [I] [PERF] n=1 req=84 rq=5 rsp=04 rs=17 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=22 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:55.743 [I] DFU session finished; restarting session
+12:13:56.758 [I] Command 0x80 received (dataSize=21)
+12:13:57.158 [I] [PERF] n=2 req=E1 rq=21 rsp=61 rs=21 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=64 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:57.170 [I] DFU session finished; restarting session
+12:13:58.181 [I] Command 0x80 received (dataSize=49)
+12:13:58.555 [I] [PERF] n=3 req=E3 rq=49 rsp=63 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=166 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:13:58.571 [I] DFU session finished; restarting session
+12:13:59.580 [I] Command 0x80 received (dataSize=5)
+12:14:00.068 [I] [PERF] n=4 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=224 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:00.081 [I] DFU session finished; restarting session
+12:14:01.610 [I] Command 0x80 received (dataSize=5)
+12:14:01.630 [I] [PERF] n=5 req=81 rq=5 rsp=01 rs=53 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=282 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:01.642 [I] DFU session finished; restarting session
+12:14:02.655 [I] Command 0x80 received (dataSize=9)
+12:14:03.113 [I] [PERF] n=6 req=82 rq=9 rsp=7F rs=6 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=297 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:03.124 [I] DFU session finished; restarting session
+12:14:04.143 [I] Command 0x80 received (dataSize=9)
+12:14:04.621 [I] [PERF] n=7 req=86 rq=9 rsp=06 rs=128 large=1226 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=434 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:04.637 [I] DFU session finished; restarting session
+12:14:06.179 [I] Command 0x80 received (dataSize=9)
+12:14:06.187 [I] [PERF] n=8 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=571 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:06.200 [I] DFU session finished; restarting session
+12:14:07.215 [I] Command 0x80 received (dataSize=9)
+12:14:07.672 [I] [PERF] n=9 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=708 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:07.683 [I] DFU session finished; restarting session
+12:14:08.710 [I] Command 0x80 received (dataSize=9)
+12:14:09.165 [I] [PERF] n=10 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=845 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:09.176 [I] DFU session finished; restarting session
+12:14:10.194 [I] Command 0x80 received (dataSize=9)
+12:14:10.596 [I] [PERF] n=11 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=982 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:10.608 [I] DFU session finished; restarting session
+12:14:11.643 [I] Command 0x80 received (dataSize=9)
+12:14:12.071 [I] [PERF] n=12 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1119 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:12.083 [I] DFU session finished; restarting session
+12:14:13.094 [I] Command 0x80 received (dataSize=9)
+12:14:13.528 [I] [PERF] n=13 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1256 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:13.540 [I] DFU session finished; restarting session
+12:14:14.568 [I] Command 0x80 received (dataSize=9)
+12:14:14.997 [I] [PERF] n=14 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1393 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:15.019 [I] DFU session finished; restarting session
+12:14:16.044 [I] Command 0x80 received (dataSize=9)
+12:14:16.447 [I] [PERF] n=15 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1530 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:16.460 [I] DFU session finished; restarting session
+12:14:17.492 [I] Command 0x80 received (dataSize=9)
+12:14:17.846 [I] [PERF] n=16 req=86 rq=9 rsp=06 rs=128 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1667 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:17.856 [I] DFU session finished; restarting session
+12:14:18.894 [I] Command 0x80 received (dataSize=9)
+12:14:19.232 [I] [PERF] n=17 req=86 rq=9 rsp=06 rs=93 large=0 t=0 sign=0 kexg=0 kexs=0 kem=0 cum_t=0 cum_b=1769 nsstk=2328 nsheap=1032 sstk=4336 sheap=2576
+12:14:19.243 [I] DFU session finished; restarting session

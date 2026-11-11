@@ -1,0 +1,29 @@
+  2.346s [2s.568ms][DBG] < boot_validate_slot: fa_id = 2
+  2.416s [2s.568ms][DBG] < boot_prepare_image_for_update
+  2.417s [2s.568ms][DBG]  * process swap_type = 1
+  2.418s [2s.569ms][DBG] > boot_validate_slot: fa_id = 1
+  2.418s [2s.578ms][DBG] ECDSA verifying signature with curve ID 4, hash_len=48, sig_len=96
+  2.419s [2s.748ms][DBG] ECDSA verification result: verify_ret=0x0d50b002
+  2.572s [2s.748ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+  2.579s [2s.750ms][DBG] < boot_validate_slot: fa_id = 1
+  2.583s [2s.754ms][INF] Successfully added image data to shared area
+  2.589s [2s.759ms][INF] User Application validated successfully
+  2.594s [2s.764ms][INF] Running the first app
+  2.597s [2s.767ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+  2.605s [2s.774ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+  2.609s [2s.780ms][INF] Starting User Application (wait)...
+  2.614s [2s.785ms][INF] Start slot Address: 0x3201B400
+  2.618s [2s.789ms][INF] MCUBoot Bootloader finished.
+  2.623s 
+  2.623s [INF] Deinitializing hardware...
+  2.625s 
+  2.625s [2J[;H******************************************************************
+  2.634s 
+  2.634s         PSOC Control C3M6: Secure Boot and Update with EPB
+  2.641s 
+  2.641s                    Image Version : 1.0.0+0
+  2.644s 
+  2.644s ******************************************************************
+  2.650s 
+  2.650s  Starting DFU Transport
+  2.651s 

@@ -1,0 +1,501 @@
+﻿make: Entering directory '/cygdrive/p/psc3-provisioning-app'
+Searching installed tools in progress...
+Searching installed tools complete
+/usr/bin/make -C proj_cm33_s build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psc3-provisioning-app" MTB_APPLICATION_PROMOTE=true && /usr/bin/make -C proj_cm33_ns build_proj MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns" MTB_APPLICATION_NAME="psc3-provisioning-app" MTB_APPLICATION_PROMOTE=true && true
+make[1]: Entering directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_s'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_s Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'P:/psc3-provisioning-app/proj_cm33_s'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/core/prov_crypto.o
+[2/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/core/prov_csr.o
+[3/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/core/prov_csr_mldsa.o
+[4/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/core/prov_svc.o
+[5/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/main.o
+[6/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/nsc/prov_nsc.o
+[7/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/pas/pas.o
+[8/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/platform/heap_guard.o
+[9/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/platform/ppc_config.o
+[10/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/local/wolfssl/prov_wc_seed.o
+[11/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[12/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[13/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_alt_mxcrypto.o
+[14/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/aes_gcm_alt_mxcrypto.o
+[15/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/crypto_common.o
+[16/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdh_alt_mxcrypto.o
+[17/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecdsa_alt_mxcrypto.o
+[18/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_alt_mxcrypto.o
+[19/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ecp_curves_alt_mxcrypto.o
+[20/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/ed25519_alt_mxcrypto.o
+[21/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha1_alt_mxcrypto.o
+[22/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha256_alt_mxcrypto.o
+[23/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/sha512_alt_mxcrypto.o
+[24/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTO/trng_alt_mxcrypto.o
+[25/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/aes_alt_mxcryptolite.o
+[26/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ecdsa_alt_mxcryptolite.o
+[27/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/ed25519_alt_mxcryptolite.o
+[28/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/eddsa_alt_sha512.o
+[29/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/sha256_alt_mxcryptolite.o
+[30/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_MXCRYPTOLITE/trng_alt_mxcryptolite.o
+[31/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_common.o
+[32/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_aead.o
+[33/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_asymmetric.o
+[34/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_cipher.o
+[35/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_hash.o
+[36/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_agreement.o
+[37/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_key_generation.o
+[38/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_mac.o
+[39/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_public_key_export.o
+[40/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_sign.o
+[41/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCrypto/ifx_mxcrypto_transparent_signature_verify.o
+[42/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_common.o
+[43/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_aead.o
+[44/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_cipher.o
+[45/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_hash.o
+[46/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_agreement.o
+[47/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_derivation.o
+[48/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_key_generation.o
+[49/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_mac.o
+[50/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_public_key_export.o
+[51/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_signature_verify.o
+[52/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_common.o
+[53/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_aead.o
+[54/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_cipher.o
+[55/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptosuite/ifx_cryptosuite_transparent_mac.o
+[56/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_common.o
+[57/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_import.o
+[58/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_encapsulation.o
+[59/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_key_generation.o
+[60/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_public_key_export.o
+[61/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_sign.o
+[62/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_wolfcrypto/ifx_wolfcrypto_transparent_signature_verify.o
+[63/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/aes.o
+[64/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/aesce.o
+[65/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/aesni.o
+[66/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/aria.o
+[67/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/asn1parse.o
+[68/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/cy-mbedtls-acceleration/mbedtls_PSA/mbedtls_psa_MXCryptolite/ifx_cryptolite_transparent_sign.o
+[69/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/asn1write.o
+[70/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/base64.o
+[71/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/bignum.o
+[72/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/bignum_core.o
+[73/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/bignum_mod.o
+[74/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/bignum_mod_raw.o
+[75/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/block_cipher.o
+[76/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/camellia.o
+[77/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ccm.o
+[78/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/chacha20.o
+[79/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/chachapoly.o
+[80/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/cipher.o
+[81/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/cipher_wrap.o
+[82/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/cmac.o
+[83/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/constant_time.o
+[84/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ctr_drbg.o
+[85/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/debug.o
+[86/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/des.o
+[87/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/dhm.o
+[88/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecdh.o
+[89/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecdsa.o
+[90/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecjpake.o
+[91/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecp.o
+[92/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecp_curves.o
+[93/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ecp_curves_new.o
+[94/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/entropy.o
+[95/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/entropy_poll.o
+[96/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/error.o
+[97/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/gcm.o
+[98/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/hkdf.o
+[99/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/hmac_drbg.o
+[100/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/lmots.o
+[101/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/lms.o
+[102/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/md.o
+[103/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/md5.o
+[104/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/memory_buffer_alloc.o
+[105/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/mps_reader.o
+[106/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/mps_trace.o
+[107/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/net_sockets.o
+[108/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/nist_kw.o
+[109/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/oid.o
+[110/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/padlock.o
+[111/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pem.o
+[112/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pk.o
+[113/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pk_ecc.o
+[114/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pk_wrap.o
+[115/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pkcs12.o
+[116/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pkcs5.o
+[117/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pkcs7.o
+[118/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pkparse.o
+[119/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/pkwrite.o
+[120/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/platform.o
+[121/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/platform_util.o
+[122/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/poly1305.o
+[123/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_aead.o
+[124/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_cipher.o
+[125/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_se.o
+[126/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_client.o
+[127/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_hash.o
+[128/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_ffdh.o
+[129/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_storage.o
+[130/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_its_file.o
+[131/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ripemd160.o
+[132/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_ecp.o
+[133/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/rsa_alt_helpers.o
+[134/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/rsa.o
+[135/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/sha1.o
+[136/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_pake.o
+[137/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/sha256.o
+[138/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/sha3.o
+[139/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_driver_wrappers_no_static.o
+[140/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_cache.o
+[141/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_ciphersuites.o
+[142/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_mac.o
+[143/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_rsa.o
+[144/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto.o
+[145/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_client.o
+[146/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_cookie.o
+[147/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_random.o
+[148/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_crypto_slot_management.o
+[149/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/sha512.o
+[150/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_msg.o
+[151/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/psa_util.o
+[152/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_ticket.o
+[153/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls12_client.o
+[154/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls.o
+[155/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls13_client.o
+[156/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/timing.o
+[157/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/version.o
+[158/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/version_features.o
+[159/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_debug_helpers_generated.o
+[160/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls12_server.o
+[161/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509.o
+[162/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509_create.o
+[163/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls13_keys.o
+[164/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509_crl.o
+[165/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509_crt.o
+[166/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls13_generic.o
+[167/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/ssl_tls13_server.o
+[168/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509_csr.o
+[169/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/threading.o
+[170/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509write.o
+[171/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509write_crt.o
+[172/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/target/infineon/mbedtls/ifx_mbedtls_builtin_keys.o
+[173/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/ifx-mbedtls/library/x509write_csr.o
+[174/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[175/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[176/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[177/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[178/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[179/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[180/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[181/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[182/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[183/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[184/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[185/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[186/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[187/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[188/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[189/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[190/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[191/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[192/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[193/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[194/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[195/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[196/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[197/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[198/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[199/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[200/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[201/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[202/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[203/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[204/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[205/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[206/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[207/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[208/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[209/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[210/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[211/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[212/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[213/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[214/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[215/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[216/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[217/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[218/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[219/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[220/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[221/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[222/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[223/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[224/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[225/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[226/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[227/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[228/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[229/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[230/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[231/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[232/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[233/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[234/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[235/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[236/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[237/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[238/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[239/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[240/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[241/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[242/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[243/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[244/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[245/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[246/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[247/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[248/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[249/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[250/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[251/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[252/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[253/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[254/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[255/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[256/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[257/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[258/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[259/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[260/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[261/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[262/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[263/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[264/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[265/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[266/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/libraries_shared/mtb-srf/source/mtb_srf.o
+[267/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[268/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[269/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[270/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[271/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[272/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[273/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[274/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[275/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[276/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[277/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[278/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[279/280] Building object file P:/psc3-provisioning-app/proj_cm33_s/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[280/280] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_s.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex P:/psc3-provisioning-app/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_s.elf P:/psc3-provisioning-app/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_s.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary P:/psc3-provisioning-app/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_s.elf P:/psc3-provisioning-app/proj_cm33_s/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_s.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_s'
+make[1]: Entering directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_ns'
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: proj_cm33_ns Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+
+Prebuild operations complete
+# 0: Loading the application in directory 'P:/psc3-provisioning-app/proj_cm33_ns'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/local/dfu_user.o
+[2/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/local/imports/dfu/config/DFU_CFG1/COMPONENT_DFU_I2C/transport_i2c.o
+[3/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/local/log/log.o
+[4/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/local/main.o
+[5/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/local/router/prov_router.o
+[6/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[7/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[8/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[9/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/dfu/cy_dfu.o
+[10/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[11/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[12/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[13/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[14/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[15/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[16/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[17/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[18/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[19/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[20/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[21/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[22/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[23/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[24/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[25/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[26/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[27/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[28/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[29/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[30/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[31/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[32/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[33/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[34/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[35/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[36/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[37/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[38/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[39/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[40/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[41/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[42/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[43/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[44/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[45/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[46/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[47/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[48/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[49/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[50/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[51/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[52/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[53/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[54/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[55/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[56/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[57/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[58/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[59/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[60/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[61/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[62/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[63/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[64/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[65/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[66/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[67/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[68/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[69/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[70/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[71/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[72/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[73/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[74/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[75/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[76/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[77/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[78/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[79/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[80/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[81/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[82/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[83/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[84/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[85/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[86/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[87/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[88/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[89/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[90/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[91/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[92/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[93/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[94/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[95/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[96/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[97/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[98/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[99/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-srf/source/COMPONENT_NON_SECURE_DEVICE/mtb_srf_pool.o
+[100/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[101/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[102/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[103/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[104/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[105/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/mtb-srf/source/mtb_srf.o
+[106/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[107/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[108/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/libraries_shared/retarget-io/source/cy_retarget_io.o
+[109/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[110/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[111/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[112/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[113/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[114/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[115/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[116/117] Building object file P:/psc3-provisioning-app/proj_cm33_ns/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[117/117] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_ns.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex P:/psc3-provisioning-app/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_ns.elf P:/psc3-provisioning-app/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_ns.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary P:/psc3-provisioning-app/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_ns.elf P:/psc3-provisioning-app/proj_cm33_ns/build/APP_KIT_PSC3M6_EVAL/Debug/proj_cm33_ns.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+make[1]: Leaving directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_ns'
+/usr/bin/make -C proj_cm33_s application_postbuild MTB_APPLICATION_SUBPROJECTS="proj_cm33_s proj_cm33_ns"
+make[1]: Entering directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_s'
+mkdir -p ../build ../build/project_hex
+(cd ../configs && C:/Users/kpato/Infineon/Tools/ModusToolbox-Edge-Protect-Security-Suite-2.4.0/tools/edgeprotecttools/bin/edgeprotecttools.exe run-config -i signer_combiner.json --symbol-search ../proj_cm33_ns/../bsps/TARGET_APP_KIT_PSC3M6_EVAL ) 
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x12000000-0x12000068 to 0x32000000-0x32000068
+: E : INFO  : Relocating segment 0x12000080-0x12019814 to 0x32000080-0x32019814
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_s_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : hex-relocate: command "hex-relocate" validation succeeded
+: E : INFO  : Relocating segment 0x02020000-0x020297D4 to 0x22020000-0x220297D4
+: E : INFO  : Saved file to '../build/project_hex/proj_cm33_ns_shifted.hex'
+: E : INFO  : hex-relocate: command "hex-relocate" succeeded
+: E : INFO  : merge: command "merge" validation succeeded
+: E : INFO  : merge: command "merge" succeeded
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |              143,312 |       524,288 |
+ |   m33_nvm             | 0x00000000 | ( 80%)       104,444 |       131,072 |
+ |     .vector_table     | 0x00000000 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000080 |                   96 |               |
+ |     .text             | 0x000000e0 |              103,848 |               |
+ |     .ARM.exidx        | 0x00019688 |                    8 |               |
+ |     .copy.table       | 0x00019690 |                   24 |               |
+ |     .zero.table       | 0x000196a8 |                    8 |               |
+ |     .data (load data) | 0x000196b0 |                  356 |               |
+ |   m33ns_nvm           | 0x00020000 | ( 24%)        38,868 |       163,840 |
+ |     .text             | 0x00000000 |               38,176 |               |
+ |     .ARM.exidx        | 0x00009520 |                    8 |               |
+ |     .copy.table       | 0x00009528 |                   24 |               |
+ |     .zero.table       | 0x00009540 |                    8 |               |
+ |     .data (load data) | 0x00009548 |                  652 |               |
+ |   pas                 | 0x00048000 | (  0%)             0 |        24,576 |
+ |   <unallocated>       |            |                      |       204,800 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |              129,142 |       131,072 |
+ |   m33_data            | 0x00000000 | (100%)        73,725 |        73,728 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  356 |               |
+ |     .noinit           | 0x00000440 |                   81 |               |
+ |     .bss              | 0x00000494 |               10,944 |               |
+ |     .heap             | 0x00002f54 |               53,420 |               |
+ |     .stack            | 0x00010000 |                8,192 |               |
+ |   m33ns_data          | 0x00012000 | (100%)        55,293 |        55,296 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  652 |               |
+ |     .noinit           | 0x00000568 |                   81 |               |
+ |     .bss              | 0x000005bc |                6,304 |               |
+ |     .heap             | 0x00001e5c |               43,428 |               |
+ |     .stack            | 0x0000c800 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0001f800 | (  6%)           124 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |     .cy_sharedmem     | 0x00000000 |                  124 |               |
+ |   <unallocated>       |            |                      |             0 |
+  ---------------------------------------------------------------------------
+make[1]: Leaving directory '/cygdrive/p/psc3-provisioning-app/proj_cm33_s'
+make: Leaving directory '/cygdrive/p/psc3-provisioning-app'

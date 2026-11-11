@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cybsp__pm__callbacks_8c" kind="file" language="C++">
+    <compoundname>cybsp_pm_callbacks.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="cybsp__pm__callbacks_8h" local="yes">cybsp_pm_callbacks.h</includes>
+    <includes local="yes">cy_sysclk.h</includes>
+    <includes refid="cybsp__dsram_8h" local="yes">cybsp_dsram.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>cybsp_pm_callbacks.c</label>
+        <link refid="cybsp__pm__callbacks_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cy_sysclk.h</label>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cybsp__pm__callbacks_8c_1afa59dac61cf3d20529cee4978cf0de40" prot="public" static="no">
+        <name>CYBSP_SYSCLK_PM_CALLBACK_ORDER</name>
+        <initializer>(255u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="43" column="13" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cybsp__pm__callbacks_8c_1a968b36ba2c30b5e0a45ee48958b37d29" prot="public" static="yes" mutable="no">
+        <type>cy_stc_syspm_callback_params_t</type>
+        <definition>cy_stc_syspm_callback_params_t cybsp_sysclk_pm_callback_param</definition>
+        <argsstring></argsstring>
+        <name>cybsp_sysclk_pm_callback_param</name>
+        <initializer>= { NULL, NULL }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="90" column="39" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cybsp__pm__callbacks_8c_1a4019a535405caebba214dff66cd2e085" prot="public" static="yes" mutable="no">
+        <type>cy_stc_syspm_callback_t</type>
+        <definition>cy_stc_syspm_callback_t cybsp_sysclk_pm_callback</definition>
+        <argsstring></argsstring>
+        <name>cybsp_sysclk_pm_callback</name>
+        <initializer>=
+{
+    .callback       = &amp;Cy_SysClk_DeepSleepCallback,
+
+    .type           = (cy_en_syspm_callback_type_t)CY_SYSPM_MODE_DEEPSLEEP_RAM,
+
+
+
+    .callbackParams = &amp;cybsp_sysclk_pm_callback_param,
+    .order          = CYBSP_SYSCLK_PM_CALLBACK_ORDER
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="91" column="39" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cybsp__pm__callbacks_8c_1a4697b5028d2a38ca694232982ae0e307" prot="public" static="yes" mutable="no">
+        <type>cy_stc_syspm_callback_params_t</type>
+        <definition>cy_stc_syspm_callback_params_t cybsp_ds_ram_pm_callback_param</definition>
+        <argsstring></argsstring>
+        <name>cybsp_ds_ram_pm_callback_param</name>
+        <initializer>= { NULL, NULL }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="104" column="39" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cybsp__pm__callbacks_8c_1a4d283fbe9d3fe6e26dfcb5ecd06b58cb" prot="public" static="yes" mutable="no">
+        <type>cy_stc_syspm_callback_t</type>
+        <definition>cy_stc_syspm_callback_t cybsp_ds_ram_pm_callback</definition>
+        <argsstring></argsstring>
+        <name>cybsp_ds_ram_pm_callback</name>
+        <initializer>=
+{
+    .callback       = &amp;cybsp_deepsleep_ram_callback,
+    .type           = CY_SYSPM_DEEPSLEEP_RAM,
+    .callbackParams = &amp;cybsp_ds_ram_pm_callback_param,
+    .order          = 0u
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="105" column="39" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cybsp__pm__callbacks_8c_1a90b07e95e8588af199e77be45077e3f7" prot="public" static="no" mutable="no">
+        <type>cy_stc_syspm_callback_t *</type>
+        <definition>cy_stc_syspm_callback_t* _cybsp_callbacks_array[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_cybsp_callbacks_array</name>
+        <initializer>=
+{
+
+    &amp;cybsp_sysclk_pm_callback,
+
+    &amp;cybsp_ds_ram_pm_callback
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="116" column="25" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cybsp__pm__callbacks_8c_1a40c0ac84cbd25bc88602e79b2ab35690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cy_en_syspm_status_t</type>
+        <definition>cy_en_syspm_status_t cybsp_deepsleep_ram_callback</definition>
+        <argsstring>(cy_stc_syspm_callback_params_t *callbackParams, cy_en_syspm_callback_mode_t mode)</argsstring>
+        <name>cybsp_deepsleep_ram_callback</name>
+        <param>
+          <type>cy_stc_syspm_callback_params_t *</type>
+          <declname>callbackParams</declname>
+        </param>
+        <param>
+          <type>cy_en_syspm_callback_mode_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="52" column="22" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="52" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="cybsp__pm__callbacks_8c_1a8f6f2401158fd23670891e717596f535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _cybsp_pm_callbacks_get_ptr_and_number</definition>
+        <argsstring>(cy_stc_syspm_callback_t ***arr_ptr, size_t *number_of_elements)</argsstring>
+        <name>_cybsp_pm_callbacks_get_ptr_and_number</name>
+        <param>
+          <type>cy_stc_syspm_callback_t ***</type>
+          <declname>arr_ptr</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>number_of_elements</declname>
+        </param>
+        <briefdescription>
+<para>Get number of PM callbacks, that are available for specific BSP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">arr_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to store array of callback pointers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">number_of_elements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to store number of elements in array of callback pointers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" line="127" column="6" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c" bodystart="127" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Description: Provides initialization code for starting up the hardware contained on the Infineon board. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>(c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_pm_callbacks.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_sysclk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_dsram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>sysclk<sp/>deep<sp/>sleep<sp/>callback<sp/>is<sp/>recommended<sp/>to<sp/>be<sp/>the<sp/>last<sp/>callback<sp/>that<sp/>is<sp/>executed<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>entry<sp/>into<sp/>deep<sp/>sleep<sp/>mode<sp/>and<sp/>the<sp/>first<sp/>one<sp/>upon<sp/>exit<sp/>the<sp/>deep<sp/>sleep<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Doing<sp/>so<sp/>minimizes<sp/>the<sp/>time<sp/>spent<sp/>on<sp/>low<sp/>power<sp/>mode<sp/>entry<sp/>and<sp/>exit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBSP_SYSCLK_PM_CALLBACK_ORDER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>CYBSP_SYSCLK_PM_CALLBACK_ORDER<sp/><sp/><sp/><sp/><sp/><sp/>(255u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_deepsleep_ram_callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">cy_en_syspm_status_t<sp/>cybsp_deepsleep_ram_callback(cy_stc_syspm_callback_params_t*<sp/>callbackParams,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cy_en_syspm_callback_mode_t<sp/>mode)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>cy_en_syspm_status_t<sp/>retVal<sp/>=<sp/>CY_SYSPM_FAIL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>CY_UNUSED_PARAMETER(callbackParams);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(mode)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CY_SYSPM_CHECK_READY:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CY_SYSPM_CHECK_FAIL:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CY_SYSPM_BEFORE_TRANSITION:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/>CY_SYSPM_SUCCESS;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CY_SYSPM_AFTER_TRANSITION:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cy_Syslib_SetWarmBootEntryPoint((uint32_t*)&amp;<ref refid="group__group__bsp__dsram__functions_1ga2f87313c9926c64f8f8cac002a3b0e2f" kindref="member">syspmBspDeepSleepEntryPoint</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retVal<sp/>=<sp/>CY_SYSPM_SUCCESS;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cy_stc_syspm_callback_params_t<sp/>cybsp_sysclk_pm_callback_param<sp/>=<sp/>{<sp/>NULL,<sp/>NULL<sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cy_stc_syspm_callback_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cybsp_sysclk_pm_callback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>.callback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>&amp;Cy_SysClk_DeepSleepCallback,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(CY_CFG_PWR_SYS_IDLE_MODE<sp/>==<sp/>CY_CFG_PWR_MODE_DEEPSLEEP_RAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>.type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(cy_en_syspm_callback_type_t)CY_SYSPM_MODE_DEEPSLEEP_RAM,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>#</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>.type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(cy_en_syspm_callback_type_t)CY_SYSPM_MODE_DEEPSLEEP,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>.callbackParams<sp/>=<sp/>&amp;cybsp_sysclk_pm_callback_param,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>.order<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>CYBSP_SYSCLK_PM_CALLBACK_ORDER</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>if<sp/>!defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cy_stc_syspm_callback_params_t<sp/>cybsp_ds_ram_pm_callback_param<sp/>=<sp/>{<sp/>NULL,<sp/>NULL<sp/>};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>cy_stc_syspm_callback_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cybsp_ds_ram_pm_callback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>.callback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>&amp;cybsp_deepsleep_ram_callback,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>.type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>CY_SYSPM_DEEPSLEEP_RAM,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>.callbackParams<sp/>=<sp/>&amp;cybsp_ds_ram_pm_callback_param,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>.order<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0u</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">cy_stc_syspm_callback_t*<sp/>_cybsp_callbacks_array[]<sp/>=</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;cybsp_sysclk_pm_callback,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>if<sp/>!defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;cybsp_ds_ram_pm_callback</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_cybsp_pm_callbacks_get_ptr_and_number(cy_stc_syspm_callback_t***<sp/>arr_ptr,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>number_of_elements)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>*number_of_elements<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(_cybsp_callbacks_array)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*arr_ptr<sp/>=<sp/>_cybsp_callbacks_array;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*number_of_elements<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(_cybsp_callbacks_array)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(_cybsp_callbacks_array[0]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.c"/>
+  </compounddef>
+</doxygen>

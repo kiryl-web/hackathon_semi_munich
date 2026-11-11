@@ -1,0 +1,50 @@
+{
+    "core": {
+        "version": "1.1.0.571"
+    },
+    "opt": {
+        "props": {
+            "capabilities": [
+                "adc",
+                "bsp_gen6",
+                "can",
+                "comp",
+                "dac",
+                "dma",
+                "epc3",
+                "flash_512k",
+                "hal",
+                "hppass",
+                "i2c",
+                "i3c",
+                "kit_psc3m6_eval",
+                "led",
+                "low_power",
+                "lptimer",
+                "mcu_gp",
+                "psc3",
+                "psc3m6",
+                "rtc",
+                "smart_io",
+                "spi",
+                "sram_128k",
+                "std_crypto",
+                "switch",
+                "uart",
+                "usb_device",
+                "usb_host"
+            ],
+            "dependencies": {
+                "core-lib": "release-v1.8.0",
+                "core-make": "release-v3.10.0",
+                "mtb-dsl-psc3m6": "release-v1.1.0"
+            },
+            "flow_version": "2.0",
+            "min_tools": "3.7.0",
+            "template": {
+                "id": "mtb-template-psc3m6",
+                "version": "release-v1.1.0"
+            }
+        }
+    }
+}

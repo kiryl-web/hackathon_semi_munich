@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="bsp__settings_8md" kind="file" language="Markdown">
+    <compoundname>bsp_settings.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Peripheral<sp/>Default<sp/>BSP<sp/>Settings</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Resource<sp/>|<sp/>Parameter<sp/>|<sp/>Value<sp/>|<sp/>Remarks<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>:------:<sp/>|<sp/>:-------:<sp/>|<sp/>:---:<sp/>|<sp/>:------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>UART<sp/><sp/><sp/><sp/><sp/>|<sp/>Flow<sp/>control<sp/>|<sp/>No<sp/>flow<sp/>control<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>^<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Data<sp/>format<sp/>|<sp/>8N1<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>^<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Baud<sp/>rate<sp/>|<sp/>115200<sp/>|<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">©<sp/>Cypress<sp/>Semiconductor<sp/>Corporation,<sp/>2024-2026.</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/bsp_settings.md"/>
+  </compounddef>
+</doxygen>

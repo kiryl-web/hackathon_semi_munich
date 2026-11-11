@@ -1,0 +1,103 @@
+board_names:
+  - KIT_PSC3M6_EVAL
+total_examples: 62
+categories:
+  - category: Getting Started
+    count: 5
+    tags: [blank, empty, freertos, hrpwm, oob, template, threadx, usb, blinky, hello world, gpio, starter, led, adc]
+  - category: Peripherals
+    count: 51
+    tags: [afe, blinking, canfd, cpu, deepsleep, duty cycle, eeprom, emulated, ezi2c, fault handling, frequency, half-duplex, hibernate, hppass, i3c controller, i3c target, kill, lpcomp, lpf, mcwdt, motif, motor, pmbus, power modes, rtc, smart io, smartio, square wave, sram, systick, toggle, trigger, usb host, blinky, class-b, cordic, counter, csg, dac, flash, hw 3p3z filter, scb, spi, svpwm, wdt, gpio, pwm, receive, tcpwm, timer, transmit, usb device, dma, i2c, master, slave, led, uart, adc, psoc control]
+  - category: Security
+    count: 6
+    tags: [boot, bootloader, dual-bank, epb, lfu, live-update, lms, mcuboot, ml-dsa, ppc, pqc, secure-nonsecure, sss, trustzone, xmss, secure-update, dfu-mw, secure-boot, security]
+acronym_map:
+  afe:
+    - Audio Front-End
+    - Analog Front-End
+  asf:
+    - Alternative Serial Interface to securely load and execute target code directly over an alternate serial connection during device provisioning or early booting stages — NOT Atmel Software Framework
+  ccm:
+    - Cloud Connectivity Manager — NOT Counter with CBC-MAC
+  cts:
+    - Current Time Service — NOT Clear To Send
+  ess:
+    - Environmental Sensing Service — NOT Extended Service Set
+  hppass:
+    - High-Performance Programmable Analog Sub-System
+  lpa:
+    - Low Power Assistant
+  lppass:
+    - Low-Power Autonomous Analog Sub-System
+  mfs:
+    - Multi-Frequency Scan — CAPSENSE noise-rejection mode
+  mpc:
+    - Memory Protection Controller
+  msc:
+    - Multi Sense Converter (CAPSENSE parts)
+    - Mass Storage Class (USB parts)
+  mtbml:
+    - ModusToolbox Machine Learning
+  otp:
+    - One-Time Programmable memory — NOT One-Time Password
+  pdl:
+    - Peripheral Driver Library — the low-level ModusToolbox driver layer
+  rlad:
+    - Run-Length Adaptive Dithering — fixed-function decompression block in the GPU pipeline, not a software codec
+  scb:
+    - Serial Communication Block — configurable UART/SPI/I2C peripheral
+  smif:
+    - Serial Memory Interface — external flash/PSRAM controller
+  srf:
+    - Secure Request Framework
+  stl:
+    - Safety Test Library — NOT the C++ Standard Template Library
+  svc:
+    - Staged Voice Control middleware — NOT the Arm Cortex-M SVC (Supervisor Call) instruction
+  tcpwm:
+    - Peripheral Block configurable as a Timer, Counter, PWM
+  wcm:
+    - Wi-Fi Connection Manager
+synonym_map:
+  advertising:
+    - advertiser
+    - advertisement
+    - broadcast
+  ble:
+    - bluetooth low energy
+    - bluetooth le
+    - bt le
+  bluetooth:
+    - bt
+  capsense:
+    - capacitive sensing
+    - touch
+    - button
+    - slider
+  freertos:
+    - rtos
+    - real-time operating system
+  gfx:
+    - graphics
+    - display
+  ml:
+    - machine learning
+    - ai
+    - deepcraft
+  ota:
+    - over-the-air
+    - firmware update
+  pdm:
+    - microphone
+    - mic
+    - pdm-pcm
+  uart:
+    - serial
+    - console
+  wifi:
+    - wi-fi
+    - wireless lan
+    - wlan
+    - wireless
+notes:
+  - Expand the user's request into a small set of tags from this vocabulary, then call search. Tags are listed rarest (most discriminating) first, so prefer earlier ones; use acronym_map/synonym_map to bridge natural-language phrasing onto tags. An acronym listing more than one long form is ambiguous in this catalog — pick by context rather than assuming the first.

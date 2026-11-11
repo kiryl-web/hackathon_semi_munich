@@ -1,0 +1,151 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'
+Tools Directory: C:/Users/kpato/ModusToolbox/tools_3.9
+Searching installed tools in progress...
+Searching installed tools complete
+Use of the FPU on a secure project may be susceptible to an VLLDM Instruction Security Vulnerability (CVE-2021-35465). Verify the toolchain you are using already provides a workaround or use VFP_SELECT=softfloat instead of VFP_SELECT=. For more information see https://developer.arm.com/Arm%20Security%20Center/VLLDM%20Instruction%20Security%20Vulnerability
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+
+/cygdrive/c/Users/kpato/AppData/Local/Programs/Python/Python38/python configs/prebuild.py --maj 1		 --min 0		 --rev 0		 --bn 0		 --key ../keys/ecdsa_p384_img_sign_key_priv.der --key-type ECDSA-384 --enc-key ../keys/enc_ec256_pub.pem --t configs/symbol_template.json -o bsps/TARGET_APP_KIT_PSC3M6_EVAL/symbols.json
+Prebuild operations complete
+Toolchain validation: PASS
+Initializing build: mtb-example-ce243041-secure-boot-and-update-with-epb Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+ninja: no work to do.
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.elf C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |               42,060 |       524,288 |
+ |   bootloader          | 0x00000000 | (  0%)             0 |       110,592 |
+ |   m33_nvm             | 0x0001b000 | ( 32%)        42,060 |       131,072 |
+ |     .mcu_boot_header  | 0x00000000 |                1,024 |               |
+ |     .vector_table     | 0x00000400 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000480 |                   32 |               |
+ |     .text             | 0x000004a0 |               40,136 |               |
+ |     .ARM.exidx        | 0x0000a168 |                    8 |               |
+ |     .copy.table       | 0x0000a170 |                   24 |               |
+ |     .zero.table       | 0x0000a188 |                    8 |               |
+ |     .data (load data) | 0x0000a190 |                  724 |               |
+ |   secondary_slot      | 0x00040000 | (  0%)             0 |       131,072 |
+ |   <unallocated>       |            |                      |       151,552 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |               55,301 |       131,072 |
+ |   shared_data         | 0x00000000 | (  0%)             0 |         4,096 |
+ |   m33_data            | 0x00001000 | (100%)        55,293 |        55,296 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  724 |               |
+ |     .noinit           | 0x000005b0 |                  149 |               |
+ |     .bss              | 0x00000648 |                2,412 |               |
+ |     .heap             | 0x00000fb4 |               47,180 |               |
+ |     .stack            | 0x0000c800 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0000e800 | (  0%)             8 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |   <unallocated>       |            |                      |        69,632 |
+  ---------------------------------------------------------------------------
+
+
+SEGGER J-Link Commander V9.76a (Compiled Sep 14 2026 16:59:56)
+DLL version V9.76a, compiled Sep 14 2026 16:58:56
+
+J-Link Commander will now exit on Error
+
+J-Link Command File read successfully.
+Processing script file...
+J-Link>Connect
+J-Link connection not established yet but required for command.
+Connecting to J-Link ...O.K.
+Firmware: J-Link Lite-XMC4200 Rev.1 compiled May  4 2026 12:38:23
+Hardware version: V1.00
+J-Link uptime (since boot): 0d 00h 17m 45s
+S/N: 591239652
+USB speed mode: Full speed (12 MBit/s)
+VTref=3.300V
+Device "PSC3M6GES3AH" selected.
+
+
+Connecting to target via SWD
+ConfigTargetSettings() start
+ConfigTargetSettings() end - Took 69us
+InitTarget() start
+InitTarget() end - Took 28.9ms
+Found SW-DP with ID 0x4C013477
+DPIDR: 0x4C013477
+CoreSight SoC-600 or later (DPv3 detected)
+AP map detection skipped. User specified AP map and usage.
+AP[1]: Core found
+AP[1]: AHB-AP ROM base: 0xE00BF000
+CPUID register: 0x411FD210. Implementer code: 0x41 (ARM)
+Feature set: Mainline
+Cache: No cache
+Found Cortex-M33 r1p0, Little endian.
+FPUnit: 8 code (BP) slots and 0 literal slots
+Security extension: implemented
+Secure debug: enabled
+CoreSight components:
+ROMTbl[0] @ E00BF000
+[0][0]: E0080000 CID B105900D PID 003BB9ED DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+[0][1]: E008E000 CID B105900D PID 002BB9E7 DEVARCH 00000000 DEVTYPE 11 TPIU
+[0][2]: E0088000 CID B105900D PID 002BB9EB DEVARCH 00000000 DEVTYPE 12 CSTF
+[0][4]: E00FF000 CID B105100D PID 000BB4C9 DEVARCH 00000000 DEVTYPE 01 ROM Table
+ROMTbl[1] @ E00FF000
+[1][0]: E000E000 CID B105900D PID 000BBD21 DEVARCH 47702A04 DEVTYPE 00 Cortex-M33
+[1][1]: E0001000 CID B105900D PID 000BBD21 DEVARCH 47701A02 DEVTYPE 00 DWT
+[1][2]: E0002000 CID B105900D PID 000BBD21 DEVARCH 47701A03 DEVTYPE 00 FPB
+[1][3]: E0000000 CID B105900D PID 000BBD21 DEVARCH 47701A01 DEVTYPE 43 ITM
+[1][5]: E0041000 CID B105900D PID 002BBD21 DEVARCH 47724A13 DEVTYPE 13 ETM
+[1][6]: E0042000 CID B105900D PID 000BBD21 DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+SetupTarget() start
+****************************************************
+** Silicon: 0xF100, Family: 0x124, Rev.: 0x11 (A0)
+** ROM Boot version: 1.0.0.13973                    
+** Flash Boot version: 91.191.28.1199574148         
+** Life Cycle : DEVELOPMENT
+** Flash Bank Mode : Single bank                    
+****************************************************
+SetupTarget() end - Took 13.1ms
+Memory zones:
+  Zone: "Default" Description: Default access mode
+Cortex-M33 identified.
+J-Link>exec EnableEraseAllFlashBanks
+J-Link>LoadFile C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/last_config/mtb-example-ce243041-secure-boot-and-update-with-epb_boot.hex 0 reset
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+ResetTarget() end - Took 85.7ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 4us
+Downloading file [C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/last_config/mtb-example-ce243041-secure-boot-and-update-with-epb_boot.hex]...
+Comparing flash   [000%]100%] Done.
+Erasing flash     [000%]000%]100%] Done.
+Programming flash [000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]000%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]005%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]010%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]015%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]020%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]025%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]030%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]035%]040%]040%]040%]040%]040%]040%]040%]040%]040%]040%]040%]100%] Done.
+J-Link: Flash download: Bank 1 @ 0x32000000: 1 range affected (98304 bytes)
+J-Link: Flash download: Total: 3.495s (Prepare: 0.107s, Compare: 0.321s, Erase: 1.902s, Program: 0.445s, Verify: 0.637s, Restore: 0.081s)
+J-Link: Flash download: Program & Verify speed: 88 KB/s
+HandleAfterFlashProg() start
+HandleAfterFlashProg() end - Took 86.5ms
+O.K.
+J-Link>Reset
+Reset delay: 0 ms
+ResetTarget() start
+ResetTarget() end - Took 85.7ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 4us
+J-Link>Go
+Memory map 'after startup completion point' is active
+J-Link>Exit
+
+Script processing completed.
+
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'

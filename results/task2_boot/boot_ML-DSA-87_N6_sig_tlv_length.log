@@ -1,0 +1,29 @@
+  0.001s , image_ok=0x3
+  0.001s [0s.40ms][INF] Swap type: none
+  0.006s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.009s [0s.47ms][DBG]  * process swap_type = 1
+  0.011s [0s.51ms][DBG] > boot_validate_slot: fa_id = 1
+  0.013s [0s.63ms][DBG] Invalid signature of bootable image 0
+  0.017s [0s.64ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+  0.020s [0s.67ms][ERR] Image in the primary slot is not valid!
+  0.022s [0s.72ms][DBG] < boot_validate_slot: fa_id = 1
+  0.025s [0s.76ms][ERR] handle_error!
+  0.236s [0s.0ms][DBG] [2J[;H
+  0.283s [0s.0ms][INF] MCUBoot Bootloader Started
+  0.287s [0s.0ms][INF] boot_go_for_image_id
+  0.290s [0s.0ms][INF] Processing img id: 0
+  0.293s [0s.0ms][DBG]  * boot_prepare_image_for_update...
+  0.297s [0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+  0.302s [0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+  0.308s [0s.15ms][DBG]  * There was no partial swap, determine swap type.
+  0.314s [0s.21ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.323s [0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+  0.338s [0s.40ms][INF] Swap type: none
+  0.342s [0s.43ms][DBG] < boot_prepare_image_for_update
+  0.348s [0s.47ms][DBG]  * process swap_type = 1
+  0.350s [0s.51ms][DBG] > boot_validate_slot: fa_id = 1
+  0.354s [0s.63ms][DBG] Invalid signature of bootable image 0
+  0.358s [0s.63ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+  0.363s [0s.66ms][ERR] Image in the primary slot is not valid!
+  0.367s [0s.71ms][DBG] < boot_validate_slot: fa_id = 1
+  0.369s [0s.75ms][ERR] handle_error!

@@ -1,0 +1,30 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'
+Tools Directory: C:/Users/kpato/ModusToolbox/tools_3.9
+Searching installed tools in progress...
+Searching installed tools complete
+
+==============================================================================
+= Importing libraries =
+==============================================================================
+mtbgetlibs: retreived MTBQueryAPI interface
+mtbgetlibs: running in 'Direct' mode
+0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master' for creating a new one
+0: Finished loading the application data (529 ms total, 327 make)
+0: Loading the ModusToolbox Technology Packs and Early Access Packs
+0: Finished loading the ModusToolbox Technology Packs and Early Access Packs (4 ms)
+0: Loading the tools information
+0: Finished loading the tools information (22 ms)
+0: Loading the manifest data
+0: Finished loading the manifest data (6604 ms)
+0: No SDK-based filtering is applied to the manifest database contents.
+0: Loaded ModusToolbox 3.x single core application
+0: ToolsDir is 'C:/Users/kpato/ModusToolbox/tools_3.9'
+0: loaded asset 'retarget-io'
+0: loaded asset 'dfu'
+mtbgetlibs: changes committed
+mtbgetlibs: completed in 12153 milliseconds
+==============================================================================
+= Import complete =
+==============================================================================
+
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'

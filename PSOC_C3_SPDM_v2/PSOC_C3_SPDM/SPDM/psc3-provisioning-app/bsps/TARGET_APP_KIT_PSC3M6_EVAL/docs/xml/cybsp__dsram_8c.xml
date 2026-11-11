@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cybsp__dsram_8c" kind="file" language="C++">
+    <compoundname>cybsp_dsram.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">cy_syspm.h</includes>
+    <includes local="yes">cy_sysclk.h</includes>
+    <includes refid="cybsp_8h" local="yes">cybsp.h</includes>
+    <includes refid="system__cat1b_8h" local="yes">system_cat1b.h</includes>
+    <includes refid="cybsp__dsram_8h" local="yes">cybsp_dsram.h</includes>
+    <includes local="yes">cmsis_compiler.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>cybsp_dsram.c</label>
+        <link refid="cybsp__dsram_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cmsis_compiler.h</label>
+      </node>
+      <node id="4">
+        <label>cy_sysclk.h</label>
+      </node>
+      <node id="3">
+        <label>cy_syspm.h</label>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cybsp__dsram_8c_1a012d0440d80829ccaf3bec2423b59b07" prot="public" static="no" mutable="no">
+        <type>CY_SECTION_RAMFUNC_END unsigned int</type>
+        <definition>CY_SECTION_RAMFUNC_END unsigned int __INITIAL_SP</definition>
+        <argsstring></argsstring>
+        <name>__INITIAL_SP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" line="82" column="21" declfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" declline="82" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__group__bsp__dsram__functions_1ga2f87313c9926c64f8f8cac002a3b0e2f" prot="public" static="no" mutable="no">
+        <type>cy_stc_syspm_warmboot_entrypoint_t</type>
+        <definition>cy_stc_syspm_warmboot_entrypoint_t syspmBspDeepSleepEntryPoint</definition>
+        <argsstring></argsstring>
+        <name>syspmBspDeepSleepEntryPoint</name>
+        <initializer>=
+    { (uint32_t*)(&amp;__INITIAL_SP), (uint32_t*)cybsp_warmboot_handler }</initializer>
+        <briefdescription>
+<para>DS entry point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" line="83" column="36" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group__bsp__dsram__functions_1gaeaa97ebf2a7a769589bf24bb2d306fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__WEAK void</type>
+        <definition>__WEAK void cybsp_syspm_do_warmboot</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_syspm_do_warmboot</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prepares the system to handle warm boot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" line="52" column="13" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="cybsp__dsram_8c_1a8be1a140551ed16d3b211606762eecde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CY_SECTION_RAMFUNC_BEGIN void</type>
+        <definition>CY_SECTION_RAMFUNC_BEGIN void cybsp_warmboot_handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_warmboot_handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" line="64" column="6" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__bsp__dsram__functions_1gae9217e4b92ef5f9cda69a3bc26b9a5a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__WEAK cy_rslt_t</type>
+        <definition>__WEAK cy_rslt_t cybsp_syspm_dsram_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>cybsp_syspm_dsram_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the deepsleep ram setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CY_RSLT_SUCCESS if the board is successfully initialized, if there is a problem initializing any hardware it returns an error code specific to the hardware module that had a problem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" line="90" column="18" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c" bodystart="90" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Description: Provides initialization code for handling deepsleep ram. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>(c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. SPDX-License-Identifier: Apache-2.0</para>
+</simplesect>
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <verbatim>http://www.apache.org/licenses/LICENSE-2.0
+</verbatim> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_syspm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_sysclk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CY_USING_HAL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyhal_hwmgr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyhal_syspm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>((CY_PDL_FLASH_BOOT)<sp/>&amp;&amp;<sp/>(CYHAL_DRIVER_AVAILABLE_QSPI))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_smif_init.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CY_RTOS_AWARE)<sp/>||<sp/>defined(COMPONENT_RTOS_AWARE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyabs_rtos_dsram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;system_cat1b.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cybsp_dsram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cmsis_compiler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_syspm_do_warmboot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">__WEAK<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__group__bsp__dsram__functions_1gaeaa97ebf2a7a769589bf24bb2d306fb4" kindref="member">cybsp_syspm_do_warmboot</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(CY_RTOS_AWARE)<sp/>||<sp/>defined(COMPONENT_RTOS_AWARE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>cyabs_rtos_exit_dsram();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">CY_SECTION_RAMFUNC_BEGIN</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_warmboot_handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cybsp_warmboot_handler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>SystemInit_Warmboot_CAT1B_CM33();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>((CY_PDL_FLASH_BOOT)<sp/>&amp;&amp;<sp/>(CYHAL_DRIVER_AVAILABLE_QSPI))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>cybsp_smif_enable();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>cybsp_smif_init();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>init_cycfg_all();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__bsp__dsram__functions_1gaeaa97ebf2a7a769589bf24bb2d306fb4" kindref="member">cybsp_syspm_do_warmboot</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">CY_SECTION_RAMFUNC_END</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DS-RAM<sp/>Warmboot<sp/>Re-entry*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__INITIAL_SP<sp/></highlight><highlight class="comment">/*__StackTop*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">cy_stc_syspm_warmboot_entrypoint_t<sp/><ref refid="group__group__bsp__dsram__functions_1ga2f87313c9926c64f8f8cac002a3b0e2f" kindref="member">syspmBspDeepSleepEntryPoint</ref><sp/>=</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>(uint32_t*)(&amp;__INITIAL_SP),<sp/>(uint32_t*)cybsp_warmboot_handler<sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cybsp_syspm_dsram_init</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(CYBSP_SKIP_PM_REGISTRATION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">__WEAK<sp/>cy_rslt_t<sp/><ref refid="group__group__bsp__dsram__functions_1gae9217e4b92ef5f9cda69a3bc26b9a5a8" kindref="member">cybsp_syspm_dsram_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Setup<sp/>DS-RAM<sp/>Warmboot<sp/>Re-entry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>Cy_Syslib_SetWarmBootEntryPoint((uint32_t*)&amp;<ref refid="group__group__bsp__dsram__functions_1ga2f87313c9926c64f8f8cac002a3b0e2f" kindref="member">syspmBspDeepSleepEntryPoint</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CY_RSLT_SUCCESS;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//#if<sp/>!defined(CYBSP_SKIP_PM_REGISTRATION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/cybsp_dsram.c"/>
+  </compounddef>
+</doxygen>

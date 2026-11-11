@@ -1,0 +1,27 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce43373-edgeprotect-bootloader-master/mtb-example-ce43373-edgeprotect-bootloader-master'
+Searching installed tools in progress...
+Searching installed tools complete
+NOTE: unable to find app.mk, make sure to run 'make getlibs'.
+C:/Users/kpato/ModusToolbox/tools_3.9/mtbgetlibs/mtbgetlibs --app .
+mtbgetlibs: retreived MTBQueryAPI interface
+mtbgetlibs: running in 'Direct' mode
+0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/mtb-example-ce43373-edgeprotect-bootloader-master/mtb-example-ce43373-edgeprotect-bootloader-master' for creating a new one
+0: Finished loading the application data (1056 ms total, 802 make)
+0: Loading the ModusToolbox Technology Packs and Early Access Packs
+0: Finished loading the ModusToolbox Technology Packs and Early Access Packs (5 ms)
+0: Loading the tools information
+0: Finished loading the tools information (23 ms)
+0: Loading the manifest data
+0: Finished loading the manifest data (8828 ms)
+0: No SDK-based filtering is applied to the manifest database contents.
+0: Loaded ModusToolbox 3.0 or later multicore application
+0: ToolsDir is 'C:/Users/kpato/ModusToolbox/tools_3.9'
+0: loaded asset 'crypto-suite-psc3'
+0: loaded asset 'retarget-io'
+0: loaded asset 'ifx-mcuboot-psc3m6'
+0: loaded asset 'cy-mbedtls-acceleration'
+0: loaded asset 'ifx-mbedtls'
+0: loaded asset 'ifx-wolfcrypto'
+mtbgetlibs: changes committed
+mtbgetlibs: completed in 35647 milliseconds
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce43373-edgeprotect-bootloader-master/mtb-example-ce43373-edgeprotect-bootloader-master'

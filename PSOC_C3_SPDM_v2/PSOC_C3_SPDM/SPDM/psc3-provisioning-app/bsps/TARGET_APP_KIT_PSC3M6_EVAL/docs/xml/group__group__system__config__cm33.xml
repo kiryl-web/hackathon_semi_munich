@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__group__system__config__cm33" kind="group">
+    <compoundname>group_system_config_cm33</compoundname>
+    <title>Group_system_config_cm33</title>
+    <innergroup refid="group__group__system__config__macro__cm33">Macros</innergroup>
+    <briefdescription>
+<para>Provides device startup, system configuration, and linker script files. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The system startup provides the followings features:<itemizedlist>
+<listitem><para><ref refid="group__group__system__config__cm33_1group_system_config_device_memory_definition_cm33" kindref="member">Device Memory Definition</ref></para>
+</listitem><listitem><para><ref refid="group__group__system__config__cm33_1group_system_config_device_initialization_cm33" kindref="member">Device Initialization</ref></para>
+</listitem><listitem><para><ref refid="group__group__system__config__cm33_1group_system_config_heap_stack_config_cm33" kindref="member">Heap and Stack Configuration</ref></para>
+</listitem><listitem><para><ref refid="group__group__system__config__cm33_1group_system_config_default_handlers_cm33" kindref="member">Default Interrupt Handlers Definition</ref></para>
+</listitem><listitem><para><ref refid="group__group__system__config__cm33_1group_system_config_device_vector_table_cm33" kindref="member">Vectors Table Copy from ROM/Flash to RAM</ref></para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="group__group__system__config__cm33_1group_system_config_configuration_cm33">
+<title>Configuration Considerations</title>
+<sect2 id="group__group__system__config__cm33_1group_system_config_device_memory_definition_cm33">
+<title>Device Memory Definition</title>
+<para>Allocation of different types of memory such as the ROM, flash and RAM etc. for the CPU is defined by the linker scripts.</para>
+<para><simplesect kind="note"><para>The linker files provided with the PDL are generic and handle all common use cases. Your project may not use every section defined in the linker files. In that case you may see warnings during the build process. To eliminate build warnings in your project, you can simply comment out or remove the relevant code in the linker file.</para>
+</simplesect>
+<bold>For CYW20829</bold></para>
+<para><bold>ARM GCC</bold><linebreak/>
+The ROM, flash and RAM sections for the CPU are defined in the linker file: &apos;cyw20829_ns_flash_cbus.ld&apos;, where &apos;ns&apos; indicates that the linker script file is for non-secure image. For devices without security extension, there will be only one linker file and it is always non-secure.</para>
+<para>Memory sections are for the GNU GCC ARM tool set is defined in the linker file cyw20829_ns_flash_cbus.ld. Following are the important memory sections for the User/Application image.</para>
+<para>Memory sections are for the GNU GCC ARM tool set is defined in the linker file &lt;device&gt;_ns.sct. Following are the important memory sections for the User/Application image. <programlisting><codeline><highlight class="normal">code<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(rx)<sp/><sp/>:<sp/>ORIGIN<sp/>=<sp/>CODE_VMA,<sp/><sp/><sp/><sp/><sp/><sp/>LENGTH<sp/>=<sp/>CODE_BS_SIZE<sp/><sp/>Starting<sp/>address<sp/>and<sp/>the<sp/>size<sp/>of<sp/>Non-secure<sp/>bootstrap<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">bsData<sp/><sp/><sp/><sp/><sp/><sp/>(rwx)<sp/>:<sp/>ORIGIN<sp/>=<sp/>DATA_BS_VMA,<sp/><sp/><sp/>LENGTH<sp/>=<sp/>DATA_BS_SIZE<sp/><sp/>Starting<sp/>address<sp/>and<sp/>the<sp/>size<sp/>of<sp/>Non-secure<sp/>bootstrap<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">appCodeRam<sp/><sp/>(rx)<sp/><sp/>:<sp/>ORIGIN<sp/>=<sp/>DATA_CBUS_VMA,<sp/>LENGTH<sp/>=<sp/>DATA_SIZE<sp/><sp/><sp/><sp/><sp/>Starting<sp/>address<sp/>and<sp/>the<sp/>size<sp/>of<sp/>Non-secure<sp/>application<sp/>ram<sp/>functions</highlight></codeline>
+<codeline><highlight class="normal">data<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(rwx)<sp/>:<sp/>ORIGIN<sp/>=<sp/>DATA_VMA,<sp/><sp/><sp/><sp/><sp/><sp/>LENGTH<sp/>=<sp/>DATA_SIZE<sp/><sp/><sp/><sp/><sp/>Starting<sp/>address<sp/>and<sp/>the<sp/>size<sp/>of<sp/>Non-secure<sp/>application<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">xip<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(rx)<sp/><sp/>:<sp/>ORIGIN<sp/>=<sp/>XIP_VMA,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>LENGTH<sp/>=<sp/>XIP_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>Starting<sp/>address<sp/>and<sp/>the<sp/>size<sp/>of<sp/>Non-secure<sp/>application<sp/>code</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="note"><para>In CYW20829, the Bootstrap memory is used to place the startup code along with SMIF driver in the ram area. The size requirement for Bootstrap may vary depending on the number of functions that are linked from SMIF driver. When more functions are linked, you may see linker error. In order to fix this you need to increase Bootstarp memory size in the ram by modifying the value of BOOTSTRAP_OFFSET_RAM.<linebreak/>
+E.g. if linker error suggests to increase by 8192 bytes, then you need to move the starting address of the bootstrap memory up by 8192 bytes as shown below <linebreak/>
+BOOTSTRAP_OFFSET_RAM = 0x0001E000; Old value<linebreak/>
+BOOTSTRAP_OFFSET_RAM = 0x0001C000; New value<linebreak/>
+Because of the change in the bootstrap size, you may also need to move the application start address in the flash. If you see a linker error after above change, then you need to modify the application code offset APPCODE_OFFSET_FLASH in the flash.<linebreak/>
+E.g. if linker error suggests 256 bytes overlap of .appText LMA with .bootstrapText LMA, you need to move the application start offset in the flash down by 256 bytes as shown below<linebreak/>
+APPCODE_OFFSET_FLASH = 0x00002200; Old value<linebreak/>
+APPCODE_OFFSET_FLASH = 0x00002300; New value</para>
+</simplesect>
+<bold>ARM Compiler</bold><linebreak/>
+The ROM, flash and RAM sections for the CPU are defined in the linker file: &apos;cyw20829_ns_flash_cbus.sct&apos;, where &apos;ns&apos; indicates that the linker script file is for non-secure image. For devices without security extension, there will be only one linker file and it is always non-secure.</para>
+<para>Memory sections are for the GNU GCC ARM tool set is defined in the linker file cyw20829_ns_flash_cbus.sct. Following are the important memory sections for the User/Application image. <programlisting><codeline><highlight class="normal">bootstrapText_vma<sp/><sp/><sp/>Starting<sp/>address<sp/>of<sp/>bootstrap<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">bootstrapText_size<sp/><sp/>Size<sp/>of<sp/>memory<sp/>reserved<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>Bootstrap<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">bootstrapData_vma<sp/><sp/><sp/>Starting<sp/>address<sp/>of<sp/>Bootstrap<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">appText_vma<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Stating<sp/>address<sp/>of<sp/>application<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">appData_vma<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Stating<sp/>address<sp/>of<sp/>application<sp/>data</highlight></codeline>
+</programlisting></para>
+<para><bold>IAR</bold><linebreak/>
+The ROM, flash and RAM sections for the CPU are defined in the linker file: &apos;cyw20829_ns_flash_cbus.icf&apos;, where &apos;ns&apos; indicates that the linker script file is for non-secure image. For devices without security extension, there will be only one linker file and it is always non-secure.</para>
+<para>Memory sections are for the GNU GCC ARM tool set is defined in the linker file cyw20829_ns_flash_cbus.icf. Following are the important memory sections for the User/Application image. <programlisting><codeline><highlight class="normal">define<sp/>region<sp/>CODE_region<sp/><sp/><sp/><sp/><sp/>=<sp/>mem:[from<sp/>CODE_VMA<sp/>size<sp/>CODE_BS_SIZE];<sp/><sp/><sp/><sp/><sp/><sp/>Bootstrap<sp/>code<sp/>region<sp/>and<sp/>size</highlight></codeline>
+<codeline><highlight class="normal">define<sp/>region<sp/>DATA_BS_region<sp/><sp/>=<sp/>mem:[from<sp/>DATA_BS_VMA<sp/>size<sp/>DATA_BS_SIZE];<sp/><sp/><sp/>Bootstrap<sp/>data<sp/>region<sp/>and<sp/>size</highlight></codeline>
+<codeline><highlight class="normal">define<sp/>region<sp/>DATA_region<sp/><sp/><sp/><sp/><sp/>=<sp/>mem:[from<sp/>DATA_VMA<sp/>size<sp/>DATA_SIZE];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Application<sp/>data<sp/>region<sp/>and<sp/>size</highlight></codeline>
+<codeline><highlight class="normal">define<sp/>region<sp/>XIP_region<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>mem:[from<sp/>XIP_VMA<sp/>size<sp/>XIP_SIZE];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Application<sp/>code<sp/>(xip)<sp/>region<sp/>and<sp/>size</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="group__group__system__config__cm33_1group_system_config_device_initialization_cm33">
+<title>Device Initialization</title>
+<para><bold>CM33 Without ARM TrustZone Support:</bold><linebreak/>
+ Below MSC describes the simplified startup sequence starting from reset release of the core. As soon as the reset is released, the execution starts form the ROM interrupt vector table reset vector. The ROM code initializes the basic clock needed to access and configure MMIO registers and then sets up debug port so that the debugger can be attached. After it finishes all the necessary initialization, it reads the bootstrap (part of non secure application image) location, size from TOC2 header and loads the bootstrap code into SRAM.</para>
+<para>Before switching execution to the non-secure application code, the ROM code needs to initialize the stack pointer MSP_NS for the non-secure code. This value is picked form the first entry in the non-secure bootstrap&apos;s vector table __ns_vector_table. Once the non-secure stack is initialized, the ROM code will call the non-secure code entry point which is nothing but the Reset_Handler. Address of this function is picked form the second entry in the non-secure vector table __ns_vector_table and type casting it to function pointer.</para>
+<para>In the non-secure Reset_Handler, the vector table is copied to RAM area and then the address of the vector table is set to VTOR register. This calls SystemInit function which internally calls Cy_PDL_Init, Cy_SystemInit and SystemCoreClockUpdate functions. Then it calls C runtime initialization function which calls main function of the application code.</para>
+<para>Below sequence diagram captures the initialization process in the startup code. <image type="html" name="cm33_ns_startup.png" inline="yes"></image>
+</para>
+</sect2>
+<sect2 id="group__group__system__config__cm33_1group_system_config_heap_stack_config_cm33">
+<title>Heap and Stack Configuration</title>
+<para>By default, the stack size is set to 0x00001000 and the entire remaining ram is used for the heap</para>
+<sect3 id="group__group__system__config__cm33_1group_system_config_heap_stack_config_gcc_cm33">
+<title>ARM GCC</title>
+<para><itemizedlist>
+<listitem><para><bold>Editing source code files for non-secure image</bold><linebreak/>
+The stack and heap sizes are defined in the linker script file: &apos;cyw20829_ns_flash_cbus.ld&apos;. Change the stack size by modifying the following line:<linebreak/>
+<programlisting><codeline><highlight class="normal">STACK_SIZE<sp/>=<sp/>0x00001000;<sp/></highlight></codeline>
+</programlisting> Remaining free RAM is used as heap.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>Correct operation of malloc and related functions depends on the working implementation of the &apos;sbrk&apos; function. Newlib-nano (default C runtime library used by the GNU Arm Embedded toolchain) provides weak &apos;sbrk&apos; implementation that doesn&apos;t check for heap and stack collisions during excessive memory allocations. To ensure the heap always remains within the range defined by __HeapBase and __HeapLimit linker symbols, provide a strong override for the &apos;sbrk&apos; function: <programlisting filename=".C"><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>_sbrk(uint32_t<sp/>incr)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint8_t<sp/>__HeapBase,<sp/>__HeapLimit;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>*heapBrk<sp/>=<sp/>&amp;__HeapBase;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*prevBrk<sp/>=<sp/>heapBrk;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(incr<sp/>&gt;<sp/>(uint32_t)(&amp;__HeapLimit<sp/>-<sp/>heapBrk))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errno<sp/>=<sp/>ENOMEM;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CY_HALT();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>heapBrk<sp/>+=<sp/>incr;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prevBrk;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> For FreeRTOS-enabled multi-threaded applications, it is sufficient to include clib-support library that provides newlib-compatible implementations of &apos;sbrk&apos;, &apos;__malloc_lock&apos; and &apos;__malloc_unlock&apos;: <linebreak/>
+ <ulink url="https://github.com/Infineon/clib-support">https://github.com/Infineon/clib-support</ulink>.</para>
+</simplesect>
+</para>
+</sect3>
+<sect3 id="group__group__system__config__cm33_1group_system_config_heap_stack_config_arm_cm33">
+<title>ARM Compiler</title>
+<para><itemizedlist>
+<listitem><para><bold>Editing source code files for non-secure image</bold><linebreak/>
+The stack sizes are defined in the linker script file: &apos;cyw20829_ns_flash_cbus.sct&apos;. Change the stack by modifying the following lines:<linebreak/>
+<programlisting><codeline><highlight class="preprocessor">#define<sp/>STACK_SIZE<sp/><sp/>0x00001000<sp/></highlight></codeline>
+</programlisting> Remaining free RAM is used as heap.</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="group__group__system__config__cm33_1group_system_config_heap_stack_config_iar_cm33">
+<title>IAR</title>
+<para><itemizedlist>
+<listitem><para><bold>Editing source code files for non-secure image</bold><linebreak/>
+The stack and heap sizes are defined in the linker script file: &apos;cyw20829_ns_flash_cbus.icf&apos;. Change the stack size by modifying the following line:<linebreak/>
+<programlisting><codeline><highlight class="normal">define<sp/>symbol<sp/>STACK_SIZE<sp/>=<sp/>0x00001000;<sp/></highlight></codeline>
+</programlisting> Remaining free RAM is used as heap.</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+<sect2 id="group__group__system__config__cm33_1group_system_config_default_handlers_cm33">
+<title>Default Interrupt Handlers Definition</title>
+<para>The default interrupt handler functions are dummy handler in the startup file.<linebreak/>
+Below is the default handler for the non-secure interrupts:<linebreak/>
+<programlisting><codeline><highlight class="normal"><sp/>interrupt_type<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InterruptHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1);</highlight></codeline>
+<codeline><highlight class="normal">}<sp/></highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="group__group__system__config__cm33_1group_system_config_device_vector_table_cm33">
+<title>Vectors Table Copy from ROM/Flash to RAM</title>
+<para>This process uses memory sections defined in the linker script. The startup code copies the default vector table contents to the non-secure SRAM region specified by the linker script. APIs are provided in the sysint driver to hook user implemented handler replacing the default handler for the corresponding interrupt.</para>
+<para>Following tables provide the address of the default and non-secure SRAM interrupt vector table for different supported compilers. </para>
+<sect3 id="group__group__system__config__cm33_1group_system_config_device_vector_table_gcc_cm33">
+<title>ARM GCC</title>
+<para>The linker script file is &apos;cyw20829_ns_flash_cbus.ld&apos;. For non-secure world, it uses the following variable.<linebreak/>
+ Copy interrupt vectors from ROM/flash to RAM: <linebreak/>
+ From: <programlisting><codeline><highlight class="normal">__ns_vector_table<sp/></highlight></codeline>
+</programlisting> To: <programlisting><codeline><highlight class="normal">__ns_vector_table_rw<sp/></highlight></codeline>
+</programlisting> The vector table address (and the vector table itself) are defined in the ns_start_&lt;device&gt;.c startup file corresponding to non-secure world. The code in these files copies the vector table from ROM/Flash to RAM.</para>
+</sect3>
+<sect3 id="group__group__system__config__cm33_1group_system_config_device_vector_table_mdk_cm33">
+<title>ARM Compiler</title>
+<para>The linker script file is &apos;cyw20829_ns_flash_cbus.sct&apos;. For non-secure world, it uses the following variable.<linebreak/>
+ Copy interrupt vectors from ROM/flash to RAM: <linebreak/>
+ From: <programlisting><codeline><highlight class="normal">__ns_vector_table<sp/></highlight></codeline>
+</programlisting> To: <programlisting><codeline><highlight class="normal">__ns_vector_table_rw<sp/></highlight></codeline>
+</programlisting> The vector table address (and the vector table itself) are defined in the ns_start_&lt;device&gt;.c startup file corresponding to non-secure world. The code in these files copies the vector table from ROM/Flash to RAM.</para>
+</sect3>
+<sect3 id="group__group__system__config__cm33_1group_system_config_device_vector_table_iar_cm33">
+<title>IAR</title>
+<para>The linker script file is &apos;cyw20829_ns_flash_cbus.icf&apos;. For non-secure world, it uses the following variable.<linebreak/>
+ Copy interrupt vectors from ROM/flash to RAM: <linebreak/>
+ From: <programlisting><codeline><highlight class="normal">__ns_vector_table<sp/></highlight></codeline>
+</programlisting> To: <programlisting><codeline><highlight class="normal">__ns_vector_table_rw<sp/></highlight></codeline>
+</programlisting> The vector table address (and the vector table itself) are defined in the ns_start_&lt;device&gt;.c startup file corresponding to non-secure worlds. The code in these files copies the vector table from ROM/Flash to RAM.</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="group__group__system__config__cm33_1group_system_config_changelog_cm33">
+<title>Changelog</title>
+<para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>Version </para>
+</entry><entry thead="yes"><para>Changes </para>
+</entry><entry thead="yes"><para>Reason for Change  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.2 </para>
+</entry><entry thead="no"><para>Added new internal functions. </para>
+</entry><entry thead="no"><para>Added support for DSRAM Setup for PSC3 devices.  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.1 </para>
+</entry><entry thead="no"><para>Restructured documentation and internal function behaviour. </para>
+</entry><entry thead="no"><para>User experience enhancement.  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.0 </para>
+</entry><entry thead="no"><para>Initial version </para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+</table>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

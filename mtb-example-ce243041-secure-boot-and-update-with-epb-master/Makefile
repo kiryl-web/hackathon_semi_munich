@@ -42,7 +42,7 @@ MTB_TYPE=COMBINED
 # configurations. If TARGET is manually edited, ensure TARGET_<BSP>.mtb with a
 # valid URL exists in the application, run 'make getlibs' to fetch BSP contents
 # and update or regenerate launch configurations for your IDE.
-TARGET=KIT_PSC3M6_EVAL
+TARGET=APP_KIT_PSC3M6_EVAL
 
 # Name of application (used to derive name of final linked file).
 #
@@ -86,7 +86,8 @@ endif # checking for Python path
 #  Allowed values:
 #   Post-quantum : XMSS_SHA2_10_256, LMS_SHA256_M32_H10, ML-DSA-44 , ML-DSA-65, ML-DSA-87
 #   Classic ECC  : ECDSA-256, ECDSA-384, ECDSA-521
-IMAGE_SIGNING_KEY_TYPE=ML-DSA-87
+# Hackathon Task 1 = ECDSA-384 baseline; Task 2 = ML-DSA-87.
+IMAGE_SIGNING_KEY_TYPE=ECDSA-384
 
 # Path to Image signing private key (must match IMAGE_SIGNING_KEY_TYPE).
 # Example private keys provided in the keys folder:
@@ -98,7 +99,12 @@ IMAGE_SIGNING_KEY_TYPE=ML-DSA-87
 #   ECDSA-256          : ../keys/ecdsa_p256_img_sign_key_priv.der
 #   ECDSA-384          : ../keys/ecdsa_p384_img_sign_key_priv.der
 #   ECDSA-521          : ../keys/ecdsa_p521_img_sign_key_priv.der
-IMAGE_SIGNING_KEY=../keys/ml_dsa_87_img_sign_key_priv.der
+IMAGE_SIGNING_KEY=../keys/ecdsa_p384_img_sign_key_priv.der
+
+# Hackathon Task 2: image hash / HashML-DSA pre-hash override (sha256|sha384|sha512).
+# Empty = scheme default from configs/prebuild.py. Must match EPBL feature_config
+# "ml_dsa_sig_hash" (CNSA 2.0 profile: ML-DSA-87 + SHA512).
+IMAGE_SHA?=
 
 # Image encryption settings (applies to UPDATE images only)
 # Set to 1 to enable encryption, 0 to disable
@@ -212,7 +218,7 @@ LDLIBS+=
 LINKER_SCRIPT=
 
 #Prebuild: generate symbols.json consumed by the signer-combiner post-build step
-PREBUILD=$(CY_PYTHON_PATH) configs/prebuild.py --maj $(IMG_VER_MAJOR) --min $(IMG_VER_MINOR) --rev $(IMG_REVISION) --bn $(IMG_BUILD_NO) --key $(IMAGE_SIGNING_KEY) --key-type $(IMAGE_SIGNING_KEY_TYPE) --enc-key $(IMAGE_ENCRYPTION_KEY) --t configs/symbol_template.json -o bsps/TARGET_$(TARGET)/symbols.json
+PREBUILD=$(CY_PYTHON_PATH) configs/prebuild.py --maj $(IMG_VER_MAJOR) --min $(IMG_VER_MINOR) --rev $(IMG_REVISION) --bn $(IMG_BUILD_NO) --key $(IMAGE_SIGNING_KEY) --key-type $(IMAGE_SIGNING_KEY_TYPE) --enc-key $(IMAGE_ENCRYPTION_KEY) $(if $(IMAGE_SHA),--sha $(IMAGE_SHA)) --t configs/symbol_template.json -o bsps/TARGET_$(TARGET)/symbols.json
 # Custom post-build commands to run.
 POSTBUILD=
 

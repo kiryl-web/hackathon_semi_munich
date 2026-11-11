@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>KIT_PSC3M6_EVAL BSP</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_output_bsps_TARGET_KIT_PSC3M6_EVAL_README"/> </para>
+<sect1 id="index_1autotoc_md1">
+<title>Overview</title>
+<para>The PSOC™ Control C3M6 MCU Evaluation Kit (KIT_PSC3M6_EVAL) is based on the PSOC™ Control family of devices. It enables the evaluation and development of applications for the PSOC™ Control C3M6 MCU.</para>
+<para><bold>Note:</bold> Programming this kit requires installing <ulink url="https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack">SEGGER J-Link software</ulink>.</para>
+<para><image type="html" name="board.png"></image>
+ <image type="latex" name="board.png"></image>
+ <image type="rtf" name="board.png"></image>
+ <image type="docbook" name="board.png"></image>
+ <image type="xml" name="board.png"></image>
+</para>
+<para>To use code from the BSP, simply include a reference to <computeroutput>cybsp.h</computeroutput>.</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Features</title>
+<para>Kit Features:</para>
+<para><itemizedlist>
+<listitem><para>PSoC™ Control C3M6 (Arm® Cortex®-M33 based) Microcontroller</para>
+</listitem><listitem><para>On-board Debug Probe with USB interface supporting SWD</para>
+</listitem><listitem><para>J-Link debugger and UART virtual COM port, with USB Type C connector</para>
+</listitem><listitem><para>Two user LEDs, two user buttons, and a reset button for the PSC3M6</para>
+</listitem><listitem><para>USB device and host function</para>
+</listitem><listitem><para>All IOs available on expansion header</para>
+</listitem><listitem><para>On board SPI Nor flash</para>
+</listitem><listitem><para>Headers compatible with MIKROE’s mikroBUS shields</para>
+</listitem><listitem><para>Headers compatible with Arduino Uno R3</para>
+</listitem><listitem><para>Potentiometer that can be used to simulate analog sensor output</para>
+</listitem></itemizedlist>
+</para>
+<para>Kit Contents:</para>
+<para><itemizedlist>
+<listitem><para>PSOC™ Control C3M6 Evaluation Kit</para>
+</listitem><listitem><para>USB Type-A to Type-C cable</para>
+</listitem><listitem><para>Jumper wires</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>BSP Configuration</title>
+<para>The BSP has a few hooks that allow its behavior to be configured. Some of these items are enabled by default while others must be explicitly enabled. Items enabled by default are specified in the KIT_PSC3M6_EVAL.mk file. The items that are enabled can be changed by creating a custom BSP or by editing the application makefile.</para>
+<para>Components:<itemizedlist>
+<listitem><para>Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.</para>
+</listitem></itemizedlist>
+</para>
+<para>Defines:<itemizedlist>
+<listitem><para>CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.</para>
+</listitem><listitem><para>CY_USING_HAL - This define, enabled by default in some BSPs, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers. Newer BSPs pull in the v3.x HAL, which enables itself via its own makefile, so CY_USING_HAL is not present.</para>
+</listitem><listitem><para>CYBSP_CUSTOM_SYSCLK_PM_CALLBACK - This define, disabled by default, causes the BSP to skip registering its default SysClk Power Management callback, if any, and instead to invoke the application-defined function <computeroutput>cybsp_register_custom_sysclk_pm_callback</computeroutput> to register an application-specific callback.</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="index_1autotoc_md4">
+<title>Clock Configuration</title>
+<para><table rows="7" cols="3"><row>
+<entry thead="yes" align='center'><para>Clock   </para>
+</entry><entry thead="yes" align='center'><para>Source   </para>
+</entry><entry thead="yes" align='center'><para>Output Frequency    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>FLL   </para>
+</entry><entry thead="no" align='center'><para>IHO   </para>
+</entry><entry thead="no" align='center'><para>100.0 MHz    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>CLK_HF0   </para>
+</entry><entry thead="no" align='center'><para>CLK_PATH1   </para>
+</entry><entry thead="no" align='center'><para>180 MHz    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>CLK_HF1   </para>
+</entry><entry thead="no" align='center'><para>CLK_PATH1   </para>
+</entry><entry thead="no" align='center'><para>180 MHz    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>CLK_HF2   </para>
+</entry><entry thead="no" align='center'><para>CLK_PATH0   </para>
+</entry><entry thead="no" align='center'><para>100 MHz    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>CLK_HF3   </para>
+</entry><entry thead="no" align='center'><para>CLK_PATH0   </para>
+</entry><entry thead="no" align='center'><para>50 MHz    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>CLK_HF4   </para>
+</entry><entry thead="no" align='center'><para>CLK_PATH1   </para>
+</entry><entry thead="no" align='center'><para>180 MHz   </para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>Power Configuration</title>
+<para><itemizedlist>
+<listitem><para>System Active Power Mode: OD</para>
+</listitem><listitem><para>System Idle Power Mode: CPU Sleep</para>
+</listitem><listitem><para>VDDA Voltage: 3300 mV</para>
+</listitem><listitem><para>VDDD Voltage: 3300 mV</para>
+</listitem></itemizedlist>
+</para>
+<para>See the <ulink url="md_bsp_settings.html">BSP Setttings</ulink> for additional board specific configuration settings.</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>API Reference Manual</title>
+<para>The KIT_PSC3M6_EVAL Board Support Package provides a set of APIs to configure, initialize and use the board resources.</para>
+<para>See the <ulink url="modules.html">BSP API Reference Manual</ulink> for the complete list of the provided interfaces.</para>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>More information</title>
+<para><itemizedlist>
+<listitem><para><ulink url="modules.html">KIT_PSC3M6_EVAL BSP API Reference Manual</ulink></para>
+</listitem><listitem><para><ulink url="https://www.infineon.com/evaluation-board/KIT-PSC3M6-EVAL">KIT_PSC3M6_EVAL Documentation</ulink></para>
+</listitem><listitem><para><ulink url="https://www.infineon.com">Infineon Technologies AG</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/Infineon">Infineon GitHub</ulink></para>
+</listitem><listitem><para><ulink url="https://www.infineon.com/modustoolbox">ModusToolbox™</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+ © 2026, Infineon Technologies AG, or an affiliate of Infineon Technologies AG. </para>
+</sect1>
+    </detaileddescription>
+    <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/README.md"/>
+  </compounddef>
+</doxygen>

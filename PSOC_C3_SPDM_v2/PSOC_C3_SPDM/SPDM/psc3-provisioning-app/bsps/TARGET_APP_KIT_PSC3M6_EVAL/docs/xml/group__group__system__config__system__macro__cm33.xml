@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__group__system__config__system__macro__cm33" kind="group">
+    <compoundname>group_system_config_system_macro_cm33</compoundname>
+    <title>System Macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__group__system__config__system__macro__cm33_1ga2c3161220ca73cd6884dcaba546bf772" prot="public" static="no">
+        <name>CY_STARTUP_M33_ID</name>
+        <initializer>((uint32_t)((uint32_t)((0x0EU) &amp; 0x3FFFU) &lt;&lt; 18U))</initializer>
+        <briefdescription>
+<para>The Cortex-M33 startup driver identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="output/bsps/TARGET_KIT_PSC3M6_EVAL/system_cat1b.h" line="295" column="13" bodyfile="output/bsps/TARGET_KIT_PSC3M6_EVAL/system_cat1b.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,7 @@
+connect: OK
+set-trust: OK (root pinned)
+get-cert: OK (slot 0, 1218 bytes, verified to pinned root)
+start-session: OK (KEY_EXCHANGE / FINISH, session 0xffffffff, AES_256_GCM)
+end-session: OK (secured END_SESSION)
+RESULT: PASS
+

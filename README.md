@@ -304,6 +304,38 @@ encountered during setup. Keep the wires secure and the laptop on external
 power throughout a long test. An initial Enter-DFU write failure (DFU error 3,
 exit code 8195) occurs before SPDM and does not prove a signature rejection.
 
+### What Is Flashed Where?
+
+The USB bridge and the PSC3M6 target run different firmware. The target board
+uses a Cortex-M33 MCU; the detached KitProg3 is only the programmer/bridge.
+
+| Device | Firmware/application | How it is installed or used |
+|---|---|---|
+| MiniProg4 or detached KitProg3 | Compatible stock Infineon MiniProg4/KitProg3 firmware, not the SPDM application | Use `fw-loader` for a necessary bridge update and select the verified I2C mode described above |
+| PSC3M6 target, provisioning stage | `psc3-provisioning-app`, including its Secure and Nonsecure projects | Program the combined application through the target board's on-board J-Link |
+| PSC3M6 target, runtime stage | `psoc-spdm-responder`, including its Secure and Nonsecure projects | Replace the provisioning application through J-Link while preserving PAS keys and certificates |
+| Windows PC | Provisioning host utilities and the SPDM Requester | Run these on the PC; they are not flashed onto either device |
+
+For a target without SPDM credentials, use this order:
+
+1. Prepare the MiniProg4/KitProg3 bridge and confirm that `dfuh-cli --display-hw`
+	exposes its I2C interface. Do not flash a PSC3 application image onto it.
+2. Build and program `psc3-provisioning-app` onto the **PSC3M6 target** via
+	its on-board J-Link, not via the I2C-only bridge wiring.
+3. Run the provisioning host on Windows through the USB-I2C bridge to generate
+	the device key, obtain/sign its CSR, and transfer and verify the certificate
+	chain. The private device key stays on the target.
+4. Build and program the combined `psoc-spdm-responder` application onto the
+	**same PSC3M6 target**, preserving the provisioned PAS contents. Use the
+	application-level Program launch, not just the Nonsecure image by itself.
+5. Run the SPDM Requester on Windows to communicate with the responder over
+	the USB-I2C bridge.
+
+Once the responder and credentials are installed, normal SPDM tests do **not**
+require reflashing either device. A further bridge firmware update is not a
+prerequisite for each test. No full-device erase, freeze/finalize operation or
+lifecycle change was needed in the verified setup.
+
 ### Build and Eclipse Setup
 
 For a fresh setup, obtain the supplied application and its libspdm submodule
@@ -353,6 +385,122 @@ wiring. When selecting a particular probe, the make variable is
 **`MTB_PROBE_SERIAL`**, not `PROBE_SERIAL`. The host **SPDM Requester remains a
 separate program**; importing into Eclipse neither starts authentication nor
 automatically removes the DFU host's per-transfer overhead.
+
+### Programming Commands: KitProg3 and PSC3M6
+
+These are instructions for a deliberate installation, not commands to run for
+every SPDM test. Programming replaces firmware; provisioning can change the
+device identity. Use stable USB power and keep the laptop on external power.
+Do not unplug a device while its firmware is being programmed or verified.
+
+Use the PowerShell build environment from **Build and Eclipse Setup** above
+(`$make`, `$env:CY_TOOLS_PATHS`, HOME and PATH). The examples assume the supplied
+applications and their BSP/dependencies are already available under `P:`.
+Replace the example tool paths and serial placeholders with your own values.
+
+#### 1. Prepare or Update the USB-I2C Bridge
+
+Install the Infineon ModusToolbox Programming Tools package. `fw-loader`
+selects the compatible bundled vendor firmware for the connected programmer;
+do not give it the PSC3 application image. First list the connected devices:
+
+```powershell
+$programmingTools = 'C:/Infineon/Tools/ModusToolboxProgtools-2.0'
+$fwLoader = Join-Path $programmingTools 'fw-loader/bin/fw-loader.exe'
+$dfuh = Join-Path $env:CY_TOOLS_PATHS 'dfuh-tool/dfuh-cli.exe'
+& $fwLoader --device-list
+```
+
+For the detached CY8CPROTO KitProg3, run the following block **only when a
+firmware update is needed**. Copy its exact serial from the device list. Do
+not use `all`, and do not confuse this serial with the board's J-Link serial.
+
+```powershell
+$bridgeSerial = 'REPLACE_WITH_KITPROG_SERIAL'
+if ($bridgeSerial -like 'REPLACE_*') { throw 'Set the KitProg3 serial from --device-list first.' }
+& $fwLoader --update-kp3 $bridgeSerial
+if ($LASTEXITCODE -ne 0) { throw 'KitProg3 firmware update failed; stop here.' }
+& $fwLoader --mode kp3-bulk $bridgeSerial
+if ($LASTEXITCODE -ne 0) { throw 'KitProg3 mode selection failed; stop here.' }
+& $fwLoader --device-list
+& $dfuh --display-hw
+```
+
+The update must report successful programming/verification, and the final
+listing must expose the selected device as **I2C**. Version 2.90.1804 and BULK
+were verified for the detached KitProg3 used here; another installed tools
+package may bundle a different compatible firmware version.
+
+For the **original MiniProg4 instead**, no firmware update was needed in this
+setup. Select that MiniProg4's serial and switch only its mode. This is an
+alternative to the KitProg3 block, not a second mode change for the same probe:
+
+```powershell
+$miniProgSerial = 'REPLACE_WITH_MINIPROG4_SERIAL'
+if ($miniProgSerial -like 'REPLACE_*') { throw 'Set the MiniProg4 serial from --device-list first.' }
+& $fwLoader --mode kp3-hid $miniProgSerial
+if ($LASTEXITCODE -ne 0) { throw 'MiniProg4 mode selection failed; stop here.' }
+& $dfuh --display-hw
+```
+
+Do not continue to host tests unless the selected bridge is listed as I2C.
+Updating/switching this bridge does **not** program the PSC3 target.
+
+#### 2. Program the Provisioning Application onto PSC3M6
+
+Only do this stage for a target whose credentials you intend to provision.
+Connect the PSC3's **J13 USB connector** for its on-board J-Link and use that
+J-Link's serial number below, not the USB-I2C bridge serial. The provisioning
+application is a separate supplied project, not the SPDM requester executable.
+
+```powershell
+$psc3ProbeSerial = 'REPLACE_WITH_ONBOARD_JLINK_SERIAL'
+if ($psc3ProbeSerial -like 'REPLACE_*') { throw 'Set the PSC3 board J-Link serial first.' }
+& $make -C P:/psc3-provisioning-app getlibs
+if ($LASTEXITCODE -ne 0) { throw 'Provisioning dependencies failed; stop here.' }
+& $make -C P:/psc3-provisioning-app build TARGET=APP_KIT_PSC3M6_EVAL PROV_SIG_SUITES=ml-dsa-87 PROV_SELFTEST=0 PROV_SELFTEST_FINALIZE=0
+if ($LASTEXITCODE -ne 0) { throw 'Provisioning build failed; do not program a stale image.' }
+& $make -C P:/psc3-provisioning-app qprogram TARGET=APP_KIT_PSC3M6_EVAL PROV_SIG_SUITES=ml-dsa-87 PROV_SELFTEST=0 PROV_SELFTEST_FINALIZE=0 BSP_PROGRAM_INTERFACE=JLink "MTB_PROBE_SERIAL=$psc3ProbeSerial"
+if ($LASTEXITCODE -ne 0) { throw 'Provisioning application programming failed.' }
+```
+
+`qprogram` programs the already built **combined application**, including its
+Secure and Nonsecure images. Confirm the programmer's program/verify result.
+The UART startup should identify the provisioning application and report I2C
+ready; the verified board used its J-Link UART at **115200 baud, 8-N-1**.
+
+**Stop here to provision credentials.** Run the supplied provisioning host
+on Windows over the USB-I2C bridge, generate the device key/CSR, sign and
+transfer the certificate chain, and verify readback and `prove-cert`. Follow
+the provisioning application's instructions; do not pass `--freeze` or
+finalize unless an intentional lifecycle decision requires it. Flashing the
+responder alone does not create its device key or certificates.
+
+#### 3. Program the SPDM Responder onto the Same PSC3M6
+
+After provisioning succeeds, use the same on-board J-Link and program the
+combined responder without a full-device erase. If you skipped the previous
+stage because credentials already exist, set `$psc3ProbeSerial` to your
+board's J-Link serial before running this block.
+
+```powershell
+if ([string]::IsNullOrWhiteSpace($psc3ProbeSerial) -or $psc3ProbeSerial -like 'REPLACE_*') { throw 'Set the PSC3 board J-Link serial first.' }
+& $make -C P:/psoc-spdm-responder build TARGET=APP_KIT_PSC3M6_EVAL SPDM_PROFILE=P4
+if ($LASTEXITCODE -ne 0) { throw 'Responder build failed; do not program a stale image.' }
+& $make -C P:/psoc-spdm-responder qprogram TARGET=APP_KIT_PSC3M6_EVAL SPDM_PROFILE=P4 BSP_PROGRAM_INTERFACE=JLink "MTB_PROBE_SERIAL=$psc3ProbeSerial"
+if ($LASTEXITCODE -ne 0) { throw 'Responder programming failed.' }
+```
+
+The combined responder image is generated as `build/app_combined.hex` in its
+application directory. Do not select only the Nonsecure image, perform a
+full-device erase, or overwrite PAS assets. Confirm successful program/verify
+and the UART messages for responder initialization, certificate-chain loading
+and the I2C transport waiting for host commands.
+
+As an **Eclipse alternative**, select the imported responder application,
+run **Build Application**, then its application-level **Program Application**
+launch using the on-board J-Link. Do not choose **Erase Device**. After that,
+start the SPDM Requester separately on Windows; it is not firmware to flash.
 
 ### Provisioning and Observed Verification Status
 

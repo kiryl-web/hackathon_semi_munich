@@ -1,0 +1,63 @@
+{
+    "version":  "1.0",
+    "description":  "Configuration of the bootloader solution example",
+    "target":  "PSC3_M6",
+    "security_setup":  {
+                           "validation_key_type":  {
+                                                       "description":  "Type of the image validation key. Possible values: \u0027ECDSA-256\u0027, \u0027ECDSA-384\u0027, \u0027ECDSA-521\u0027 \u0027LMS_SHA256_M32_H10\u0027, \u0027XMSS_SHA2_10_256\u0027, \u0027ML-DSA-44\u0027, \u0027ML-DSA-65\u0027, \u0027ML-DSA-87\u0027",
+                                                       "value":  "ECDSA-384"
+                                                   },
+                           "validation_key":  {
+                                                  "description":  "Path to the image validation key. Example key path: ../keys/ecdsa-p256-pub.pem",
+                                                  "value":  "../../../mtb-example-ce243041-secure-boot-and-update-with-epb-master/keys/ecdsa_p384_img_sign_key_pub.der"
+                                              },
+                           "ml_dsa_sig_hash":  {
+                                                   "description":  "Hash function used for ML-DSA signature generation. Possible values: \u0027SHA256\u0027, \u0027SHA384\u0027, \u0027SHA512\u0027",
+                                                   "value":  ""
+                                               },
+                           "validate_boot":  {
+                                                 "description":  "Image validation during boot",
+                                                 "value":  true
+                                             },
+                           "validate_upgrade":  {
+                                                    "description":  "Image validation during upgrade",
+                                                    "value":  true
+                                                },
+                           "image_encryption":  {
+                                                    "description":  "Activate/deactivate image encryption",
+                                                    "value":  false
+                                                },
+                           "encryption_type":  {
+                                                   "description":  "Encryption method: \u0027KDF-CMAC\u0027 (PSC3_M6 hardware key derivation) or \u0027EC256\u0027 (standard elliptic curve)",
+                                                   "value":  ""
+                                               },
+                           "encryption_key":  {
+                                                  "description":  "Key for EC256 encryption (example: ../keys/enc-ec256-priv.pem). Leave empty for KDF-CMAC (uses master key from SFLASH)",
+                                                  "value":  ""
+                                              },
+                           "hw_rollback_prot":  {
+                                                    "description":  "Use HW anti roll-back counter",
+                                                    "value":  false
+                                                },
+                           "sflash_keys":  {
+                                               "description":  "Use key provisioned in device SFLASH to verify images",
+                                               "value":  false
+                                           },
+                           "sw_downgrade_prev":  {
+                                                     "description":  "Use software downgrade prevention (for \u0027overwrite\u0027 method only!)",
+                                                     "value":  true
+                                                 }
+                       },
+    "dependency_check":  {
+                             "description":  "To prevent upgrading the non-compatible images for multiple-images",
+                             "value":  false
+                         },
+    "fault_injection_hardening":  {
+                                      "description":  "FIH profile parameter. Can be \u0027off\u0027, \u0027low\u0027, \u0027medium\u0027, \u0027high\u0027",
+                                      "value":  "off"
+                                  },
+    "serial_logging":  {
+                           "description":  "Logging level is one list \u0027off\u0027, \u0027error\u0027, \u0027warning\u0027, \u0027info\u0027, \u0027debug\u0027",
+                           "value":  "debug"
+                       }
+}

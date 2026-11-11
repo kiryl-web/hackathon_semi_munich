@@ -1,0 +1,181 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'
+Tools Directory: C:/Users/kpato/ModusToolbox/tools_3.9
+Searching installed tools in progress...
+Searching installed tools complete
+Use of the FPU on a secure project may be susceptible to an VLLDM Instruction Security Vulnerability (CVE-2021-35465). Verify the toolchain you are using already provides a workaround or use VFP_SELECT=softfloat instead of VFP_SELECT=. For more information see https://developer.arm.com/Arm%20Security%20Center/VLLDM%20Instruction%20Security%20Vulnerability
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Tools Directory: C:/Users/kpato/ModusToolbox/tools_3.9
+Use of the FPU on a secure project may be susceptible to an VLLDM Instruction Security Vulnerability (CVE-2021-35465). Verify the toolchain you are using already provides a workaround or use VFP_SELECT=softfloat instead of VFP_SELECT=. For more information see https://developer.arm.com/Arm%20Security%20Center/VLLDM%20Instruction%20Security%20Vulnerability
+NOTE: Using 'C:/Users/kpato/ModusToolbox/tools_3.9/ninja/ninja.exe' from PATH.
+Generating mtbninja data files...
+Generating mtbninja data complete...
+Toolchain validation: PASS
+Initializing build: mtb-example-ce243041-secure-boot-and-update-with-epb Debug APP_KIT_PSC3M6_EVAL GCC_ARM
+
+/cygdrive/c/Users/kpato/AppData/Local/Programs/Python/Python38/python configs/prebuild.py --maj 0 --min 9 --rev 0 --bn 0 --key ../keys/ml_dsa_87_img_sign_key_priv.der --key-type ML-DSA-87 --enc-key ../keys/enc_ec256_pub.pem --sha sha512 --t configs/symbol_template.json -o bsps/TARGET_APP_KIT_PSC3M6_EVAL/symbols.json
+Prebuild operations complete
+# 0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'
+# 0: Loading the ModusToolbox Technology Packs and Early Access Packs
+# 0: Loading the tools information
+[1/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_ext.o
+[2/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/async-transfer/source/mtb_async_transfer.o
+[3/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_pins.o
+[4/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripheral_clocks.o
+[5/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_clocks.o
+[6/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_protection.o
+[7/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/startup_cat1b_cm33.o
+[8/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_system.o
+[9/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/system_psc3_x6.o
+[10/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/local/imports/dfu/config/DFU_CFG1/COMPONENT_DFU_I2C/transport_i2c.o
+[11/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg.o
+[12/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/local/retarget_io_init.o
+[13/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/config/GeneratedSource/cycfg_peripherals.o
+[14/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp.o
+[15/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/local/dfu_user.o
+[16/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm.o
+[17/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_pm_callbacks.o
+[18/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/bsps/APP_KIT_PSC3M6_EVAL/cybsp_dsram.o
+[19/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/local/main.o
+[20/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_dma.o
+[21/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/dfu/cy_dfu.o
+[22/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_scb_uart.o
+[23/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_nvm.o
+[24/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/device-utils/syspm/source/mtb_syspm_callbacks_tcpwm.o
+[25/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_adc_sar.o
+[26/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_clock.o
+[27/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_comp.o
+[28/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma.o
+[29/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer.o
+[30/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_dma_dw.o
+[31/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_gpio.o
+[32/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/devices/source/cy_device.o
+[33/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm_mxs40flashc_v1.o
+[34/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_nvm.o
+[35/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_i2c.o
+[36/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_mcwdt.o
+[37/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_lptimer_common.o
+[38/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_pwm.o
+[39/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_spi.o
+[40/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_rtc.o
+[41/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_system.o
+[42/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_syspm.o
+[43/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cordic.o
+[44/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_canfd.o
+[45/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_utils_impl.o
+[46/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_timer.o
+[47/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/hal/source/mtb_hal_uart.o
+[48/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes_ccm.o
+[49/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_cmac.o
+[50/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_aes.o
+[51/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hmac.o
+[52/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_hkdf.o
+[53/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_key_gen.o
+[54/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_ec25519.o
+[55/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecdsa.o
+[56/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_ecc_eddsa.o
+[57/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_nist_p.o
+[58/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha.o
+[59/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_rsa.o
+[60/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_sha256.o
+[61/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_dma.o
+[62/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_trng.o
+[63/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_efuse_v3.o
+[64/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_vu.o
+[65/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_cryptolite_utils.o
+[66/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_gpio.o
+[67/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_ac.o
+[68/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_hwfilt3p3z.o
+[69/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_csg.o
+[70/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass_sar.o
+[71/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_drv.o
+[72/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_hppass.o
+[73/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_pipe.o
+[74/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_flash.o
+[75/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mcwdt.o
+[76/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ms_ctl.o
+[77/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_mpc.o
+[78/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ipc_sema.o
+[79/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lpcomp.o
+[80/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_lvd.o
+[81/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf.o
+[82/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_promc.o
+[83/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_ppc.o
+[84/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_i3c.o
+[85/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_pdl_srf_common.o
+[86/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_common.o
+[87/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_rtc.o
+[88/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_ezi2c.o
+[89/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi_ez.o
+[90/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_svgs.o
+[91/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysint_v2.o
+[92/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_spi.o
+[93/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_smartio.o
+[94/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysfault.o
+[95/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_regb.o
+[96/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_uart.o
+[97/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_scb_i2c.o
+[98/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syslib.o
+[99/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_pdcm.o
+[100/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_systick_v2.o
+[101/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_ppu.o
+[102/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_counter.o
+[103/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_motif.o
+[104/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/support/source/mtb_stdlib_stubs.o
+[105/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_quaddec.o
+[106/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_shiftreg.o
+[107/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_sysclk_v2.o
+[108/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_wdt.o
+[109/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_trigmux.o
+[110/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_tcpwm_pwm.o
+[111/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/ppu_v1.o
+[112/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-dsl-psc3m6/pdl/drivers/source/cy_syspm_v2.o
+[113/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/mtb-srf/source/mtb_srf.o
+[114/115] Building object file C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/Debug/libraries_shared/retarget-io/source/cy_retarget_io.o
+[115/115] Linking, creating elf file build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.elf
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O ihex C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.elf C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.hex
+C:/Users/kpato/Infineon/Tools/mtb-gcc-arm-eabi/14.2.1/gcc/bin/arm-none-eabi-objcopy -O binary C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.elf C:/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master/build/APP_KIT_PSC3M6_EVAL/Debug/mtb-example-ce243041-secure-boot-and-update-with-epb.bin;
+==============================================================================
+= Build complete =
+==============================================================================
+
+  ---------------------------------------------------------------------------
+ | Memory/Region/Section |     Offset |                 Used |     Available |
+  ---------------------------------------------------------------------------
+ | FLASH                 |            |               42,060 |       524,288 |
+ |   bootloader          | 0x00000000 | (  0%)             0 |       110,592 |
+ |   m33_nvm             | 0x0001b000 | ( 32%)        42,060 |       131,072 |
+ |     .mcu_boot_header  | 0x00000000 |                1,024 |               |
+ |     .vector_table     | 0x00000400 |                  104 |               |
+ |     .gnu.sgstubs      | 0x00000480 |                   32 |               |
+ |     .text             | 0x000004a0 |               40,136 |               |
+ |     .ARM.exidx        | 0x0000a168 |                    8 |               |
+ |     .copy.table       | 0x0000a170 |                   24 |               |
+ |     .zero.table       | 0x0000a188 |                    8 |               |
+ |     .data (load data) | 0x0000a190 |                  724 |               |
+ |   secondary_slot      | 0x00040000 | (  0%)             0 |       131,072 |
+ |   <unallocated>       |            |                      |       151,552 |
+  ---------------------------------------------------------------------------
+ | ROM                   |            |                    0 |        65,536 |
+ |   <unallocated>       |            |                      |        65,536 |
+  ---------------------------------------------------------------------------
+ | SRAM                  |            |               55,301 |       131,072 |
+ |   shared_data         | 0x00000000 | (  0%)             0 |         4,096 |
+ |   m33_data            | 0x00001000 | (100%)        55,293 |        55,296 |
+ |     .ramVectors       | 0x00000000 |                  732 |               |
+ |     .data             | 0x000002dc |                  724 |               |
+ |     .noinit           | 0x000005b0 |                  149 |               |
+ |     .bss              | 0x00000648 |                2,412 |               |
+ |     .heap             | 0x00000fb4 |               47,180 |               |
+ |     .stack            | 0x0000c800 |                4,096 |               |
+ |   m33ns_shm_data      | 0x0000e800 | (  0%)             8 |         2,048 |
+ |     .cy_sharedmem     | 0x00000000 |                    8 |               |
+ |   <unallocated>       |            |                      |        69,632 |
+  ---------------------------------------------------------------------------
+mkdir -p build/last_config
+(cd configs && C:/Users/kpato/Infineon/Tools/ModusToolbox-Edge-Protect-Security-Suite-2.4.0/tools/edgeprotecttools/bin/edgeprotecttools.exe run-config -i update.json --symbol-search ..//bsps/TARGET_APP_KIT_PSC3M6_EVAL ) 
+: E : INFO  : Secure Image signing: command "sign" validation succeeded
+: E : INFO  : Image signed successfully (C:\Users\kpato\KP\Hackathon\mtb-example-ce243041-secure-boot-and-update-with-epb-master\build\last_config\mtb-example-ce243041-secure-boot-and-update-with-epb_update.hex)
+: E : INFO  : Secure Image signing: command "sign" succeeded
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/mtb-example-ce243041-secure-boot-and-update-with-epb-master'

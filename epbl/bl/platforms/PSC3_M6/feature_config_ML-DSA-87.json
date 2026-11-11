@@ -1,0 +1,63 @@
+{
+    "version": "1.0",
+    "description": "Configuration of the bootloader solution example",
+    "target": "PSC3_M6",
+    "security_setup": {
+        "validation_key_type": {
+            "description": "Type of the image validation key. Possible values: 'ECDSA-256', 'ECDSA-384', 'ECDSA-521' 'LMS_SHA256_M32_H10', 'XMSS_SHA2_10_256', 'ML-DSA-44', 'ML-DSA-65', 'ML-DSA-87'",
+            "value": "ML-DSA-87"
+        },
+        "validation_key": {
+            "description": "Path to the image validation key. Example key path: ../keys/ecdsa-p256-pub.pem",
+            "value": "../../../mtb-example-ce243041-secure-boot-and-update-with-epb-master/keys/ml_dsa_87_img_sign_key_pub.der"
+        },
+        "ml_dsa_sig_hash": {
+            "description": "Hash function used for ML-DSA signature generation. Possible values: 'SHA256', 'SHA384', 'SHA512'",
+            "value": "SHA512"
+        },
+        "validate_boot": {
+            "description": "Image validation during boot",
+            "value": true
+        },
+        "validate_upgrade": {
+            "description": "Image validation during upgrade",
+            "value": true
+        },
+        "image_encryption": {
+            "description": "Activate/deactivate image encryption",
+            "value": false
+        },
+        "encryption_type": {
+            "description": "Encryption method: 'KDF-CMAC' (PSC3_M6 hardware key derivation) or 'EC256' (standard elliptic curve)",
+            "value": ""
+        },
+        "encryption_key": {
+            "description": "Key for EC256 encryption (example: ../keys/enc-ec256-priv.pem). Leave empty for KDF-CMAC (uses master key from SFLASH)",
+            "value": ""
+        },
+        "hw_rollback_prot": {
+            "description": "Use HW anti roll-back counter",
+            "value": false
+        },
+        "sflash_keys": {
+            "description": "Use key provisioned in device SFLASH to verify images",
+            "value": false
+        },
+        "sw_downgrade_prev": {
+            "description": "Use software downgrade prevention (for 'overwrite' method only!)",
+            "value": true
+        }
+    },
+    "dependency_check": {
+        "description": "To prevent upgrading the non-compatible images for multiple-images",
+        "value": false
+    },
+    "fault_injection_hardening": {
+        "description": "FIH profile parameter. Can be 'off', 'low', 'medium', 'high'",
+        "value": "off"
+    },
+    "serial_logging": {
+        "description": "Logging level is one list 'off', 'error', 'warning', 'info', 'debug'",
+        "value": "debug"
+    }
+}
