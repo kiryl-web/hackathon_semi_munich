@@ -1,0 +1,114 @@
+py.exe : INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe 
+--custom-command status.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:109 char:10
++     $o = & py -3.13 .\test\spdm_provision.py --hwid $Hwid --key-slot  ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO provisione...--i2c-speed 400:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+prov_cmd_status : PROV_OK
+provisioned     : NOT_PROVISIONED
+num_slots       : 2
+pas_version     : 0x0003
+slot[0]         : FREE
+slot[1]         : FREE
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+info.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+{
+  "prov_cmd_status": 0,
+  "uid": "978f920350161f35",
+  "caps": 0,
+  "num_slots": 2,
+  "slot_sizes": [
+    8172,
+    15340
+  ],
+  "algs": [
+    {
+      "alg_id": 259,
+      "pub_len": 2592,
+      "sig_len": 4627,
+      "alg_id_name": "ML_DSA_87"
+    }
+  ],
+  "max_chunk": 64,
+  "prov_cmd_status_name": "PROV_OK"
+}
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+gen-key.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+prov_cmd_status : PROV_OK
+slot_id         : 0
+alg             : ML_DSA_87 (0x0103)
+pub_len         : 2592 bytes
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+get-csr_probe.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+get-csr.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+prov_cmd_status : PROV_OK
+csr_len         : 7355 bytes
+written         : test\_work\edge_p4\dev.csr
+[ok] CA-signed certificate written (DER): test\_work\edge_p4\leaf.crt
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+put-cert.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+saved blob      : test\_work\edge_p4\spdm_cert_chain.bin (15187 B, sha256=6f2b8b67d47bbc3c...)
+prov_cmd_status : PROV_OK
+recv_total      : 15187 bytes
+committed       : yes
+cert_len        : 15187 bytes
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+get-cert_probe.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+get-cert.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+prov_cmd_status : PROV_OK
+cert_len        : 15187 bytes
+written         : test\_work\edge_p4\readback.bin
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+prove-cert_probe.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe --custom-command 
+prove-cert.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+prov_cmd_status : PROV_OK
+alg             : ML_DSA_87 (0x0103)
+cert_sha256     : 6f2b8b67d47bbc3c70bba59440d0235ea52deebb3d33ee27758114731c577e61
+nonce           : 8425ac45e005a6fb666c7ce54fa257125f59f4b4a317374f5fc4e990a4ead716
+sig_len         : 4627
+OK: device proved possession of the certified private key.
+======================================================================
+ SPDM provisioning (cert chain)
+   key slot=0  cert slot=1  alg=ml-dsa-87
+   chain (root-first, leaf appended): ['test\\ca_mldsa87.crt'] + <leaf>
+   RootHash alg=sha384
+   CA key=test\ca_mldsa87.key  CA crt=test\ca_mldsa87.crt  days=365
+   out dir=test\_work\edge_p4  freeze=False
+   globals forwarded to provisioner.py: ['--hwid', 'KitProg3-140A16D001060400']
+======================================================================
+
+>> --hwid KitProg3-140A16D001060400 status
+   [ok] status
+
+>> --hwid KitProg3-140A16D001060400 info --json
+   [ok] info
+
+>> --hwid KitProg3-140A16D001060400 gen-key --slot 0 --alg ml-dsa-87
+   [ok] gen-key
+
+>> --hwid KitProg3-140A16D001060400 get-csr --slot 0 --cn PSC3 DEV 01 -o test\_work\edge_p4\dev.csr --org ICW --ou APP --country IN --serial SN-0001
+   [ok] get-csr
+
+>> C:\Users\kpato\KP\Hackathon\PSOC_C3_SPDM_v2\PSOC_C3_SPDM\SPDM\psc3-provisioning-host\test\sign_csr.py test\_work\edge_p4\dev.csr -o test\_work\edge_p4\leaf.crt --out-form der --ca-key test\ca_mldsa87.key --ca-crt test\ca_mldsa87.crt --days 365
+   [ok] CA-signed leaf certificate: test\_work\edge_p4\leaf.crt
+
+>> --hwid KitProg3-140A16D001060400 put-cert --slot 1 --key-slot 0 --spdm-chain --hash-alg sha384 -i test\ca_mldsa87.crt -i test\_work\edge_p4\leaf.crt --save-blob test\_work\edge_p4\spdm_cert_chain.bin
+   [ok] put-cert (--spdm-chain)
+
+>> --hwid KitProg3-140A16D001060400 get-cert --slot 1 -o test\_work\edge_p4\readback.bin
+   [ok] get-cert (read-back)
+
+>> --hwid KitProg3-140A16D001060400 prove-cert --slot 1 -i test\_work\edge_p4\spdm_cert_chain.bin
+   [ok] prove-cert
+
+======================================================================
+ PASS: SPDM cert_chain provisioned (device NOT frozen).
+ Stored SPDM blob: test\_work\edge_p4\spdm_cert_chain.bin
+ Re-run with --freeze to lock the device.
+======================================================================
+

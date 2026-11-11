@@ -1,0 +1,10 @@
+py.exe : INFO provisioner.backend: Running: C:\Users\kpato\ModusToolbox\tools_3.9\dfuh-tool\dfuh-cli.exe 
+--custom-command put-cert.mtbdfu --hwid KitProg3-140A16D001060400 --i2c-address 0x08 --i2c-speed 400
+At C:\Users\kpato\KP\Hackathon\tools\task3_edge_tests.ps1:95 char:10
++     $o = & py -3.13 provisioner.py --hwid $Hwid --timeout-ms 60000 @a ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO provisione...--i2c-speed 400:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+prov_cmd_status : PROV_ERR_LENGTH
+

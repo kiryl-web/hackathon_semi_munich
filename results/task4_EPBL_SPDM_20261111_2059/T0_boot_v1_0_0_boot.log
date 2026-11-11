@@ -1,0 +1,62 @@
+20:59:21.903 [524s.288ms][DBG] [2J[;H
+20:59:22.167 
+[0s.0ms][INF] MCUBoot Bootloader Started
+20:59:22.169 
+[0s.0ms][INF] boot_go_for_image_id
+20:59:22.210 
+[0s.0ms][INF] Processing img id: 0
+20:59:22.216 
+[0s.1ms][DBG]  * boot_prepare_image_for_update...
+20:59:22.265 
+[0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+20:59:22.336 
+[0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+20:59:22.336 
+[0s.16ms][DBG]  * There was no partial swap, determine swap type.
+20:59:22.336 
+[0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+20:59:22.413 
+[0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=unset, swap_type=0x1, copy_done=0x3, image_ok=0x3
+20:59:22.415 
+[0s.40ms][INF] Swap type: none
+20:59:22.415 
+[0s.43ms][DBG] < boot_prepare_image_for_update
+20:59:22.419 
+[0s.47ms][DBG]  * process swap_type = 1
+20:59:22.423 
+[0s.51ms][DBG] > boot_validate_slot: fa_id = 1
+20:59:22.425 
+[0s.131ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+20:59:22.428 
+[0s.131ms][DBG] < boot_validate_slot: fa_id = 1
+20:59:22.428 
+[0s.132ms][INF] Successfully added image data to shared area
+20:59:22.433 
+[0s.137ms][INF] User Application validated successfully
+20:59:22.433 
+[0s.141ms][INF] Running the first app
+20:59:22.436 
+[0s.145ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+20:59:22.439 
+[0s.152ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+20:59:22.441 
+[0s.157ms][INF] Starting User Application (wait)...
+20:59:22.443 
+[0s.162ms][INF] Start slot Address: 0x3201B400
+20:59:22.453 
+[0s.166ms][INF] MCUBoot Bootloader finished.
+20:59:22.455 
+20:59:22.455 [INF] Deinitializing hardware...
+20:59:22.459 
+20:59:22.461 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+20:59:22.463 [I] App version: 5.0.0+0
+20:59:22.465 [I] Board and logging init complete
+20:59:22.467 [I] Secure NSC ABI version: 0x0008
+20:59:22.469 [I] libspdm module version: 4.0.0 (alpha 0xFF)
+20:59:22.471 [I] Starting DFU/I2C carrier bring-up
+20:59:22.475 [I] DFU middleware initialized
+20:59:22.477 [I] SPDM command router registered
+20:59:22.477 [I] SPDM responder: cert chain loaded (15187 B)
+20:59:22.482 [I] SPDM responder context ready
+20:59:22.482 [I] SPDM responder initialized
+20:59:22.487 [I] I2C transport started; waiting for host commands

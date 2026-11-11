@@ -1,7 +1,9 @@
-# Handoff – state after Task 3 (2026-11-11)
+# Handoff – state after Task 4 (2026-11-11, 22:xx)
 
-Read this first in a new session. **Task 3 (SPDM PQC) is DONE**: `results/Task3_PQC_SPDM_Report.pdf`,
-details `results/TASK3_NOTES.md`. Next = Task 4 (lifecycle / update), then Task 5 (presentation).
+Read this first in a new session. **Task 4 (lifecycle) is DONE**: `results/Task4_Lifecycle_Report.pdf`,
+details `results/TASK4_NOTES.md`. The SPDM responder now runs BEHIND EPBL (ML-DSA-87) with real SPDM
+measurements. Next = Task 5 (presentation + 5-min live demo, deadline 2026-11-12 12:00).
+**Task 3 (SPDM PQC) is DONE**: `results/Task3_PQC_SPDM_Report.pdf`, details `results/TASK3_NOTES.md`.
 Task 2 (boot-time PQC) is DONE: `results/Task2_PQC_Boot_Report.pdf`,
 details `results/TASK2_NOTES.md`. Task 1 (ECC baseline) is DONE: `results/Task1_ECC_Baseline_Report.pdf`,
 details in `results/TASK1_NOTES.md`.
@@ -39,7 +41,20 @@ details in `results/TASK1_NOTES.md`.
 | `hex_flip.py in out addr` | tamper one byte in an Intel-HEX |
 | `make_task1_report.py` | regenerates the Task 1 PDF |
 
-## Current device state (after Task 3)
+## Current device state (after Task 4) – supersedes the Task 3 section below
+- Flash: EPBL (spdm map, ML-DSA-87/SHA-512) @0x32000000 + SPDM responder **v2.0.0** (TARGET=APP_KIT_PSC3M6_EVAL_EPBL,
+  P4, FI=0) in the primary slot @0x3201B000; upgrade slot empty; PAS @0x32048000 = ML-DSA-87 identity from the task4
+  RESTORE (artifacts provisioning-host `test/_work/edge_p4`, root ca_mldsa87 = results/task3_neg_roots/good_root.der).
+- Demo images: results/task4_boot/*.hex (signed v1.0.0/1.1.0/1.2.0/2.0.0 + tamper variants, epbl_full.hex).
+  Runner `tools/task4_epbl_spdm_tests.ps1 -Phase BOARD [-Only T1] [-NoSpdm]`; reference values `tools/task4_verify_meas.py`.
+- Do NOT flash the standalone responder or the provisioning app unless needed: both overwrite EPBL at 0x32000000
+  (then reload results/task4_boot/epbl_full.hex + a boot image).
+- Both responder targets build from one tree (no getlibs needed): `TARGET=APP_KIT_PSC3M6_EVAL` (standalone) or
+  `TARGET=APP_KIT_PSC3M6_EVAL_EPBL`; build/app_combined.hex is shared -> the PREP phase rebuilds the EPBL target itself.
+- EPBL build for this map needs `MEMORY_MAP=<abs>/epbl/bl/platforms/PSC3_M6/memory_maps/spdm_overwrite_single_flash.json`
+  (the default in epbl common.mk is still the CE243041 map for the Task 2 demo app).
+
+## Device state after Task 3 (historical)
 - Flash @0x32000000: **SPDM responder P4 (ML-DSA-87 / ML-KEM-1024), SPDM_FAULT_INJECT=0**, Release + [PERF] logging.
   EPBL + CE243041 app were overwritten → for boot demos reprogram EPBL (`make -C epbl/bl build` then `qprogram`,
   feature_config_ML-DSA-87.json active) and the signed app (results/img_ML-DSA-87_v1_0_boot.hex).

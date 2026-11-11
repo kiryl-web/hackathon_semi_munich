@@ -1,0 +1,1231 @@
+diff --git a/README.md b/README.md
+index d9efcd9..0f24f78 100644
+--- a/README.md
++++ b/README.md
+@@ -34,10 +34,10 @@ the SPDM capability advertisement derive from. Four profiles are shipped today,
+ 
+ | `SPDM_PROFILE` | SPDM version | Signature / KEM | Hash | Compliance | Kits |
+ | -------------- | ------------ | --------------- | ---- | ---------- | ---- |
+-| `P1` (default) | up to 1.4 (tested at 1.4) | ECDSA / ECDHE **P-256** | SHA-256 | &mdash; | PSC3M5, PSC3M6 and PSC3M8 |
++| `P1` | up to 1.4 (tested at 1.4) | ECDSA / ECDHE **P-256** | SHA-256 | &mdash; | PSC3M5, PSC3M6 and PSC3M8 |
+ | `P2` | up to 1.4 | ECDSA / ECDHE **P-384** | SHA-384 | CNSA 1.0 | PSC3M5, PSC3M6 and PSC3M8 |
+ | `P3` | up to 1.4 | ECDSA / ECDHE **P-521** | SHA-512 | &mdash; | PSC3M5, PSC3M6 and PSC3M8 |
+-| `P4` | 1.4 | **ML-DSA-87** / **ML-KEM-1024** (PQC) | SHA-384 | CNSA 2.0 | PSC3M6 and PSC3M8 |
++| `P4` (default) | 1.4 | **ML-DSA-87** / **ML-KEM-1024** (PQC) | SHA-384 | CNSA 2.0 | PSC3M6 and PSC3M8 |
+ 
+ All four profiles share AES-256-GCM for the secure session. `P1`&ndash;`P3` run
+ their crypto entirely on PSA / mbedTLS. `P4` additionally pulls **wolfCrypt**
+@@ -98,9 +98,9 @@ model, trust boundaries, security properties, and design rationale.
+ ## Supported kits (make variable 'TARGET')
+ 
+ - [PSOC&trade; Control C3M5 Evaluation Kit](https://www.infineon.com/KIT_PSC3M5_EVK)
+-  (`APP_KIT_PSC3M5_EVK`) &ndash; Default value of `TARGET`
++   (`APP_KIT_PSC3M5_EVK`)
+ - [PSOC&trade; Control C3M6 Evaluation Kit](https://www.infineon.com/KIT_PSC3M6_EVAL)
+-  (`APP_KIT_PSC3M6_EVAL`)
++   (`APP_KIT_PSC3M6_EVAL`) &ndash; Default value of `TARGET`
+ - [PSOC&trade; Control C3M8 Evaluation Kit](https://www.infineon.com/KIT_PSC3M8_EVK)
+   (`APP_KIT_PSC3M8_EVK`)
+ 
+@@ -120,15 +120,47 @@ SPDM (DFU) command transport. How that link is provided depends on the kit:
+   programming/debug, the UART log, and the I2C transport over a single USB
+   cable; no extra hardware is required.
+ - **KIT_PSC3M6_EVAL (M6):** the on-board SEGGER J-Link handles programming/debug
+-  only. The I2C transport requires an external I2C-USB bridge — an Infineon
+-  **MiniProg4** — wired to the kit as follows:
++   only. The I2C transport requires an external USB-I2C bridge. The following
++   **MiniProg4** wiring was verified using its **12-pin, 2x6 communication
++   header**, not either SWD connector:
+ 
+    Board connector/pin | Signal | MiniProg4 pin
+    :------------------ | :----- | :------------
+    J16.5 (P9.0)        | SCL    | Pin 4
+    J16.6 (P9.2)        | SDA    | Pin 2
+-   J15.7               | GND    | Pin 12
+-   J15.8               | VTARG  | Pin 1
++    J15.7               | VTARG (3.3 V) | Pin 1
++    J15.8               | GND    | Pin 12
++
++**Correction to the original wiring table:** PSC3M6 **J15.7 is 3.3 V** and
++**J15.8 is GND**. The earlier table had these reversed. Do not follow the
++reversed mapping in another copy of the example.
++
++A physically detached **KitProg3 section from CY8CPROTO-062-4343W** was also
++used as the USB-I2C bridge. Its connector layout differs from MiniProg4:
++
++| Detached KitProg3 connection | Signal | PSC3M6 connection |
++| --------------------------- | ------ | ----------------- |
++| `P12.1` / `12.1`, connector J7 pin 5 | SDA | J16.6 / P9.2 |
++| `P12.0` / `12.0`, connector J7 pin 4 | SCL | J16.5 / P9.0 |
++| J4 pin 1, VTARG | 3.3 V reference input | J15.7 / 3.3 V |
++| J4 pin 2, GND | Common ground | J15.8 / GND |
++
++`J7.5` means **pin 5 of connector J7**; the board may label that GPIO `12.1`
++rather than `J7.5`. J4 is the five-pin SWD connector: **only VTARG and GND
++belong there for this I2C setup**. SWDIO and SWDCLK are not SDA and SCL.
++
++For the detached KitProg3, VTARG is an **input** needed for voltage-level
++translation, not a power output for the PSC3. Power the PSC3 through its
++on-board J-Link USB connector **J13**, and power the bridge through its own
++USB connector. Disconnect both USB supplies before rewiring. Do not connect
++VBUS/5 V to the PSC3's 3.3 V reference or I2C pins. Do not join independently
++driven supply rails if the KitProg3 section is still attached to another board.
++
++The pin assignments were checked against the manufacturer kit guides:
++[KIT_PSC3M6_EVAL](https://www.infineon.com/evaluation-board/KIT-PSC3M6-EVAL),
++[MiniProg4](https://www.infineon.com/assets/row/public/documents/30/44/infineon-cy8ckit-005-miniprog4-program-and-debug-kit-guide-usermanual-en.pdf), and
++[CY8CPROTO-062-4343W](https://www.infineon.com/assets/row/public/documents/30/44/infineon-cy8cproto-062-4343w-psoc-6-wi-fi-bt-prototyping-kit-guide-usermanual-en.pdf)
++(KitProg3 connectors: pages 21 and 31).
+ 
+ 
+ ## Software setup
+@@ -162,6 +194,168 @@ The device-policy provisioning step uses the **Edge Protect Tools**
+ </details>
+ 
+ 
++## Verified Windows setup and changes (PSC3M6)
++
++The following records the setup completed on **2026-11-10/11**. The successful
++outcome was a built and programmed responder, working SPDM negotiation and
++certificate-fragment transfers, and an Eclipse import. **A complete
++`CHALLENGE_AUTH` run was not finished**; see the verification status below.
++
++### Build defaults and environment
++
++The application defaults in `common.mk` were changed from PSC3M5/P1 to
++`TARGET=APP_KIT_PSC3M6_EVAL` and `SPDM_PROFILE=P4`, matching the actual board
++and its ML-DSA-87 identity. No manual change to the cryptographic algorithms
++was needed for this bring-up.
++
++The working tool combination was ModusToolbox tools **3.9**, GNU Arm **14.2.1**,
++native Windows **CMake 3.31.6**, and Edge Protect Security Suite **2.4.0**.
++CMake was missing initially and was added as a portable installation. Its
++`bin` directory must be on the PATH used by both command-line builds and
++Eclipse; ModusToolbox's bundled Ninja was sufficient.
++
++The original deeply nested path contained spaces and parentheses and broke
++the Windows/Cygwin build. A temporary `subst P:` mapping to the directory
++containing the SPDM applications avoided that problem without copying files.
++Prefer a short checkout path for a new installation. `P:` is only a local
++alias and must be recreated after a Windows restart if the generated project
++paths still use it.
++
++For example, adapt the paths below to your installation. The example assumes
++that `P:` maps to the parent containing `psoc-spdm-responder`, and that native
++CMake is installed under `C:/Tools/cmake`:
++
++```powershell
++$env:CY_TOOLS_PATHS = 'C:/Infineon/Tools/ModusToolbox/tools_3.9'
++$env:HOME = $env:USERPROFILE.Replace('\', '/')
++$env:PATH = 'C:/Tools/cmake/bin;C:/Infineon/Tools/ModusToolbox/tools_3.9/modus-shell/bin;' + $env:PATH
++$make = Join-Path $env:CY_TOOLS_PATHS 'modus-shell/bin/make.exe'
++& $make -C P:/psoc-spdm-responder getlibs
++& $make -C P:/psoc-spdm-responder build TARGET=APP_KIT_PSC3M6_EVAL SPDM_PROFILE=P4
++& $make -C P:/psoc-spdm-responder eclipse TARGET=APP_KIT_PSC3M6_EVAL SPDM_PROFILE=P4 BSP_PROGRAM_INTERFACE=JLink
++```
++
++Run the environment setup again in a new shell. Changes to one shell's PATH
++do not update an already running Eclipse process. GCC and Edge Protect tools
++also need to be discoverable by the IDE build; the local Eclipse starter used
++for this setup was extended with the CMake path. This machine-specific starter
++is outside the responder repository, so configure your own launcher or IDE
++environment for a fresh checkout.
++
++### Repairing stale generated BSP files
++
++The first responder build lacked device-library metadata. Running `make
++getlibs` restored it. The Device Configurator then rejected changed/stale
++generated symbols. The existing `GeneratedSource` directory was backed up,
++and the files were regenerated from the existing `design.modus`:
++
++```powershell
++& (Join-Path $env:CY_TOOLS_PATHS 'device-configurator/device-configurator-cli.exe') --build 'P:/psoc-spdm-responder/bsps/TARGET_APP_KIT_PSC3M6_EVAL/config/design.modus' --readonly --force
++```
++
++This was a recovery step, not a required action on every build. Back up any
++manual generated-file changes before using `--force`. The source
++`design.modus` and the PSC3M6 security/lifecycle policy were not changed; the
++M6 memory partition comes from the Device Configurator, not M5 OEM-policy
++provisioning.
++
++### USB bridge firmware and mode
++
++- The original MiniProg4 was in DAPLink mode, which the Windows DFU host did
++   not expose as an I2C bridge. Switching that selected probe to `kp3-hid`
++   restored I2C enumeration. Its firmware was not updated during this test.
++- The detached CY8CPROTO KitProg3 initially ran firmware **1.01.158**. Its
++   firmware was updated, with explicit approval, to **2.90.1804** using the
++   installed `fw-loader --update-kp3` command for that probe's serial number.
++   This updates the programmer, not the PSC3 application.
++- For that updated KitProg3, **`kp3-bulk`** was the mode that actually exposed
++   I2C to `dfuh-cli`; HID did not. Do not apply a blanket HID/BULK rule across
++   different hardware and firmware versions. Check the actual enumeration with
++   `dfuh-cli --display-hw` and select the corresponding `--hwid`.
++- The MODE button is not a start button for the SPDM test. No special SPDM
++   firmware is needed on KitProg3: the standard firmware supplies the bridge.
++
++The tested I2C address was **0x08**. MiniProg4 worked at **400 kHz**; the final
++KitProg3 transfer tests used **100 kHz**. Wrong SWD-vs-I2C connections, reversed
++reference/ground wires, disconnected jumpers, USB unplugging, and a laptop
++power interruption were encountered during bring-up. Keep the data wires
++securely attached and the laptop on external power for long tests. A failed
++initial Enter-DFU write (`dfuh-cli` error 3 / exit 8195) happens **before SPDM**
++and is not evidence of a certificate or signature rejection.
++
++### Provisioning and programming the responder
++
++The separate provisioning application and host utility were used first. The
++Python host environment required **PyYAML** and **cryptography >= 46** for
++ML-DSA support; the installed cryptography version was 50.0.2. The device
++generated its own ML-DSA-87 key in **PAS slot 0**. A CSR was signed with a demo
++CA, and the resulting **15,168-byte** SPDM certificate chain was stored in
++**PAS slot 1**, exposed by the responder as **SPDM certificate slot 0**.
++Readback matched the uploaded chain byte-for-byte, and the provisioning
++`prove-cert` command verified possession of the device key.
++
++The responder was then built and programmed through the PSC3's **on-board
++J-Link**, not through the I2C-only KitProg3 wiring. The selected probe variable
++was **`MTB_PROBE_SERIAL`**, not `PROBE_SERIAL`; set it to your board's J-Link
++serial when multiple probes are connected. Programming and verification
++succeeded and retained the provisioned assets. No full-device erase,
++`--freeze`/finalize operation, or lifecycle change was performed. Do not erase
++the PAS assets when switching between provisioning and responder applications.
++
++### Eclipse export and import
++
++`make eclipse` generated all three projects:
++
++- `psoc-spdm-responder` (application)
++- `psoc-spdm-responder.proj_cm33_s` (secure)
++- `psoc-spdm-responder.proj_cm33_ns` (non-secure)
++
++Import the application **in place**, with copying into the workspace disabled.
++If Eclipse's generic existing-projects importer finds only the application,
++import `proj_cm33_s` and `proj_cm33_ns` separately as well. All three were
++imported into the existing workspace without replacing its previous projects.
++
++Eclipse initially logged workspace-lock errors while saving imported project
++preferences, and interrupted local-history backup jobs on a subsequent load.
++Regular exits/restarts after the import completed produced a clean final
++session; the workspace and project preferences were not deleted.
++
++Build and Program/Debug use the **J-Link** launch configuration. Eclipse runs
++the device firmware; the Windows **SPDM Requester remains a separate host
++program**. Opening the project in Eclipse does not automatically run
++`CHALLENGE_AUTH` or remove the DFU host's per-transfer overhead.
++
++### Verification status and remaining work
++
++| Check | Observed result |
++| ----- | --------------- |
++| P4 responder build and programming | Passed; programming verification succeeded |
++| Asset provisioning, readback and `prove-cert` | Passed; no freeze/finalize |
++| Responder startup | Certificate chain loaded, context ready, I2C listening |
++| SPDM negotiation | SPDM 1.4, ML-DSA-87, ML-KEM-1024, SHA-384, AES-256-GCM |
++| SPDM certificate transfer | Successful fragments observed; full SPDM certificate validation not completed |
++| Eclipse export and import | All three projects imported; clean final restarted session |
++| `CHALLENGE_AUTH`, signed measurements, secure session and encrypted exchange | Not verified end-to-end |
++
++The final authentication run was deliberately cancelled before completion to
++continue with the Eclipse import. Earlier runs were also interrupted by
++physical disconnection or power loss. A manually cancelled run reporting
++`SPDM_REQ_EAUTH` is **not** proof of an invalid signature. Provisioning
++`prove-cert` is a different check from SPDM `CHALLENGE_AUTH`.
++
++Measured Windows host/bridge initialization took about **11 seconds per DFU
++transaction**, while a small actual GET_VERSION exchange completed in under
++one second after initialization. Certificate and ML-DSA-87 signature responses
++are fragmented into small packets, so a full run can take many minutes.
++Allow it to finish uninterrupted before claiming authenticated SPDM success.
++
++For GitHub, publish portable sources, BSP templates, dependency definitions
++and the libspdm submodule; exclude build/IDE caches, local test artefacts and
++private keys. Do not rely on a developer's personal paths, `P:` mapping or
++external Eclipse starter. The provisioning applications and host tools are
++separate from this responder repository and must be obtained separately.
++
++
+ ## Operation
+ 
+ ### 1. Get the project
+diff --git a/common.mk b/common.mk
+index 586b688..507f300 100644
+--- a/common.mk
++++ b/common.mk
+@@ -29,7 +29,7 @@ MTB_TYPE=PROJECT
+ # To change the target, it is recommended to use the Library manager
+ # ('make library-manager' from command line), which will also update Eclipse IDE launch
+ # configurations.
+-TARGET=KIT_PSC3M5_EVK
++TARGET=APP_KIT_PSC3M6_EVAL
+ 
+ # Name of toolchain to use. Options include:
+ #
+@@ -48,9 +48,15 @@ TOOLCHAIN=GCC_ARM
+ # one line per new board; the positive DEVICE_PSC3M5 guard keeps the manual
+ # bring-up compiled in only where it is needed. PSC3M8 is a multicore part but
+ # only its main CM33 (TrustZone) core is used here, so it tracks PSC3M6.
++# Hackathon Task 4: BSP variant with the Edge Protect Bootloader flash map. getlibs writes
++# SEARCH_TARGET_<TARGET> for the target it was run for only; defining it here lets both
++# targets build without re-running getlibs.
++SEARCH_TARGET_APP_KIT_PSC3M6_EVAL_EPBL ?= ../bsps/TARGET_APP_KIT_PSC3M6_EVAL_EPBL
++SEARCH_TARGET_APP_KIT_PSC3M6_EVAL ?= ../bsps/TARGET_APP_KIT_PSC3M6_EVAL
++
+ ifeq ($(TARGET),APP_KIT_PSC3M5_EVK)
+ DEVICE_GUARD=DEVICE_PSC3M5
+-else ifeq ($(TARGET),APP_KIT_PSC3M6_EVAL)
++else ifneq ($(filter $(TARGET),APP_KIT_PSC3M6_EVAL APP_KIT_PSC3M6_EVAL_EPBL),)
+ DEVICE_GUARD=DEVICE_PSC3M6
+ else ifeq ($(TARGET),APP_KIT_PSC3M8_EVK)
+ DEVICE_GUARD=DEVICE_PSC3M8
+@@ -69,7 +75,9 @@ endif
+ #
+ # The selected profile.h defines the orthogonal SPDM_HAVE_* capability flags the
+ # app/config headers derive from; profile.mk carries the build-graph delta.
+-SPDM_PROFILE ?= P1
++# Hackathon: P2 = ECC baseline (Task 1), P4 = CNSA 2.0 PQC (Task 3).
++# After changing the profile run "Clean" before "Build".
++SPDM_PROFILE ?= P4
+ SPDM_PROFILE_DIR := ../profiles/$(SPDM_PROFILE)
+ ifeq ($(wildcard $(SPDM_PROFILE_DIR)/profile.h),)
+ $(error Unknown SPDM_PROFILE '$(SPDM_PROFILE)' (no profiles/$(SPDM_PROFILE)/profile.h))
+@@ -144,6 +152,10 @@ endif
+ # 
+ # If CONFIG is manually edited, ensure to update or regenerate launch configurations 
+ # for your IDE.
+-CONFIG=Debug
++# Hackathon: Release so timing/size numbers are representative. Logging stays
++# on via SPDM_PERF_LOG (see proj_cm33_ns/Makefile); SPDM_PERF_LOG=0 gives the
++# clean production-size image.
++CONFIG=Release
++SPDM_PERF_LOG ?= 1
+ 
+ include ../common_app.mk
+diff --git a/platforms/PSC3M6/detect_platform.mk b/platforms/PSC3M6/detect_platform.mk
+index cacf20d..84e6c6b 100644
+--- a/platforms/PSC3M6/detect_platform.mk
++++ b/platforms/PSC3M6/detect_platform.mk
+@@ -8,7 +8,7 @@
+ # (platforms/$(PLATFORM)/deps) used by 'make getlibs'.
+ ################################################################################
+ 
+-ifeq ($(filter $(TARGET), KIT_PSC3M6_EVAL APP_KIT_PSC3M6_EVAL),$(TARGET))
++ifeq ($(filter $(TARGET), KIT_PSC3M6_EVAL APP_KIT_PSC3M6_EVAL APP_KIT_PSC3M6_EVAL_EPBL),$(TARGET))
+     PLATFORM ?= PSC3M6
+     # SPDM profiles this device can run.
+     SPDM_PROFILES_SUPPORTED ?= P1 P2 P3 P4
+diff --git a/proj_cm33_ns/Makefile b/proj_cm33_ns/Makefile
+index ec49777..3fcc89d 100644
+--- a/proj_cm33_ns/Makefile
++++ b/proj_cm33_ns/Makefile
+@@ -110,7 +110,11 @@ DEFINES+=DFU_I2C_TX_BUFFER_SIZE=135 DFU_I2C_RX_BUFFER_SIZE=135 CY_DFU_PRODUCT=0x
+ #                  _write/_read.
+ # Override LOG_LEVEL / CY_DFU_LOG_LEVEL on the make command line to keep logs in
+ # a Release image.
+-ifeq ($(CONFIG),Release)
++ifeq ($(CONFIG)$(SPDM_PERF_LOG),Release1)
++# Hackathon measurement build: Release optimisation, logging kept for [PERF].
++DEFINES+=LOG_LEVEL=LOG_LEVEL_INFO
++DEFINES+=CY_DFU_LOG_LEVEL=CY_DFU_LOG_LEVEL_ERROR
++else ifeq ($(CONFIG),Release)
+ DEFINES+=LOG_LEVEL=LOG_LEVEL_OFF
+ DEFINES+=CY_RETARGET_IO_NO_FLOAT
+ DEFINES+=CY_DFU_LOG_LEVEL=CY_DFU_LOG_LEVEL_OFF
+@@ -125,11 +129,18 @@ endif
+ # the identical value libspdm_psc3.cmake passes to the CMake archive build.
+ DEFINES+=LIBSPDM_CONFIG='"spdm_lib_config_psc3.h"'
+ 
++# Hackathon negative tests: SPDM_FAULT_INJECT=<1..6> builds a deliberately
++# faulty responder (see spdm/spdm_fault_inject.h). 0 = off (default).
++SPDM_FAULT_INJECT ?= 0
++ifneq ($(SPDM_FAULT_INJECT),0)
++DEFINES+=SPDM_FAULT_INJECT=$(SPDM_FAULT_INJECT)
++endif
++
+ # Non-Secure-Callable (NSC) veneer object generated by the secure project. The
+ # non-secure project links against it to call the secure world. This baseline
+ # stage calls the single version-query veneer to confirm the two-project
+ # TrustZone build wiring; the SPDM crypto/sign veneers are added later.
+-NSC_VENEER=../build/nsc_veneer.o
++NSC_VENEER=../build/nsc_veneer_$(TARGET).o
+ 
+ # Select softfloat or hardfp floating point. Default is softfloat.
+ VFP_SELECT=softfloat
+diff --git a/proj_cm33_ns/main.c b/proj_cm33_ns/main.c
+index 3bfdb99..5e84f2c 100644
+--- a/proj_cm33_ns/main.c
++++ b/proj_cm33_ns/main.c
+@@ -72,6 +72,7 @@
+ 
+ #include "spdm_router.h"
+ #include "spdm_responder.h"
++#include "spdm_perf_ns.h"
+ 
+ /******************************************************************************
+  * Macros
+@@ -215,6 +216,12 @@ int main(void)
+         .packetBuffer = &dfu_packet[0],
+     };
+ 
++    /* Hackathon measurement: paint the NS stack for the [PERF] high-water mark. */
++    {
++        extern uint32_t __StackLimit;
++        perf_stack_paint(&__StackLimit);
++    }
++
+     /* Initialize the device and board peripherals. */
+     result = cybsp_init();
+     if (CY_RSLT_SUCCESS != result)
+@@ -228,6 +235,9 @@ int main(void)
+     /* Initialize logging (configures the debug UART and retarget-io). */
+     log_init();
+ 
++    /* Hackathon measurement: NS SysTick cycle counter for [PERF] timings. */
++    perf_ns_timer_init();
++
+     LOG_INFO("=== PSOC Control C3 SPDM Responder (non-secure) ===");
+     LOG_INFO("App version: %u.%u.%u+%u",
+              (unsigned int)APP_VERSION_MAJOR,
+diff --git a/proj_cm33_ns/router/spdm_router.c b/proj_cm33_ns/router/spdm_router.c
+index 4275c03..f7b5261 100644
+--- a/proj_cm33_ns/router/spdm_router.c
++++ b/proj_cm33_ns/router/spdm_router.c
+@@ -58,6 +58,96 @@
+ #include "spdm_responder.h"
+ #include "log/log.h"
+ 
++#include <string.h>
++#include <unistd.h>
++#include "spdm_perf_ns.h"
++#include "nsc_perf.h"
++
++/******************************************************************************
++ * Hackathon measurement ([PERF] lines on the debug UART)
++ *
++ * One line per SPDM transfer (= one DFU transaction = at most 127 B of SPDM):
++ *   n       transfer number since the last GET_VERSION (connection start)
++ *   req/rsp MCTP type 05 = plain SPDM -> SPDM request/response code;
++ *           MCTP type 06 = secured message (code is encrypted, shown as SEC)
++ *   rq/rs   request / response bytes on the wire (incl. 1-byte MCTP header)
++ *   large   total size of a chunked (fragmented) SPDM message, first chunk only
++ *   t       device time for this dispatch (libspdm + crypto), microseconds
++ *   sign/kexg/kexs/kem  secure-side crypto time inside this dispatch, us
++ *   cum_t/cum_b  running device time / wire bytes since GET_VERSION
++ *   nsstk/nsheap/sstk/sheap  peak NS stack, NS heap, S stack, S heap (bytes)
++ *****************************************************************************/
++spdm_perf_crypto_t g_spdm_perf;
++
++extern uint32_t __StackLimit;   /* NS stack bottom (linker_ns_flash.ld) */
++extern uint32_t __StackTop;
++extern char     __HeapBase;
++
++static volatile uint32_t s_perf_wraps;
++
++void SysTick_Handler(void)
++{
++    s_perf_wraps++;
++}
++
++void perf_ns_timer_init(void)
++{
++    SysTick->LOAD = 0x00FFFFFFUL;
++    SysTick->VAL  = 0U;
++    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk |
++                    SysTick_CTRL_ENABLE_Msk;
++}
++
++uint32_t perf_ns_cyc(void)
++{
++    uint32_t w1;
++    uint32_t w2;
++    uint32_t v;
++    bool     pend;
++    do {
++        w1   = s_perf_wraps;
++        v    = SysTick->VAL;
++        pend = ((SCB->ICSR & SCB_ICSR_PENDSTSET_Msk) != 0U);
++        w2   = s_perf_wraps;
++    } while (w1 != w2);
++    /* Counter reloaded (VAL jumped back up) but the wrap interrupt has not
++     * been serviced yet: count that wrap now. */
++    if (pend && (v > 0x00800000UL)) {
++        w1++;
++    }
++    return (w1 << 24) + (0x00FFFFFFUL - v);
++}
++
++static uint32_t s_perf_n;
++static uint32_t s_perf_cum_cyc;
++static uint32_t s_perf_cum_bytes;
++
++static uint32_t perf_large_size(const uint8_t *m, size_t len, uint8_t chunk_code)
++{
++    /* m[0] = MCTP type, m[1..] = SPDM. First chunk: seq (bytes 4..7 of the
++     * SPDM header) == 0 and LargeMessageSize at SPDM offset 12. */
++    if ((len >= 17U) && (m[0] == 0x05U) && (m[2] == chunk_code) &&
++        (m[5] == 0U) && (m[6] == 0U) && (m[7] == 0U) && (m[8] == 0U)) {
++        return (uint32_t)m[13] | ((uint32_t)m[14] << 8) |
++               ((uint32_t)m[15] << 16) | ((uint32_t)m[16] << 24);
++    }
++    return 0U;
++}
++
++static void perf_code_str(const uint8_t *m, size_t len, char out[4])
++{
++    static const char hex[] = "0123456789ABCDEF";
++    if ((len >= 3U) && (m[0] == 0x05U)) {
++        out[0] = hex[m[2] >> 4];
++        out[1] = hex[m[2] & 0x0FU];
++        out[2] = '\0';
++    } else if ((len >= 1U) && (m[0] == 0x06U)) {
++        (void)memcpy(out, "SEC", 4);
++    } else {
++        (void)memcpy(out, "--", 3);
++    }
++}
++
+ /******************************************************************************
+  * Macros
+  *****************************************************************************/
+@@ -241,15 +331,57 @@ static cy_en_dfu_status_t spdm_router_handle_transfer(uint8_t *pd, uint32_t data
+         return CY_DFU_SUCCESS;
+     }
+ 
++    /* Measurement: keep the request header (pd is overwritten by the response). */
++    uint8_t  perf_req[17] = {0};
++    size_t   perf_req_len = (dataSize < sizeof(perf_req)) ? dataSize : sizeof(perf_req);
++    (void)memcpy(perf_req, pd, perf_req_len);
++    if ((perf_req_len >= 3U) && (perf_req[0] == 0x05U) && (perf_req[2] == SPDM_GET_VERSION)) {
++        s_perf_n = 0U;
++        s_perf_cum_cyc = 0U;
++        s_perf_cum_bytes = 0U;
++    }
++    (void)memset(&g_spdm_perf, 0, sizeof(g_spdm_perf));
++    uint32_t perf_t0 = perf_ns_cyc();
++
+     /* One responder dispatch consumes the staged request and produces the
+      * MCTP-framed response through the carrier device-I/O callbacks. */
+     status = spdm_responder_dispatch();
+ 
++    uint32_t perf_dt = perf_ns_cyc() - perf_t0;
++
+     if (LIBSPDM_STATUS_IS_SUCCESS(status) &&
+         spdm_transport_dfu_take_response(pd, (size_t)SPDM_DFU_TRANSPORT_MSG_SIZE, &rsp_len))
+     {
+         *rspSize = (uint32_t)rsp_len;
+         LOG_DBG("SPDM transfer: response %u B", (unsigned int)rsp_len);
++
++        char rq_code[4];
++        char rs_code[4];
++        uint32_t large = perf_large_size(perf_req, perf_req_len, SPDM_CHUNK_SEND);
++        if (large == 0U) {
++            large = perf_large_size(pd, rsp_len, SPDM_CHUNK_RESPONSE);
++        }
++        perf_code_str(perf_req, perf_req_len, rq_code);
++        perf_code_str(pd, rsp_len, rs_code);
++        s_perf_n++;
++        s_perf_cum_cyc   += perf_dt;
++        s_perf_cum_bytes += (uint32_t)dataSize + (uint32_t)rsp_len;
++        uint32_t ns_stack_size = (uint32_t)((uint8_t *)&__StackTop - (uint8_t *)&__StackLimit);
++        LOG_INFO("[PERF] n=%u req=%s rq=%u rsp=%s rs=%u large=%u t=%u sign=%u kexg=%u kexs=%u "
++                 "kem=%u cum_t=%u cum_b=%u nsstk=%u nsheap=%u sstk=%u sheap=%u",
++                 (unsigned int)s_perf_n, rq_code, (unsigned int)dataSize,
++                 rs_code, (unsigned int)rsp_len, (unsigned int)large,
++                 (unsigned int)perf_cyc_to_us(perf_dt),
++                 (unsigned int)perf_cyc_to_us(g_spdm_perf.sign_cyc),
++                 (unsigned int)perf_cyc_to_us(g_spdm_perf.kex_gen_cyc),
++                 (unsigned int)perf_cyc_to_us(g_spdm_perf.kex_ss_cyc),
++                 (unsigned int)perf_cyc_to_us(g_spdm_perf.kem_encap_cyc),
++                 (unsigned int)perf_cyc_to_us(s_perf_cum_cyc),
++                 (unsigned int)s_perf_cum_bytes,
++                 (unsigned int)(ns_stack_size - perf_stack_unused(&__StackLimit, &__StackTop)),
++                 (unsigned int)((char *)sbrk(0) - &__HeapBase),
++                 (unsigned int)nsc_perf_get(NSC_PERF_S_STACK_PEAK),
++                 (unsigned int)nsc_perf_get(NSC_PERF_S_HEAP_PEAK));
+         return CY_DFU_SUCCESS;
+     }
+ 
+diff --git a/proj_cm33_ns/spdm/cryptlib/ec.c b/proj_cm33_ns/spdm/cryptlib/ec.c
+index fbc17e0..d14203c 100644
+--- a/proj_cm33_ns/spdm/cryptlib/ec.c
++++ b/proj_cm33_ns/spdm/cryptlib/ec.c
+@@ -65,6 +65,7 @@
+ #include "hal/library/cryptlib.h"
+ 
+ #include "nsc_psa.h"
++#include "spdm_perf_ns.h"
+ 
+ /******************************************************************************
+  * EC context lifecycle (cryptlib_ec.h)
+@@ -152,8 +153,10 @@ bool libspdm_ec_generate_key(void *ec_context, uint8_t *public_key,
+         return false;
+     }
+ 
+-    if (nsc_psa_ec_generate(c->op, public_key, *public_key_size, &out_len)
+-        != NSC_PSA_SUCCESS) {
++    nsc_psa_status_t st;
++    PERF_ACC(kex_gen_cyc,
++             st = nsc_psa_ec_generate(c->op, public_key, *public_key_size, &out_len));
++    if (st != NSC_PSA_SUCCESS) {
+         return false;
+     }
+     *public_key_size = out_len;
+@@ -184,7 +187,9 @@ bool libspdm_ec_compute_key(void *ec_context, const uint8_t *peer_public,
+     p.secret_cap = *key_size;
+     p.secret_size = &out_len;
+ 
+-    if (nsc_psa_ec_compute(&p) != NSC_PSA_SUCCESS) {
++    nsc_psa_status_t st;
++    PERF_ACC(kex_ss_cyc, st = nsc_psa_ec_compute(&p));
++    if (st != NSC_PSA_SUCCESS) {
+         return false;
+     }
+     *key_size = out_len;
+diff --git a/proj_cm33_ns/spdm/cryptlib/mlkem.c b/proj_cm33_ns/spdm/cryptlib/mlkem.c
+index 430b520..af0cd54 100644
+--- a/proj_cm33_ns/spdm/cryptlib/mlkem.c
++++ b/proj_cm33_ns/spdm/cryptlib/mlkem.c
+@@ -66,6 +66,8 @@
+ #include "hal/library/cryptlib.h"
+ 
+ #include "nsc_psa.h"
++#include "spdm_perf_ns.h"
++#include "spdm_fault_inject.h"
+ 
+ #if LIBSPDM_ML_KEM_SUPPORT
+ 
+@@ -159,10 +161,17 @@ bool libspdm_mlkem_encapsulate(void *kem_context, const uint8_t *peer_encap_key,
+     p.shared_secret_cap = *shared_secret_size;
+     p.shared_secret_size = &ss_out;
+ 
+-    if (nsc_psa_mlkem_encapsulate(&p) != NSC_PSA_SUCCESS) {
++    nsc_psa_status_t st;
++    PERF_ACC(kem_encap_cyc, st = nsc_psa_mlkem_encapsulate(&p));
++    if (st != NSC_PSA_SUCCESS) {
+         return false;
+     }
+ 
++#if SPDM_FI_ACTIVE(SPDM_FI_KEM_CT)
++    cipher_text[ct_out / 2U] ^= 0x01U;
++    LOG_WARN("[FI] KEM_CT: flipped byte %u of %u-byte ML-KEM ciphertext",
++             (unsigned int)(ct_out / 2U), (unsigned int)ct_out);
++#endif
+     *cipher_text_size = ct_out;
+     *shared_secret_size = ss_out;
+     return true;
+diff --git a/proj_cm33_ns/spdm/device_secret.c b/proj_cm33_ns/spdm/device_secret.c
+index 98444d1..c7060c1 100644
+--- a/proj_cm33_ns/spdm/device_secret.c
++++ b/proj_cm33_ns/spdm/device_secret.c
+@@ -61,6 +61,8 @@
+ #include "profile.h"  /* SPDM_HAVE_* capability flags for the selected profile */
+ 
+ #include "nsc_sign.h"
++#include "spdm_perf_ns.h"
++#include "spdm_fault_inject.h"
+ 
+ /*
+  * Since SPDM 1.2, signatures are not computed over the bare transcript hash.
+@@ -316,6 +318,11 @@ bool libspdm_responder_data_sign(
+             return false;
+         }
+         (void)memcpy(&ctx_with_hash[SPDM_SIGN_CTX_SIZE], m1m2_hash, hash_size);
++#if SPDM_FI_ACTIVE(SPDM_FI_TRANSCRIPT)
++        ctx_with_hash[SPDM_SIGN_CTX_SIZE] ^= 0x01U;
++        LOG_WARN("[FI] TRANSCRIPT: signing modified transcript hash (op 0x%02X)",
++                 (unsigned int)op_code);
++#endif
+ 
+         p.message      = ctx_with_hash;
+         p.message_size = SPDM_SIGN_CTX_SIZE + hash_size;
+@@ -351,9 +358,19 @@ bool libspdm_responder_data_sign(
+     p.signature_cap  = *sig_size;
+     p.signature_size = &out_len;
+ 
+-    if (nsc_device_sign(&p) != NSC_SIGN_SUCCESS) {
++    nsc_sign_status_t sst;
++    PERF_ACC(sign_cyc, sst = nsc_device_sign(&p));
++    if (sst != NSC_SIGN_SUCCESS) {
+         return false;
+     }
++#if SPDM_FI_ACTIVE(SPDM_FI_SIG)
++    if (out_len > 0U) {
++        signature[out_len / 2U] ^= 0x01U;
++        LOG_WARN("[FI] SIG: flipped byte %u of %u-byte signature (op 0x%02X)",
++                 (unsigned int)(out_len / 2U), (unsigned int)out_len,
++                 (unsigned int)op_code);
++    }
++#endif
+     *sig_size = out_len;
+     return true;
+ }
+diff --git a/proj_cm33_ns/spdm/spdm_responder.c b/proj_cm33_ns/spdm/spdm_responder.c
+index 0c0a6fa..de11253 100644
+--- a/proj_cm33_ns/spdm/spdm_responder.c
++++ b/proj_cm33_ns/spdm/spdm_responder.c
+@@ -84,6 +84,7 @@
+ #include "spdm_transport_dfu.h"
+ #include "nsc_cert.h"
+ #include "log/log.h"
++#include "spdm_fault_inject.h"
+ 
+ /******************************************************************************
+  * Macros
+@@ -361,6 +362,27 @@ static bool spdm_responder_load_cert_chain(void *ctx)
+         return false;
+     }
+ 
++#if SPDM_FI_ACTIVE(SPDM_FI_CERT)
++    {
++        /* Change the last occurrence of the device CN (= leaf subject; the
++         * root CA uses a different name) "PSC3 DEV 01" -> "PSC3 DEV 0X". */
++        static const char cn[] = "PSC3 DEV 01";
++        const size_t cn_len = sizeof(cn) - 1U;
++        size_t hit = 0U;
++        for (size_t i = 0U; (i + cn_len) <= cert_chain_size; i++) {
++            if (memcmp(&s_cert_chain[i], cn, cn_len) == 0) {
++                hit = i + 1U;
++            }
++        }
++        if (hit != 0U) {
++            s_cert_chain[hit - 1U + cn_len - 1U] = (uint8_t)'X';
++            LOG_WARN("[FI] CERT: leaf subject CN modified at chain offset %u",
++                     (unsigned int)(hit - 1U + cn_len - 1U));
++        } else {
++            LOG_WARN("[FI] CERT: CN not found, chain unchanged");
++        }
++    }
++#endif
+     (void)memset(&parameter, 0, sizeof(parameter));
+     parameter.location = LIBSPDM_DATA_LOCATION_LOCAL;
+     parameter.additional_data[0] = (uint8_t)SPDM_RESPONDER_SPDM_CERT_SLOT;
+@@ -444,6 +466,10 @@ bool spdm_responder_init(void)
+ 
+     s_initialized = true;
+     LOG_INFO("SPDM responder context ready");
++#if SPDM_FAULT_INJECT != 0
++    LOG_WARN("[FI] FAULT-INJECTION BUILD, mode %d - test image, not for production",
++             (int)SPDM_FAULT_INJECT);
++#endif
+     return true;
+ }
+ 
+diff --git a/proj_cm33_ns/spdm/spdm_transport_dfu.c b/proj_cm33_ns/spdm/spdm_transport_dfu.c
+index 4d6dca4..fd29446 100644
+--- a/proj_cm33_ns/spdm/spdm_transport_dfu.c
++++ b/proj_cm33_ns/spdm/spdm_transport_dfu.c
+@@ -56,6 +56,7 @@
+ #include <string.h>
+ 
+ #include "spdm_transport_dfu.h"
++#include "spdm_fault_inject.h"
+ 
+ /******************************************************************************
+  * Module State
+@@ -139,6 +140,25 @@ libspdm_return_t spdm_transport_dfu_send_message(void *spdm_context, size_t mess
+     }
+ 
+     (void)memcpy(s_tx_buffer, message, message_size);
++#if SPDM_FI_ACTIVE(SPDM_FI_WIRE_FINISH) || SPDM_FI_ACTIVE(SPDM_FI_WIRE_APP)
++    {
++        /* MCTP message type: 0x05 = plain SPDM, 0x06 = secured SPDM. Count the
++         * secured responses since the last plain one (FINISH_RSP = 1st,
++         * first application-data response = 2nd) and flip the AEAD tag. */
++        static uint32_t s_fi_secured_count;
++        const uint32_t fi_target = SPDM_FI_ACTIVE(SPDM_FI_WIRE_FINISH) ? 1U : 2U;
++        if (s_tx_buffer[0] == 0x06U) {
++            s_fi_secured_count++;
++            if (s_fi_secured_count == fi_target) {
++                s_tx_buffer[message_size - 1U] ^= 0x01U;
++                LOG_WARN("[FI] WIRE: flipped AEAD tag byte of secured response #%u (%u B)",
++                         (unsigned int)s_fi_secured_count, (unsigned int)message_size);
++            }
++        } else {
++            s_fi_secured_count = 0U;
++        }
++    }
++#endif
+     s_tx_len   = message_size;
+     s_tx_ready = true;
+     return LIBSPDM_STATUS_SUCCESS;
+diff --git a/proj_cm33_s/Makefile b/proj_cm33_s/Makefile
+index 1b45d4a..4614aa4 100644
+--- a/proj_cm33_s/Makefile
++++ b/proj_cm33_s/Makefile
+@@ -83,7 +83,7 @@ APPTYPE=flash
+ # (nsc/nsc_psa.c), the device-identity sign (nsc/nsc_sign.c), the
+ # certificate-chain read (nsc/nsc_cert.c) and the measurement sourcing
+ # (nsc/nsc_meas.c).
+-NSC_VENEER=../build/nsc_veneer.o
++NSC_VENEER=../build/nsc_veneer_$(TARGET).o
+ 
+ # By default the build system automatically looks in the Makefile's directory
+ # tree for source code and builds it. The SOURCES variable can be used to
+diff --git a/proj_cm33_s/core/spdm_heap.c b/proj_cm33_s/core/spdm_heap.c
+index 80755f2..c23b8af 100644
+--- a/proj_cm33_s/core/spdm_heap.c
++++ b/proj_cm33_s/core/spdm_heap.c
+@@ -64,6 +64,10 @@
+ extern char __HeapBase;
+ extern char __HeapLimit;
+ 
++/* Hackathon measurement: highest program break ever reached (bytes above
++ * __HeapBase). Read through nsc_perf_get(NSC_PERF_S_HEAP_PEAK). */
++unsigned int spdm_heap_peak_bytes;
++
+ /******************************************************************************
+  * Function Definitions
+  *****************************************************************************/
+@@ -103,5 +107,8 @@ void *_sbrk(int incr)
+     }
+ 
+     heap_end = new_heap_end;
++    if ((unsigned int)(heap_end - &__HeapBase) > spdm_heap_peak_bytes) {
++        spdm_heap_peak_bytes = (unsigned int)(heap_end - &__HeapBase);
++    }
+     return (void *)prev_heap_end;
+ }
+diff --git a/proj_cm33_s/core/spdm_meas.c b/proj_cm33_s/core/spdm_meas.c
+index 17c2563..e0755ac 100644
+--- a/proj_cm33_s/core/spdm_meas.c
++++ b/proj_cm33_s/core/spdm_meas.c
+@@ -79,6 +79,123 @@
+ #define SPDM_MEAS_HASH_ALG_SHA_512  (0x00000008U)
+ #endif
+ 
++#if defined(MCUBOOT_HEADER_SIZE) && (MCUBOOT_HEADER_SIZE > 0)
++/******************************************************************************
++ * Hackathon Task 4: REAL measurements when the responder runs behind the Edge
++ * Protect Bootloader (TARGET=APP_KIT_PSC3M6_EVAL_EPBL, MCUBOOT_HEADER_SIZE=0x400).
++ *
++ *  Block 1 (digest): the boot stage that authenticated this image -- the EPBL
++ *          flash area 0x32000000..slot start. (Reported in the DMTF
++ *          "immutable ROM" slot: it is the first OEM boot stage.)
++ *  Block 2 (digest): the running MCUboot image exactly as EPBL verified it:
++ *          header + S + NS payload + protected TLVs (the bytes covered by the
++ *          ML-DSA-87 signature's SHA-512 image hash). A verifier recomputes the
++ *          same digest from the signed release file.
++ *  Block 3 (raw)   : secure version number = MCUboot header version
++ *          (major << 24 | minor << 16 | revision) -- the value EPBL's
++ *          downgrade prevention compares on update.
++ *  Block 4 (raw)   : informational string with the version.
++ * The image is executed in place and immutable at run time, so the digests
++ * are computed once per hash algorithm and cached.
++ *****************************************************************************/
++#include "cymem_CM33_0_S.h"
++
++#define MEAS_SLOT_OFFSET    (CYMEM_CM33_0_S_m33_nvm_OFFSET)          /* 0x1B000 */
++#define MEAS_SLOT_SIZE      (CYMEM_CM33_0_S_m33_nvm_SIZE + CYMEM_CM33_0_S_m33ns_nvm_SIZE)
++#define MEAS_NS_OFFSET      (CYMEM_CM33_0_S_m33ns_nvm_OFFSET)        /* 0x34000 */
++#define MEAS_FLASH_S_BASE   (CYMEM_CM33_0_S_m33_nvm_S_START - CYMEM_CM33_0_S_m33_nvm_OFFSET)
++#define MEAS_FLASH_NS_BASE  (CYMEM_CM33_0_S_m33ns_nvm_START - CYMEM_CM33_0_S_m33ns_nvm_OFFSET)
++#define MCUBOOT_MAGIC       (0x96F3B83DUL)
++
++/* Flash read pointer for a flash offset: secure-mapped blocks through the
++ * secure S-bus alias, blocks the MPC marks non-secure (the NS code area and the
++ * TLVs behind it) through the non-secure alias. */
++static const uint8_t *meas_flash(uint32_t offset)
++{
++    return (const uint8_t *)(uintptr_t)((offset >= MEAS_NS_OFFSET) ?
++        (MEAS_FLASH_NS_BASE + offset) : (MEAS_FLASH_S_BASE + offset));
++}
++
++static psa_status_t meas_hash_flash(psa_hash_operation_t *op, uint32_t off, uint32_t len)
++{
++    /* CPU-copy through a secure SRAM bounce buffer, so a hash engine never
++     * sees a non-secure-alias source address. */
++    static uint8_t buf[256];
++    while (len > 0U) {
++        uint32_t n = (len > sizeof(buf)) ? (uint32_t)sizeof(buf) : len;
++        /* never let one chunk straddle the S/NS alias boundary */
++        if ((off < MEAS_NS_OFFSET) && (off + n > MEAS_NS_OFFSET)) {
++            n = MEAS_NS_OFFSET - off;
++        }
++        const uint8_t *src = meas_flash(off);
++        for (uint32_t i = 0; i < n; i++) { buf[i] = src[i]; }
++        psa_status_t st = psa_hash_update(op, buf, n);
++        if (st != PSA_SUCCESS) {
++            return st;
++        }
++        off += n;
++        len -= n;
++    }
++    return PSA_SUCCESS;
++}
++
++static uint32_t rd32(const uint8_t *p) { return p[0] | (p[1] << 8) | (p[2] << 16) | ((uint32_t)p[3] << 24); }
++static uint16_t rd16(const uint8_t *p) { return (uint16_t)(p[0] | (p[1] << 8)); }
++
++static uint64_t s_secure_version_number = 0U;
++static char s_version_info[48] = "PSC3M6-SPDM-P4 (no MCUboot header)";
++static uint32_t s_cached_alg = 0U;
++
++static char *put_u(char *p, uint32_t v)
++{
++    char tmp[10];
++    int n = 0;
++    do { tmp[n++] = (char)('0' + (v % 10U)); v /= 10U; } while ((v != 0U) && (n < 10));
++    while (n > 0) { *p++ = tmp[--n]; }
++    return p;
++}
++
++/* Parse the MCUboot header of the running image; returns the number of bytes
++ * EPBL hashed (header + image + protected TLVs) or 0 if the header is invalid. */
++static uint32_t meas_image_info(void)
++{
++    const uint8_t *h = meas_flash(MEAS_SLOT_OFFSET);
++    if (rd32(h) != MCUBOOT_MAGIC) {
++        return 0U;
++    }
++    uint32_t hdr = rd16(h + 8), prot = rd16(h + 10), img = rd32(h + 12);
++    uint32_t total = hdr + img + prot;
++    if ((hdr != MCUBOOT_HEADER_SIZE) || (total > MEAS_SLOT_SIZE)) {
++        return 0U;
++    }
++    uint32_t maj = h[20], min = h[21], rev = rd16(h + 22), bn = rd32(h + 24);
++    s_secure_version_number = ((uint64_t)maj << 24) | ((uint64_t)min << 16) | rev;
++    char *p = s_version_info;
++    const char pre[] = "PSC3M6-SPDM-P4 fw ";
++    for (size_t i = 0; i < sizeof(pre) - 1U; i++) { *p++ = pre[i]; }
++    p = put_u(p, maj); *p++ = '.'; p = put_u(p, min); *p++ = '.'; p = put_u(p, rev);
++    *p++ = '+'; p = put_u(p, bn);
++    const char suf[] = " EPBL";
++    for (size_t i = 0; i < sizeof(suf) - 1U; i++) { *p++ = suf[i]; }
++    *p = '\0';
++    return total;
++}
++
++static uint8_t s_rom_digest[SPDM_MEAS_MAX_DIGEST_SIZE];
++static uint8_t s_fw_digest[SPDM_MEAS_MAX_DIGEST_SIZE];
++
++static psa_status_t meas_digest(psa_algorithm_t alg, uint32_t off, uint32_t len,
++                                uint8_t *out, size_t want)
++{
++    psa_hash_operation_t op = PSA_HASH_OPERATION_INIT;
++    size_t produced = 0U;
++    psa_status_t st = psa_hash_setup(&op, alg);
++    if (st == PSA_SUCCESS) { st = meas_hash_flash(&op, off, len); }
++    if (st == PSA_SUCCESS) { st = psa_hash_finish(&op, out, SPDM_MEAS_MAX_DIGEST_SIZE, &produced); }
++    if (st != PSA_SUCCESS) { (void)psa_hash_abort(&op); return st; }
++    return (produced == want) ? PSA_SUCCESS : PSA_ERROR_GENERIC_ERROR;
++}
++#else
+ /******************************************************************************
+  * Placeholder measurement sources
+  *
+@@ -99,6 +216,7 @@ static const char s_version_info[] = "PSC3M5-SPDM-1.0.0";
+  * single set of buffers is sufficient. */
+ static uint8_t s_rom_digest[SPDM_MEAS_MAX_DIGEST_SIZE];
+ static uint8_t s_fw_digest[SPDM_MEAS_MAX_DIGEST_SIZE];
++#endif /* MCUBOOT_HEADER_SIZE > 0 */
+ 
+ /******************************************************************************
+  * Internal helpers
+@@ -155,6 +273,25 @@ psa_status_t spdm_meas_collect(uint32_t measurement_hash_algo,
+         return st;
+     }
+ 
++#if defined(MCUBOOT_HEADER_SIZE) && (MCUBOOT_HEADER_SIZE > 0)
++    (void)produced;
++    if (s_cached_alg != measurement_hash_algo) {
++        uint32_t total = meas_image_info();
++        if (total == 0U) {
++            return PSA_ERROR_CORRUPTION_DETECTED;   /* no valid MCUboot header */
++        }
++        st = meas_digest(psa_alg, 0U, MEAS_SLOT_OFFSET, s_rom_digest, digest_size);
++        if (st == PSA_SUCCESS) {
++            st = meas_digest(psa_alg, MEAS_SLOT_OFFSET, total, s_fw_digest, digest_size);
++        }
++        if (st != PSA_SUCCESS) {
++            return st;
++        }
++        s_cached_alg = measurement_hash_algo;
++    }
++    size_t info_len = 0U;
++    while ((info_len < sizeof(s_version_info)) && (s_version_info[info_len] != '\0')) { info_len++; }
++#else
+     /* Digest-form values: hash the (placeholder) measured object with the
+      * negotiated algorithm. */
+     st = psa_hash_compute(psa_alg, s_rom_preimage, sizeof(s_rom_preimage) - 1U,
+@@ -167,6 +304,8 @@ psa_status_t spdm_meas_collect(uint32_t measurement_hash_algo,
+     if ((st != PSA_SUCCESS) || (produced != digest_size)) {
+         return (st == PSA_SUCCESS) ? PSA_ERROR_GENERIC_ERROR : st;
+     }
++    size_t info_len = sizeof(s_version_info) - 1U; /* drop the NUL */
++#endif
+ 
+     items[0].index = 1U;
+     items[0].kind = SPDM_MEAS_KIND_IMMUTABLE_ROM;
+@@ -187,7 +326,7 @@ psa_status_t spdm_meas_collect(uint32_t measurement_hash_algo,
+     items[3].index = 4U;
+     items[3].kind = SPDM_MEAS_KIND_INFORMATIONAL;
+     items[3].value = (const uint8_t *)s_version_info;
+-    items[3].value_size = sizeof(s_version_info) - 1U; /* drop the NUL */
++    items[3].value_size = info_len;
+ 
+     *out_count = SPDM_MEAS_ITEM_COUNT;
+     return PSA_SUCCESS;
+diff --git a/proj_cm33_s/main.c b/proj_cm33_s/main.c
+index 62c9fb8..049f901 100644
+--- a/proj_cm33_s/main.c
++++ b/proj_cm33_s/main.c
+@@ -62,6 +62,9 @@
+ #endif
+ #include "spdm_crypto.h"
+ #include "pas.h"
++#include "spdm_perf.h"
++
++extern uint32_t __StackLimit;   /* secure stack bottom (linker_s_flash.ld) */
+ 
+ /******************************************************************************
+  * Macros
+@@ -163,6 +166,11 @@ int main(void)
+     /* Enable global interrupts */
+     __enable_irq();
+ 
++    /* Hackathon measurement: start the DWT cycle counter (read by both worlds)
++     * and paint the secure stack so its high-water mark can be reported. */
++    perf_cyccnt_enable();
++    perf_stack_paint(&__StackLimit);
++
+     /* Set the non-secure main stack pointer */
+     __TZ_set_MSP_NS(CM33_NS_STACK_POINTER);
+ 
+diff --git a/proj_cm33_ns/spdm/spdm_fault_inject.h b/proj_cm33_ns/spdm/spdm_fault_inject.h
+new file mode 100644
+index 0000000..b5ca766
+--- /dev/null
++++ b/proj_cm33_ns/spdm/spdm_fault_inject.h
+@@ -0,0 +1,50 @@
++/******************************************************************************
++ * File Name: spdm_fault_inject.h
++ *
++ * Description: Hackathon negative-test hooks. A build with
++ *              SPDM_FAULT_INJECT=<mode> deliberately corrupts ONE piece of
++ *              responder output so the host requester's rejection can be
++ *              demonstrated (modified certificate, invalid signature, modified
++ *              transcript / handshake message, tampered application data).
++ *
++ *              SPDM_FAULT_INJECT=0 (default) compiles every hook out; the
++ *              production image is unchanged. Never ship a build with != 0.
++ *
++ *              Select on the make command line, e.g.
++ *                  make build SPDM_PROFILE=P4 SPDM_FAULT_INJECT=2
++ *****************************************************************************/
++#ifndef SPDM_FAULT_INJECT_H
++#define SPDM_FAULT_INJECT_H
++
++#include "log/log.h"
++
++#ifndef SPDM_FAULT_INJECT
++#define SPDM_FAULT_INJECT 0
++#endif
++
++/* Modified on-device certificate: one character of the leaf subject CN in the
++ * served SPDM cert_chain is changed ("PSC3 DEV 01" -> "PSC3 DEV 0X"). The CA
++ * signature over the leaf no longer verifies. */
++#define SPDM_FI_CERT          1
++/* Invalid signature: one byte of every responder signature (CHALLENGE_AUTH,
++ * MEASUREMENTS, KEY_EXCHANGE_RSP) is flipped after the SPE signed it. */
++#define SPDM_FI_SIG           2
++/* Modified transcript: the responder signs a transcript hash with one bit
++ * flipped, i.e. a well-formed signature over a transcript the requester did
++ * not see. */
++#define SPDM_FI_TRANSCRIPT    3
++/* Modified key-exchange data: the ML-KEM-1024 ciphertext is corrupted BEFORE
++ * KEY_EXCHANGE_RSP is signed. The signature verifies, but the requester's
++ * decapsulation yields a different (implicitly rejected) shared secret, so
++ * key confirmation (ResponderVerifyData / FINISH) must fail. */
++#define SPDM_FI_KEM_CT        4
++/* Man-in-the-middle on the wire: the AEAD tag (last byte) of the 1st secured
++ * response after the handshake (FINISH_RSP) is flipped. */
++#define SPDM_FI_WIRE_FINISH   5
++/* Man-in-the-middle on the wire: the AEAD tag of the 2nd secured response
++ * (the encrypted application-data echo) is flipped. */
++#define SPDM_FI_WIRE_APP      6
++
++#define SPDM_FI_ACTIVE(mode)  (SPDM_FAULT_INJECT == (mode))
++
++#endif /* SPDM_FAULT_INJECT_H */
+diff --git a/proj_cm33_ns/spdm/spdm_perf_ns.h b/proj_cm33_ns/spdm/spdm_perf_ns.h
+new file mode 100644
+index 0000000..108973e
+--- /dev/null
++++ b/proj_cm33_ns/spdm/spdm_perf_ns.h
+@@ -0,0 +1,38 @@
++/******************************************************************************
++ * File Name:   spdm_perf_ns.h
++ *
++ * Description: Hackathon measurement counters for the NS world. The crypto
++ *              glue accumulates cycles here; the router prints one [PERF]
++ *              line per SPDM transfer (after the timed work is done, so UART
++ *              output is never inside a measured interval).
++ *****************************************************************************/
++#ifndef SPDM_PERF_NS_H
++#define SPDM_PERF_NS_H
++
++#include <stdint.h>
++#include "spdm_perf.h"
++
++typedef struct {
++    /* per-transfer crypto cycles (cleared after each [PERF] line) */
++    uint32_t sign_cyc;        /* device-identity sign (ECDSA or ML-DSA), SPE */
++    uint32_t kex_gen_cyc;     /* ECDHE ephemeral key generation, SPE         */
++    uint32_t kex_ss_cyc;      /* ECDHE shared-secret computation, SPE        */
++    uint32_t kem_encap_cyc;   /* ML-KEM encapsulation, SPE                   */
++} spdm_perf_crypto_t;
++
++extern spdm_perf_crypto_t g_spdm_perf;
++
++/* NS cycle clock: DWT->CYCCNT reads as 0 from the NS world on this device, so
++ * the NS SysTick (24-bit, core clock) plus a wrap counter in SysTick_Handler
++ * forms a 32-bit free-running cycle counter. Intervals < 2^32 cycles (~23 s at
++ * 180 MHz) are measured correctly with unsigned subtraction. */
++void     perf_ns_timer_init(void);
++uint32_t perf_ns_cyc(void);
++
++#define PERF_ACC(field, expr) do {                        \
++        uint32_t perf_t0_ = perf_ns_cyc();                \
++        expr;                                             \
++        g_spdm_perf.field += perf_ns_cyc() - perf_t0_;    \
++    } while (0)
++
++#endif /* SPDM_PERF_NS_H */
+diff --git a/proj_cm33_s/nsc/nsc_perf.c b/proj_cm33_s/nsc/nsc_perf.c
+new file mode 100644
+index 0000000..b281939
+--- /dev/null
++++ b/proj_cm33_s/nsc/nsc_perf.c
+@@ -0,0 +1,35 @@
++/******************************************************************************
++ * File Name:   nsc_perf.c
++ *
++ * Description: Hackathon measurement veneer (see shared/nsc_perf.h).
++ *****************************************************************************/
++#include <arm_cmse.h>
++#include "nsc_perf.h"
++#include "spdm_perf.h"
++
++extern unsigned int spdm_heap_peak_bytes;   /* core/spdm_heap.c */
++extern char __HeapBase;
++extern char __HeapLimit;
++extern uint32_t __StackLimit;
++extern uint32_t __StackTop;
++
++__attribute__((cmse_nonsecure_entry))
++uint32_t nsc_perf_get(uint32_t which)
++{
++    uint32_t stack_size = (uint32_t)((uint8_t *)&__StackTop - (uint8_t *)&__StackLimit);
++
++    switch (which) {
++        case NSC_PERF_S_HEAP_PEAK:
++            return (uint32_t)spdm_heap_peak_bytes;
++        case NSC_PERF_S_HEAP_SIZE:
++            return (uint32_t)(&__HeapLimit - &__HeapBase);
++        case NSC_PERF_S_STACK_PEAK:
++            return stack_size - perf_stack_unused(&__StackLimit, &__StackTop);
++        case NSC_PERF_S_STACK_SIZE:
++            return stack_size;
++        default:
++            return 0U;
++    }
++}
++
++/* [] END OF FILE */
+diff --git a/shared/nsc_perf.h b/shared/nsc_perf.h
+new file mode 100644
+index 0000000..adf16c0
+--- /dev/null
++++ b/shared/nsc_perf.h
+@@ -0,0 +1,20 @@
++/******************************************************************************
++ * File Name:   nsc_perf.h
++ *
++ * Description: Hackathon measurement veneer: lets the NS world read secure
++ *              memory high-water marks. Scalar in / scalar out, no pointers
++ *              cross the boundary, so there is nothing to validate.
++ *****************************************************************************/
++#ifndef NSC_PERF_H
++#define NSC_PERF_H
++
++#include <stdint.h>
++
++#define NSC_PERF_S_HEAP_PEAK    (0U)  /* bytes of secure heap ever used       */
++#define NSC_PERF_S_HEAP_SIZE    (1U)  /* total secure heap size               */
++#define NSC_PERF_S_STACK_PEAK   (2U)  /* bytes of secure stack ever used      */
++#define NSC_PERF_S_STACK_SIZE   (3U)  /* total secure stack size              */
++
++uint32_t nsc_perf_get(uint32_t which);
++
++#endif /* NSC_PERF_H */
+diff --git a/shared/spdm_perf.h b/shared/spdm_perf.h
+new file mode 100644
+index 0000000..a3e2a5d
+--- /dev/null
++++ b/shared/spdm_perf.h
+@@ -0,0 +1,65 @@
++/******************************************************************************
++ * File Name:   spdm_perf.h
++ *
++ * Description: Hackathon Task 1/3 measurement helpers (header-only, used by
++ *              both the secure and the non-secure project).
++ *
++ *              - DWT cycle counter: enabled once by the secure image before
++ *                the NS world starts (perf_cyccnt_enable()); both worlds read
++ *                DWT->CYCCNT. Convert with perf_cyc_to_us().
++ *              - Stack high-water mark: perf_stack_paint() fills the unused
++ *                part of the current stack with a pattern; perf_stack_unused()
++ *                counts how many bytes from the bottom were never touched.
++ *
++ *              Measurement only: no effect on the SPDM protocol or crypto.
++ *****************************************************************************/
++#ifndef SPDM_PERF_H
++#define SPDM_PERF_H
++
++#include <stdint.h>
++#include <stddef.h>
++#include "cy_pdl.h"
++
++#define PERF_STACK_FILL   (0xA5A5A5A5UL)
++
++/* Secure image only: start the free-running core cycle counter. */
++static inline void perf_cyccnt_enable(void)
++{
++    DCB->DEMCR  |= DCB_DEMCR_TRCENA_Msk;
++    DWT->CYCCNT  = 0U;
++    DWT->CTRL   |= DWT_CTRL_CYCCNTENA_Msk;
++}
++
++static inline uint32_t perf_cyc(void)
++{
++    return DWT->CYCCNT;
++}
++
++static inline uint32_t perf_cyc_to_us(uint32_t cycles)
++{
++    uint32_t mhz = SystemCoreClock / 1000000UL;
++    return (mhz != 0U) ? (cycles / mhz) : cycles;
++}
++
++/* Fill [limit, current SP - margin) with the fill pattern. Call early, from
++ * the function whose stack should be measured (main). */
++static inline void perf_stack_paint(uint32_t *limit)
++{
++    uint32_t *sp = (uint32_t *)__get_MSP();
++    uint32_t *p;
++    for (p = limit; p < (sp - 16); p++) {
++        *p = PERF_STACK_FILL;
++    }
++}
++
++/* Bytes at the bottom of the stack that were never written since painting. */
++static inline uint32_t perf_stack_unused(const uint32_t *limit, const uint32_t *top)
++{
++    const uint32_t *p = limit;
++    while ((p < top) && (*p == PERF_STACK_FILL)) {
++        p++;
++    }
++    return (uint32_t)((const uint8_t *)p - (const uint8_t *)limit);
++}
++
++#endif /* SPDM_PERF_H */

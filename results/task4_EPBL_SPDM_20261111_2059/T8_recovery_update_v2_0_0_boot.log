@@ -1,0 +1,84 @@
+21:40:31.892 [0s.0ms][DBG] [2J[;H
+21:40:31.934 
+[0s.0ms][INF] MCUBoot Bootloader Started
+21:40:31.938 
+[0s.0ms][INF] boot_go_for_image_id
+21:40:31.939 
+[0s.0ms][INF] Processing img id: 0
+21:40:31.944 
+[0s.0ms][DBG]  * boot_prepare_image_for_update...
+21:40:31.946 
+[0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+21:40:31.953 
+[0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+21:40:31.959 
+[0s.15ms][DBG]  * There was no partial swap, determine swap type.
+21:40:31.962 
+[0s.21ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:40:31.971 
+[0s.30ms][INF] boot_swap_type_multi: Secondary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:40:31.984 
+[0s.40ms][INF] Swap type: test
+21:40:31.987 
+[0s.43ms][DBG] > boot_validate_slot: fa_id = 2
+21:40:31.989 
+[0s.123ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+21:40:32.067 
+[0s.123ms][DBG] < boot_validate_slot: fa_id = 2
+21:40:32.069 
+[0s.123ms][DBG] < boot_prepare_image_for_update
+21:40:32.073 
+[0s.127ms][DBG]  * process swap_type = 2
+21:40:32.077 
+[0s.131ms][DBG]  * perform update, mode 2...
+21:40:32.081 
+[0s.135ms][DBG] > boot_perform_update: bs->idx = 1
+21:40:32.085 
+[0s.139ms][INF] Image upgrade secondary slot -> primary slot
+21:40:32.087 
+[0s.145ms][INF] Erasing the primary slot
+21:40:32.092 
+[0s.148ms][DBG]  * primary slot sectors: 360
+21:40:35.640 
+[3s.697ms][INF] Copying the secondary slot to the primary slot: 0x2d000 bytes
+21:40:36.666 
+[4s.830ms][DBG] erasing secondary header
+21:40:36.798 
+[4s.840ms][DBG] erasing secondary trailer
+21:40:36.804 
+[4s.850ms][DBG] > boot_validate_slot: fa_id = 1
+21:40:36.814 
+[4s.926ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+21:40:36.890 
+[4s.926ms][DBG] < boot_validate_slot: fa_id = 1
+21:40:36.890 
+[4s.926ms][INF] Successfully added image data to shared area
+21:40:36.890 
+[4s.931ms][INF] User Application validated successfully
+21:40:36.906 
+[4s.936ms][INF] Running the first app
+21:40:36.906 
+[4s.940ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+21:40:36.906 
+[4s.947ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+21:40:36.924 
+[4s.952ms][INF] Starting User Application (wait)...
+21:40:36.930 
+[4s.957ms][INF] Start slot Address: 0x3201B400
+21:40:36.934 
+[4s.961ms][INF] MCUBoot Bootloader finished.
+21:40:36.940 
+21:40:36.943 [INF] Deinitializing hardware...
+21:40:36.945 
+21:40:36.946 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+21:40:36.954 [I] App version: 5.0.0+0
+21:40:36.956 [I] Board and logging init complete
+21:40:36.960 [I] Secure NSC ABI version: 0x0008
+21:40:36.963 [I] libspdm module version: 4.0.0 (alpha 0xFF)
+21:40:36.965 [I] Starting DFU/I2C carrier bring-up
+21:40:36.970 [I] DFU middleware initialized
+21:40:36.973 [I] SPDM command router registered
+21:40:36.976 [I] SPDM responder: cert chain loaded (15187 B)
+21:40:36.980 [I] SPDM responder context ready
+21:40:36.984 [I] SPDM responder initialized
+21:40:36.988 [I] I2C transport started; waiting for host commands

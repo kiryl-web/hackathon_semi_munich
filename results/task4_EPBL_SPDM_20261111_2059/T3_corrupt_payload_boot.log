@@ -1,0 +1,74 @@
+21:32:33.840 [524s.288ms][DBG] [2J[;H
+21:32:34.037 
+[0s.0ms][INF] MCUBoot Bootloader Started
+21:32:34.041 
+[0s.0ms][INF] boot_go_for_image_id
+21:32:34.043 
+[0s.0ms][INF] Processing img id: 0
+21:32:34.046 
+[0s.1ms][DBG]  * boot_prepare_image_for_update...
+21:32:34.051 
+[0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+21:32:34.056 
+[0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+21:32:34.064 
+[0s.16ms][DBG]  * There was no partial swap, determine swap type.
+21:32:34.068 
+[0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:32:34.074 
+[0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:32:34.085 
+[0s.40ms][INF] Swap type: test
+21:32:34.085 
+[0s.43ms][DBG] > boot_validate_slot: fa_id = 2
+21:32:34.085 
+[0s.63ms][DBG] IMAGE_TLV_SHA is invalid
+21:32:34.101 
+[0s.63ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0xffffffff
+21:32:34.107 
+[0s.63ms][DBG]  * Image in the secondary slot is invalid. Erase the image
+21:32:37.655 
+[3s.614ms][ERR] Image in the secondary slot is not valid!
+21:32:37.672 
+[3s.614ms][DBG] < boot_validate_slot: fa_id = 2
+21:32:37.678 
+[3s.614ms][DBG] < boot_prepare_image_for_update
+21:32:37.680 
+[3s.616ms][DBG]  * process swap_type = 1
+21:32:37.686 
+[3s.620ms][DBG] > boot_validate_slot: fa_id = 1
+21:32:37.688 
+[3s.700ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+21:32:37.751 
+[3s.700ms][DBG] < boot_validate_slot: fa_id = 1
+21:32:37.751 
+[3s.701ms][INF] Successfully added image data to shared area
+21:32:37.767 
+[3s.706ms][INF] User Application validated successfully
+21:32:37.767 
+[3s.710ms][INF] Running the first app
+21:32:37.781 
+[3s.714ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+21:32:37.783 
+[3s.721ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+21:32:37.783 
+[3s.727ms][INF] Starting User Application (wait)...
+21:32:37.783 
+[3s.731ms][INF] Start slot Address: 0x3201B400
+21:32:37.799 
+[3s.735ms][INF] MCUBoot Bootloader finished.
+21:32:37.799 
+21:32:37.799 [INF] Deinitializing hardware...
+21:32:37.799 
+21:32:37.799 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+21:32:37.815 [I] App version: 5.0.0+0
+21:32:37.815 [I] Board and logging init complete
+21:32:37.815 [I] Secure NSC ABI version: 0x0008
+21:32:37.831 [I] libspdm module version: 4.0.0 (alpha 0xFF)
+21:32:37.831 [I] Starting DFU/I2C carrier bring-up
+21:32:37.831 [I] DFU middleware initialized
+21:32:37.831 [I] SPDM command router registered
+21:32:37.847 [I] SPDM responder: cert chain loaded (15187 B)
+21:32:37.847 [I] SPDM responder context ready
+21:32:37.847 [I] SPDM responder initialized
+21:32:37.847 [I] I2C transport started; waiting for host commands

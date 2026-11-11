@@ -19,6 +19,7 @@ param(
     [Parameter(Mandatory)][ValidateSet('P4','PROV','P2FI','RESTORE')][string]$Phase,
     [string]$Hwid = '',
     [string]$Com = 'COM4',
+    [string]$Prefix = 'task3',  # output dir prefix (task4 runs reuse this runner)
     [string[]]$Only = @()      # P4 phase: run only these test ids (e.g. -Only E5); empty = all
 )
 $ErrorActionPreference = 'Continue'
@@ -32,7 +33,7 @@ $hostd  = "$SPDM\psc3-provisioning-host"
 $roots  = "$hack\results\task3_neg_roots"
 $jlink  = 'C:\Program Files\SEGGER\JLink_V976a\JLink.exe'
 $stamp  = Get-Date -Format 'yyyyMMdd_HHmm'
-$outDir = "$hack\results\task3_EDGE_${Phase}_$stamp"
+$outDir = "$hack\results\${Prefix}_EDGE_${Phase}_$stamp"
 New-Item -ItemType Directory -Force $outDir | Out-Null
 $csvPath = "$outDir\summary.csv"
 
@@ -170,7 +171,7 @@ try {
     }
     'PROV' {
         # keep the Task 3 identity artifacts for the record
-        Copy-Item -Recurse -Force "$hostd\test\_work\spdm_p4" "$hack\results\task3_cred_p4_original"
+        if (-not (Test-Path "$hack\results\task3_cred_p4_original")) { Copy-Item -Recurse "$hostd\test\_work\spdm_p4" "$hack\results\task3_cred_p4_original" }
         Flash $prov @('PROV_SIG_SUITES=ml-dsa-87') 'prov_mldsa87' -Clean
         Prov 'V1_info' 'PASS' @('info') | Out-Null
         Prov 'V2a_erase_cert' 'PASS' @('erase', '--slot', '1', '--yes') | Out-Null

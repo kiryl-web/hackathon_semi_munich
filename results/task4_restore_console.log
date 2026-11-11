@@ -1,0 +1,2 @@
+﻿R_restore_exchange             expect=PASS   exit=0 OK wall= 415.4s  exchange: OK (encrypted app message, sent 11 B, received 11 B)
+R_repeat_exchange_2            expect=PASS   exit=0 OK wall= 417.9s  exchange: OK (encrypted app message, sent 8 B, received 8 B)

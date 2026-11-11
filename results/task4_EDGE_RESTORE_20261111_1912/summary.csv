@@ -1,0 +1,3 @@
+﻿"test","expect","exit","ok","wall_s","evidence"
+"R_restore_exchange","PASS","0","True","415.4","exchange: OK (encrypted app message, sent 11 B, received 11 B)"
+"R_repeat_exchange_2","PASS","0","True","417.9","exchange: OK (encrypted app message, sent 8 B, received 8 B)"

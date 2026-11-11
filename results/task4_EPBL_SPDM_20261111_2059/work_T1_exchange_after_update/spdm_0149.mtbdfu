@@ -1,0 +1,17 @@
+{
+  "APPInfo": {
+    "File Version": "0x1",
+    "Packet Checksum Type": "0x0",
+    "Product Id": "01020304"
+  },
+  "commands": [
+    {
+      "cmdId": "0x80",
+      "dataLength": "0x80",
+      "dataBytes": "05 14 85 00 00 06 00 00 00 73 00 00 00 26 21 BC 88 9F 8E 78 97 33 73 94 7A F5 4C 3A 91 A5 2C C5 AA CD 44 11 CB E8 0D D7 6C 9B 7D C9 97 4A F1 76 4E 6C AA B6 13 53 6E 1A 8E DE F6 33 6F 02 33 25 27 1E 25 C7 1A 51 E5 A7 8A E9 2A 5C E9 11 1F 42 BF 41 52 47 21 D9 C2 B5 02 7C 96 05 B8 BE 12 A4 FB 24 95 44 DB 64 9E B7 49 8A 4C 57 74 DA 0D 5C 4C 80 E7 0C 2D D5 39 09 B1 9A B4 BB 67 CF 49 DC",
+      "outFile": "spdm_0149.bin",
+      "outCli": "true",
+      "timeoutMS": "0x1388"
+    }
+  ]
+}

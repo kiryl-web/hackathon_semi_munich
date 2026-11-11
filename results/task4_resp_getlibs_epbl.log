@@ -1,0 +1,28 @@
+﻿make: Entering directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'
+Searching installed tools in progress...
+Searching installed tools complete
+C:/Users/kpato/ModusToolbox/tools_3.9/mtbgetlibs/mtbgetlibs --app .
+mtbgetlibs: retreived MTBQueryAPI interface
+mtbgetlibs: running in 'Direct' mode
+0: Loading the application in directory 'C:/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder' for creating a new one
+0: Finished loading the application data (2025 ms total, 1316 make)
+0: Loading the ModusToolbox Technology Packs and Early Access Packs
+0: Finished loading the ModusToolbox Technology Packs and Early Access Packs (5 ms)
+0: Loading the tools information
+0: Finished loading the tools information (29 ms)
+0: Loading the manifest data
+make.exe : mtbgetlibs: could not load the project from directory ''
+At line:1 char:400
++ ... 'Continue'; & $make -C "$SPDM/psoc-spdm-responder" getlibs TARGET=APP ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (mtbgetlibs: cou...om directory '':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+mtbgetlibs: DEBUG:Using the application settings for the tools directory: C:/Users/kpato/ModusToolbox/tools_3.9
+mtbgetlibs: WARNING:Error downloading 
+'https://modustoolbox.infineon.com/manifests/mtb-super-manifest/v2.X/mtb-super-manifest-fv2.xml' -- Unable to write
+mtbgetlibs: FATAL:all super manifests were invalid, no data loaded
+mtbgetlibs: ERROR:Manifest loading completed with error.
+mtbgetlibs: completed in 2327 milliseconds
+make: *** [C:/Users/kpato/ModusToolbox/tools_3.9/make/application.mk:57: getlibs] Error 1
+make: Leaving directory '/cygdrive/c/Users/kpato/KP/Hackathon/PSOC_C3_SPDM_v2/PSOC_C3_SPDM/SPDM/psoc-spdm-responder'

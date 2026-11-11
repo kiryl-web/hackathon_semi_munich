@@ -1,0 +1,68 @@
+21:32:16.599 [524s.288ms][DBG] [2J[;H
+21:32:16.895 
+[0s.0ms][INF] MCUBoot Bootloader Started
+21:32:16.904 
+[0s.0ms][INF] boot_go_for_image_id
+21:32:16.909 
+[0s.0ms][INF] Processing img id: 0
+21:32:16.921 
+[0s.1ms][DBG]  * boot_prepare_image_for_update...
+21:32:16.931 
+[0s.5ms][DBG] > boot_prepare_image_for_update: image = 0
+21:32:16.936 
+[0s.10ms][DBG]  * Read an image (0) header from each slot: rc = 0
+21:32:16.943 
+[0s.16ms][DBG]  * There was no partial swap, determine swap type.
+21:32:16.948 
+[0s.22ms][INF] boot_swap_type_multi: Primary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:32:16.953 
+[0s.31ms][INF] boot_swap_type_multi: Secondary image: magic=good, swap_type=0x1, copy_done=0x3, image_ok=0x3
+21:32:16.956 
+[0s.40ms][INF] Swap type: test
+21:32:16.958 
+[0s.43ms][DBG] > boot_validate_slot: fa_id = 2
+21:32:16.961 
+[0s.47ms][ERR] insufficient version in secondary slot
+21:32:20.491 
+[3s.595ms][DBG] < boot_validate_slot: fa_id = 2
+21:32:20.508 
+[3s.595ms][DBG] < boot_prepare_image_for_update
+21:32:20.513 
+[3s.595ms][DBG]  * process swap_type = 1
+21:32:20.517 
+[3s.596ms][DBG] > boot_validate_slot: fa_id = 1
+21:32:20.519 
+[3s.677ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x742e
+21:32:20.594 
+[3s.677ms][DBG] < boot_validate_slot: fa_id = 1
+21:32:20.595 
+[3s.677ms][INF] Successfully added image data to shared area
+21:32:20.603 
+[3s.682ms][INF] User Application validated successfully
+21:32:20.608 
+[3s.687ms][INF] Running the first app
+21:32:20.610 
+[3s.690ms][DBG]  > run_next_app: !MCUBOOT_RAM_LOAD || MCUBOOT_MULTI_MEMORY_LOAD
+21:32:20.616 
+[3s.697ms][DBG]  > run_next_app: rc = 0, image_base = 0x32000000
+21:32:20.623 
+[3s.703ms][INF] Starting User Application (wait)...
+21:32:20.628 
+[3s.707ms][INF] Start slot Address: 0x3201B400
+21:32:20.631 
+[3s.712ms][INF] MCUBoot Bootloader finished.
+21:32:20.635 
+21:32:20.637 [INF] Deinitializing hardware...
+21:32:20.639 
+21:32:20.642 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+21:32:20.651 [I] App version: 5.0.0+0
+21:32:20.655 [I] Board and logging init complete
+21:32:20.659 [I] Secure NSC ABI version: 0x0008
+21:32:20.662 [I] libspdm module version: 4.0.0 (alpha 0xFF)
+21:32:20.665 [I] Starting DFU/I2C carrier bring-up
+21:32:20.669 [I] DFU middleware initialized
+21:32:20.674 [I] SPDM command router registered
+21:32:20.677 [I] SPDM responder: cert chain loaded (15187 B)
+21:32:20.683 [I] SPDM responder context ready
+21:32:20.686 [I] SPDM responder initialized
+21:32:20.686 [I] I2C transport started; waiting for host commands

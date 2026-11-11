@@ -1,0 +1,39 @@
+﻿T0_boot_v1_0_0                     expect=BOOTED   result=BOOTED    OK   12.6s  20:59:22.461 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+T0_measure_v1_0_0                  expect=PASS     result=PASS      OK  652.3s  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000000100000000 | block4='PSC3M6-SPDM-P4 fw 1.0.0+0 EPBL'
+T0_exchange_v1_0_0                 expect=PASS     result=PASS      OK  446.3s  exchange: OK (encrypted app message, sent 20 B, received 20 B)
+T1_valid_update_v1_1_0             expect=UPDATED  result=UPDATED   OK   22.1s  21:18:01.336 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+T1_measure_v1_1_0                  expect=PASS     result=PASS      OK  392.5s  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000010100000000 | block4='PSC3M6-SPDM-P4 fw 1.1.0+0 EPBL'
+T1_exchange_after_update           expect=PASS     result=PASS      OK  449.3s  exchange: OK (encrypted app message, sent 19 B, received 19 B)
+T2_rollback_v1_0_0                 expect=REJECTED result=REJECTED  OK   13.6s  [0s.47ms][ERR] insufficient version in secondary slot
+T3_corrupt_payload                 expect=REJECTED result=REJECTED  OK   17.1s  [0s.63ms][DBG] IMAGE_TLV_SHA is invalid
+T4_modified_header                 expect=REJECTED result=REJECTED  OK   17.3s  [0s.63ms][DBG] IMAGE_TLV_SHA is invalid
+T5_rogue_key                       expect=REJECTED result=REJECTED  OK   17.2s  [0s.63ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x2e
+T6_measure_still_v1_1_0            expect=PASS     result=PASS      OK  413.1s  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000010100000000 | block4='PSC3M6-SPDM-P4 fw 1.1.0+0 EPBL'
+T7_tampered_primary                expect=NOBOOT   result=NOBOOT    OK   11.8s  [0s.70ms][DBG] IMAGE_TLV_SHA is invalid
+T7_connect_no_app                  expect=REJECT   result=REJECT    OK    1.2s  spdm-requester: error: unrecognized arguments: --root C:\Users\kpato\KP\Hackathon\results\task3_neg_roots\good_root.der
+T8_recovery_update_v2_0_0          expect=UPDATED  result=UPDATED   OK   22.2s  21:40:36.946 [I] === PSOC Control C3 SPDM Responder (non-secure) ===
+T8_measure_v2_0_0                  expect=PASS     result=PASS      OK  419.9s  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000000200000000 | block4='PSC3M6-SPDM-P4 fw 2.0.0+0 EPBL'
+T8_exchange_after_recovery         expect=PASS     result=PASS      OK  477.3s  exchange: OK (encrypted app message, sent 16 B, received 16 B)
+
+test                       expect   result   ok   wall_s evidence                                                                                                               
+----                       ------   ------   --   ------ --------                                                                                                               
+T0_boot_v1_0_0             BOOTED   BOOTED   True 12.6   20:59:22.461 [I] === PSOC Control C3 SPDM Responder (non-secure) ===                                                   
+T0_measure_v1_0_0          PASS     PASS     True 652.3  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000000100000000 | block4='PSC3M6-SPDM-P4 fw 1.0.0+0 EPBL'       
+T0_exchange_v1_0_0         PASS     PASS     True 446.3  exchange: OK (encrypted app message, sent 20 B, received 20 B)                                                         
+T1_valid_update_v1_1_0     UPDATED  UPDATED  True 22.1   21:18:01.336 [I] === PSOC Control C3 SPDM Responder (non-secure) ===                                                   
+T1_measure_v1_1_0          PASS     PASS     True 392.5  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000010100000000 | block4='PSC3M6-SPDM-P4 fw 1.1.0+0 EPBL'       
+T1_exchange_after_update   PASS     PASS     True 449.3  exchange: OK (encrypted app message, sent 19 B, received 19 B)                                                         
+T2_rollback_v1_0_0         REJECTED REJECTED True 13.6   [0s.47ms][ERR] insufficient version in secondary slot                                                                  
+T3_corrupt_payload         REJECTED REJECTED True 17.1   [0s.63ms][DBG] IMAGE_TLV_SHA is invalid                                                                                
+T4_modified_header         REJECTED REJECTED True 17.3   [0s.63ms][DBG] IMAGE_TLV_SHA is invalid                                                                                
+T5_rogue_key               REJECTED REJECTED True 17.2   [0s.63ms][DBG]  * bootutil_img_validate expected = 0x742e, returned = 0x2e                                             
+T6_measure_still_v1_1_0    PASS     PASS     True 413.1  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000010100000000 | block4='PSC3M6-SPDM-P4 fw 1.1.0+0 EPBL'       
+T7_tampered_primary        NOBOOT   NOBOOT   True 11.8   [0s.70ms][DBG] IMAGE_TLV_SHA is invalid                                                                                
+T7_connect_no_app          REJECT   REJECT   True 1.2    spdm-requester: error: unrecognized arguments: --root C:\Users\kpato\KP\Hackathon\results\task3_neg_roots\good_root.der
+T8_recovery_update_v2_0_0  UPDATED  UPDATED  True 22.2   21:40:36.946 [I] === PSOC Control C3 SPDM Responder (non-secure) ===                                                   
+T8_measure_v2_0_0          PASS     PASS     True 419.9  block 3: MutableFirmwareSecurityVersion (raw)  (8 B)  0000000200000000 | block4='PSC3M6-SPDM-P4 fw 2.0.0+0 EPBL'       
+T8_exchange_after_recovery PASS     PASS     True 477.3  exchange: OK (encrypted app message, sent 16 B, received 16 B)                                                         
+
+
+
+Results in C:\Users\kpato\KP\Hackathon\results\task4_EPBL_SPDM_20261111_2059

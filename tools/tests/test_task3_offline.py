@@ -39,7 +39,7 @@ BLOB = (RES / "task3_cred_p4_original" / "spdm_cert_chain.bin")
 if not BLOB.exists():
     BLOB = HOST / "test" / "_work" / "spdm_p4" / "spdm_cert_chain.bin"
 BASE_COMMIT = "4c218834dfd1bafa47914317dcaf4d6af978e31b"
-PATCH = HACK / "patches" / "psoc-spdm-responder_task3.patch"
+PATCH = HACK / "patches" / "psoc-spdm-responder_task4.patch"  # latest cumulative patch (Task 1+3+4)
 NM = Path(r"C:\Users\kpato\Infineon\Tools\mtb-gcc-arm-eabi\14.2.1\gcc\bin\arm-none-eabi-nm.exe")
 NS_ELF = RESP / "proj_cm33_ns" / "build" / "APP_KIT_PSC3M6_EVAL" / "Release" / "proj_cm33_ns.elf"
 

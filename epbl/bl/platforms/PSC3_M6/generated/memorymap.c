@@ -24,13 +24,13 @@ struct flash_area flash_areas[] =
 		.fa_id        = FLASH_AREA_IMG_1_PRIMARY,
 		.fa_device_id = FLASH,
 		.fa_off       = 0x1b000U,
-		.fa_size      = 0x20000U,
+		.fa_size      = 0x2d000U,
 	},
 	{
 		.fa_id        = FLASH_AREA_IMG_1_SECONDARY,
 		.fa_device_id = FLASH,
-		.fa_off       = 0x40000U,
-		.fa_size      = 0x20000U,
+		.fa_off       = 0x4e000U,
+		.fa_size      = 0x2d000U,
 	},
 };
 
@@ -56,6 +56,6 @@ image_boot_config_t image_boot_config[BOOT_IMAGE_NUMBER] = {
 	{
 		.mode     = IMAGE_BOOT_MODE_FLASH,
 		.address  = 0x3201b000,
-		.size     = 0x20000,
+		.size     = 0x2d000,
 	},
 };

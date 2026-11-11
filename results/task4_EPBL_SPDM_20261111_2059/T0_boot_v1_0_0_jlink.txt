@@ -1,0 +1,112 @@
+﻿SEGGER J-Link Commander V9.76a (Compiled Sep 14 2026 16:59:56)
+DLL version V9.76a, compiled Sep 14 2026 16:58:56
+
+J-Link Commander will now exit on Error
+
+J-Link Command File read successfully.
+Processing script file...
+J-Link>connect
+J-Link connection not established yet but required for command.
+Connecting to J-Link ...O.K.
+Firmware: J-Link Lite-XMC4200 Rev.1 compiled May  4 2026 12:38:23
+Hardware version: V1.00
+J-Link uptime (since boot): 0d 00h 02m 50s
+S/N: 591239652
+USB speed mode: Full speed (12 MBit/s)
+VTref=3.300V
+Device "PSC3M6GES3AH" selected.
+
+
+Connecting to target via SWD
+ConfigTargetSettings() start
+ConfigTargetSettings() end - Took 79us
+InitTarget() start
+InitTarget() end - Took 22.7ms
+Found SW-DP with ID 0x4C013477
+DPIDR: 0x4C013477
+CoreSight SoC-600 or later (DPv3 detected)
+AP map detection skipped. User specified AP map and usage.
+AP[1]: Core found
+AP[1]: AHB-AP ROM base: 0xE00BF000
+CPUID register: 0x411FD210. Implementer code: 0x41 (ARM)
+Feature set: Mainline
+Cache: No cache
+Found Cortex-M33 r1p0, Little endian.
+FPUnit: 8 code (BP) slots and 0 literal slots
+Security extension: implemented
+Secure debug: enabled
+CoreSight components:
+ROMTbl[0] @ E00BF000
+[0][0]: E0080000 CID B105900D PID 003BB9ED DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+[0][1]: E008E000 CID B105900D PID 002BB9E7 DEVARCH 00000000 DEVTYPE 11 TPIU
+[0][2]: E0088000 CID B105900D PID 002BB9EB DEVARCH 00000000 DEVTYPE 12 CSTF
+[0][4]: E00FF000 CID B105100D PID 000BB4C9 DEVARCH 00000000 DEVTYPE 01 ROM Table
+ROMTbl[1] @ E00FF000
+[1][0]: E000E000 CID B105900D PID 000BBD21 DEVARCH 47702A04 DEVTYPE 00 Cortex-M33
+[1][1]: E0001000 CID B105900D PID 000BBD21 DEVARCH 47701A02 DEVTYPE 00 DWT
+[1][2]: E0002000 CID B105900D PID 000BBD21 DEVARCH 47701A03 DEVTYPE 00 FPB
+[1][3]: E0000000 CID B105900D PID 000BBD21 DEVARCH 47701A01 DEVTYPE 43 ITM
+[1][5]: E0041000 CID B105900D PID 002BBD21 DEVARCH 47724A13 DEVTYPE 13 ETM
+[1][6]: E0042000 CID B105900D PID 000BBD21 DEVARCH 47701A14 DEVTYPE 14 CSS600-CTI
+SetupTarget() start
+****************************************************
+** Silicon: 0xF100, Family: 0x124, Rev.: 0x11 (A0)
+** ROM Boot version: 1.0.0.13973                    
+** Flash Boot version: 91.191.28.1199574148         
+** Life Cycle : DEVELOPMENT
+** Flash Bank Mode : Single bank                    
+****************************************************
+SetupTarget() end - Took 5.67ms
+Memory zones:
+  Zone: "Default" Description: Default access mode
+Cortex-M33 identified.
+J-Link>loadfile C:\Users\kpato\KP\Hackathon\results\task4_boot\epbl_full.hex
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+ResetTarget() end - Took 237ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 6us
+Downloading file [C:\Users\kpato\KP\Hackathon\results\task4_boot\epbl_full.hex]...
+Comparing flash   [000%]100%] Done.
+J-Link: Flash download: Bank 1 @ 0x32000000: Skipped. Contents already match
+HandleAfterFlashProg() start
+HandleAfterFlashProg() end - Took 87.9ms
+O.K.
+J-Link>loadfile C:\Users\kpato\KP\Hackathon\results\task4_boot\resp_v1_0_0_boot.hex
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+ResetTarget() end - Took 88.7ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 5us
+Downloading file [C:\Users\kpato\KP\Hackathon\results\task4_boot\resp_v1_0_0_boot.hex]...
+J-Link: Flash download: Bank 1 @ 0x32000000: Skipped. Contents already match
+HandleAfterFlashProg() start
+HandleAfterFlashProg() end - Took 89.6ms
+O.K.
+J-Link>loadfile C:\Users\kpato\KP\Hackathon\results\task4_boot\zero_upgrade.hex
+'loadfile': Performing implicit reset & halt of MCU.
+ResetTarget() start
+ResetTarget() end - Took 86.9ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 6us
+Downloading file [C:\Users\kpato\KP\Hackathon\results\task4_boot\zero_upgrade.hex]...
+J-Link: Flash download: Bank 1 @ 0x32000000: Skipped. Contents already match
+HandleAfterFlashProg() start
+HandleAfterFlashProg() end - Took 102ms
+O.K.
+J-Link>r
+Reset delay: 0 ms
+ResetTarget() start
+ResetTarget() end - Took 86.8ms
+Device specific reset executed.
+AfterResetTarget() start
+AfterResetTarget() end - Took 7us
+J-Link>g
+Memory map 'after startup completion point' is active
+J-Link>exit
+
+Script processing completed.
+

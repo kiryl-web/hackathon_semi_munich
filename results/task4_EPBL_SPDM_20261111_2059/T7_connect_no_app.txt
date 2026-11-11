@@ -1,0 +1,9 @@
+spdm-requester.exe : usage: spdm-requester [-h] [--version] <operation> ...
+At C:\Users\kpato\KP\Hackathon\tools\task4_epbl_spdm_tests.ps1:129 char:10
++     $o = & $req @a --root $good --hwid $Hwid --dfuh-cli $dfuh --work- ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (usage: spdm-req...<operation> ...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+spdm-requester: error: unrecognized arguments: --root C:\Users\kpato\KP\Hackathon\results\task3_neg_roots\good_root.der
+
