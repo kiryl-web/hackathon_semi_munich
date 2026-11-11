@@ -2,3 +2,5 @@
 *.der binary
 *.bin binary
 *.elf binary
+*.pptx binary
+*.png binary

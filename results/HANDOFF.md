@@ -1,6 +1,12 @@
-# Handoff – state after Task 4 (2026-11-11, 22:xx)
+# Handoff – state after Task 5 prep (2026-11-11, late)
 
-Read this first in a new session. **Task 4 (lifecycle) is DONE**: `results/Task4_Lifecycle_Report.pdf`,
+Read this first in a new session. **Task 5 materials are READY**: slides `results/Task5_Presentation.pptx`
+(+ PDF, speaker notes = script; generator `tools/make_task5_deck.py`, export `tools/task5_export_pdf.ps1`),
+demo cheat sheet `results/TASK5_DEMO.md`, double-click demo buttons in `tools/demo/*.cmd` (dry-run OK:
+prepare 19 s, boot 7 s, rogue rejected 16 s, valid update 20 s, rollback rejected 13 s, SPDM measure v1.1 PASS 387 s
+with MATCH x3). Board currently: EPBL + responder v1.1.0 -> run `0 PREPARE` before the slot.
+Remaining: user rehearsal + live presentation (deadline 2026-11-12 12:00).
+ **Task 4 (lifecycle) is DONE**: `results/Task4_Lifecycle_Report.pdf`,
 details `results/TASK4_NOTES.md`. The SPDM responder now runs BEHIND EPBL (ML-DSA-87) with real SPDM
 measurements. Next = Task 5 (presentation + 5-min live demo, deadline 2026-11-12 12:00).
 **Task 3 (SPDM PQC) is DONE**: `results/Task3_PQC_SPDM_Report.pdf`, details `results/TASK3_NOTES.md`.

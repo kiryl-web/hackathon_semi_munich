@@ -486,8 +486,11 @@ class TestPerfSummary(unittest.TestCase):
 class TestReport(unittest.TestCase):
     def test_report_text(self):
         pdf = RES / "Task3_PQC_SPDM_Report.pdf"
-        out = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True,
-                             errors="replace").stdout
+        try:
+            out = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True,
+                                 errors="replace").stdout
+        except FileNotFoundError:          # pdftotext is only on the Git-Bash PATH
+            out = ""
         if not out:
             self.skipTest("pdftotext not available")
         for s in ("12/12 REJECTED", "8/9 PASS", "ML-KEM-1024", "ML-DSA-87", "1,638 B / 6,305 B",
