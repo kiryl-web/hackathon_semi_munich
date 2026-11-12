@@ -1,4 +1,10 @@
-# Task 5 – live demo cheat sheet (5 minutes)
+# Task 5 – live demo cheat sheet
+
+**NEW (12 Nov): full-screen demo app** – `tools\demo_app\START DEMO.cmd`. Press **P** about 8 min before the
+jury slot (pre-flight), then **Home**, then **Space** at the start of the deep dive. Keys and steps:
+`tools/demo_app/README.md`. The `.cmd` buttons below remain the backup.
+
+## Backup: button-based demo (5 minutes)
 
 Slides: `results/Task5_Presentation.pptx` (PDF copy `Task5_Presentation.pdf`). Speaker notes under every slide =
 what to say. Demo buttons: folder `C:\Users\kpato\KP\Hackathon\tools\demo\` -> double-click the `.cmd` files.

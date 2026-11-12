@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PQC Demo - PSoC Control C3M6</title>
+<style>
+:root{
+  --bg0:#050913; --bg1:#0a1224; --card:rgba(18,28,52,.72); --card2:rgba(26,40,72,.6); --line:rgba(120,160,255,.16);
+  --txt:#e6edf8; --dim:#8a9bbb; --dim2:#5d6d8c; --cyan:#38bdf8; --vio:#a78bfa; --ok:#22c55e; --okg:rgba(34,197,94,.18);
+  --warn:#f59e0b; --bad:#ef4444; --badg:rgba(239,68,68,.18); --mono:'Cascadia Mono','Cascadia Code',Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:radial-gradient(1200px 700px at 15% -10%,#13254d 0%,transparent 60%),
+  radial-gradient(1000px 600px at 110% 110%,#2a1752 0%,transparent 55%),linear-gradient(180deg,var(--bg1),var(--bg0));
+  color:var(--txt);font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;font-size:1.45vh}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:4vh 4vh;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%)}
+#app{position:relative;display:grid;grid-template-rows:7.2vh 1fr 7.4vh;height:100vh;padding:1.2vh 1.4vh;gap:1.2vh}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1.4vh;backdrop-filter:blur(8px);
+  box-shadow:0 1vh 4vh rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.04)}
+/* header */
+header{display:flex;align-items:center;gap:1.6vh;padding:0 2vh}
+.logo{width:5vh;height:5vh;border-radius:1.2vh;display:grid;place-items:center;font-weight:800;font-size:1.9vh;letter-spacing:.05em;
+  background:conic-gradient(from 210deg,var(--cyan),var(--vio),var(--cyan));color:#06101f;box-shadow:0 0 3vh rgba(56,189,248,.45)}
+.ttl h1{font-size:2.6vh;font-weight:700;letter-spacing:.01em}
+.ttl div{color:var(--dim);font-size:1.45vh;margin-top:.2vh}
+.chips{margin-left:auto;display:flex;gap:.8vh;align-items:center}
+.chip{font-size:1.35vh;padding:.55vh 1.1vh;border-radius:99px;border:1px solid rgba(56,189,248,.35);color:#bfe9ff;background:rgba(56,189,248,.08);font-weight:600}
+.chip.v{border-color:rgba(167,139,250,.4);color:#ddd2ff;background:rgba(167,139,250,.08)}
+.links{display:flex;gap:1.2vh;margin-left:1.4vh;font-size:1.3vh;color:var(--dim)}
+.links span::before{content:'';display:inline-block;width:.9vh;height:.9vh;border-radius:50%;background:var(--dim2);margin-right:.5vh;vertical-align:middle}
+.links span.on::before{background:var(--ok);box-shadow:0 0 1vh var(--ok)}
+.links span.off::before{background:var(--bad)}
+#clock{font-family:var(--mono);font-size:2vh;color:var(--dim);margin-left:1.2vh}
+/* main grid */
+main{display:grid;grid-template-columns:19% 1fr 29%;gap:1.2vh;min-height:0}
+/* steps */
+#left{display:flex;flex-direction:column;gap:1.2vh;min-height:0}
+#steps{padding:1.2vh 1.4vh;flex:1;overflow:hidden}
+.sec{font-size:1.2vh;letter-spacing:.18em;color:var(--dim);font-weight:700;margin:0 0 1vh .4vh}
+.step{display:flex;gap:1.1vh;align-items:center;padding:.62vh 1vh;border-radius:1vh;margin-bottom:.5vh;cursor:pointer;transition:.25s;border:1px solid transparent}
+.step .n{flex:none;width:3.4vh;height:3.4vh;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:1.5vh;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--dim)}
+.step .t{font-size:1.6vh;font-weight:600;line-height:1.2}
+.step .s{font-size:1.18vh;color:var(--dim);margin-top:.15vh}
+.step.active{background:linear-gradient(90deg,rgba(56,189,248,.16),rgba(56,189,248,.02));border-color:rgba(56,189,248,.35)}
+.step.active .n{background:var(--cyan);color:#04121f;border-color:var(--cyan);box-shadow:0 0 2vh rgba(56,189,248,.6);animation:pulse 1.6s infinite}
+.step.pass .n{background:var(--ok);color:#03150a;border-color:var(--ok)}
+.step.block .n{background:var(--warn);color:#1a1000;border-color:var(--warn)}
+.step.fail .n{background:var(--bad);color:#fff;border-color:var(--bad)}
+@keyframes pulse{50%{box-shadow:0 0 .5vh rgba(56,189,248,.3)}}
+#board{padding:1.2vh 1.4vh}
+.inst{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.2vh}
+.inst b{font-family:var(--mono);font-size:2.4vh;color:var(--cyan)}
+.leds{display:flex;flex-direction:column;gap:1vh}
+.led{display:flex;gap:1.2vh;align-items:center}
+.bulb{flex:none;width:3.2vh;height:3.2vh;border-radius:50%;background:#2a1a10;border:2px solid #3b2a1c;transition:background .08s,box-shadow .08s}
+.bulb.on{background:radial-gradient(circle at 35% 35%,#fff7d6,#ffb02e 45%,#ff7a00);box-shadow:0 0 2.5vh #ff9a1f,0 0 5vh rgba(255,140,0,.5)}
+.led .l1{font-weight:600;font-size:1.45vh}.led .l2{font-size:1.2vh;color:var(--dim)}
+.legend{margin-top:.9vh;font-size:1.2vh;color:var(--dim);line-height:1.6}
+.legend b{color:var(--txt);font-weight:600}
+/* center */
+#center{display:flex;flex-direction:column;gap:1.2vh;min-height:0}
+#scenehead{padding:1.6vh 2.2vh}
+#kicker{font-size:1.3vh;letter-spacing:.22em;color:var(--cyan);font-weight:700}
+#title{font-size:3.3vh;font-weight:700;margin:.4vh 0 .6vh}
+#say{font-size:1.75vh;color:#c6d2ea;line-height:1.45;max-width:95%}
+#chain{display:flex;align-items:stretch;gap:0;padding:1.4vh 1.8vh}
+.node{flex:1;position:relative;padding:1.1vh 1vh;border-radius:1.1vh;text-align:center;background:var(--card2);border:1px solid var(--line);transition:.35s}
+.node .a{font-weight:700;font-size:1.55vh}.node .b{font-size:1.15vh;color:var(--dim);margin-top:.3vh}
+.node .c{font-size:1.15vh;margin-top:.5vh;font-family:var(--mono);color:var(--vio)}
+.node.classic .c{color:var(--warn)}
+.node.work{border-color:var(--cyan);box-shadow:0 0 2.4vh rgba(56,189,248,.45);animation:glow 1s infinite alternate}
+.node.ok{border-color:var(--ok);box-shadow:0 0 2vh rgba(34,197,94,.35);background:linear-gradient(180deg,var(--okg),var(--card2))}
+.node.bad{border-color:var(--bad);box-shadow:0 0 2.4vh rgba(239,68,68,.5);background:linear-gradient(180deg,var(--badg),var(--card2))}
+@keyframes glow{to{box-shadow:0 0 .6vh rgba(56,189,248,.2)}}
+.arrow{width:3vh;display:grid;place-items:center;color:var(--dim2);font-size:2vh}
+.arrow.on{color:var(--cyan)}
+#content{flex:1;min-height:0;display:grid;gap:1.2vh}
+.pane{padding:1.5vh 1.8vh;min-height:0;overflow:hidden;position:relative}
+.pane h3{font-size:1.25vh;letter-spacing:.18em;color:var(--dim);font-weight:700;margin-bottom:1vh;display:flex;gap:1vh;align-items:center}
+.pane h3 .tag{letter-spacing:.05em;font-size:1.15vh;padding:.2vh .8vh;border-radius:99px;background:rgba(167,139,250,.15);color:#d8ccff}
+.pane h3 .tag.live{background:rgba(239,68,68,.18);color:#ffb4b4}
+.pane h3 .tag.live::before{content:'● ';color:var(--bad);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.2}}
+table.kv{width:100%;border-collapse:collapse;font-size:1.45vh}
+.kv td{padding:.62vh .6vh;border-bottom:1px solid rgba(120,160,255,.08);vertical-align:top}
+.kv td:first-child{color:var(--dim);width:24%;white-space:nowrap}
+.kv td.m{font-family:var(--mono);font-size:1.32vh;word-break:break-all;color:#d7e3ff}
+.kv td.ck{width:4vh;text-align:center;font-size:1.9vh}
+.good{color:var(--ok)}.badc{color:var(--bad)}.warnc{color:var(--warn)}.cy{color:var(--cyan)}.vi{color:var(--vio)}.dimc{color:var(--dim)}
+.mono{font-family:var(--mono)}
+.hex{font-family:var(--mono);font-size:1.4vh;line-height:1.9}
+.hex .row{display:flex;gap:1vh;align-items:center}
+.hex .addr{color:var(--dim2);width:11ch;flex:none}
+.hex .lbl{color:var(--dim);width:9ch;flex:none;font-family:'Segoe UI';font-size:1.25vh}
+.hex i{font-style:normal;padding:0 .25ch;border-radius:.4vh}
+.hex i.chg{background:var(--bad);color:#fff;font-weight:700;box-shadow:0 0 1.5vh var(--bad)}
+.hex i.was{background:rgba(34,197,94,.3);color:#d4ffe2;font-weight:700}
+.seg{display:inline-flex;flex-direction:column;align-items:center;margin-right:.6vh}
+.seg .bytes{padding:.3vh .5vh;border-radius:.5vh;border:1px solid var(--line)}
+.seg .nm{font-size:1.05vh;color:var(--dim);font-family:'Segoe UI';margin-top:.2vh}
+.seg.ver .bytes{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 1.2vh rgba(56,189,248,.35)}
+/* verdict */
+#right{display:flex;flex-direction:column;gap:1.2vh;min-height:0}
+#verdict{padding:1.8vh 2vh;transition:.3s;min-height:17vh}
+#verdict .big{font-size:4.2vh;font-weight:800;letter-spacing:.02em;line-height:1.1;margin:.4vh 0}
+#verdict .why{font-size:1.6vh;color:#d3dcf0}
+#verdict .meta{font-size:1.3vh;color:var(--dim);margin-top:.8vh;font-family:var(--mono)}
+#verdict.ok{border-color:rgba(34,197,94,.6);background:linear-gradient(135deg,rgba(34,197,94,.22),var(--card))}
+#verdict.ok .big{color:var(--ok)}
+#verdict.blk{border-color:rgba(245,158,11,.7);background:linear-gradient(135deg,rgba(239,68,68,.25),rgba(245,158,11,.10) 60%,var(--card))}
+#verdict.blk .big{color:#ffb547}
+#verdict.bad{border-color:var(--bad);background:linear-gradient(135deg,rgba(239,68,68,.3),var(--card))}
+#verdict.bad .big{color:var(--bad)}
+#verdict.work .big{color:var(--cyan)}
+#verdict.flash{animation:flash .5s 3}
+@keyframes flash{50%{transform:scale(1.02);filter:brightness(1.5)}}
+#console{flex:1;padding:1.4vh 1.6vh;display:flex;flex-direction:column;min-height:0}
+#con{flex:1;overflow:hidden;font-family:var(--mono);font-size:1.28vh;line-height:1.55;display:flex;flex-direction:column;justify-content:flex-end}
+#con div{flex:none;white-space:pre;overflow:hidden;text-overflow:ellipsis;animation:fadein .25s}
+#con .good{color:#4ade80;font-weight:700}#con .bad{color:#f87171;font-weight:700}#con .app{color:#e2e8f0}
+#con .boot{color:#7f93b8}#con .dim{color:#4d5b78}#con .ph{color:var(--cyan)}#con .sys{color:var(--vio)}
+@keyframes fadein{from{opacity:0;transform:translateY(.6vh)}}
+/* spdm */
+#feed{font-family:var(--mono);font-size:1.3vh;display:flex;flex-direction:column;justify-content:flex-end;height:100%;overflow:hidden}
+.msg{display:grid;grid-template-columns:5ch 21ch 1fr;gap:1vh;padding:.45vh .6vh;border-radius:.6vh;align-items:baseline;animation:fadein .25s}
+.msg .no{color:var(--dim2)}.msg .nm{font-weight:700;color:#cfe3ff;font-family:'Segoe UI';font-size:1.45vh}
+.msg .nm small{display:block;font-weight:400;color:var(--dim);font-size:1.15vh}
+.msg .hx{display:block;color:#7c8db0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msg .nt{display:block;color:#b9c6e0;font-family:'Segoe UI';font-size:1.3vh;white-space:normal}
+.msg.oid{background:rgba(167,139,250,.14)}.msg.oid .nm{color:#d8ccff}
+.msg.aead{background:rgba(34,197,94,.12)}.msg.aead .nm{color:#86efac}
+.msg.algo{background:rgba(56,189,248,.12)}
+.msg.error{background:var(--badg)}
+.msg.chunk .nm{color:#9fb3d6}
+.stats{display:grid;grid-template-columns:.8fr 1fr .8fr 1.7fr;gap:1vh;margin-bottom:1.2vh}
+.stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:1vh;padding:.9vh 1.1vh}
+.stat .v{font-size:2.3vh;font-weight:700;font-family:var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stat .k{font-size:1.15vh;color:var(--dim);letter-spacing:.08em}
+.bar{height:.7vh;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;margin-top:.6vh}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--vio));width:0;transition:width .4s}
+table.meas{width:100%;border-collapse:collapse;font-size:1.35vh}
+.meas td,.meas th{padding:.6vh .5vh;border-bottom:1px solid rgba(120,160,255,.1);text-align:left}
+.meas th{color:var(--dim);font-weight:600;font-size:1.15vh;letter-spacing:.08em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;column-gap:1.4vh}
+.ev{display:flex;justify-content:space-between;align-items:center;gap:.6vh;padding:.5vh .2vh;border-bottom:1px solid rgba(120,160,255,.08);font-size:1.28vh}
+.ev > span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.ev .pill{flex:none;font-size:1.05vh;padding:.1vh .7vh}
+table.tight td,table.tight th{padding:.22vh .5vh;font-size:1.2vh}
+.meas td.m{font-family:var(--mono);font-size:1.22vh;color:#cdd9f3}
+.pill{display:inline-block;padding:.25vh 1vh;border-radius:99px;font-weight:700;font-size:1.25vh}
+.pill.ok{background:var(--okg);color:#86efac}.pill.bad{background:var(--badg);color:#fca5a5}.pill.w{background:rgba(245,158,11,.18);color:#fcd34d}
+.wire{font-family:var(--mono);font-size:1.35vh;line-height:1.7;word-break:break-all}
+.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2vh}
+.kpi{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:1.2vh;padding:1vh 1.4vh}
+.kpi .v{font-size:3vh;font-weight:800;background:linear-gradient(90deg,var(--cyan),var(--vio));-webkit-background-clip:text;color:transparent}
+.kpi .k{font-size:1.35vh;color:var(--dim);margin-top:.3vh;line-height:1.4}
+.plane{font-size:1.5vh;line-height:1.6;color:#c9d5ec}
+.plane b{color:var(--txt)}
+ul.clean{list-style:none}ul.clean li{padding:.45vh 0 .45vh 2.4vh;position:relative}
+ul.clean li::before{content:'▸';position:absolute;left:.6vh;color:var(--cyan)}
+/* footer */
+footer{display:flex;align-items:center;gap:1.2vh;padding:0 1.6vh}
+.btn{height:4.6vh;min-width:4.6vh;padding:0 1.6vh;border-radius:1vh;border:1px solid var(--line);background:rgba(255,255,255,.04);
+  color:var(--txt);font-size:1.6vh;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.8vh;transition:.2s}
+.btn:hover{background:rgba(56,189,248,.15);border-color:rgba(56,189,248,.5)}
+.btn.primary{background:linear-gradient(135deg,rgba(56,189,248,.35),rgba(167,139,250,.3));border-color:rgba(56,189,248,.6)}
+.btn kbd{font-family:var(--mono);font-size:1.15vh;color:var(--dim);border:1px solid var(--line);border-radius:.4vh;padding:0 .5vh}
+#cd{flex:1;display:flex;flex-direction:column;gap:.6vh;margin:0 1vh}
+#cdtxt{font-size:1.35vh;color:var(--dim)}
+#cdbar{height:.8vh;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}
+#cdbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--vio))}
+#livemini{font-size:1.3vh;color:var(--dim);min-width:30vh;display:none}
+#livemini.on{display:block}
+#livemini b{color:#ffb4b4}
+#toast{position:fixed;left:50%;top:9vh;transform:translateX(-50%) translateY(-3vh);opacity:0;transition:.4s;z-index:9;
+  padding:1.6vh 2.6vh;border-radius:1.4vh;font-size:1.9vh;font-weight:600;background:rgba(10,18,36,.95);border:1px solid var(--cyan);
+  box-shadow:0 1vh 5vh rgba(0,0,0,.6);max-width:70vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%)}
+#toast.ok{border-color:var(--ok)}#toast.bad{border-color:var(--bad)}
+#startov{position:fixed;inset:0;display:grid;place-items:center;background:rgba(3,6,14,.55);backdrop-filter:blur(3px);z-index:8;transition:.4s}
+#startov.hide{opacity:0;pointer-events:none}
+#startov .box{text-align:center}
+#startov h2{font-size:4.4vh;font-weight:800;background:linear-gradient(90deg,#fff,var(--cyan),var(--vio));-webkit-background-clip:text;color:transparent}
+#startov p{color:var(--dim);font-size:1.9vh;margin-top:1.4vh;line-height:1.7}
+#startov kbd{font-family:var(--mono);border:1px solid var(--line);padding:.2vh .8vh;border-radius:.5vh;color:var(--txt)}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="card">
+    <div class="logo">PQC</div>
+    <div class="ttl"><h1>Quantum-resistant SPDM device</h1>
+      <div>PSoC™ Control C3M6 · Edge Protect Bootloader · SPDM 1.4 · CNSA 2.0 profile · live on real hardware</div></div>
+    <div class="chips">
+      <span class="chip">ML-DSA-87</span><span class="chip">ML-KEM-1024</span><span class="chip v">SHA-384 / 512</span><span class="chip v">AES-256-GCM</span>
+    </div>
+    <div class="links"><span id="lk-jl">J-Link</span><span id="lk-com">COM4</span><span id="lk-i2c">I2C</span></div>
+    <div id="clock">--:--:--</div>
+  </header>
+  <main>
+    <div id="left">
+      <div id="steps" class="card"><div class="sec">DEMO</div><div id="steplist"></div></div>
+      <div id="board" class="card">
+        <div class="sec">THE BOARD, LIVE</div>
+        <div class="inst"><span class="dimc">installed image (read from flash)</span><b id="inst">-</b></div>
+        <div class="leds">
+          <div class="led"><div class="bulb" id="b3"></div><div><div class="l1">LED3 · heartbeat</div><div class="l2">responder firmware: blinks while idle, pauses during SPDM traffic</div></div></div>
+          <div class="led"><div class="bulb" id="b4"></div><div><div class="l1">LED4 · verdict lamp</div><div class="l2" id="b4m">driven by this app over SWD</div></div></div>
+        </div>
+        <div class="legend"><b>LED4:</b> steady = verified image running · fast blink = attack rejected · off = reset / no boot · flicker = one blink per SPDM transfer</div>
+      </div>
+    </div>
+    <div id="center">
+      <div id="scenehead" class="card"><div id="kicker"></div><div id="title"></div><div id="say"></div></div>
+      <div id="chain" class="card"></div>
+      <div id="content"></div>
+    </div>
+    <div id="right">
+      <div id="verdict" class="card"><div class="sec" id="vk">DEVICE VERDICT</div><div class="big" id="vbig">-</div><div class="why" id="vwhy"></div><div class="meta" id="vmeta"></div></div>
+      <div id="console" class="card"><div class="sec" id="conh">BOARD CONSOLE · COM4 · LIVE</div><div id="con"></div></div>
+    </div>
+  </main>
+  <footer class="card">
+    <button class="btn" onclick="prev()" title="previous step">⏮ <kbd>←</kbd></button>
+    <button class="btn" onclick="redo()" title="redo this step">↻ Redo <kbd>R</kbd></button>
+    <button class="btn primary" id="pp" onclick="togglePause()">▶ Start <kbd>Space</kbd></button>
+    <button class="btn" onclick="next()" title="next step">⏭ <kbd>→</kbd></button>
+    <div id="cd"><div id="cdtxt">Press Space to start the automatic run</div><div id="cdbar"><i></i></div></div>
+    <div id="livemini"></div>
+    <button class="btn" onclick="preflight()" title="pre-flight: known state + live SPDM attestation (~7 min)">Pre-flight <kbd>P</kbd></button>
+  </footer>
+</div>
+<div id="toast"></div>
+<div id="startov"><div class="box"><h2>From ECC to CNSA 2.0, on a microcontroller</h2>
+  <p>Verified boot with ML-DSA-87 · SPDM 1.4 with ML-DSA-87 and ML-KEM-1024<br>
+  <kbd>Space</kbd> start / pause &nbsp; <kbd>←</kbd><kbd>→</kbd> step &nbsp; <kbd>R</kbd> redo &nbsp; <kbd>1</kbd>-<kbd>8</kbd> jump &nbsp; <kbd>P</kbd> pre-flight &nbsp; <kbd>A</kbd> abort live SPDM &nbsp; <kbd>F</kbd> fullscreen</p></div></div>
+<script>
+// ------------------------------------------------------------------ state
+let IM = {}, EP = {}, ST = {}, SRC = {};
+let cur = 0, paused = true, token = 0, started = false;
+const pending = {};
+const chan = {live: newChan(), replay: newChan()};
+let viewChan = null;
+let boardModel = {lines: [], verdict: null};
+let lastLive = null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const short = (h, n=24) => h ? (h.length > n ? h.slice(0, n) + '…' : h) : '-';
+function newChan(){ return {kind:null, src:'', expected:0, n:0, bytes:0, rows:[], lines:[], summary:null, done:false, ok:false, oid:false, secured:[], t0:0, last:null, running:false}; }
+
+// ------------------------------------------------------------------ scenes
+const S = [
+ {id:'intro', kind:'intro', short:'Overview', sub:'one chain of trust', kicker:'OVERVIEW', title:'One post-quantum chain of trust: reset → session',
+  say:'An existing ECC-based SPDM device, migrated to the CNSA 2.0 profile. The bootloader verifies every image with ML-DSA-87; the running device proves its identity and firmware over SPDM 1.4 with ML-DSA-87 and agrees session keys with ML-KEM-1024. Everything you see next runs live on this board.', dwell:14},
+ {id:'boot', kind:'board', step:'boot', short:'Verified boot', sub:'reset → EPBL checks ML-DSA-87', kicker:'STEP 1 · AUTHORIZED IMAGE', title:'Reset: EPBL verifies the responder before it may run',
+  say:'We reset the board. The Edge Protect Bootloader hashes the whole responder image with SHA-512 and verifies its 4,627-byte ML-DSA-87 signature against the key compiled into the bootloader. Only then does it jump to the application.', img:()=>primaryKey(), expect:['BOOTED','INSTALLED'], dwell:9},
+ {id:'rogue', kind:'board', step:'rogue', short:'Attack: rogue key', sub:'well-formed, wrong signer', kicker:'STEP 2 · TAMPERING ATTEMPT', title:'Attack: a perfectly formatted update signed with an attacker\'s ML-DSA-87 key',
+  say:'The attacker has the update format, a valid SHA-512 digest and a real ML-DSA-87 signature - just not our key. The key hash inside the image does not match the provisioned key, so the signature cannot verify.', img:'rogue', expect:['REJECTED'], dwell:10},
+ {id:'corrupt', kind:'board', step:'corrupt', short:'Attack: one byte', sub:'genuine signature, code modified', kicker:'STEP 3 · TAMPERING ATTEMPT', title:'Attack: a genuine signed update with one single byte of code changed',
+  say:'Same signature, same key - but one byte of the application was modified after signing. The recomputed SHA-512 no longer matches the signed digest. EPBL refuses it and keeps the verified image.', img:'corrupt', expect:['REJECTED'], dwell:10},
+ {id:'valid', kind:'board', step:'valid', short:'Valid update v1.1', sub:'genuine signed update', kicker:'STEP 4 · SECURE UPDATE', title:'A genuine signed update v1.1.0 is verified and installed',
+  say:'Now the real thing: a newer version, signed with our ML-DSA-87 key. EPBL verifies the candidate, copies it into the primary slot, verifies again and starts it. The SPDM identity in protected storage is untouched.', img:'v1_1_update', expect:['INSTALLED'], dwell:10},
+ {id:'rollback', kind:'board', step:'rollback', short:'Attack: rollback', sub:'genuine but older v1.0', kicker:'STEP 5 · DOWNGRADE ATTACK', title:'Attack: re-install the older, genuinely signed v1.0.0',
+  say:'Classic downgrade attack: an old image with a known bug, correctly signed by us. The signature is fine - but the version is lower than the installed one, so EPBL rejects it.', img:'v1_0_update', expect:['REJECTED'], dwell:10},
+ {id:'attest', kind:'spdm', step:'replay_measure', chan:'replay', short:'SPDM attestation', sub:'ML-DSA-87 identity + measurements', kicker:'STEP 6 · RUNTIME: WHO ARE YOU, WHAT ARE YOU RUNNING?', title:'SPDM 1.4: the host authenticates the device and its firmware',
+  say:'The host pins an ML-DSA-87 root, downloads the device\'s 15 KB certificate chain, and requests signed measurements. They must equal the digests the host recomputes from the release files: the device attests exactly the image EPBL verified.', dwell:12},
+ {id:'session', kind:'spdm', step:'spdm_exchange', chan:'live', short:'Encrypted session', sub:'ML-KEM-1024 · live, after update', kicker:'STEP 7 · RUNTIME: PROTECTED CHANNEL, LIVE', title:'Reconnect after the update: ML-KEM-1024 session + encrypted application data',
+  say:'Started live, against the updated v1.1: a fresh ML-KEM-1024 key exchange, the transcript signed with ML-DSA-87, then our time-stamped message travels AES-256-GCM encrypted and comes back. Over this 127-byte I2C debug bridge it takes ~7 minutes - the device itself needs under a second.', dwell:25},
+ {id:'summary', kind:'summary', short:'Evidence & cost', sub:'recorded runs, measured cost', kicker:'RESULTS', title:'Measured on this board: what it protects, and what it costs',
+  say:'All boot and SPDM negatives were run on the hardware. PQC compute is not the bottleneck on the Cortex-M33 - bytes, RAM and the transport are. What is still classical is listed openly.', final:true},
+];
+const PRE = {id:'preflight', kind:'spdm', chan:'live', kicker:'PRE-FLIGHT (BEFORE THE JURY ARRIVES)', title:'Known state + live SPDM attestation',
+  say:'Programs EPBL + responder v1.0.0 (identity untouched), then runs a full live SPDM measurement so step 6 can show a fresh run from this board. Takes about 7 minutes - do not reset the board meanwhile.'};
+
+function primaryKey(){
+  const v = ST.primary;
+  return v === '1.1.0' ? 'v1_1_boot' : v === '2.0.0' ? 'v2_0_update' : 'v1_0_boot';
+}
+
+// ------------------------------------------------------------------ rendering: steps, chain
+function renderSteps(){
+  $('steplist').innerHTML = S.map((s, i) => `<div class="step ${s.state||''} ${i===cur && !inPre ? 'active':''}" onclick="jump(${i})">
+     <div class="n">${s.state==='pass'?'✓':s.state==='block'?'⛨':s.state==='fail'?'✕':i}</div>
+     <div><div class="t">${esc(s.short)}</div><div class="s">${esc(s.sub)}</div></div></div>`).join('');
+}
+function renderChain(st={}){
+  const N = [
+    ['rom','ROM_BOOT','immutable, Infineon','ECDSA (classical)',true],
+    ['fb','FLASH_BOOT','boot policy','ECDSA (classical)',true],
+    ['epbl','EPBL','Edge Protect Bootloader','ML-DSA-87 + SHA-512'],
+    ['app','SPDM responder', 'v'+(ST.primary||'?')+' · PSoC C3M6','ML-DSA-87 · ML-KEM-1024'],
+    ['host','Host requester','PC · pinned PQC root','verifies everything']];
+  $('chain').innerHTML = N.map((n, i) => (i ? `<div class="arrow ${st.arrow>=i?'on':''}">➜</div>` : '') +
+    `<div class="node ${n[4]?'classic':''} ${st[n[0]]||''}"><div class="a">${n[1]}</div><div class="b">${esc(n[2])}</div><div class="c">${n[3]}</div></div>`).join('');
+}
+function setHead(s){ $('kicker').textContent = s.kicker; $('title').textContent = s.title; $('say').textContent = s.say; }
+function setVerdict(cls, big, why='', meta='', label='DEVICE VERDICT'){
+  const v = $('verdict'); v.className = 'card ' + cls; $('vk').textContent = label;
+  $('vbig').innerHTML = big; $('vwhy').innerHTML = why; $('vmeta').innerHTML = meta;
+  if (cls === 'blk' || cls === 'ok' || cls === 'bad'){ v.classList.remove('flash'); void v.offsetWidth; v.classList.add('flash'); }
+}
+function con(text, cls='dim'){
+  const d = document.createElement('div'); d.className = cls; d.textContent = text;
+  const c = $('con'); c.appendChild(d); while (c.children.length > 70) c.removeChild(c.firstChild);
+}
+function clearCon(){ $('con').innerHTML = ''; }
+
+// ------------------------------------------------------------------ rendering: board scene
+function renderBoard(s){
+  const k = typeof s.img === 'function' ? s.img() : s.img;
+  const a = IM[k];
+  const box = $('content'); box.style.gridTemplateColumns = '1.25fr 1fr'; box.style.gridTemplateRows = '1fr';
+  if (!a){ box.innerHTML = `<div class="pane card"><h3>INPUT</h3><div class="dimc">analysing image files…</div></div>`; return; }
+  const inst = ST.primary || '?';
+  let verRow = `<b class="cy mono">${a.version}</b>`;
+  let verCk = '';
+  if (a.slot === 'upgrade slot'){
+    const base = s.id === 'valid' && cmpVer(inst,'1.1.0') >= 0 ? '1.0.0 (restored first)' : s.id === 'rollback' && cmpVer(inst,'1.0.0') <= 0 ? '1.1.0 (installed first)' : inst;
+    const newer = s.id === 'rollback' ? false : true;
+    verRow += ` &nbsp;vs installed <b class="mono">${base}</b> → ${newer ? '<span class="good">newer</span>' : '<span class="badc">OLDER = rollback</span>'}`;
+    verCk = newer ? '<span class="good">✓</span>' : '<span class="badc">✕</span>';
+  } else verCk = '<span class="good">✓</span>';
+  const dg = a.digest_ok, kh = a.keyhash_ok;
+  box.innerHTML = `
+   <div class="pane card"><h3>INPUT · WHAT WE FEED THE BOARD <span class="tag">${esc(a.slot)} @ ${a.base}</span></h3>
+    <table class="kv">
+     <tr><td>file</td><td class="m">${esc(a.file)}</td><td class="ck"></td></tr>
+     <tr><td>what it is</td><td><b>${esc(a.desc)}</b></td><td class="ck"></td></tr>
+     <tr><td>version (header)</td><td>${verRow}</td><td class="ck">${verCk}</td></tr>
+     <tr><td>signed bytes</td><td class="m">${a.total_signed.toLocaleString()} B = header ${a.hdr_size} + code ${a.img_size.toLocaleString()} + protected TLV ${a.prot_tlv}</td><td class="ck"></td></tr>
+     <tr><td>SHA-512 in image</td><td class="m">${short(a.sha512_stored,48)}</td><td class="ck"></td></tr>
+     <tr><td>SHA-512 recomputed</td><td class="m ${dg?'':'badc'}">${short(a.sha512_calc,48)}</td><td class="ck">${dg?'<span class="good">✓</span>':'<span class="badc">✕</span>'}</td></tr>
+     <tr><td>signer key hash</td><td class="m ${kh?'':'badc'}">${short(a.keyhash,48)}</td><td class="ck">${kh?'<span class="good">✓</span>':'<span class="badc">✕</span>'}</td></tr>
+     <tr><td>key pinned in EPBL</td><td class="m">${short(EP.pinned_hash,48)} <span class="dimc">(2,592-B key @ ${EP.key_addr})</span></td><td class="ck"></td></tr>
+     <tr><td>ML-DSA-87 signature</td><td class="m">${a.sig_len.toLocaleString()} B @ ${a.sig_addr}: ${a.sig_head} …</td><td class="ck"></td></tr>
+     <tr><td>boot metadata</td><td class="m">${a.tlv_total.toLocaleString()} B per image <span class="dimc">(ECDSA-P384: 215 B)</span></td><td class="ck"></td></tr>
+    </table></div>
+   <div class="pane card">${hexPanel(a)}</div>`;
+}
+function cmpVer(a, b){ const x = (a||'0').split('.').map(Number), y = (b||'0').split('.').map(Number);
+  for (let i=0;i<3;i++){ if ((x[i]||0)!==(y[i]||0)) return (x[i]||0)-(y[i]||0);} return 0; }
+function hexPanel(a){
+  if (a.diff){
+    const d = a.diff;
+    const row = (arr, cls) => arr.map((b, i) => i === d.col ? `<i class="${cls}">${b}</i>` : `<i>${b}</i>`).join('');
+    return `<h3>THE TAMPERING · ${d.count} BYTE CHANGED</h3>
+     <div class="hex">
+      <div class="row"><span class="lbl">genuine (signed)</span><span class="addr">${d.row}</span><span>${row(d.orig.slice(0,12),'was')}</span></div>
+      <div class="row"><span class="lbl">this file</span><span class="addr">${d.row}</span><span>${row(d.new.slice(0,12),'chg')}</span></div>
+     </div>
+     <table class="kv" style="margin-top:1.4vh">
+      <tr><td>address</td><td class="m">${d.addr} (offset ${d.offset.toLocaleString()} in the image)</td></tr>
+      <tr><td>location</td><td>${esc(d.where)}</td></tr>
+      <tr><td>change</td><td class="m"><span class="good">0x${d.before}</span> → <span class="badc">0x${d.after}</span></td></tr>
+      <tr><td>signature</td><td>unchanged - still the genuine ML-DSA-87 signature</td></tr>
+     </table>
+     <div style="margin-top:1.4vh" class="plane">One bit is enough: SHA-512 over ${a.total_signed.toLocaleString()} bytes changes completely, so the signed digest no longer matches.</div>`;
+  }
+  const h = a.header_hex.split(' ');
+  const seg = (from, to, nm, cls='') => `<span class="seg ${cls}"><span class="bytes">${h.slice(from,to).join(' ')}</span><span class="nm">${nm}</span></span>`;
+  let extra = '';
+  if (a.key === 'rogue') extra = `<table class="kv" style="margin-top:1.4vh">
+      <tr><td>key in this image</td><td class="m badc">${short(a.keyhash,40)}</td></tr>
+      <tr><td>key EPBL trusts</td><td class="m good">${short(EP.pinned_hash,40)}</td></tr>
+      <tr><td>digest</td><td>${a.digest_ok?'<span class="good">valid</span> - the file is well-formed, only the signer is wrong':'invalid'}</td></tr></table>
+      <div class="plane" style="margin-top:1.2vh">Being well-formed is not enough: only an image signed by the provisioned ML-DSA-87 key may run.</div>`;
+  else if (a.key === 'v1_0_update') extra = `<div class="plane" style="margin-top:1.4vh">Signature and digest are genuine. The only defence is the version check: <b>1.0.0 &lt; installed 1.1.0</b>. The SPDM measurement block 3 also reports the running version to the host, so a downgrade is visible remotely as well.</div>`;
+  else if (a.key === 'v1_1_update') extra = `<div class="plane" style="margin-top:1.4vh">Valid key, valid digest, higher version → EPBL verifies the candidate, copies it to the primary slot and verifies it again before starting it.</div>`;
+  else extra = `<div class="plane" style="margin-top:1.4vh">EPBL verifies this image on every reset: SHA-512 over header + code + protected TLVs, then ML-DSA-87 (HashML-DSA) with the key compiled into EPBL. The immutable BootROM stays classical (ECDSA) - EPBL is the PQC enforcement point.</div>`;
+  return `<h3>MCUBOOT HEADER · FIRST 32 BYTES @ ${a.base}</h3>
+    <div class="hex" style="display:flex;flex-wrap:wrap;row-gap:1vh">
+      ${seg(0,4,'magic')}${seg(4,8,'load addr')}${seg(8,10,'hdr size')}${seg(10,12,'prot TLV')}${seg(12,16,'image size')}${seg(16,20,'flags')}${seg(20,24,'version '+a.version,'ver')}${seg(24,28,'build')}
+    </div>${extra}`;
+}
+
+// ------------------------------------------------------------------ rendering: SPDM
+function renderSpdm(c, s){
+  const m = chan[c]; viewChan = c;
+  const box = $('content'); box.style.gridTemplateColumns = '1.35fr 1fr'; box.style.gridTemplateRows = '1fr';
+  const tag = c === 'live' ? `<span class="tag live">LIVE</span>` : `<span class="tag">REPLAY · ${esc(m.src||SRC.measure||'')}</span>`;
+  box.innerHTML = `
+   <div class="pane card" style="display:flex;flex-direction:column"><h3>SPDM ON THE WIRE ${tag}</h3>
+     <div class="stats">
+       <div class="stat"><div class="v" id="sx-n">0</div><div class="k">TRANSFERS</div><div class="bar"><i id="sx-bar"></i></div></div>
+       <div class="stat"><div class="v" id="sx-b">0</div><div class="k">BYTES ON BUS</div></div>
+       <div class="stat"><div class="v" id="sx-t">-</div><div class="k" id="sx-tk">ELAPSED</div></div>
+       <div class="stat"><div class="v" id="sx-m">-</div><div class="k">CURRENT MESSAGE</div></div>
+     </div>
+     <div style="flex:1;min-height:0"><div id="feed"></div></div></div>
+   <div class="pane card" id="spdmres"></div>`;
+  renderFeed(); renderSpdmStats(); renderSpdmResult(s);
+}
+function renderFeed(){
+  const m = chan[viewChan]; const f = $('feed'); if (!f) return;
+  f.innerHTML = m.rows.slice(-16).map(r => {
+    const cls = (r.chunk ? 'chunk ' : '') + (r.tag || '');
+    const nm = r.chunk ? `${r.name} ×${r.count}<small>${esc(r.part_of||'')} · ${r.bytes.toLocaleString()} B</small>` :
+                         `${esc(r.name)}<small>→ ${esc(r.rsp_name)} · ${r.req_len}/${r.rsp_len} B</small>`;
+    return `<div class="msg ${cls}"><span class="no">#${r.n}</span><span class="nm">${nm}</span>
+      <span><span class="hx">→ ${esc(r.req_hex)}</span><span class="hx">← ${esc(r.rsp_hex)}</span>${r.note?`<span class="nt">${esc(r.note)}</span>`:''}</span></div>`;
+  }).join('');
+}
+function renderSpdmStats(){
+  const m = chan[viewChan]; if (!$('sx-n')) return;
+  $('sx-n').textContent = m.n; $('sx-b').textContent = m.bytes.toLocaleString();
+  $('sx-bar').style.width = Math.min(100, m.expected ? 100*m.n/m.expected : 0) + '%';
+  $('sx-m').textContent = m.last ? (m.last.chunk ? (m.last.part_of || m.last.name) : m.last.name).replace(' (encrypted)',' 🔒') : '-';
+  if (viewChan === 'live'){ $('sx-tk').textContent = 'ELAPSED'; $('sx-t').textContent = m.t0 ? fmtS((m.done ? m.tEnd : Date.now()) - m.t0) : '-'; }
+  else { $('sx-tk').textContent = 'REPLAY SPEED'; $('sx-t').textContent = m.n ? '≈15×' : '-'; }
+}
+function fmtS(ms){ const s = Math.round(ms/1000); return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`; }
+function renderSpdmResult(s){
+  const m = chan[viewChan]; const el = $('spdmres'); if (!el) return;
+  const sm = m.summary;
+  let h = '';
+  if (m.kind === 'measure' || (s && s.id === 'attest')){
+    h += `<h3>WHAT THE HOST CHECKS</h3><ul class="clean plane">
+      <li>trust anchor: <b>ML-DSA-87 root</b>, pinned on the host (classical / ML-DSA-65 roots are rejected)</li>
+      <li>certificate chain: <b>15,187 B</b> ${m.oid ? '<span class="pill ok">OID id-ML-DSA-87 seen on the wire</span>' : ''}</li>
+      <li>signed measurements: digests recomputed from the <b>release files</b></li></ul>`;
+    if (sm && sm.meas){
+      const mm = sm.meas;
+      h += `<h3 style="margin-top:1.4vh">SIGNED MEASUREMENTS vs RELEASE FILE · ${esc(mm.file)}</h3><table class="meas"><tr><th>BLOCK</th><th>DEVICE SIGNED</th><th>HOST RECOMPUTED</th><th></th></tr>` +
+        mm.rows.map(r => `<tr><td>${r.block} · ${esc(r.label)}</td><td class="m">${short(r.device,18)}</td><td class="m">${short(r.expected,18)}</td><td>${r.match?'<span class="pill ok">MATCH</span>':'<span class="pill bad">MISMATCH</span>'}</td></tr>`).join('') +
+        `</table><div class="plane" style="margin-top:1vh">block 4: <span class="mono cy">${esc(mm.info)}</span></div>`;
+    } else if (sm) h += `<div class="plane">${(sm.lines||[]).map(esc).join('<br>')}</div>`;
+    else h += `<div class="dimc" style="margin-top:2vh">waiting for the measurement response…</div>`;
+  } else {
+    const msg = m.message || 'hello from the PQC demo';
+    h += `<h3>THE SESSION</h3><ul class="clean plane" style="font-size:1.32vh;line-height:1.35">
+      <li><b>KEY_EXCHANGE</b>: fresh ML-KEM-1024 encapsulation key from the host (1,568 B)</li>
+      <li>device encapsulates (1,568-B ciphertext, 32-B secret), signs the transcript with <b>ML-DSA-87</b></li>
+      <li>HKDF-SHA-384 keys bound to the transcript · <b>FINISH</b> · then <b>AES-256-GCM</b> traffic</li></ul>
+      <h3 style="margin-top:1vh">APPLICATION DATA</h3>
+      <table class="kv"><tr><td>host plaintext</td><td class="m cy">"${esc(msg)}"</td></tr>
+      <tr><td>on the wire</td><td class="m">${m.secured[1] ? esc(m.secured[1]) + ' …' : '<span class="dimc">(appears when the session is up)</span>'}</td></tr>
+      <tr><td>device echo, decrypted</td><td class="m good">${sm && sm.reply ? '"'+esc(sm.reply)+'"' : '<span class="dimc">-</span>'}</td></tr></table>`;
+    if (sm) h += `<div class="plane mono" style="margin-top:1.2vh;font-size:1.25vh">${(sm.lines||[]).filter(l=>/OK|PASS|FAIL|error|reply/i.test(l)).map(esc).join('<br>')}</div>`;
+    if (viewChan === 'live' && !m.done && RECX) h += `<h3 style="margin-top:1.4vh">SAME OPERATION, RECORDED <span class="tag">${esc(RECX.src||'')}</span></h3>
+      <div class="plane mono" style="font-size:1.22vh">${(RECX.lines||[]).filter(l=>/OK|reply/.test(l)).map(esc).join('<br>')}</div>`;
+  }
+  el.innerHTML = h;
+}
+let RECX = null;
+
+// ------------------------------------------------------------------ rendering: intro / summary
+function renderIntro(){
+  const box = $('content'); box.style.gridTemplateColumns = '1fr 1fr 1fr'; box.style.gridTemplateRows = 'auto 1fr';
+  box.innerHTML = `
+   <div class="pane card"><h3>BOOT PLANE</h3><div class="plane"><b>EPBL verifies every image with ML-DSA-87</b> (SHA-512 pre-hash) before it runs - on every reset and every update. Rollback prevention by version.</div></div>
+   <div class="pane card"><h3>RUNTIME PLANE</h3><div class="plane"><b>SPDM 1.4:</b> ML-DSA-87 device identity (on-chip key), ML-KEM-1024 key establishment, AES-256-GCM traffic. No classical algorithm is offered - no silent fallback.</div></div>
+   <div class="pane card"><h3>THE LINK</h3><div class="plane">Signed SPDM measurements = <b>EPBL digest + verified-image digest + version</b>. The host recomputes them from the release files.</div></div>
+   <div class="pane card" style="grid-column:1/4"><h3>CNSA 2.0 MAPPING</h3>
+    <table class="meas" style="font-size:1.42vh"><tr><th>FUNCTION</th><th>ECC BASELINE</th><th>MIGRATED (LIVE HERE)</th><th>STATUS</th></tr>
+     <tr><td>firmware signature (EPBL → app)</td><td>ECDSA-P384</td><td class="cy">ML-DSA-87, SHA-512</td><td><span class="pill ok">PQC</span></td></tr>
+     <tr><td>SPDM device authentication</td><td>ECDSA-P384</td><td class="cy">ML-DSA-87</td><td><span class="pill ok">PQC</span></td></tr>
+     <tr><td>SPDM key establishment</td><td>ECDHE-P384</td><td class="cy">ML-KEM-1024</td><td><span class="pill ok">PQC</span></td></tr>
+     <tr><td>certificates / trust anchor</td><td>P-384 chain, 1.2 KB</td><td class="cy">ML-DSA-87 chain, 15.2 KB</td><td><span class="pill ok">PQC</span></td></tr>
+     <tr><td>hash / AEAD</td><td>SHA-384, AES-256-GCM</td><td class="cy">SHA-384/512, AES-256-GCM</td><td><span class="pill ok">CNSA 2.0</span></td></tr>
+     <tr><td>BootROM → first stage</td><td>ECDSA (immutable ROM)</td><td>unchanged</td><td><span class="pill w">classical - documented</span></td></tr>
+    </table></div>`;
+}
+async function renderSummary(){
+  const box = $('content'); box.style.gridTemplateColumns = '1.15fr 1fr'; box.style.gridTemplateRows = 'auto 1fr';
+  let ev = {task4:[], task3:[]};
+  try { ev = await (await fetch('/api/evidence')).json(); } catch(e){}
+  const pill = r => /REJECT|NOBOOT/.test(r) ? `<span class="pill w">${r}</span>` : `<span class="pill ok">${r}</span>`;
+  const t4 = ev.task4.map(r => `<div class="ev"><span>${r.ok?'<span class="good">✓</span>':'<span class="badc">✕</span>'} ${esc(r.test.replace(/_/g,' ').replace(/v(\d) (\d) (\d)/,'v$1.$2.$3'))}</span>${pill(r.result)}</div>`).join('');
+  const t3 = ev.task3.map(l => { const nm = (l.match(/^(\S+)/)||[])[1]||l; const at = (l.match(/at=(\S+)/)||[])[1]||''; const ok = /ok=True/.test(l);
+     return `<div class="ev"><span>${ok?'<span class="good">✓</span>':'<span class="badc">✕</span>'} ${esc(nm.replace(/_/g,' '))}</span>${pill('REJECTED')}</div>`; }).join('');
+  box.innerHTML = `
+   <div class="pane card" style="grid-column:1/3"><div class="big3">
+     <div class="kpi"><div class="v">80 ms</div><div class="k">ML-DSA-87 verification of the 165 KB responder in EPBL (ECDSA-P384: 170 ms)</div></div>
+     <div class="kpi"><div class="v">11 ms</div><div class="k">ML-KEM-1024 encapsulation on the device (software ECDHE-P384: 163 ms)</div></div>
+     <div class="kpi"><div class="v">126 KB</div><div class="k">peak handshake RAM (ECC ~40 KB) · 15.2 KB chain (×12.5) · 4.8 KB boot metadata</div></div>
+   </div></div>
+   <div class="pane card"><h3>LIFECYCLE ON HARDWARE · RESPONDER BEHIND EPBL (TASK 4)</h3><div class="grid2">${t4}</div></div>
+   <div class="pane card"><h3>SPDM TAMPER CAMPAIGN (TASK 3) · 12/12 REJECTED</h3><div class="grid2">${t3}</div></div>`;
+  setVerdict('', 'Still classical', `<ul class="clean" style="font-size:1.45vh;line-height:1.45">
+     <li>ROM_BOOT / FLASH_BOOT → EPBL: ECDSA (immutable ROM); OEM key not enabled on the shared board</li>
+     <li>rollback: software version check → eFuse counter + closed debug port in production</li>
+     <li>credentials not frozen, lifecycle DEVELOPMENT (open hackathon board)</li>
+     <li>next: DICE-style identity derived from the verified image</li></ul>`, '', 'HONEST LIMITS');
+}
+
+// ------------------------------------------------------------------ scene engine
+let inPre = false;
+function render(){
+  const s = inPre ? PRE : S[cur];
+  setHead(s); renderSteps();
+  if (s.kind === 'intro'){ renderChain({}); renderIntro(); setVerdict('', 'Ready', 'Board connected, images analysed.', ''); }
+  else if (s.kind === 'board'){ renderChain({}); renderBoard(s); }
+  else if (s.kind === 'spdm'){ renderChain({epbl:'ok', app: s.chan==='live' && !chan.live.done ? 'work' : 'ok', host:'ok', arrow:4}); renderSpdm(s.chan, s); }
+  else if (s.kind === 'summary'){ renderChain({rom:'', fb:'', epbl:'ok', app:'ok', host:'ok', arrow:4}); renderSummary(); }
+}
+async function api(step, extra={}, tok){
+  for (;;){
+    let r;
+    try { r = await fetch('/api/run', {method:'POST', body: JSON.stringify({step, ...extra})}); }
+    catch(e){ toast('Server not reachable', 'bad'); return null; }
+    const j = await r.json();
+    if (r.status === 200) return j.op;
+    if (j.error === 'busy'){ await sleep(500); if (tok !== undefined && tok !== token) return null; continue; }
+    if (j.error === 'spdm_running'){ toast(j.msg, 'bad'); return 'blocked'; }
+    toast(j.msg || j.error, 'bad'); return null;
+  }
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const waitOp = op => new Promise(r => { pending[op] = r; });
+
+async function runScene(i){
+  inPre = false;
+  const tok = ++token; cur = Math.max(0, Math.min(S.length-1, i)); const s = S[cur];
+  s.state = ''; stopCountdown(); render();
+  let outcome = 'pass';
+  if (s.kind === 'board'){
+    boardModel = {lines:[], verdict:null}; clearCon();
+    renderChain({epbl:'work', arrow:2});
+    setVerdict('work', 'Checking…', 'EPBL is verifying the image', '');
+    const op = await api(s.step, {}, tok);
+    if (tok !== token) return;
+    if (op === 'blocked'){ s.state = 'fail'; renderSteps(); pause(true); return; }
+    if (op === null){ s.state = 'fail'; renderSteps(); return; }
+    const res = await waitOp(op);
+    if (tok !== token) return;
+    outcome = showBoardVerdict(s, res);
+  } else if (s.kind === 'spdm' && s.chan === 'replay'){
+    chan.replay = newChan(); render();
+    const op = await api(s.step, {seconds: 20}, tok);
+    if (op && op !== 'blocked'){ const res = await waitOp(op); if (tok !== token) return; outcome = res.ok ? 'pass' : 'fail'; }
+  } else if (s.kind === 'spdm' && s.chan === 'live'){
+    renderChain({epbl:'ok', app:'work', host:'work', arrow:4});
+    loadRecorded();
+    if (!chan.live.running){
+      chan.live = newChan(); chan.live.message = 'PQC demo ' + new Date().toTimeString().slice(0,8); render();
+      const op = await api(s.step, {message: chan.live.message}, tok);
+      if (op === 'blocked' || op === null) outcome = 'fail';
+    }
+    setVerdict('work', 'Session running…', 'live SPDM over the 127-byte I2C bridge', 'result arrives in a few minutes - keep going', 'LIVE SPDM');
+    outcome = 'pass-later';
+  }
+  if (tok !== token) return;
+  if (outcome !== 'pass-later'){ s.state = outcome; }
+  renderSteps();
+  if (s.final){ setPP(); $('cdtxt').textContent = 'End of the automatic run - ← / 1-8 to revisit any step, R to redo'; return; }
+  await countdown(s.dwell || 8, tok);
+  if (tok !== token) return;
+  runScene(cur + 1);
+}
+function showBoardVerdict(s, r){
+  const t = r.timing || {};
+  const tm = [t.candidate != null ? `candidate check ${t.candidate} ms` : '', t.primary != null ? `primary check ${t.primary} ms` : ''].filter(Boolean).join(' · ');
+  const meta = `${tm ? 'EPBL log: ' + tm + ' · ' : ''}${r.seconds}s · installed now: v${r.primary||'?'}`;
+  const ok = s.expect.includes(r.verdict);
+  let cls, big, out;
+  if (r.verdict === 'REJECTED'){ cls = 'blk'; big = '⛨ ATTACK BLOCKED'; out = ok ? 'block' : 'fail';
+    renderChain({epbl:'bad', app:'ok', arrow:3}); }
+  else if (r.verdict === 'BOOTED' || r.verdict === 'INSTALLED'){ cls = 'ok'; big = r.verdict === 'INSTALLED' ? '✓ UPDATE INSTALLED' : '✓ VERIFIED · RUNNING'; out = ok ? 'pass' : 'fail';
+    renderChain({epbl:'ok', app:'ok', arrow:3}); }
+  else { cls = 'bad'; big = r.verdict === 'NOBOOT' ? '✕ NO BOOT' : '✕ ' + r.verdict; out = 'fail'; renderChain({epbl:'bad', app:'bad', arrow:2}); }
+  let why = esc(r.reason);
+  if (r.verdict === 'REJECTED') why += '<br><span class="dimc">the previously verified image keeps running</span>';
+  if (!ok) why += `<br><span class="badc">expected: ${s.expect.join(' / ')}</span>`;
+  setVerdict(cls, big, why, meta);
+  if (s.kind === 'board') renderBoard(s);
+  return out;
+}
+let cdTimer = null, cdLeft = 0, cdTotal = 0, cdRes = null;
+function countdown(sec, tok){
+  return new Promise(res => {
+    cdLeft = cdTotal = sec * 1000; cdRes = res;
+    cdTimer = setInterval(() => {
+      if (tok !== token){ clearInterval(cdTimer); return; }
+      if (!paused) cdLeft -= 100;
+      $('cdbar').firstChild.style.width = (100 * (1 - cdLeft / cdTotal)) + '%';
+      const nx = S[cur + 1];
+      $('cdtxt').textContent = paused ? `Paused - Space to continue${nx ? ' with: ' + nx.short : ''}` : `Next: ${nx ? nx.short : '-'} in ${Math.ceil(cdLeft/1000)} s`;
+      if (cdLeft <= 0){ clearInterval(cdTimer); cdTimer = null; res(); }
+    }, 100);
+  });
+}
+function stopCountdown(){ if (cdTimer){ clearInterval(cdTimer); cdTimer = null; } $('cdbar').firstChild.style.width = '0%'; $('cdtxt').textContent = 'Running step…'; }
+function setPP(){ $('pp').innerHTML = paused ? '▶ Resume <kbd>Space</kbd>' : '⏸ Pause <kbd>Space</kbd>'; }
+function pause(p){ paused = p; setPP(); }
+function togglePause(){
+  $('startov').classList.add('hide');
+  if (!started){ started = true; paused = false; setPP(); runScene(cur); return; }
+  pause(!paused);
+}
+function next(){ $('startov').classList.add('hide'); started = true; if (cur < S.length - 1) runScene(cur + 1); }
+function prev(){ $('startov').classList.add('hide'); started = true; runScene(inPre ? cur : Math.max(0, cur - 1)); }
+function redo(){ $('startov').classList.add('hide'); started = true; if (inPre) return preflight(); runScene(cur); }
+function jump(i){ $('startov').classList.add('hide'); started = true; if (i >= 0 && i < S.length) runScene(i); }
+
+async function preflight(){
+  $('startov').classList.add('hide');
+  const tok = ++token; inPre = true; stopCountdown(); pause(true); started = false;
+  setHead(PRE); renderSteps(); clearCon(); chan.live = newChan(); renderSpdm('live', PRE);
+  renderChain({epbl:'work', arrow:2});
+  setVerdict('work', 'Pre-flight 1/2', 'programming EPBL + responder v1.0.0 (SPDM identity untouched)', '', 'PRE-FLIGHT');
+  const op = await api('prepare', {}, tok);
+  if (!op || op === 'blocked' || tok !== token) return;
+  const r = await waitOp(op);
+  if (tok !== token) return;
+  if (!['BOOTED','INSTALLED'].includes(r.verdict)){ setVerdict('bad', 'Pre-flight failed', esc(r.reason), 'check USB J13 / run again (P)', 'PRE-FLIGHT'); return; }
+  renderChain({epbl:'ok', app:'work', host:'work', arrow:4});
+  setVerdict('work', 'Pre-flight 2/2', 'live SPDM attestation running (~7 min)', 'do not reset the board', 'PRE-FLIGHT');
+  const op2 = await api('spdm_measure', {}, tok);
+  if (!op2 || op2 === 'blocked') return;
+  const r2 = await waitOp(op2);
+  if (!inPre) return;
+  if (r2.ok){ setVerdict('ok', '✓ READY', 'board in known state (v1.0.0), fresh SPDM attestation recorded', 'press Home or 0 to go to the start, then Space', 'PRE-FLIGHT'); }
+  else setVerdict('bad', 'SPDM failed', 'step 6 will replay the last recorded run instead', 'check the KitProg3 USB cable', 'PRE-FLIGHT');
+  $('cdtxt').textContent = 'Pre-flight finished - press Home, then Space to start the show';
+}
+async function loadRecorded(){
+  if (RECX) return;
+  try { RECX = await (await fetch('/api/recorded?kind=exchange')).json(); } catch(e){}
+}
+
+// ------------------------------------------------------------------ events
+function onEvent(e){
+  const d = JSON.parse(e.data);
+  switch (d.type){
+  case 'uart': con(d.text.replace(/^\s*\[[^\]]*\]\s?/, ''), d.cls); break;
+  case 'phase': con('» ' + d.text, 'ph'); break;
+  case 'op_start': clearCon(); setB4('reset'); break;
+  case 'op_done': if (pending[d.op]){ pending[d.op](d); delete pending[d.op]; } break;
+  case 'state': ST = d.state; applyState(); break;
+  case 'leds': $('b3').classList.toggle('on', !!d.led3); $('b4').classList.toggle('on', !!d.led4); break;
+  case 'led_mode': setB4(d.mode); break;
+  case 'analysis': IM = d.images; EP = d.epbl; if (!inPre && S[cur].kind === 'board') renderBoard(S[cur]); break;
+  case 'syslog': if (/failed|NOT|not available/.test(d.text)) toast(d.text, 'bad'); break;
+  case 'spdm_start': {
+    const m = chan[d.chan] = Object.assign(newChan(), {kind:d.kind, src:d.src, expected:d.expected, running:true, t0:Date.now(), message:d.message || (chan[d.chan]||{}).message});
+    if (d.chan === 'live'){ lastLive = m; liveMini(); }
+    if (viewChan === d.chan && isSpdmView()) renderSpdm(d.chan, curScene());
+    break; }
+  case 'spdm_msg': {
+    const m = chan[d.chan]; m.n = d.n; m.bytes = d.total;
+    const isChunk = d.name === 'CHUNK_GET' || d.name === 'CHUNK_SEND';
+    const last = m.rows[m.rows.length - 1];
+    if (isChunk && last && last.chunk && last.name === d.name && last.part_of === d.part_of && !d.tag){
+      last.count++; last.bytes += d.req_len + d.rsp_len; last.req_hex = d.req_hex; last.rsp_hex = d.rsp_hex; last.n = d.n;
+    } else m.rows.push(Object.assign({}, d, {chunk:isChunk, count:1, bytes:d.req_len + d.rsp_len}));
+    if (m.rows.length > 80) m.rows.shift();
+    if (d.tag === 'oid') m.oid = true;
+    if (d.secure){ const raw = d.req_hex; m.secured.push(raw); }
+    m.last = m.rows[m.rows.length - 1];
+    if (d.chan === viewChan && isSpdmView()){ renderFeed(); renderSpdmStats(); if (d.tag === 'oid' || d.secure) renderSpdmResult(curScene()); }
+    if (d.chan === 'live') liveMini();
+    break; }
+  case 'spdm_line': chan[d.chan].lines.push(d.text); if (d.chan === viewChan && isSpdmView()) con(d.text, /OK|PASS/.test(d.text) ? 'good' : /error|FAIL/i.test(d.text) ? 'bad' : 'app'); break;
+  case 'spdm_done': {
+    const m = chan[d.chan]; m.done = true; m.running = false; m.ok = d.ok; m.summary = d.summary; m.tEnd = Date.now();
+    if (pending[d.op]){ pending[d.op](d); delete pending[d.op]; }
+    if (d.chan === viewChan && isSpdmView()){ renderSpdmStats(); renderSpdmResult(curScene());
+      const s = curScene();
+      if (d.chan === 'replay' || s.id === 'session') setVerdict(d.ok ? 'ok' : 'bad', d.ok ? (d.kind === 'measure' ? '✓ AUTHENTICATED' : '✓ SESSION OK') : '✕ FAILED',
+         d.ok ? (d.kind === 'measure' ? 'ML-DSA-87 chain verified to the pinned root · measurements signed · '+ (d.summary.meas && d.summary.meas.all_match ? '3/3 MATCH' : 'see table') : 'ML-KEM-1024 session, encrypted message answered: "' + esc(d.summary.reply||'') + '"') : esc((d.summary.lines||[]).slice(-2).join(' ')),
+         `${d.summary.transfers||0} transfers · ${(d.summary.bytes||0).toLocaleString()} B${d.summary.seconds ? ' · ' + d.summary.seconds + ' s' : ''} · ${esc(d.summary.src||'')}`, d.chan === 'live' ? 'LIVE SPDM' : 'SPDM (RECORDED RUN, REPLAYED)');
+    }
+    if (d.chan === 'live'){
+      liveMini();
+      if (!inPre) toast(d.ok ? `LIVE SPDM ${d.kind} PASSED (${fmtS(m.tEnd - m.t0)})${d.summary.reply ? ' - encrypted reply: "' + d.summary.reply + '"' : ''}` : `Live SPDM ${d.kind} failed${d.aborted ? ' (aborted)' : ''}`, d.ok ? 'ok' : 'bad', 9000);
+      const sc = S.find(x => x.id === 'session'); if (d.kind === 'exchange' && sc){ sc.state = d.ok ? 'pass' : 'fail'; renderSteps(); }
+    }
+    break; }
+  }
+}
+function curScene(){ return inPre ? PRE : S[cur]; }
+function isSpdmView(){ return curScene().kind === 'spdm'; }
+function setB4(mode){
+  const t = {on:'steady: verified image running', alarm:'FAST BLINK: attack rejected', off:'off: no verified image', reset:'off: board in reset', activity:'flicker: one toggle per SPDM transfer'}[mode] || '';
+  $('b4m').textContent = t || 'driven by this app over SWD';
+}
+function applyState(){
+  $('inst').textContent = ST.primary ? (ST.primary === 'none' ? 'none' : 'v' + ST.primary) : '-';
+  const lk = (id, v) => { $(id).className = v === true ? 'on' : v === false ? 'off' : ''; };
+  lk('lk-jl', ST.jlink); lk('lk-com', ST.com); lk('lk-i2c', ST.i2c);
+}
+function liveMini(){
+  const m = chan.live, el = $('livemini');
+  if (!m.running && !m.done){ el.className = ''; return; }
+  el.className = 'on';
+  el.innerHTML = m.running ? `<b>● LIVE SPDM ${esc(m.kind)}</b> · ${m.n}/${m.expected} transfers · ${m.last ? esc(m.last.part_of || m.last.name) : 'connecting'}<div class="bar"><i style="width:${Math.min(100,100*m.n/(m.expected||1))}%"></i></div>`
+                           : `${m.ok ? '<span class="good">✓</span>' : '<span class="badc">✕</span>'} live SPDM ${esc(m.kind)} ${m.ok ? 'passed' : 'failed'} · ${m.n} transfers · ${fmtS(m.tEnd - m.t0)}`;
+}
+let toastT = null;
+function toast(t, cls='', ms=5000){ const el = $('toast'); el.textContent = t; el.className = 'show ' + cls; clearTimeout(toastT); toastT = setTimeout(() => el.className = '', ms); }
+
+document.addEventListener('keydown', e => {
+  if (e.repeat) return;
+  const k = e.key;
+  if (k === ' '){ e.preventDefault(); togglePause(); }
+  else if (k === 'ArrowRight' || k === 'PageDown') next();
+  else if (k === 'ArrowLeft' || k === 'PageUp') prev();
+  else if (k === 'r' || k === 'R') redo();
+  else if (k === 'Home' || k === '0'){ token++; inPre = false; started = false; paused = true; setPP(); S.forEach(s => s.state = ''); cur = 0; stopCountdown(); render(); $('cdtxt').textContent = 'Press Space to start the automatic run'; }
+  else if (k >= '1' && k <= '8') jump(+k);
+  else if (k === 'p' || k === 'P') preflight();
+  else if (k === 'a' || k === 'A') api('abort');
+  else if (k === 'l' || k === 'L') api('led_test');
+  else if (k === 'f' || k === 'F'){ if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+  else if (k === 'Escape') $('startov').classList.add('hide');
+});
+setInterval(() => { $('clock').textContent = new Date().toTimeString().slice(0,8); if (viewChan === 'live' && isSpdmView() && chan.live.running) renderSpdmStats(); }, 500);
+
+(async function init(){
+  try {
+    const j = await (await fetch('/api/state')).json();
+    IM = j.images || {}; EP = j.epbl || {}; ST = j.state || {}; SRC = j.sources || {};
+    applyState();
+    if (j.leds){ $('b3').classList.toggle('on', !!j.leds.led3); $('b4').classList.toggle('on', !!j.leds.led4); }
+  } catch(e){}
+  const es = location.hash.includes('shot') ? {} : new EventSource('/events'); es.onmessage = onEvent;
+  es.onerror = () => {};
+  const mh = location.hash.match(/s=(\d+)/);
+  if (mh){ cur = +mh[1]; $('startov').classList.add('hide'); }
+  render();
+  if (location.hash.includes('replay')) api('replay_measure', {seconds: 3});
+  if (location.hash.includes('autostart')) togglePause();
+})();
+</script>
+</body>
+</html>

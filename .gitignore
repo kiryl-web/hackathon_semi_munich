@@ -4,3 +4,4 @@ epbl/mtb_shared/
 **/build/
 **/.cache/
 /mtb_shared/
+__pycache__/

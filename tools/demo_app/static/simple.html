@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PQC Demo - simple</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a30;--line:#24304f;--txt:#e8eefc;--dim:#8d9bbb;--cy:#38bdf8;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;
+  --mono:'Cascadia Mono',Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;font-size:1.6vh}
+#app{display:grid;grid-template-rows:auto 1fr;height:100vh;padding:1.6vh;gap:1.6vh}
+header{display:flex;align-items:center;gap:2vh}
+h1{font-size:2.8vh;font-weight:700}
+h1 small{display:block;font-size:1.5vh;color:var(--dim);font-weight:400;margin-top:.3vh}
+.sp{flex:1}
+.inst{font-size:1.5vh;color:var(--dim)}.inst b{font-family:var(--mono);font-size:2.4vh;color:var(--cy);margin-left:.6vh}
+.led{display:flex;align-items:center;gap:.8vh;font-size:1.4vh;color:var(--dim)}
+.bulb{width:2.6vh;height:2.6vh;border-radius:50%;background:#2b1d12;border:2px solid #3a2a1b;transition:background .08s,box-shadow .08s}
+.bulb.on{background:radial-gradient(circle at 35% 35%,#fff4cc,#ffaa22 50%,#ff7a00);box-shadow:0 0 2vh #ff9a1f}
+main{display:grid;grid-template-columns:34% 1fr;gap:1.6vh;min-height:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:1.2vh;padding:1.6vh;min-height:0}
+#exps{display:flex;flex-direction:column;gap:.8vh;overflow:hidden}
+.grp{font-size:1.25vh;letter-spacing:.16em;color:var(--dim);font-weight:700;margin:.6vh 0 .2vh}
+.exp{display:flex;align-items:center;gap:1.4vh;padding:.85vh 1.4vh;border-radius:1vh;border:1px solid var(--line);background:#0f1628;
+  cursor:pointer;transition:.15s;text-align:left;color:var(--txt);font:inherit;width:100%}
+.exp:hover{border-color:var(--cy);background:#13203a}
+.exp:active{transform:scale(.99)}
+.exp.cur{border-color:var(--cy);box-shadow:0 0 0 2px rgba(56,189,248,.35) inset;background:#132443}
+.exp .ic{font-size:2.6vh;width:3.6vh;text-align:center}
+.exp .t{font-weight:600;font-size:1.75vh}
+.exp .d{font-size:1.3vh;color:var(--dim);margin-top:.15vh}
+.exp .ex{margin-left:auto;font-size:1.15vh;font-weight:700;padding:.3vh .9vh;border-radius:99px;white-space:nowrap}
+.ex.g{background:rgba(34,197,94,.15);color:#86efac}.ex.r{background:rgba(245,158,11,.15);color:#fcd34d}.ex.b{background:rgba(56,189,248,.15);color:#a5e3ff}
+.exp .res{margin-left:.6vh;font-size:1.9vh;width:2.4vh;text-align:center}
+#right{display:grid;grid-template-rows:auto auto 1fr;gap:1.6vh;min-height:0}
+#banner{display:flex;align-items:center;gap:2vh;padding:2vh 2.4vh;transition:background .3s,border-color .3s}
+#banner .big{font-size:4.6vh;font-weight:800;line-height:1.05}
+#banner .sub{font-size:1.8vh;color:#cdd7ee;margin-top:.5vh}
+#banner .clock{margin-left:auto;font-family:var(--mono);font-size:3.4vh;color:var(--dim)}
+#banner.run{border-color:var(--cy)}#banner.run .big{color:var(--cy)}
+#banner.ok{border-color:var(--ok);background:linear-gradient(90deg,rgba(34,197,94,.2),var(--panel))}#banner.ok .big{color:var(--ok)}
+#banner.blk{border-color:var(--warn);background:linear-gradient(90deg,rgba(239,68,68,.22),rgba(245,158,11,.08) 60%,var(--panel))}#banner.blk .big{color:#ffb547}
+#banner.bad{border-color:var(--bad);background:linear-gradient(90deg,rgba(239,68,68,.25),var(--panel))}#banner.bad .big{color:var(--bad)}
+#info{padding:1.4vh 1.8vh}
+#about{font-size:1.75vh;line-height:1.45;color:#dbe4f7;margin-bottom:1vh}
+#about b{color:#fff}
+.chk{display:grid;grid-template-columns:5.2vh 1fr;gap:1.4vh;align-items:center;padding:.9vh 0;border-top:1px solid rgba(120,150,220,.12)}
+.st{width:5.2vh;height:5.2vh;border-radius:1vh;display:grid;place-items:center;font-size:2.8vh;font-weight:800}
+.st.ok{background:rgba(34,197,94,.16);color:var(--ok);border:1px solid rgba(34,197,94,.5)}
+.st.bad{background:rgba(239,68,68,.2);color:#ff6b6b;border:1px solid var(--bad);box-shadow:0 0 2vh rgba(239,68,68,.45)}
+.ct{font-weight:700;font-size:1.6vh;margin-bottom:.35vh}
+.ct .tg{font-size:1.2vh;font-weight:800;padding:.15vh .8vh;border-radius:99px;margin-left:.8vh;letter-spacing:.05em}
+.tg.ok{background:rgba(34,197,94,.16);color:#86efac}.tg.bad{background:rgba(239,68,68,.25);color:#fecaca}
+.hr{display:grid;grid-template-columns:17ch 1fr;font-family:var(--mono);font-size:1.45vh;line-height:1.6}
+.hr .l{color:var(--dim);font-family:'Segoe UI';font-size:1.35vh}
+.hr i{font-style:normal}
+.hr i.x{background:rgba(239,68,68,.7);color:#fff;border-radius:2px}
+.hr i.m,.hr .m{color:#86efac}
+.hr b.byte{background:var(--bad);color:#fff;padding:0 .3ch;border-radius:3px;box-shadow:0 0 1.2vh var(--bad)}
+.hr b.orig{background:rgba(34,197,94,.35);color:#eafff1;padding:0 .3ch;border-radius:3px}
+#facts{display:grid;grid-template-columns:1fr 1fr;gap:.8vh 2.4vh;font-size:1.5vh}
+#facts:empty{display:none}
+.f{display:flex;gap:1vh;align-items:baseline;border-bottom:1px solid rgba(120,150,220,.12);padding:.5vh 0;min-width:0}
+.f .k{color:var(--dim);white-space:nowrap}
+.f .v{font-family:var(--mono);font-size:1.4vh;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-left:auto}
+.good{color:var(--ok)}.badc{color:var(--bad)}
+#termp{display:flex;flex-direction:column;min-height:0}
+#termh{display:flex;justify-content:space-between;font-size:1.25vh;letter-spacing:.16em;color:var(--dim);font-weight:700;margin-bottom:1vh}
+#term{flex:1;min-height:0;overflow-y:auto;font-family:var(--mono);font-size:1.45vh;line-height:1.55;background:#070b16;border-radius:.8vh;padding:1.2vh 1.4vh}
+#term div{white-space:pre-wrap;word-break:break-all}
+#term .good{color:#4ade80;font-weight:700}#term .bad{color:#f87171;font-weight:700}#term .app{color:#e2e8f0}
+#term .boot{color:#8ea2c8}#term .dim{color:#56637f}#term .ph{color:var(--cy)}#term .hd{color:#fff;font-weight:700}
+#term .spdm{color:#c4b5fd}#term .in{color:#fcd34d}#term .inb{color:#fde68a;font-weight:700}#term .aead{color:#86efac}
+.tools{display:flex;gap:1vh;margin-top:auto;padding-top:1vh}
+.small{flex:1;padding:1vh;border-radius:.8vh;border:1px solid var(--line);background:#0f1628;color:var(--dim);font:inherit;font-size:1.35vh;cursor:pointer}
+.small:hover{color:var(--txt);border-color:var(--cy)}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Quantum-resistant boot + SPDM <small>PSoC Control C3M6 · ML-DSA-87 · ML-KEM-1024 · live on the board</small></h1>
+    <div class="sp"></div>
+    <div class="inst">installed<b id="inst">-</b></div>
+    <div class="led"><div class="bulb" id="b3"></div>LED3 heartbeat</div>
+    <div class="led"><div class="bulb" id="b4"></div>LED4 verdict</div>
+  </header>
+  <main>
+    <div id="exps" class="panel"></div>
+    <div id="right">
+      <div id="banner" class="panel"><div><div class="big" id="big">Pick an experiment</div><div class="sub" id="sub">It starts as soon as you click it.</div></div><div class="clock" id="clock"></div></div>
+      <div id="info" class="panel"><div id="about">Each button runs one experiment on the real board. The checks the board performs appear here.</div><div id="checks"></div><div id="facts"></div></div>
+      <div id="termp" class="panel"><div id="termh"><span id="termt">TERMINAL</span><span id="termr"></span></div><div id="term"></div></div>
+    </div>
+  </main>
+</div>
+<script>
+const PREP_ABOUT = "Puts the board into a known starting point: bootloader plus genuine version 1.0.0. The chip's identity key is not touched.";
+const EXPS = [
+ {grp:'BOOT · EPBL VERIFIES ML-DSA-87'},
+ {id:'boot',     ic:'⏻', t:'Verified boot',        d:'reset - EPBL checks the installed image', ex:['g','boots'], about:"We reset the board. The bootloader recomputes the image fingerprint (SHA-512) and checks its <b>ML-DSA-87 signature</b> with the built-in key before starting it.",   img:()=>primKey()},
+ {id:'rogue',    ic:'🗝', t:'Rogue-key update',     d:'well-formed, signed with an attacker key', ex:['r','rejected'], about:"An attacker builds a perfectly formatted update and signs it with <b>their own</b> ML-DSA-87 key. The bootloader only trusts our key, so it refuses to install it.", img:'rogue'},
+ {id:'corrupt',  ic:'✎', t:'One byte changed',     d:'genuine signature, 1 code byte modified',  ex:['r','rejected'], about:"A genuine, correctly signed update - but <b>one byte of program code</b> was changed afterwards. The fingerprint no longer matches the signature, so it is refused.", img:'corrupt'},
+ {id:'header',   ic:'✎', t:'Header edited',        d:'genuine signature, version field changed', ex:['r','rejected'], about:"A genuine signed update where someone edited the <b>version number</b> in the header to look newer. Any change breaks the signed fingerprint, so it is refused.", img:'header'},
+ {id:'valid',    ic:'⬆', t:'Valid update v1.1',    d:'genuine signed update',                    ex:['g','installs'], about:"A genuine, <b>newer</b> update signed with our key. The bootloader verifies it, copies it into place, verifies it again and starts it.", img:'v1_1_update'},
+ {id:'rollback', ic:'⬇', t:'Rollback to v1.0',     d:'genuine but older image',                  ex:['r','rejected'], about:"A genuine but <b>older</b> version, e.g. one with a known bug. The signature is valid, but the bootloader refuses to go back to a lower version number.", img:'v1_0_update'},
+ {grp:'SPDM 1.4 · RUNTIME (LIVE ~7 MIN, REPLAY 20 S)'},
+ {id:'spdm_measure',  ic:'🔎', t:'Attestation (live)',     d:'ML-DSA-87 chain + signed measurements', ex:['b','~7 min'], about:"The PC asks the running chip: <b>who are you, and what software are you running?</b> The chip answers with its post-quantum certificate and a signed fingerprint of its firmware."},
+ {id:'spdm_exchange', ic:'🔒', t:'Encrypted session (live)', d:'ML-KEM-1024 + AES-256-GCM message',   ex:['b','~7 min'], about:"The PC and the chip agree on a <b>secret key</b> with quantum-safe ML-KEM-1024, then send a message encrypted with it - like HTTPS, but between chips. Eavesdroppers see only random bytes."},
+ {id:'replay_measure',  ic:'⏩', t:'Attestation (replay)',     d:'recorded run from this board, real bytes', ex:['b','20 s'], about:"The PC asks the running chip: <b>who are you, and what software are you running?</b> The chip answers with its post-quantum certificate and a signed fingerprint of its firmware. <i>Recorded run from this board, replayed fast.</i>"},
+ {id:'replay_exchange', ic:'⏩', t:'Session (replay)',         d:'recorded run from this board, real bytes', ex:['b','20 s'], about:"The PC and the chip agree on a <b>secret key</b> with quantum-safe ML-KEM-1024, then send a message encrypted with it - like HTTPS, but between chips. Eavesdroppers see only random bytes. <i>Recorded run from this board, replayed fast.</i>"},
+];
+let maxOp = 0, minOp = 0;
+let IM = {}, EP = {}, ST = {}, cur = null, curOp = null, t0 = 0, phase = '', results = {}, lastChunk = null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const short = (h, n=20) => h ? (h.length > n ? h.slice(0, n) + '…' : h) : '-';
+const primKey = () => ST.primary === '1.1.0' ? 'v1_1_boot' : ST.primary === '2.0.0' ? 'v2_0_update' : 'v1_0_boot';
+
+function renderExps(){
+  $('exps').innerHTML = EXPS.map(e => e.grp ? `<div class="grp">${e.grp}</div>` :
+    `<button class="exp ${cur===e.id?'cur':''}" title="${(e.about||'').replace(/<[^>]+>/g,'')}" onclick="start('${e.id}')"><span class="ic">${e.ic}</span>
+      <span><div class="t">${e.t}</div><div class="d">${e.d}</div></span><span class="ex ${e.ex[0]}">${e.ex[1]}</span>
+      <span class="res">${results[e.id]||''}</span></button>`).join('') +
+    `<div class="tools"><button class="small" onclick="start('prepare')">↺ Known state (v1.0)</button>
+      <button class="small" onclick="post('abort')">■ Stop live SPDM</button><button class="small" onclick="post('led_test')">💡 LED test</button></div>`;
+}
+// ---------------------------------------------------------------- terminal
+function clearTerm(){ $('term').innerHTML = ''; lastChunk = null; }
+function line(text, cls='dim'){
+  const t = $('term'), d = document.createElement('div'); d.className = cls; d.textContent = text; t.appendChild(d);
+  while (t.children.length > 400) t.removeChild(t.firstChild);
+  t.scrollTop = t.scrollHeight; return d;
+}
+function banner(cls, big, sub=''){ $('banner').className = 'panel ' + cls; $('big').innerHTML = big; $('sub').innerHTML = sub; }
+function facts(rows){ $('facts').innerHTML = rows.map(r => `<div class="f"><span class="k">${r[0]}</span><span class="v ${r[2]||''}">${r[1]}</span></div>`).join(''); }
+
+// ---------------------------------------------------------------- start an experiment (immediately)
+async function start(id){
+  const e = EXPS.find(x => x.id === id) || {t:'Known state: EPBL + v1.0.0', id, about: PREP_ABOUT};
+  cur = id; curOp = null; minOp = maxOp + 1; t0 = Date.now(); phase = 'starting'; delete results[id]; renderExps();
+  clearTerm();                                             // cleared right now, not when the server answers
+  line(`▶ ${e.t}   (${new Date().toTimeString().slice(0,8)})`, 'hd');
+  banner('run', 'Running…', esc(e.d || ''));
+  e.msg = 'PQC demo ' + new Date().toTimeString().slice(0,8);
+  showInput(e);
+  const isReplay = id.startsWith('replay_');
+  $('termt').textContent = id.startsWith('spdm') || isReplay ? 'SPDM TRANSFERS (HOST ⇄ DEVICE)' : 'BOARD CONSOLE · COM4';
+  const r = await post(id, isReplay ? {seconds: 20} : {force: true, message: e.msg});
+  if (r && r.op){ if (r.op > maxOp) maxOp = r.op; if (cur === id) curOp = r.op; }
+}
+async function post(step, extra={}){
+  try { const r = await fetch('/api/run', {method:'POST', body: JSON.stringify({step, ...extra})}); return await r.json(); }
+  catch(e){ line('server not reachable', 'bad'); return null; }
+}
+const grp = h => h.slice(0, 48).replace(/(.{8})/g, '$1 ').trim() + ' …';
+function diffHex(ref, h){            // highlight every hex digit that differs from the reference
+  let out = '';
+  for (let k = 0; k < 48; k++){ if (k && k % 8 === 0) out += ' '; out += ref[k] === h[k] ? `<i class="m">${h[k]}</i>` : `<i class="x">${h[k]}</i>`; }
+  return out + ' …';
+}
+function chk(ok, title, tag, rows){
+  return `<div class="chk"><div class="st ${ok?'ok':'bad'}">${ok?'✓':'✕'}</div><div><div class="ct">${title}<span class="tg ${ok?'ok':'bad'}">${tag}</span></div>
+    ${rows.map(r => `<div class="hr"><span class="l">${r[0]}</span><span>${r[1]}</span></div>`).join('')}</div></div>`;
+}
+const bits = h => parseInt(h, 16).toString(2).padStart(8, '0').replace(/(.{4})/, '$1 ');
+function showInput(e){
+  $('about').innerHTML = e.about || '';
+  const k = typeof e.img === 'function' ? e.img() : e.img; const a = IM[k];
+  $('checks').innerHTML = ''; facts([]);
+  if (e.id === 'spdm_exchange' || e.id === 'replay_exchange'){
+    if (e.id === 'spdm_exchange') line(`IN  application message (plaintext): "${e.msg}"`, 'inb');
+    line('IN  trust anchor: good_root.der (ML-DSA-87 root CA, pinned on the PC)', 'in');
+    line('IN  host offers only: ML-DSA-87 · ML-KEM-1024 · SHA-384 · AES-256-GCM', 'in');
+    return;
+  }
+  if (e.id === 'spdm_measure' || e.id === 'replay_measure'){
+    line('IN  trust anchor: good_root.der (ML-DSA-87 root CA, pinned on the PC)', 'in');
+    line('IN  reference values: SHA-384 recomputed from epbl_full.hex + the release image', 'in');
+    return;
+  }
+  if (!a) return;
+  const keyOk = a.keyhash_ok, dgOk = a.digest_ok;
+  let html = chk(keyOk, 'Who signed it? (signer key fingerprint)', keyOk ? 'OUR KEY' : 'FRAUDULENT KEY', [
+      ['key built into EPBL', `<span class="m">${grp(EP.pinned_hash)}</span>`],
+      ['key in this image', diffHex(EP.pinned_hash, a.keyhash)]]);
+  html += chk(dgOk, 'Was it changed after signing? (SHA-512 of the image)', dgOk ? 'INTACT' : 'MODIFIED', [
+      ['signed fingerprint', `<span class="m">${grp(a.sha512_stored)}</span>`],
+      ['recomputed now', diffHex(a.sha512_stored, a.sha512_calc)]]);
+  if (a.diff){
+    const d = a.diff, ctx = (arr, cls) => arr.slice(0, 12).map((b, i) => i === d.col ? `<b class="${cls}">${b}</b>` : b).join(' ');
+    html += chk(false, `The flipped byte @ ${d.addr} (${esc(d.where)})`, `0x${d.before} → 0x${d.after}`, [
+      ['genuine', ctx(d.orig, 'orig') + `   <span class="l">bits ${bits(d.before)}</span>`],
+      ['this file', ctx(d.new, 'byte') + `   <span class="l">bits ${bits(d.after)}</span>`]]);
+  } else if (a.slot === 'upgrade slot'){
+    const inst = e.id === 'valid' ? '1.0.0' : e.id === 'rollback' ? '1.1.0' : (ST.primary || '?');
+    const newer = e.id !== 'rollback';
+    html += chk(newer, 'Is it newer than what is installed? (anti-rollback)', newer ? 'NEWER' : 'OLDER = ROLLBACK', [
+      ['installed', inst], ['this image', a.version]]);
+  }
+  $('checks').innerHTML = html;
+  // what goes in -> terminal
+  line(`IN  file ${a.file}  (${a.desc})`, 'inb');
+  line(`IN  target ${a.slot} @ ${a.base}, ${a.total_signed.toLocaleString()} signed bytes + ${a.tlv_total.toLocaleString()} B metadata`, 'in');
+  line(`IN  header  ${a.header_hex}   (version ${a.version})`, 'in');
+  if (a.diff) line(`IN  modified byte @ ${a.diff.addr}: 0x${a.diff.before} -> 0x${a.diff.after}`, 'inb');
+  line(`IN  SHA-512 in image  ${a.sha512_stored.slice(0, 64)}…`, 'in');
+  line(`IN  signer key hash   ${a.keyhash.slice(0, 64)}…`, 'in');
+  line(`IN  ML-DSA-87 signature (${a.sig_len.toLocaleString()} B) ${a.sig_head} …`, 'in');
+}
+// ---------------------------------------------------------------- events
+function mine(d){ return curOp === null ? (cur !== null && d.op >= minOp) : d.op === curOp; }
+function onEvent(ev){
+  const d = JSON.parse(ev.data);
+  if (d.op > maxOp) maxOp = d.op;
+  switch (d.type){
+  case 'op_queued': if (mine(d)){ phase = 'stopping the previous experiment'; line('» waiting for the previous experiment to stop …', 'ph'); } break;
+  case 'op_start': if (mine(d)){ phase = 'programming flash'; (d.hexes || []).forEach(h => line(`IN  J-Link> loadfile ${h}`, 'in')); line('IN  J-Link> r (reset) · g (go)', 'in'); } break;
+  case 'phase': if (mine(d)){ line('» ' + d.text, 'ph'); phase = /reset ->/.test(d.text) ? 'EPBL running' : phase; } break;
+  case 'uart': if (mine(d)) line(d.text.replace(/^\s*\[[^\]]*\]\s?/, ''), d.cls); break;
+  case 'op_done': if (mine(d) && d.verdict !== 'SKIPPED') done(d); break;
+  case 'spdm_start': if (mine(d)){ phase = d.replay ? 'replaying ' + d.src : 'SPDM over I2C'; line(`» ${d.replay ? 'REPLAY of ' + d.src : 'LIVE SPDM ' + d.kind + ' started'} · ~${d.expected} transfers`, 'ph'); } break;
+  case 'spdm_msg': if (mine(d)) spdmLine(d); break;
+  case 'spdm_line': if (mine(d)) line(d.text, /OK|PASS/.test(d.text) ? 'good' : /error|FAIL/i.test(d.text) ? 'bad' : 'app'); break;
+  case 'spdm_done': if (mine(d)) spdmDone(d); break;
+  case 'state': ST = d.state; $('inst').textContent = ST.primary ? 'v' + ST.primary : '-'; break;
+  case 'leds': $('b3').classList.toggle('on', !!d.led3); $('b4').classList.toggle('on', !!d.led4); break;
+  case 'analysis': IM = d.images; EP = d.epbl; break;
+  }
+}
+function spdmLine(d){
+  const chunk = d.name === 'CHUNK_GET' || d.name === 'CHUNK_SEND';
+  if (chunk && d.tag !== 'oid' && lastChunk && lastChunk.key === d.name + d.part_of){
+    lastChunk.n++; lastChunk.b += d.req_len + d.rsp_len;
+    lastChunk.el.textContent = `#${d.n}  ${d.name} ×${lastChunk.n}  (${d.part_of})  ${lastChunk.b.toLocaleString()} B`;
+    lastChunk.inEl.textContent = `      IN  → ${d.req_hex}`;
+    lastChunk.outEl.textContent = `      OUT ← ${d.rsp_hex}`;
+    $('termr').textContent = `${d.n} transfers · ${d.total.toLocaleString()} B`; return;
+  }
+  const txt = chunk ? `#${d.n}  ${d.name} ×1  (${d.part_of})  ${d.req_len + d.rsp_len} B` :
+    `#${d.n}  ${d.name}  →  ${d.rsp_name}   (${d.req_len} B in / ${d.rsp_len} B out)${d.note ? '   · ' + d.note : ''}`;
+  const el = line(txt, d.secure ? 'aead' : d.tag === 'oid' ? 'good' : chunk ? 'dim' : 'spdm');
+  const inEl = line(`      IN  → ${d.req_hex}${d.secure ? '   (encrypted on the wire)' : ''}`, 'in');
+  const outEl = line(`      OUT ← ${d.rsp_hex}`, 'dim');
+  if (d.tag === 'oid') line('      ' + d.note, 'good');
+  lastChunk = chunk ? {key: d.name + d.part_of, n: 1, b: d.req_len + d.rsp_len, el, inEl, outEl} : null;
+  $('termr').textContent = `${d.n} transfers · ${d.total.toLocaleString()} B`;
+}
+function done(r){
+  const t = r.timing || {}, ok = r.verdict === 'BOOTED' || r.verdict === 'INSTALLED';
+  const tm = [t.candidate != null ? `candidate check ${t.candidate} ms` : '', t.primary != null ? `image check ${t.primary} ms` : ''].filter(Boolean).join(' · ');
+  if (r.verdict === 'REJECTED'){ banner('blk', '⛨ ATTACK BLOCKED', esc(r.reason) + ' - the verified image keeps running'); results[cur] = '⛨'; }
+  else if (ok){ banner('ok', r.verdict === 'INSTALLED' ? '✓ UPDATE INSTALLED' : '✓ VERIFIED · RUNNING', esc(r.reason)); results[cur] = '✓'; }
+  else { banner('bad', '✕ ' + r.verdict, esc(r.reason)); results[cur] = '✕'; }
+  line(`■ ${r.verdict}: ${r.reason}${tm ? '   (' + tm + ')' : ''}`, r.verdict === 'REJECTED' ? 'bad' : ok ? 'good' : 'bad');
+  phase = ''; $('clock').textContent = `${((Date.now() - t0)/1000).toFixed(1)} s`; renderExps();
+}
+function spdmDone(d){
+  const s = d.summary || {};
+  if (d.ok){
+    let sub = d.kind === 'measure' ? 'ML-DSA-87 chain verified to the pinned root · measurements signed' : `ML-KEM-1024 session · encrypted echo: "${esc(s.reply||'')}"`;
+    if (s.meas){ sub += s.meas.all_match ? ' · 3/3 MATCH with the release file' : ' · measurement MISMATCH';
+      s.meas.rows.forEach(r => line(`   block ${r.block} ${r.label}: ${r.match ? 'MATCH' : 'MISMATCH'}  ${short(r.device, 32)}`, r.match ? 'good' : 'bad')); }
+    banner('ok', d.kind === 'measure' ? '✓ DEVICE AUTHENTICATED' : '✓ ENCRYPTED SESSION OK', sub); results[cur] = '✓';
+  } else { banner('bad', '✕ SPDM FAILED', esc((s.lines||[]).slice(-1)[0] || (d.aborted ? 'aborted' : ''))); results[cur] = '✕'; }
+  facts([['transfers', s.transfers || '-'], ['bytes', (s.bytes||0).toLocaleString()], ['source', esc(s.src || '')], ['time', s.seconds ? s.seconds + ' s' : 'replay']]);
+  phase = ''; $('clock').textContent = `${((Date.now() - t0)/1000).toFixed(0)} s`; renderExps();
+}
+setInterval(() => { if (phase){ $('clock').textContent = `${((Date.now() - t0)/1000).toFixed(1)} s`; $('sub').textContent = phase + ' …'; } }, 100);
+document.addEventListener('keydown', e => { if (e.key === 'f' || e.key === 'F'){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } });
+(async function(){
+  try { const j = await (await fetch('/api/state')).json(); IM = j.images||{}; EP = j.epbl||{}; ST = j.state||{};
+    $('inst').textContent = ST.primary ? 'v' + ST.primary : '-';
+    if (j.leds){ $('b3').classList.toggle('on', !!j.leds.led3); $('b4').classList.toggle('on', !!j.leds.led4); } } catch(e){}
+  renderExps();
+  if (!location.hash.includes('shot')){ const es = new EventSource('/events'); es.onmessage = onEvent; }
+})();
+</script>
+</body>
+</html>
